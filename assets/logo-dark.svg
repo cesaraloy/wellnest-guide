@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="800" height="160">
+  <rect width="400" height="80" fill="#3a3530"/>
+
+  <!-- Circle mark -->
+  <circle cx="36" cy="36" r="18" fill="none" stroke="#b5c4a8" stroke-width="1.5"/>
+  <circle cx="36" cy="36" r="6" fill="#b5c4a8"/>
+
+  <!-- Wordmark -->
+  <text x="66" y="46"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="34"
+    font-weight="400"
+    letter-spacing="2"
+    fill="#ffffff">Wellnest</text>
+
+  <!-- Guide italic sage -->
+  <text x="232" y="46"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="34"
+    font-weight="400"
+    letter-spacing="2"
+    fill="#b5c4a8"
+    font-style="italic">Guide</text>
+
+  <!-- Tagline -->
+  <text x="66" y="64"
+    font-family="'DM Sans', Helvetica, Arial, sans-serif"
+    font-size="9"
+    font-weight="300"
+    letter-spacing="3.5"
+    fill="rgba(255,255,255,0.4)">RETIROS DE BIENESTAR EN ESPAÑA</text>
+</svg>
