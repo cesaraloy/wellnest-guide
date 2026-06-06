@@ -368,14 +368,14 @@ Responde SOLO en JSON válido sin backticks:
 }`;
 
   try {
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1200,messages:[{role:'user',content:prompt}]})
+    const res = await fetch('/api/recommend', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt })
     });
-    if(!res.ok) throw new Error(`Error ${res.status}`);
-    const data=await res.json();
-    const text=data.content.map(b=>b.text||'').join('');
+    if (!res.ok) throw new Error(`Error ${res.status}`);
+    const data = await res.json();
+    const text = data.result;
     const result=JSON.parse(text.replace(/```json|```/g,'').trim());
     renderResults(result);
   } catch(err){
