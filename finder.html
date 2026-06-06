@@ -153,11 +153,31 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 .book-btn:hover { background:var(--sage); }
 
 @media(max-width:900px) {
-  .app { grid-template-columns:1fr; }
-  .panel-left { padding:40px 24px; }
-  .panel-right { padding:40px 24px; }
   nav { padding:14px 20px; }
+  .app { grid-template-columns:1fr; min-height:auto; }
+  .panel-left { padding:32px 20px 28px; border-right:none; border-bottom:1px solid rgba(122,140,110,0.12); }
+  .panel-right { padding:32px 20px 48px; }
+  .form-title { font-size:30px; }
+  .radio-grid { grid-template-columns:1fr 1fr; }
+  .region-pill-group { grid-template-columns:1fr 1fr; }
+  .card-footer { flex-wrap:wrap; gap:10px; }
+  .card-right { align-items:flex-start; flex-direction:row; flex-wrap:wrap; gap:8px; }
+  .comm-summary { overflow-x:auto; }
+  .comm-row { font-size:11px; }
+  .comm-label { max-width:180px; }
+}
+
+@media(max-width:480px) {
+  .panel-left { padding:24px 16px 20px; }
+  .panel-right { padding:24px 16px 40px; }
+  .form-title { font-size:26px; }
+  .radio-grid { grid-template-columns:1fr; }
   .region-pill-group { grid-template-columns:1fr; }
+  .pill { padding:8px 14px; font-size:12px; }
+  .results-title { font-size:22px; }
+  .card-header { grid-template-columns:72px 1fr; }
+  .card-name { font-size:15px; }
+  .card-right { flex-direction:column; align-items:flex-end; }
 }
 </style>
 </head>
@@ -446,6 +466,7 @@ Reglas: precios realistas dentro del presupuesto, match entre 70-99, variedad de
 // ── RENDER RESULTS ───────────────────────────────────────────────────
 function renderResults(data) {
   const right = document.getElementById('rightPanel');
+  if (window.innerWidth <= 900) right.scrollIntoView({ behavior: 'smooth', block: 'start' });
   const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura' };
   const rMap = { andalucia:'Andalucía', cataluna:'Cataluña', galicia:'Galicia', canarias:'Canarias', madrid:'Madrid', valencia:'Valencia', pais_vasco:'País Vasco', baleares:'Baleares', aragon:'Aragón', castilla:'Castilla', cualquiera:'España' };
 

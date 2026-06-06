@@ -60,6 +60,17 @@
     text-transform: uppercase; transition: background .2s !important;
   }
   .nav-cta:hover { background: var(--earth) !important; }
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--charcoal); transition: all .3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   /* ── HERO ── */
   .hero {
@@ -255,20 +266,61 @@
   @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
   @media(max-width:900px) {
-    nav { padding:16px 24px; }
+    nav { padding:16px 20px; }
+    nav.scrolled { padding:12px 20px; }
+    .nav-hamburger { display:flex; }
+    .nav-links {
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:rgba(250,248,244,0.98); backdrop-filter:blur(12px);
+      flex-direction:column; padding:16px 20px 24px; gap:0;
+      border-bottom:1px solid rgba(122,140,110,0.15);
+    }
+    .nav-links.open { display:flex; }
+    .nav-links a { padding:13px 0; border-bottom:1px solid rgba(122,140,110,0.08); font-size:15px; letter-spacing:.02em; }
+    .nav-links a:last-child { border-bottom:none; }
+    .nav-cta { margin-top:8px; text-align:center !important; padding:13px 22px !important; border-radius:2px; }
+
     .hero { grid-template-columns:1fr; }
-    .hero-left { padding:60px 24px 40px; }
+    .hero-left { padding:56px 20px 40px; }
     .hero-right { display:none; }
-    .section { padding:60px 24px; }
-    .categories { grid-template-columns:repeat(3,1fr); }
+    .hero-sub { font-size:15px; margin-bottom:32px; }
+    .search-bar { flex-direction:column; max-width:100%; }
+    .search-field { border-right:none; border-bottom:1px solid rgba(122,140,110,0.18); padding:13px 16px; }
+    .search-field:last-of-type { border-bottom:none; }
+    .search-btn { padding:15px; width:100%; font-size:13px; }
+    .hero-stats { gap:24px; margin-top:32px; flex-wrap:wrap; }
+
+    .section { padding:56px 20px; }
+    .section-header { flex-direction:column; align-items:flex-start; gap:16px; margin-bottom:32px; }
+    .categories { grid-template-columns:repeat(3,1fr); gap:10px; }
     .retreats-grid { grid-template-columns:1fr; }
-    .feature-banner { margin:0 24px 48px; grid-template-columns:1fr; }
-    .regions { padding:60px 24px; }
-    .regions-grid { grid-template-columns:repeat(2,1fr); }
-    .how-works { padding:60px 24px; }
-    .steps { grid-template-columns:repeat(2,1fr); }
-    footer { padding:48px 24px 32px; }
-    .footer-grid { grid-template-columns:1fr 1fr; }
+
+    .feature-banner { margin:0 20px 56px; grid-template-columns:1fr; }
+    .banner-content { padding:40px 28px; }
+    .banner-title { font-size:34px; }
+    .feature-banner > div:last-child { display:none; }
+
+    .regions { padding:56px 20px; }
+    .regions-grid { grid-template-columns:repeat(2,1fr); gap:12px; margin-top:32px; }
+    .region-card { padding:20px 16px; }
+
+    .how-works { padding:56px 20px; }
+    .steps { grid-template-columns:repeat(2,1fr); gap:24px; margin-top:32px; }
+
+    footer { padding:48px 20px 32px; }
+    .footer-grid { grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px; }
+    .footer-grid > div:first-child { grid-column:1/-1; }
+    .footer-bottom { flex-direction:column; gap:8px; text-align:center; }
+  }
+
+  @media(max-width:540px) {
+    h1 { font-size:38px; }
+    .categories { grid-template-columns:repeat(2,1fr); }
+    .regions-grid { grid-template-columns:1fr; }
+    .steps { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:1fr; }
+    .hero-stats { gap:20px; }
+    .stat-num { font-size:26px; }
   }
 </style>
 </head>
@@ -278,13 +330,16 @@
   <a href="/" class="nav-logo">
     <img src="/assets/logo.svg" alt="Wellnest Guide">
   </a>
-  <div class="nav-links">
-    <a href="#explorar">Explorar</a>
-    <a href="#regiones">Regiones</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#explorar" onclick="closeNav()">Explorar</a>
+    <a href="#regiones" onclick="closeNav()">Regiones</a>
     <a href="finder">Buscador IA</a>
-    <a href="#centros">Para centros</a>
+    <a href="#centros" onclick="closeNav()">Para centros</a>
     <a href="finder" class="nav-cta">Encontrar mi retiro</a>
   </div>
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -523,10 +578,17 @@
 </footer>
 
 <script>
-  // Navbar scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('navHamburger').classList.toggle('open');
+  }
+  function closeNav() {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('navHamburger').classList.remove('open');
+  }
 </script>
 </body>
 </html>
