@@ -1,8 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/finder", "dest": "/finder.html" },
-    { "src": "/", "dest": "/index.html" }
-  ]
+  "trailingSlash": false
 }
