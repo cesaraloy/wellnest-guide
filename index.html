@@ -131,7 +131,8 @@
   /* ── HERO RIGHT ── */
   .hero-right { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:4px; overflow:hidden; }
   .hero-img { overflow:hidden; transition:transform .6s ease; cursor:default; position:relative; }
-  .hero-img svg { display:block; width:100%; height:100%; }
+  .hero-img img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+  .hero-img:hover img { transform:scale(1.05); }
   .img1 { grid-column:1; grid-row:1/3; }
   .img-label {
     position:absolute; bottom:16px; left:16px;
@@ -164,7 +165,8 @@
     text-decoration: none;
   }
   .cat-card:hover { transform:translateY(-4px); }
-  .cat-bg { width:100%; height:100%; }
+  .cat-bg { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+  .cat-card:hover .cat-bg { transform:scale(1.06); }
   .cat-overlay {
     position:absolute; bottom:0; left:0; right:0; padding:20px 16px;
     background:linear-gradient(transparent,rgba(0,0,0,0.55));
@@ -181,8 +183,8 @@
   }
   .retreat-card:hover { box-shadow:0 12px 48px rgba(0,0,0,.1); }
   .retreat-img { aspect-ratio:4/3; position:relative; overflow:hidden; }
-  .retreat-img svg { display:block; width:100%; height:100%; transition:transform .5s ease; }
-  .retreat-card:hover .retreat-img svg { transform:scale(1.04); }
+  .retreat-img img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .retreat-card:hover .retreat-img img { transform:scale(1.04); }
   .retreat-badge {
     position:absolute; top:14px; left:14px; background:white;
     padding:5px 12px; font-size:10px; letter-spacing:.12em; text-transform:uppercase;
@@ -371,38 +373,14 @@
   </div>
   <div class="hero-right">
     <div class="hero-img img1" style="position:relative;">
-      <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice">
-        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fa37e"/><stop offset="100%" stop-color="#5a7250"/></linearGradient></defs>
-        <rect width="400" height="600" fill="url(#g1)"/>
-        <polygon points="0,420 120,200 240,350 320,180 400,300 400,600 0,600" fill="rgba(0,0,0,0.15)"/>
-        <polygon points="0,480 80,320 180,430 280,260 400,380 400,600 0,600" fill="rgba(0,0,0,0.2)"/>
-        <circle cx="280" cy="120" r="50" fill="rgba(255,230,150,0.3)"/>
-        <ellipse cx="200" cy="490" rx="80" ry="20" fill="rgba(100,160,200,0.3)"/>
-      </svg>
+      <img src="https://picsum.photos/seed/wellnest-sierra-nevada/500/750" alt="Retiro de yoga en Sierra Nevada, Granada" loading="lazy">
       <div class="img-label">Sierra Nevada</div>
     </div>
     <div class="hero-img">
-      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
-        <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4b896"/><stop offset="100%" stop-color="#a0785a"/></linearGradient></defs>
-        <rect width="300" height="300" fill="url(#g2)"/>
-        <rect x="80" y="160" width="140" height="60" rx="4" fill="rgba(255,255,255,0.25)"/>
-        <circle cx="150" cy="120" r="12" fill="rgba(255,255,255,0.6)"/>
-        <line x1="150" y1="132" x2="150" y2="175" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
-        <line x1="120" y1="150" x2="180" y2="150" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
-        <line x1="150" y1="175" x2="125" y2="210" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
-        <line x1="150" y1="175" x2="175" y2="210" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
-      </svg>
+      <img src="https://picsum.photos/seed/wellnest-yoga-studio/450/450" alt="Espacio de yoga y meditación al aire libre" loading="lazy">
     </div>
     <div class="hero-img">
-      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
-        <defs><linearGradient id="g3" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#4a6355"/><stop offset="100%" stop-color="#7a9c88"/></linearGradient></defs>
-        <rect width="300" height="300" fill="url(#g3)"/>
-        <ellipse cx="150" cy="220" rx="100" ry="30" fill="rgba(100,180,200,0.35)"/>
-        <rect x="100" y="130" width="100" height="75" fill="rgba(255,245,235,0.4)"/>
-        <rect x="90" y="120" width="120" height="15" rx="1" fill="rgba(180,130,90,0.5)"/>
-        <ellipse cx="85" cy="150" rx="10" ry="35" fill="rgba(40,80,50,0.5)"/>
-        <ellipse cx="215" cy="155" rx="9" ry="30" fill="rgba(40,80,50,0.45)"/>
-      </svg>
+      <img src="https://picsum.photos/seed/wellnest-spa-retreat/450/450" alt="Espacio de spa y bienestar en un retiro" loading="lazy">
     </div>
   </div>
 </section>
@@ -418,27 +396,27 @@
   </div>
   <div class="categories">
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8fa37e"/><stop offset="100%" stop-color="#5a7250"/></linearGradient></defs><rect width="200" height="267" fill="url(#c1)"/><circle cx="100" cy="90" r="16" fill="rgba(255,255,255,0.5)"/><line x1="100" y1="106" x2="100" y2="155" stroke="rgba(255,255,255,0.5)" stroke-width="4"/><line x1="68" y1="125" x2="132" y2="125" stroke="rgba(255,255,255,0.5)" stroke-width="4"/><line x1="100" y1="155" x2="75" y2="195" stroke="rgba(255,255,255,0.5)" stroke-width="4"/><line x1="100" y1="155" x2="125" y2="195" stroke="rgba(255,255,255,0.5)" stroke-width="4"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-yoga/400/534" alt="Yoga" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Yoga</div><div class="cat-count">112 retiros</div></div>
     </a>
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a89070"/><stop offset="100%" stop-color="#6d5540"/></linearGradient></defs><rect width="200" height="267" fill="url(#c2)"/><circle cx="100" cy="110" r="40" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/><circle cx="100" cy="110" r="28" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/><circle cx="100" cy="110" r="16" fill="rgba(255,255,255,0.4)"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-meditacion/400/534" alt="Meditación" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Meditación</div><div class="cat-count">87 retiros</div></div>
     </a>
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6b9e8a"/><stop offset="100%" stop-color="#3d7060"/></linearGradient></defs><rect width="200" height="267" fill="url(#c3)"/><path d="M100,60 C70,90 55,130 65,165 C75,195 125,195 135,165 C145,130 130,90 100,60Z" fill="rgba(255,255,255,0.3)"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-detox/400/534" alt="Detox" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Detox</div><div class="cat-count">54 retiros</div></div>
     </a>
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#9090a0"/><stop offset="100%" stop-color="#505060"/></linearGradient></defs><rect width="200" height="267" fill="url(#c4)"/><rect x="60" y="100" width="80" height="80" rx="2" fill="rgba(255,255,255,0.2)"/><rect x="80" y="80" width="40" height="25" rx="20" fill="rgba(255,255,255,0.25)"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-silencio/400/534" alt="Silencio" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Silencio</div><div class="cat-count">31 retiros</div></div>
     </a>
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c4a060"/><stop offset="100%" stop-color="#8a6030"/></linearGradient></defs><rect width="200" height="267" fill="url(#c5)"/><circle cx="100" cy="120" r="45" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/><path d="M100,75 L113,108 L148,108 L120,128 L131,162 L100,142 L69,162 L80,128 L52,108 L87,108Z" fill="rgba(255,255,255,0.3)"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-ayurveda/400/534" alt="Ayurveda" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Ayurveda</div><div class="cat-count">28 retiros</div></div>
     </a>
     <a href="finder" class="cat-card">
-      <svg class="cat-bg" viewBox="0 0 200 267" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="c6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7aaa7a"/><stop offset="100%" stop-color="#3a6a3a"/></linearGradient></defs><rect width="200" height="267" fill="url(#c6)"/><polygon points="100,60 140,150 60,150" fill="rgba(255,255,255,0.3)"/><polygon points="100,100 148,200 52,200" fill="rgba(255,255,255,0.25)"/></svg>
+      <img class="cat-bg" src="https://picsum.photos/seed/wellnest-cat-naturaleza/400/534" alt="Naturaleza" loading="lazy">
       <div class="cat-overlay"><div class="cat-name">Naturaleza</div><div class="cat-count">68 retiros</div></div>
     </a>
   </div>
@@ -456,7 +434,7 @@
   <div class="retreats-grid">
     <a href="finder" class="retreat-card">
       <div class="retreat-img">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7a9c6e"/><stop offset="100%" stop-color="#4a6a3a"/></linearGradient></defs><rect width="400" height="300" fill="url(#r1)"/><polygon points="0,220 80,100 180,180 260,80 400,160 400,300 0,300" fill="rgba(0,0,0,0.2)"/><circle cx="320" cy="70" r="35" fill="rgba(255,220,100,0.25)"/></svg>
+        <img src="https://picsum.photos/seed/wellnest-retreat-pino/600/450" alt="Casa del Pino — Yoga y Silencio en Sierra Nevada" loading="lazy">
         <div class="retreat-badge">★ Editorial pick</div>
         <div class="retreat-save">♡</div>
       </div>
@@ -472,7 +450,7 @@
     </a>
     <a href="finder" class="retreat-card">
       <div class="retreat-img">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="r2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c4a882"/><stop offset="100%" stop-color="#8a6840"/></linearGradient></defs><rect width="400" height="300" fill="url(#r2)"/><rect x="80" y="80" width="240" height="160" rx="2" fill="rgba(255,245,230,0.35)"/><rect x="65" y="70" width="270" height="20" fill="rgba(160,110,60,0.5)"/><ellipse cx="120" cy="260" rx="25" ry="8" fill="rgba(60,100,60,0.4)"/><ellipse cx="120" cy="225" rx="12" ry="40" fill="rgba(60,100,60,0.4)"/></svg>
+        <img src="https://picsum.photos/seed/wellnest-retreat-angels/600/450" alt="Mas dels Àngels — Detox y Ayurveda en Priorat" loading="lazy">
         <div class="retreat-badge">Más reservado</div>
         <div class="retreat-save">♡</div>
       </div>
@@ -488,7 +466,7 @@
     </a>
     <a href="finder" class="retreat-card">
       <div class="retreat-img">
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="r3" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#4a7a8a"/><stop offset="100%" stop-color="#7ab0c0"/></linearGradient></defs><rect width="400" height="300" fill="url(#r3)"/><path d="M0,180 Q80,150 160,180 Q240,210 320,180 Q360,165 400,180 L400,300 L0,300Z" fill="rgba(100,190,220,0.3)"/><polygon points="120,160 200,80 280,160" fill="rgba(255,255,255,0.15)"/></svg>
+        <img src="https://picsum.photos/seed/wellnest-retreat-silencio/600/450" alt="O Silencio — Mar y Meditación en Costa da Morte" loading="lazy">
         <div class="retreat-badge">Nuevo</div>
         <div class="retreat-save">♡</div>
       </div>
@@ -513,13 +491,9 @@
     <p class="banner-desc">Llega a miles de personas que buscan exactamente lo que ofreces. Perfil verificado, reservas directas y visibilidad en el mayor directorio de retiros de España.</p>
     <a href="mailto:hola@wellnest.guide" class="banner-btn">Listar mi centro →</a>
   </div>
-  <div style="background:linear-gradient(135deg,#3a4a38,#1a2a18);display:flex;align-items:center;justify-content:center;">
-    <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-      <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(122,140,110,0.3)" stroke-width="1"/>
-      <circle cx="100" cy="100" r="55" fill="none" stroke="rgba(122,140,110,0.2)" stroke-width="1"/>
-      <circle cx="100" cy="100" r="32" fill="rgba(122,140,110,0.25)"/>
-      <circle cx="100" cy="100" r="14" fill="rgba(181,196,168,0.6)"/>
-    </svg>
+  <div style="position:relative; overflow:hidden;">
+    <img src="https://picsum.photos/seed/wellnest-centros-banner/700/500" alt="Centro de bienestar y retiro" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(58,74,56,0.55),rgba(26,42,24,0.45));"></div>
   </div>
 </div>
 

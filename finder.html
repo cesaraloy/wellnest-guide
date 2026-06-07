@@ -127,9 +127,14 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 
 .result-card { background:white; border-radius:2px; margin-bottom:18px; overflow:hidden; transition:box-shadow .3s; border:1px solid rgba(122,140,110,0.1); }
 .result-card:hover { box-shadow:0 8px 32px rgba(0,0,0,0.08); }
-.card-header { display:grid; grid-template-columns:90px 1fr; }
-.card-visual { display:flex; align-items:center; justify-content:center; font-size:32px; }
+.card-header { display:grid; grid-template-columns:96px 1fr; }
+.card-visual { position:relative; overflow:hidden; }
+.card-visual img { display:block; width:100%; height:100%; object-fit:cover; }
+.card-visual .card-emoji { position:absolute; bottom:6px; right:6px; font-size:16px; background:rgba(255,255,255,.85); border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; }
 .card-info { padding:14px 14px 14px 0; }
+.card-gallery { display:flex; gap:6px; padding:0 14px 12px; }
+.card-gallery img { width:64px; height:48px; object-fit:cover; border-radius:2px; cursor:pointer; transition:opacity .2s; flex:0 0 auto; }
+.card-gallery img:hover { opacity:.75; }
 .card-name { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400; line-height:1.2; margin-bottom:3px; }
 .card-location { font-size:11px; color:#bbb; letter-spacing:.04em; margin-bottom:8px; }
 .card-tags { display:flex; gap:5px; flex-wrap:wrap; }
@@ -504,9 +509,17 @@ function renderResults(data) {
     else if (r.plataforma === 'getyourguide') bookUrl = buildGYGLink(r.search_term, r.location);
     else bookUrl = buildCivitatisLink(r.search_term, r.location);
 
+    // seed determinista a partir del nombre, así cada retiro mantiene siempre las mismas fotos
+    const seed = (r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const photoMain = `https://picsum.photos/seed/${seed}-main/300/300`;
+    const gallery = [1, 2, 3].map(n => `https://picsum.photos/seed/${seed}-g${n}/200/150`);
+
     html += `<div class="result-card">
       <div class="card-header">
-        <div class="card-visual" style="background:${bg};color:white;">${r.emoji || '🌿'}</div>
+        <div class="card-visual" style="background:${bg};">
+          <img src="${photoMain}" alt="${r.name}" loading="lazy">
+          <span class="card-emoji">${r.emoji || '🌿'}</span>
+        </div>
         <div class="card-info">
           <div class="card-name">${r.name}</div>
           <div class="card-location">📍 ${r.location}</div>
@@ -515,6 +528,9 @@ function renderResults(data) {
             <span class="card-tag">${r.duracion}</span>
           </div>
         </div>
+      </div>
+      <div class="card-gallery">
+        ${gallery.map(src => `<img src="${src}" alt="Foto de ${r.name}" loading="lazy" onclick="window.open('${src.replace('/200/150','/900/650')}','_blank')">`).join('')}
       </div>
       <div class="card-body">
         <div class="card-desc">${r.desc}</div>
