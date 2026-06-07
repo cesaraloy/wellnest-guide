@@ -545,10 +545,12 @@ async function findRetreats() {
 
 Genera EXACTAMENTE 4 recomendaciones de retiros reales en España (preferiblemente en ${regionLabel}) que encajen con estas preferencias.
 
-Para cada retiro, indica la plataforma más adecuada para reservarlo:
-- "booking" si es principalmente alojamiento con programa de bienestar
-- "getyourguide" si es una experiencia, taller o retiro corto reservable como actividad
-- "civitatis" si es una actividad o tour de bienestar en España
+Para cada retiro, indica la plataforma más adecuada para reservarlo, teniendo en cuenta que GetYourGuide y Civitatis son catálogos de ACTIVIDADES Y EXPERIENCIAS DE UN SOLO DÍA (clases sueltas, talleres, tours guiados, sesiones puntuales de yoga/meditación al aire libre), NO de retiros de alojamiento de varios días:
+- "booking": para CUALQUIER retiro que incluya alojamiento de una o más noches (la inmensa mayoría de los retiros de bienestar). Es la opción por defecto.
+- "getyourguide": SOLO si la recomendación es una actividad o taller de un único día sin pernoctación (ej. "clase de yoga en la playa", "taller de un día de cocina ayurvédica", "ruta guiada de mindfulness en la naturaleza")
+- "civitatis": igual que getyourguide, solo para actividades/tours de un día sin alojamiento
+
+Si dudas entre alojamiento multi-noche o actividad de un día, elige siempre "booking". No fuerces "getyourguide" ni "civitatis" en retiros de varios días: el enlace resultante llevaría a una actividad que no se corresponde con la recomendación.
 
 Responde SOLO en JSON válido sin texto adicional ni backticks:
 {
