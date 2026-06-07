@@ -685,18 +685,24 @@ function renderResults(data) {
 
 function sendRecommendationsEmail(data) {
   if (!state.leadEmail) return;
-  try {
-    fetch('/api/send-recommendations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        lead: { name: state.leadName, email: state.leadEmail },
-        insight: data.insight,
-        retreats: data.retreats
-      }),
-      keepalive: true
-    });
-  } catch (e) { /* no bloquear la experiencia si falla el envío */ }
+  fetch('/api/send-recommendations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      lead: { name: state.leadName, email: state.leadEmail },
+      insight: data.insight,
+      retreats: data.retreats.map(r => ({
+        name: r.name, location: r.location, desc: r.desc,
+        duracion: r.duracion, precio_desde: r.precio_desde,
+        match: r.match, bookUrl: r.bookUrl
+      }))
+    })
+  })
+  .then(async (resp) => {
+    if (!resp.ok) console.error('Wellnest: error al enviar email de recomendaciones', resp.status, await resp.text());
+    else console.log('Wellnest: email de recomendaciones enviado correctamente');
+  })
+  .catch((e) => console.error('Wellnest: fallo de red al enviar email de recomendaciones', e));
 }
 
 function reset() {
