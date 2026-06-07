@@ -74,6 +74,17 @@ nav {
 .region-pill.selected { background:var(--sage); border-color:var(--sage); color:white; }
 .region-pill .region-emoji { font-size:16px; }
 
+.date-range-wrap { display:flex; gap:14px; }
+.date-field { flex:1; }
+.date-field label { display:block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--earth); margin-bottom:6px; }
+.date-field input[type=date] {
+  width:100%; padding:11px 14px; border:1.5px solid rgba(122,140,110,0.25); border-radius:2px;
+  font-family:'DM Sans',sans-serif; font-size:13px; color:var(--charcoal); background:white; cursor:pointer;
+}
+.date-field input[type=date]:focus { outline:none; border-color:var(--sage); }
+.date-clear { margin-top:12px; font-size:11px; color:#aaa; cursor:pointer; text-decoration:underline; display:inline-block; }
+.date-clear:hover { color:var(--terracota); }
+
 .slider-wrap { padding:6px 0; }
 .range-val { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:300; color:var(--charcoal); margin-bottom:10px; }
 .range-labels { display:flex; justify-content:space-between; font-size:11px; color:#bbb; margin-top:8px; }
@@ -238,17 +249,25 @@ const BOOKING_AID = 'TU_AFFILIATE_ID';
 const GYG_PARTNER_ID = 'TU_GYG_PARTNER_ID';
 const CIVITATIS_AFF = 'TU_CIVITATIS_ID';
 
-function buildBookingLink(searchTerm, region) {
+function buildBookingLink(searchTerm, region, checkin, checkout) {
   const dest = encodeURIComponent((region && region !== 'cualquiera' ? region + ' ' : '') + (searchTerm || 'retiro bienestar') + ' España');
-  return `https://www.booking.com/searchresults.es.html?aid=${BOOKING_AID}&ss=${dest}&lang=es`;
+  let url = `https://www.booking.com/searchresults.es.html?aid=${BOOKING_AID}&ss=${dest}&lang=es`;
+  if (checkin) url += `&checkin=${checkin}`;
+  if (checkout) url += `&checkout=${checkout}`;
+  return url;
 }
-function buildGYGLink(searchTerm, region) {
+function buildGYGLink(searchTerm, region, checkin, checkout) {
   const q = encodeURIComponent((searchTerm || 'retiro bienestar') + (region && region !== 'cualquiera' ? ' ' + region : '') + ' España');
-  return `https://www.getyourguide.es/s/?q=${q}&partner_id=${GYG_PARTNER_ID}`;
+  let url = `https://www.getyourguide.es/s/?q=${q}&partner_id=${GYG_PARTNER_ID}`;
+  if (checkin) url += `&date_from=${checkin}`;
+  if (checkout) url += `&date_to=${checkout}`;
+  return url;
 }
-function buildCivitatisLink(searchTerm, region) {
+function buildCivitatisLink(searchTerm, region, checkin) {
   const q = encodeURIComponent((searchTerm || 'retiro') + (region && region !== 'cualquiera' ? '-' + region : '-espana'));
-  return `https://www.civitatis.com/es/espana/?aid=${CIVITATIS_AFF}&q=${q}`;
+  let url = `https://www.civitatis.com/es/espana/?aid=${CIVITATIS_AFF}&q=${q}`;
+  if (checkin) url += `&date=${checkin}`;
+  return url;
 }
 
 // ── STATE ───────────────────────────────────────────────────────────
@@ -257,6 +276,8 @@ const state = {
   tipo: [],
   region: null,
   duracion: null,
+  fechaInicio: null,
+  fechaFin: null,
   presupuesto: 600,
   nivel: null,
   exclusividad: null
@@ -309,6 +330,12 @@ const steps = [
       { value:'semana', label:'Una semana' },
       { value:'mas', label:'Más de una semana' }
     ]
+  },
+  {
+    id: 'fechas',
+    label: '¿Tienes fechas aproximadas?',
+    hint: 'Opcional — nos ayuda a comprobar disponibilidad real en Booking, GetYourGuide y Civitatis',
+    type: 'date-range'
   },
   {
     id: 'presupuesto',
@@ -367,6 +394,21 @@ function renderStep() {
     ).join('')}</div>`;
   }
 
+  if (s.type === 'date-range') {
+    const today = new Date().toISOString().split('T')[0];
+    html += `<div class="date-range-wrap">
+      <div class="date-field">
+        <label>Llegada</label>
+        <input type="date" min="${today}" value="${state.fechaInicio || ''}" onchange="updateDate('fechaInicio', this.value)">
+      </div>
+      <div class="date-field">
+        <label>Salida</label>
+        <input type="date" min="${state.fechaInicio || today}" value="${state.fechaFin || ''}" onchange="updateDate('fechaFin', this.value)">
+      </div>
+    </div>
+    ${(state.fechaInicio || state.fechaFin) ? `<div class="date-clear" onclick="clearDates()">✕ Quitar fechas</div>` : ''}`;
+  }
+
   if (s.type === 'range') {
     const v = state[s.id] || s.min;
     html += `<div class="slider-wrap">
@@ -406,8 +448,22 @@ function renderStep() {
 function canNext() {
   const s = steps[state.step];
   if (s.type === 'multi-pill') return (state[s.id] || []).length > 0;
-  if (s.type === 'range') return true;
+  if (s.type === 'range' || s.type === 'date-range') return true;
   return !!state[s.id];
+}
+function updateDate(field, value) {
+  state[field] = value || null;
+  if (field === 'fechaInicio' && state.fechaFin && state.fechaFin < value) state.fechaFin = null;
+  renderStep();
+}
+function clearDates() {
+  state.fechaInicio = null;
+  state.fechaFin = null;
+  renderStep();
+}
+function formatDate(iso) {
+  const [y, m, d] = iso.split('-');
+  return `${d}/${m}/${y}`;
 }
 function pick(f, v) { state[f] = v; renderStep(); }
 function toggle(f, v) {
@@ -441,7 +497,7 @@ async function findRetreats() {
   const prompt = `Eres un experto en retiros de bienestar en España. El usuario busca:
 - Tipos de experiencia: ${tipos}
 - Región: ${regionLabel}
-- Duración: ${durMap[state.duracion] || state.duracion}
+- Duración: ${durMap[state.duracion] || state.duracion}${state.fechaInicio ? `\n- Fechas aproximadas: del ${state.fechaInicio}${state.fechaFin ? ' al ' + state.fechaFin : ''}` : ''}
 - Presupuesto máximo: ${state.presupuesto >= 3000 ? 'sin límite' : state.presupuesto + '€'}
 - Ambiente: ${excMap[state.exclusividad] || state.exclusividad}
 
@@ -518,7 +574,7 @@ function renderResults(data) {
     <div style="margin-bottom:28px;">
       <div class="results-eyebrow">Recomendaciones personalizadas</div>
       <div class="results-title">Encontramos <em>${data.retreats.length} retiros</em> para ti</div>
-      <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'Sin límite de presupuesto' : 'Hasta ' + state.presupuesto + '€'}</div>
+      <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'Sin límite de presupuesto' : 'Hasta ' + state.presupuesto + '€'}${state.fechaInicio ? ` · 📅 ${formatDate(state.fechaInicio)}${state.fechaFin ? ' – ' + formatDate(state.fechaFin) : ''}` : ''}</div>
     </div>
     <div class="insight-box">${data.insight}</div>`;
 
@@ -527,9 +583,9 @@ function renderResults(data) {
     const btnLabel = platformLabel[r.plataforma] || 'Ver disponibilidad';
 
     let bookUrl;
-    if (r.plataforma === 'booking') bookUrl = buildBookingLink(r.search_term, r.location);
-    else if (r.plataforma === 'getyourguide') bookUrl = buildGYGLink(r.search_term, r.location);
-    else bookUrl = buildCivitatisLink(r.search_term, r.location);
+    if (r.plataforma === 'booking') bookUrl = buildBookingLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
+    else if (r.plataforma === 'getyourguide') bookUrl = buildGYGLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
+    else bookUrl = buildCivitatisLink(r.search_term, r.location, state.fechaInicio);
 
     // seed determinista a partir del nombre, así cada retiro mantiene siempre las mismas fotos
     const seed = (r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -582,7 +638,7 @@ function renderResults(data) {
 }
 
 function reset() {
-  Object.assign(state, { step:0, tipo:[], region:null, duracion:null, presupuesto:600, nivel:null, exclusividad:null });
+  Object.assign(state, { step:0, tipo:[], region:null, duracion:null, fechaInicio:null, fechaFin:null, presupuesto:600, nivel:null, exclusividad:null });
   renderStep();
   document.getElementById('rightPanel').innerHTML = `<div class="empty-state"><div class="empty-icon">🌿</div><div class="empty-title">Tus recomendaciones<br>aparecerán aquí</div><div class="empty-sub">Completa el formulario y nuestra IA buscará<br>los retiros que mejor encajan contigo.</div></div>`;
 }
