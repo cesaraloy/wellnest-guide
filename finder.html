@@ -253,7 +253,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
       <label class="lead-label">Email</label>
       <input type="email" id="leadEmail" class="lead-input" placeholder="tucorreo@ejemplo.com" autocomplete="email">
     </div>
-    <p class="lead-legal">Al introducir tu nombre y email aceptas los <a href="/terminos" target="_blank">términos legales</a> y la <a href="/privacidad" target="_blank">política de privacidad</a> de Wellnest Guide.</p>
+    <p class="lead-legal">Al introducir tu nombre y email aceptas los <a href="/legal#terminos" target="_blank">términos legales</a> y la <a href="/legal#privacidad" target="_blank">política de privacidad</a> de Wellnest Guide.</p>
     <div id="leadError" class="lead-error"></div>
     <button class="cta-btn" style="margin-top:6px;" onclick="submitLead()">✦ Ver mis recomendaciones</button>
   </div>
@@ -665,7 +665,7 @@ function renderResults(data) {
               <div class="match-bar"><div class="match-fill" style="width:${r.match || 88}%"></div></div>
               ${r.match || 88}% encaje
             </div>
-            <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn">${btnLabel} →</a>
+            <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='trackEvent("click",{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})'>${btnLabel} →</a>
           </div>
         </div>
       </div>
@@ -683,6 +683,32 @@ function reset() {
   Object.assign(state, { step:0, tipo:[], region:null, duracion:null, fechaInicio:null, fechaFin:null, presupuesto:600, nivel:null, exclusividad:null });
   renderStep();
   document.getElementById('rightPanel').innerHTML = `<div class="empty-state"><div class="empty-icon">🌿</div><div class="empty-title">Tus recomendaciones<br>aparecerán aquí</div><div class="empty-sub">Completa el formulario y nuestra IA buscará<br>los retiros que mejor encajan contigo.</div></div>`;
+}
+
+// ── TRACKING ─────────────────────────────────────────────────────────
+function trackEvent(type, extra) {
+  if (!state.leadEmail) return;
+  const payload = {
+    type,
+    lead: { name: state.leadName, email: state.leadEmail }
+  };
+  if (type === 'search') {
+    payload.search = {
+      tipo: state.tipo, region: state.region, duracion: state.duracion,
+      fechaInicio: state.fechaInicio, fechaFin: state.fechaFin,
+      presupuesto: state.presupuesto, nivel: state.nivel, exclusividad: state.exclusividad
+    };
+  }
+  if (type === 'click') payload.retreat = extra;
+
+  try {
+    fetch('/api/track-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true
+    });
+  } catch (e) { /* no bloquear la navegación si falla el tracking */ }
 }
 
 // ── LEAD CAPTURE ─────────────────────────────────────────────────────
@@ -705,6 +731,7 @@ function submitLead() {
   state.leadName = name;
   state.leadEmail = email;
   closeLeadModal();
+  trackEvent('search');
   findRetreats();
 }
 document.addEventListener('keydown', (e) => {
