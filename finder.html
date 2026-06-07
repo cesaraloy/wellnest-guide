@@ -630,6 +630,7 @@ function renderResults(data) {
     if (r.plataforma === 'booking') bookUrl = buildBookingLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
     else if (r.plataforma === 'getyourguide') bookUrl = buildGYGLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
     else bookUrl = buildCivitatisLink(r.search_term, r.location, state.fechaInicio);
+    r.bookUrl = bookUrl;
 
     // seed determinista a partir del nombre, así cada retiro mantiene siempre las mismas fotos
     const seed = (r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -679,6 +680,23 @@ function renderResults(data) {
   </div>`;
 
   right.innerHTML = html;
+  sendRecommendationsEmail(data);
+}
+
+function sendRecommendationsEmail(data) {
+  if (!state.leadEmail) return;
+  try {
+    fetch('/api/send-recommendations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        lead: { name: state.leadName, email: state.leadEmail },
+        insight: data.insight,
+        retreats: data.retreats
+      }),
+      keepalive: true
+    });
+  } catch (e) { /* no bloquear la experiencia si falla el envío */ }
 }
 
 function reset() {
