@@ -18,7 +18,9 @@
       "holístico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/qi-the-energy-house.html",
-    "photo": "https://picsum.photos/seed/masqi-alicante/600/400"
+    "photo": "https://picsum.photos/seed/masqi-alicante/600/400",
+    "lat": 38.718,
+    "lng": -0.659
   },
   {
     "id": "mas-vivent-girona",
@@ -38,7 +40,9 @@
       "solo adultos"
     ],
     "booking_url": "https://www.booking.com/hotel/es/mas-vivent.html",
-    "photo": "https://picsum.photos/seed/masvivent-girona/600/400"
+    "photo": "https://picsum.photos/seed/masvivent-girona/600/400",
+    "lat": 42.325,
+    "lng": 3.107
   },
   {
     "id": "es-raco-darta-mallorca",
@@ -59,7 +63,9 @@
       "Mallorca"
     ],
     "booking_url": "https://www.booking.com/hotel/es/es-raco-d-arta.html",
-    "photo": "https://picsum.photos/seed/esraco-arta/600/400"
+    "photo": "https://picsum.photos/seed/esraco-arta/600/400",
+    "lat": 39.699,
+    "lng": 3.346
   },
   {
     "id": "mas-can-puig-fuirosos",
@@ -79,7 +85,9 @@
       "solo adultos"
     ],
     "booking_url": "https://www.booking.com/hotel/es/mas-can-puig-de-fuirosos-barcelona2.es.html",
-    "photo": "https://picsum.photos/seed/canpuig-montseny/600/400"
+    "photo": "https://picsum.photos/seed/canpuig-montseny/600/400",
+    "lat": 41.69,
+    "lng": 2.483
   },
   {
     "id": "surf-yoga-fuerteventura",
@@ -99,7 +107,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/surf-amp-yoga-retreats-fuerteventura.html",
-    "photo": "https://picsum.photos/seed/surfy-fuerteventura/600/400"
+    "photo": "https://picsum.photos/seed/surfy-fuerteventura/600/400",
+    "lat": 28.67,
+    "lng": -13.921
   },
   {
     "id": "ibiza-yoga-villa-nova-1",
@@ -117,7 +127,9 @@
       "playa"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ibiza-yoga-villa-nova-1.html",
-    "photo": "https://picsum.photos/seed/ibiza-yoga-villa-nova-1/600/400"
+    "photo": "https://picsum.photos/seed/ibiza-yoga-villa-nova-1/600/400",
+    "lat": 39.077,
+    "lng": 1.473
   },
   {
     "id": "ibiza-yoga-villa-roca-5",
@@ -135,7 +147,9 @@
       "playa"
     ],
     "booking_url": "https://www.booking.com/hotel/es/roca-5.html",
-    "photo": "https://picsum.photos/seed/roca-5/600/400"
+    "photo": "https://picsum.photos/seed/roca-5/600/400",
+    "lat": 39.077,
+    "lng": 1.473
   },
   {
     "id": "ibiza-yoga-meditation-hut",
@@ -153,7 +167,9 @@
       "mindfulness"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ibiza-yoga-the-meditation-hut.html",
-    "photo": "https://picsum.photos/seed/ibiza-yoga-meditation-hut/600/400"
+    "photo": "https://picsum.photos/seed/ibiza-yoga-meditation-hut/600/400",
+    "lat": 39.006,
+    "lng": 1.525
   },
   {
     "id": "shavasana-yoga-retreats",
@@ -171,7 +187,9 @@
       "retiro grupal"
     ],
     "booking_url": "https://www.booking.com/hotel/es/shavasana-yoga-retreats.html",
-    "photo": "https://picsum.photos/seed/shavasana-yoga-retreats/600/400"
+    "photo": "https://picsum.photos/seed/shavasana-yoga-retreats/600/400",
+    "lat": 38.907,
+    "lng": 1.421
   },
   {
     "id": "cal-reiet-holistic-retreat",
@@ -191,7 +209,9 @@
       "piscina"
     ],
     "booking_url": "https://www.booking.com/hotel/es/cal-reiet-holistic-retreat.html",
-    "photo": "https://picsum.photos/seed/cal-reiet-holistic-retreat/600/400"
+    "photo": "https://picsum.photos/seed/cal-reiet-holistic-retreat/600/400",
+    "lat": 39.355,
+    "lng": 3.13
   },
   {
     "id": "shanti-som-wellbeing-retreat",
@@ -212,7 +232,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/shanti-som-wellbeing-retreat.html",
-    "photo": "https://picsum.photos/seed/shanti-som-wellbeing-retreat/600/400"
+    "photo": "https://picsum.photos/seed/shanti-som-wellbeing-retreat/600/400",
+    "lat": 36.619,
+    "lng": -4.73
   },
   {
     "id": "malaga-hills-wellness",
@@ -232,7 +254,9 @@
       "eco"
     ],
     "booking_url": "https://www.booking.com/hotel/es/malaga-hills-boutique-amp-welness-b-amp-b.html",
-    "photo": "https://picsum.photos/seed/malaga-hills-boutique/600/400"
+    "photo": "https://picsum.photos/seed/malaga-hills-boutique/600/400",
+    "lat": 36.845,
+    "lng": -3.997
   },
   {
     "id": "harmony-home-wellness",
@@ -252,7 +276,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/harmony-home.html",
-    "photo": "https://picsum.photos/seed/harmony-home/600/400"
+    "photo": "https://picsum.photos/seed/harmony-home/600/400",
+    "lat": 36.873,
+    "lng": -4.115
   },
   {
     "id": "el-carmen-yoga-house",
@@ -271,7 +297,9 @@
       "olivar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-carmen-yoga-house.html",
-    "photo": "https://picsum.photos/seed/el-carmen-yoga-house/600/400"
+    "photo": "https://picsum.photos/seed/el-carmen-yoga-house/600/400",
+    "lat": 36.748,
+    "lng": -5.161
   },
   {
     "id": "b-bou-hotel-la-vinuela-spa",
@@ -290,7 +318,9 @@
       "piscina"
     ],
     "booking_url": "https://www.booking.com/hotel/es/la-vinuela.html",
-    "photo": "https://picsum.photos/seed/la-vinuela/600/400"
+    "photo": "https://picsum.photos/seed/la-vinuela/600/400",
+    "lat": 36.891,
+    "lng": -4.158
   },
   {
     "id": "el-lodge-ski-spa-sierra-nevada",
@@ -309,7 +339,9 @@
       "lujo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-lodge.html",
-    "photo": "https://picsum.photos/seed/el-lodge/600/400"
+    "photo": "https://picsum.photos/seed/el-lodge/600/400",
+    "lat": 37.054,
+    "lng": -3.367
   },
   {
     "id": "finca-alvaita-sierra-nevada",
@@ -328,7 +360,9 @@
       "retiro"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-alvaita-sierra-nevada-resort.html",
-    "photo": "https://picsum.photos/seed/finca-alvaita-sierra-nevada/600/400"
+    "photo": "https://picsum.photos/seed/finca-alvaita-sierra-nevada/600/400",
+    "lat": 37.05,
+    "lng": -3.37
   },
   {
     "id": "luxury-dome-retreat-granada",
@@ -347,7 +381,9 @@
       "glamping"
     ],
     "booking_url": "https://www.booking.com/hotel/es/luxury-dome-retreat-dudar-47-granada.html",
-    "photo": "https://picsum.photos/seed/luxury-dome-retreat/600/400"
+    "photo": "https://picsum.photos/seed/luxury-dome-retreat/600/400",
+    "lat": 37.21,
+    "lng": -3.52
   },
   {
     "id": "cortijo-de-la-seda",
@@ -366,7 +402,9 @@
       "olivar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/cortijo-de-la-seda.html",
-    "photo": "https://picsum.photos/seed/cortijo-de-la-seda/600/400"
+    "photo": "https://picsum.photos/seed/cortijo-de-la-seda/600/400",
+    "lat": 37.177,
+    "lng": -3.599
   },
   {
     "id": "mdd4-health-experience-sevilla",
@@ -385,7 +423,9 @@
       "urbano"
     ],
     "booking_url": "https://www.booking.com/hotel/es/mdd4-health-experience-only-adults.html",
-    "photo": "https://picsum.photos/seed/mdd4-health-experience/600/400"
+    "photo": "https://picsum.photos/seed/mdd4-health-experience/600/400",
+    "lat": 37.389,
+    "lng": -5.985
   },
   {
     "id": "dragonfly-retreat-malaga",
@@ -404,7 +444,9 @@
       "retiro"
     ],
     "booking_url": "https://www.booking.com/hotel/es/dragonfly-retreat.html",
-    "photo": "https://picsum.photos/seed/dragonfly-retreat/600/400"
+    "photo": "https://picsum.photos/seed/dragonfly-retreat/600/400",
+    "lat": 36.66,
+    "lng": -4.76
   },
   {
     "id": "surfer-tarifa",
@@ -423,7 +465,9 @@
       "activo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/surfer-tarifa.html",
-    "photo": "https://picsum.photos/seed/surfer-tarifa/600/400"
+    "photo": "https://picsum.photos/seed/surfer-tarifa/600/400",
+    "lat": 36.014,
+    "lng": -5.604
   },
   {
     "id": "surf-yoga-fuerteventura-la-oliva",
@@ -442,7 +486,9 @@
       "piscina"
     ],
     "booking_url": "https://www.booking.com/hotel/es/surf-amp-yoga-fuerteventura.html",
-    "photo": "https://picsum.photos/seed/surf-amp-yoga-fuerteventura/600/400"
+    "photo": "https://picsum.photos/seed/surf-amp-yoga-fuerteventura/600/400",
+    "lat": 28.623,
+    "lng": -13.938
   },
   {
     "id": "studio-agua-surf-yoga-fuerteventura",
@@ -461,7 +507,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/studio-agua-surf-amp-yoga-villa.html",
-    "photo": "https://picsum.photos/seed/studio-agua-surf-yoga/600/400"
+    "photo": "https://picsum.photos/seed/studio-agua-surf-yoga/600/400",
+    "lat": 28.1,
+    "lng": -14.217
   },
   {
     "id": "appartement-aire-surf-yoga-fuerteventura",
@@ -480,7 +528,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/appartement-aire-surf-yoga-villa.html",
-    "photo": "https://picsum.photos/seed/appartement-aire-surf-yoga/600/400"
+    "photo": "https://picsum.photos/seed/appartement-aire-surf-yoga/600/400",
+    "lat": 28.1,
+    "lng": -14.217
   },
   {
     "id": "puresurfcamps-surflodge-fuerteventura",
@@ -499,7 +549,9 @@
       "activo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/puresurfcamps-surflodge-fuerteventura.html",
-    "photo": "https://picsum.photos/seed/puresurfcamps-surflodge/600/400"
+    "photo": "https://picsum.photos/seed/puresurfcamps-surflodge/600/400",
+    "lat": 28.623,
+    "lng": -13.938
   },
   {
     "id": "nirvana-yoga-lanzarote",
@@ -517,7 +569,9 @@
       "playa"
     ],
     "booking_url": "https://www.booking.com/hotel/es/nirvana-yoga-c.html",
-    "photo": "https://picsum.photos/seed/nirvana-yoga-c/600/400"
+    "photo": "https://picsum.photos/seed/nirvana-yoga-c/600/400",
+    "lat": 28.963,
+    "lng": -13.55
   },
   {
     "id": "botanico-oriental-spa-tenerife",
@@ -536,7 +590,9 @@
       "retiro"
     ],
     "booking_url": "https://www.booking.com/hotel/es/botanico-y-oriental-spa-garden.html",
-    "photo": "https://picsum.photos/seed/botanico-oriental-spa/600/400"
+    "photo": "https://picsum.photos/seed/botanico-oriental-spa/600/400",
+    "lat": 28.415,
+    "lng": -16.547
   },
   {
     "id": "oceano-health-spa-tenerife",
@@ -556,7 +612,9 @@
       "medico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/oceano.html",
-    "photo": "https://picsum.photos/seed/oceano-health-spa/600/400"
+    "photo": "https://picsum.photos/seed/oceano-health-spa/600/400",
+    "lat": 28.579,
+    "lng": -16.324
   },
   {
     "id": "tenerife-nature-retreat",
@@ -575,7 +633,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/tenerife-nature-retreat.html",
-    "photo": "https://picsum.photos/seed/tenerife-nature-retreat/600/400"
+    "photo": "https://picsum.photos/seed/tenerife-nature-retreat/600/400",
+    "lat": 28.179,
+    "lng": -16.624
   },
   {
     "id": "wellness-house-tenerife",
@@ -594,7 +654,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/wellness-house.html",
-    "photo": "https://picsum.photos/seed/wellness-house-tenerife/600/400"
+    "photo": "https://picsum.photos/seed/wellness-house-tenerife/600/400",
+    "lat": 28.464,
+    "lng": -16.252
   },
   {
     "id": "gloria-palace-royal-gran-canaria",
@@ -613,7 +675,9 @@
       "playa"
     ],
     "booking_url": "https://www.booking.com/hotel/es/gloria-palace-royal-hotel-spa.html",
-    "photo": "https://picsum.photos/seed/gloria-palace-royal/600/400"
+    "photo": "https://picsum.photos/seed/gloria-palace-royal/600/400",
+    "lat": 27.784,
+    "lng": -15.709
   },
   {
     "id": "lopesan-costa-meloneras-spa",
@@ -632,7 +696,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/lopesan-costa-meloneras-resort-spa-casino.html",
-    "photo": "https://picsum.photos/seed/lopesan-costa-meloneras/600/400"
+    "photo": "https://picsum.photos/seed/lopesan-costa-meloneras/600/400",
+    "lat": 27.731,
+    "lng": -15.59
   },
   {
     "id": "hotel-camiral-girona",
@@ -651,7 +717,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-camiral.html",
-    "photo": "https://picsum.photos/seed/hotel-camiral/600/400"
+    "photo": "https://picsum.photos/seed/hotel-camiral/600/400",
+    "lat": 41.843,
+    "lng": 2.805
   },
   {
     "id": "s-agaro-spa-wellness",
@@ -670,7 +738,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/s-agaro.html",
-    "photo": "https://picsum.photos/seed/s-agaro/600/400"
+    "photo": "https://picsum.photos/seed/s-agaro/600/400",
+    "lat": 41.786,
+    "lng": 2.991
   },
   {
     "id": "hotel-villa-retiro-tarragona",
@@ -689,7 +759,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/villa-retiro.html",
-    "photo": "https://picsum.photos/seed/villa-retiro/600/400"
+    "photo": "https://picsum.photos/seed/villa-retiro/600/400",
+    "lat": 40.843,
+    "lng": 0.488
   },
   {
     "id": "asia-gardens-alicante",
@@ -709,7 +781,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/asia-gardens.html",
-    "photo": "https://picsum.photos/seed/asia-gardens/600/400"
+    "photo": "https://picsum.photos/seed/asia-gardens/600/400",
+    "lat": 38.568,
+    "lng": -0.262
   },
   {
     "id": "retiro-costina-wellness-galicia",
@@ -729,7 +803,9 @@
       "lujo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/retiro-costina-wellness-amp-villas-santa-comba8.html",
-    "photo": "https://picsum.photos/seed/retiro-costina-wellness/600/400"
+    "photo": "https://picsum.photos/seed/retiro-costina-wellness/600/400",
+    "lat": 43.028,
+    "lng": -8.821
   },
   {
     "id": "augusta-eco-wellness-galicia",
@@ -748,7 +824,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/augusta-spa-resort.html",
-    "photo": "https://picsum.photos/seed/augusta-spa-resort/600/400"
+    "photo": "https://picsum.photos/seed/augusta-spa-resort/600/400",
+    "lat": 42.399,
+    "lng": -8.808
   },
   {
     "id": "hotel-bienestar-moana-galicia",
@@ -766,7 +844,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-bienestar-moana-booking.html",
-    "photo": "https://picsum.photos/seed/hotel-bienestar-moana/600/400"
+    "photo": "https://picsum.photos/seed/hotel-bienestar-moana/600/400",
+    "lat": 42.281,
+    "lng": -8.74
   },
   {
     "id": "hotel-arima-spa-san-sebastian",
@@ -786,7 +866,9 @@
       "solo adultos"
     ],
     "booking_url": "https://www.booking.com/hotel/es/arima.html",
-    "photo": "https://picsum.photos/seed/arima/600/400"
+    "photo": "https://picsum.photos/seed/arima/600/400",
+    "lat": 43.288,
+    "lng": -1.984
   },
   {
     "id": "hotel-spa-atxaspi-navarra",
@@ -805,7 +887,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/atxaspi.html",
-    "photo": "https://picsum.photos/seed/atxaspi/600/400"
+    "photo": "https://picsum.photos/seed/atxaspi/600/400",
+    "lat": 43.261,
+    "lng": -1.703
   },
   {
     "id": "kinedomus-bienestar-burgos",
@@ -825,7 +909,9 @@
       "vino"
     ],
     "booking_url": "https://www.booking.com/hotel/es/kinedomus-bienestar.html",
-    "photo": "https://picsum.photos/seed/kinedomus-bienestar/600/400"
+    "photo": "https://picsum.photos/seed/kinedomus-bienestar/600/400",
+    "lat": 41.67,
+    "lng": -3.689
   },
   {
     "id": "vado-del-duraton-segovia",
@@ -844,7 +930,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/vado-del-duraton.html",
-    "photo": "https://picsum.photos/seed/vado-del-duraton/600/400"
+    "photo": "https://picsum.photos/seed/vado-del-duraton/600/400",
+    "lat": 41.303,
+    "lng": -3.755
   },
   {
     "id": "hacienda-los-robles-madrid",
@@ -863,7 +951,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/rural-spa-amp-wellness-hacienda-los-robles.html",
-    "photo": "https://picsum.photos/seed/hacienda-los-robles/600/400"
+    "photo": "https://picsum.photos/seed/hacienda-los-robles/600/400",
+    "lat": 40.717,
+    "lng": -4.011
   },
   {
     "id": "sancho-abarca-petit-spa",
@@ -882,7 +972,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/sancho-abarca.html",
-    "photo": "https://picsum.photos/seed/sancho-abarca-huesca/600/400"
+    "photo": "https://picsum.photos/seed/sancho-abarca-huesca/600/400",
+    "lat": 42.184,
+    "lng": -1.352
   },
   {
     "id": "torre-del-marques-monroyo",
@@ -902,7 +994,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/torre-del-marques-monroyo.html",
-    "photo": "https://picsum.photos/seed/torre-del-marques-monroyo/600/400"
+    "photo": "https://picsum.photos/seed/torre-del-marques-monroyo/600/400",
+    "lat": 40.804,
+    "lng": -0.063
   },
   {
     "id": "spa-ciudad-de-teruel",
@@ -920,7 +1014,9 @@
       "hidroterapia"
     ],
     "booking_url": "https://www.booking.com/hotel/es/spa-ciudad-de-teruel.html",
-    "photo": "https://picsum.photos/seed/spa-ciudad-teruel/600/400"
+    "photo": "https://picsum.photos/seed/spa-ciudad-teruel/600/400",
+    "lat": 40.346,
+    "lng": -1.107
   },
   {
     "id": "puebloastur-eco-resort-wellness",
@@ -940,7 +1036,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/puebloastur-eco-resort-wellness.html",
-    "photo": "https://picsum.photos/seed/puebloastur-eco-resort/600/400"
+    "photo": "https://picsum.photos/seed/puebloastur-eco-resort/600/400",
+    "lat": 43.508,
+    "lng": -5.72
   },
   {
     "id": "artiem-asturias",
@@ -959,7 +1057,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/bal-spa.html",
-    "photo": "https://picsum.photos/seed/artiem-asturias/600/400"
+    "photo": "https://picsum.photos/seed/artiem-asturias/600/400",
+    "lat": 43.533,
+    "lng": -5.661
   },
   {
     "id": "north-surf-house-gijon",
@@ -978,7 +1078,9 @@
       "activo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/surfhousegijon.html",
-    "photo": "https://picsum.photos/seed/north-surf-house-gijon/600/400"
+    "photo": "https://picsum.photos/seed/north-surf-house-gijon/600/400",
+    "lat": 43.535,
+    "lng": -5.661
   },
   {
     "id": "balneario-la-hermida",
@@ -998,7 +1100,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-la-hermida.html",
-    "photo": "https://picsum.photos/seed/balneario-la-hermida/600/400"
+    "photo": "https://picsum.photos/seed/balneario-la-hermida/600/400",
+    "lat": 43.214,
+    "lng": -4.62
   },
   {
     "id": "latas-surf-house",
@@ -1017,7 +1121,9 @@
       "retiro"
     ],
     "booking_url": "https://www.booking.com/hotel/es/latas-surf-house.html",
-    "photo": "https://picsum.photos/seed/latas-surf-house/600/400"
+    "photo": "https://picsum.photos/seed/latas-surf-house/600/400",
+    "lat": 43.471,
+    "lng": -3.626
   },
   {
     "id": "spa-rural-mies-de-rubayo",
@@ -1036,7 +1142,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/spa-rural-mies-de-rubayo.html",
-    "photo": "https://picsum.photos/seed/spa-rural-mies-de-rubayo/600/400"
+    "photo": "https://picsum.photos/seed/spa-rural-mies-de-rubayo/600/400",
+    "lat": 43.414,
+    "lng": -3.796
   },
   {
     "id": "thalasia-costa-murcia",
@@ -1055,7 +1163,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/thalasia-thalasso-center.html",
-    "photo": "https://picsum.photos/seed/thalasia-costa-murcia/600/400"
+    "photo": "https://picsum.photos/seed/thalasia-costa-murcia/600/400",
+    "lat": 37.862,
+    "lng": -0.794
   },
   {
     "id": "balneario-archena-termas",
@@ -1075,7 +1185,9 @@
       "histórico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/termas.html",
-    "photo": "https://picsum.photos/seed/balneario-archena-termas/600/400"
+    "photo": "https://picsum.photos/seed/balneario-archena-termas/600/400",
+    "lat": 38.118,
+    "lng": -1.298
   },
   {
     "id": "grand-hyatt-la-manga",
@@ -1095,7 +1207,9 @@
       "Mar Menor"
     ],
     "booking_url": "https://www.booking.com/hotel/es/grand-hyatt-lamanga-club.html",
-    "photo": "https://picsum.photos/seed/grand-hyatt-la-manga/600/400"
+    "photo": "https://picsum.photos/seed/grand-hyatt-la-manga/600/400",
+    "lat": 37.638,
+    "lng": -0.729
   },
   {
     "id": "hospes-palacio-arenales-caceres",
@@ -1114,7 +1228,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/palacio-de-arenales-spa.html",
-    "photo": "https://picsum.photos/seed/hospes-palacio-arenales/600/400"
+    "photo": "https://picsum.photos/seed/hospes-palacio-arenales/600/400",
+    "lat": 39.476,
+    "lng": -6.372
   },
   {
     "id": "hotel-spa-adealba-merida",
@@ -1133,7 +1249,9 @@
       "piscina"
     ],
     "booking_url": "https://www.booking.com/hotel/es/adealba.html",
-    "photo": "https://picsum.photos/seed/hotel-spa-adealba/600/400"
+    "photo": "https://picsum.photos/seed/hotel-spa-adealba/600/400",
+    "lat": 38.917,
+    "lng": -6.344
   },
   {
     "id": "menorca-experimental",
@@ -1153,7 +1271,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/menorca-experimental.html",
-    "photo": "https://picsum.photos/seed/menorca-experimental/600/400"
+    "photo": "https://picsum.photos/seed/menorca-experimental/600/400",
+    "lat": 39.883,
+    "lng": 4.268
   },
   {
     "id": "fontenille-menorca",
@@ -1173,7 +1293,9 @@
       "Menorca"
     ],
     "booking_url": "https://www.booking.com/hotel/es/fontenille-menorca.html",
-    "photo": "https://picsum.photos/seed/fontenille-menorca/600/400"
+    "photo": "https://picsum.photos/seed/fontenille-menorca/600/400",
+    "lat": 39.983,
+    "lng": 4.083
   },
   {
     "id": "zoetry-mallorca-wellness-spa",
@@ -1193,7 +1315,9 @@
       "gastronomía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-sa-torre-mallorca.html",
-    "photo": "https://picsum.photos/seed/zoetry-mallorca/600/400"
+    "photo": "https://picsum.photos/seed/zoetry-mallorca/600/400",
+    "lat": 39.485,
+    "lng": 2.889
   },
   {
     "id": "balneario-arnedillo-rioja",
@@ -1213,7 +1337,9 @@
       "terapéutico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-arnedillo.html",
-    "photo": "https://picsum.photos/seed/balneario-arnedillo/600/400"
+    "photo": "https://picsum.photos/seed/balneario-arnedillo/600/400",
+    "lat": 42.213,
+    "lng": -2.249
   },
   {
     "id": "marques-de-riscal-elciego",
@@ -1233,7 +1359,9 @@
       "gastronomía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/marques-de-riscal-luxury-collection.html",
-    "photo": "https://picsum.photos/seed/marques-de-riscal/600/400"
+    "photo": "https://picsum.photos/seed/marques-de-riscal/600/400",
+    "lat": 42.558,
+    "lng": -2.583
   },
   {
     "id": "balneario-elgorriaga-navarra",
@@ -1253,7 +1381,9 @@
       "masajes"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-elgorriaga.html",
-    "photo": "https://picsum.photos/seed/balneario-elgorriaga/600/400"
+    "photo": "https://picsum.photos/seed/balneario-elgorriaga/600/400",
+    "lat": 43.183,
+    "lng": -1.736
   },
   {
     "id": "hotel-balneario-areatza",
@@ -1273,7 +1403,9 @@
       "bosque"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balnearioareatza.html",
-    "photo": "https://picsum.photos/seed/balneario-areatza/600/400"
+    "photo": "https://picsum.photos/seed/balneario-areatza/600/400",
+    "lat": 43.083,
+    "lng": -2.616
   },
   {
     "id": "hotel-thalasso-villa-antilla",
@@ -1293,7 +1425,9 @@
       "País Vasco"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-villa-antilla.html",
-    "photo": "https://picsum.photos/seed/hotel-villa-antilla/600/400"
+    "photo": "https://picsum.photos/seed/hotel-villa-antilla/600/400",
+    "lat": 43.276,
+    "lng": -2.124
   },
   {
     "id": "castilla-termal-brihuega",
@@ -1313,7 +1447,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/castilla-termal-brihuega.html",
-    "photo": "https://picsum.photos/seed/castilla-termal-brihuega/600/400"
+    "photo": "https://picsum.photos/seed/castilla-termal-brihuega/600/400",
+    "lat": 40.757,
+    "lng": -2.874
   },
   {
     "id": "hotel-spa-la-salve-torrijos",
@@ -1332,7 +1468,9 @@
       "masajes"
     ],
     "booking_url": "https://www.booking.com/hotel/es/la-salve.html",
-    "photo": "https://picsum.photos/seed/hotel-spa-la-salve/600/400"
+    "photo": "https://picsum.photos/seed/hotel-spa-la-salve/600/400",
+    "lat": 39.881,
+    "lng": -4.28
   },
   {
     "id": "nastasi-hotel-spa-lleida",
@@ -1351,7 +1489,9 @@
       "familiar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/spa-del-nastasi.html",
-    "photo": "https://picsum.photos/seed/nastasi-hotel-spa/600/400"
+    "photo": "https://picsum.photos/seed/nastasi-hotel-spa/600/400",
+    "lat": 41.618,
+    "lng": 0.62
   },
   {
     "id": "luna-club-hotel-yoga-spa",
@@ -1372,7 +1512,9 @@
       "ecológico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/lunaclubmalgratdemar.html",
-    "photo": "https://picsum.photos/seed/luna-club-hotel-yoga/600/400"
+    "photo": "https://picsum.photos/seed/luna-club-hotel-yoga/600/400",
+    "lat": 41.648,
+    "lng": 2.742
   },
   {
     "id": "mas-de-l-aranyo-eco-wellness",
@@ -1392,7 +1534,9 @@
       "masía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/mas-de-l-39-aranyo.html",
-    "photo": "https://picsum.photos/seed/mas-de-l-aranyo/600/400"
+    "photo": "https://picsum.photos/seed/mas-de-l-aranyo/600/400",
+    "lat": 41.6,
+    "lng": 0.75
   },
   {
     "id": "thalassa-sport-spa-roses",
@@ -1411,7 +1555,9 @@
       "Costa Brava"
     ],
     "booking_url": "https://www.booking.com/hotel/es/thalassa-sport-spa.html",
-    "photo": "https://picsum.photos/seed/thalassa-sport-spa-roses/600/400"
+    "photo": "https://picsum.photos/seed/thalassa-sport-spa-roses/600/400",
+    "lat": 42.265,
+    "lng": 3.183
   },
   {
     "id": "casa-llibertat-spa-lliber",
@@ -1431,7 +1577,9 @@
       "Costa Blanca"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-llibertat-rural-finca-with-wellness-retreat.html",
-    "photo": "https://picsum.photos/seed/casa-llibertat-lliber/600/400"
+    "photo": "https://picsum.photos/seed/casa-llibertat-lliber/600/400",
+    "lat": 38.78,
+    "lng": 0.001
   },
   {
     "id": "castilla-termal-solares",
@@ -1450,7 +1598,9 @@
       "histórico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-solares.html",
-    "photo": "https://picsum.photos/seed/castilla-termal-solares/600/400"
+    "photo": "https://picsum.photos/seed/castilla-termal-solares/600/400",
+    "lat": 43.385,
+    "lng": -3.697
   },
   {
     "id": "balneario-termas-pallares-aragon",
@@ -1470,7 +1620,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-termas-pallares.html",
-    "photo": "https://picsum.photos/seed/termas-pallares-aragon/600/400"
+    "photo": "https://picsum.photos/seed/termas-pallares-aragon/600/400",
+    "lat": 41.305,
+    "lng": -2.131
   },
   {
     "id": "castilla-termal-burgo-de-osma",
@@ -1490,7 +1642,9 @@
       "lujo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/termal-burgo-de-osma.html",
-    "photo": "https://picsum.photos/seed/castilla-termal-burgo-osma/600/400"
+    "photo": "https://picsum.photos/seed/castilla-termal-burgo-osma/600/400",
+    "lat": 41.587,
+    "lng": -3.073
   },
   {
     "id": "arantza-hotela",
@@ -1509,7 +1663,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/arantza-hotela.html",
-    "photo": "https://picsum.photos/seed/arantza-hotela/600/400"
+    "photo": "https://picsum.photos/seed/arantza-hotela/600/400",
+    "lat": 43.251,
+    "lng": -1.676
   },
   {
     "id": "hospederia-de-los-parajes",
@@ -1528,7 +1684,9 @@
       "La Rioja"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hospederia-de-los-parajes.html",
-    "photo": "https://picsum.photos/seed/hospederia-de-los-parajes/600/400"
+    "photo": "https://picsum.photos/seed/hospederia-de-los-parajes/600/400",
+    "lat": 42.558,
+    "lng": -2.583
   },
   {
     "id": "finca-de-los-arandinos",
@@ -1547,7 +1705,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-de-los-arandinos.html",
-    "photo": "https://picsum.photos/seed/finca-de-los-arandinos/600/400"
+    "photo": "https://picsum.photos/seed/finca-de-los-arandinos/600/400",
+    "lat": 42.39,
+    "lng": -2.47
   },
   {
     "id": "los-montejos",
@@ -1566,7 +1726,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/los-montejos.html",
-    "photo": "https://picsum.photos/seed/los-montejos/600/400"
+    "photo": "https://picsum.photos/seed/los-montejos/600/400",
+    "lat": 40.204,
+    "lng": -6.856
   },
   {
     "id": "alcuneza",
@@ -1585,7 +1747,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/alcuneza.html",
-    "photo": "https://picsum.photos/seed/alcuneza/600/400"
+    "photo": "https://picsum.photos/seed/alcuneza/600/400",
+    "lat": 41.062,
+    "lng": -2.633
   },
   {
     "id": "dacha-toledo-casa-rural-amp-spa",
@@ -1604,7 +1768,9 @@
       "Toledo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/dacha-toledo-casa-rural-amp-spa.html",
-    "photo": "https://picsum.photos/seed/dacha-toledo/600/400"
+    "photo": "https://picsum.photos/seed/dacha-toledo/600/400",
+    "lat": 39.6,
+    "lng": -4.683
   },
   {
     "id": "daniya-denia-spa-business",
@@ -1623,7 +1789,9 @@
       "mar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/daniya-denia-spa-business.html",
-    "photo": "https://picsum.photos/seed/daniya-denia-spa/600/400"
+    "photo": "https://picsum.photos/seed/daniya-denia-spa/600/400",
+    "lat": 38.84,
+    "lng": 0.107
   },
   {
     "id": "dormio-resort-costa-blanca",
@@ -1642,7 +1810,9 @@
       "familia"
     ],
     "booking_url": "https://www.booking.com/hotel/es/dormio-resort-costa-blanca.html",
-    "photo": "https://picsum.photos/seed/dormio-costa-blanca/600/400"
+    "photo": "https://picsum.photos/seed/dormio-costa-blanca/600/400",
+    "lat": 38.428,
+    "lng": -0.391
   },
   {
     "id": "ourense-termal",
@@ -1661,7 +1831,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ourense-termal.html",
-    "photo": "https://picsum.photos/seed/ourense-termal/600/400"
+    "photo": "https://picsum.photos/seed/ourense-termal/600/400",
+    "lat": 42.336,
+    "lng": -7.864
   },
   {
     "id": "oca-imi-amp-spa",
@@ -1680,7 +1852,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/oca-imi-amp-spa.html",
-    "photo": "https://picsum.photos/seed/imi-hotel-spa/600/400"
+    "photo": "https://picsum.photos/seed/imi-hotel-spa/600/400",
+    "lat": 42.336,
+    "lng": -7.864
   },
   {
     "id": "eurostarsgranhotellatoja",
@@ -1699,7 +1873,9 @@
       "Galicia"
     ],
     "booking_url": "https://www.booking.com/hotel/es/eurostarsgranhotellatoja.html",
-    "photo": "https://picsum.photos/seed/eurostars-la-toja/600/400"
+    "photo": "https://picsum.photos/seed/eurostars-la-toja/600/400",
+    "lat": 42.493,
+    "lng": -8.842
   },
   {
     "id": "finca-serena-mallorca",
@@ -1719,7 +1895,9 @@
       "Mallorca"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-serena-mallorca.html",
-    "photo": "https://picsum.photos/seed/finca-serena-mallorca/600/400"
+    "photo": "https://picsum.photos/seed/finca-serena-mallorca/600/400",
+    "lat": 39.568,
+    "lng": 3.019
   },
   {
     "id": "finca-rural-es-turo",
@@ -1738,7 +1916,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-rural-es-turo.html",
-    "photo": "https://picsum.photos/seed/finca-es-turo/600/400"
+    "photo": "https://picsum.photos/seed/finca-es-turo/600/400",
+    "lat": 39.318,
+    "lng": 3.012
   },
   {
     "id": "audax-spa-wellness-centre",
@@ -1758,7 +1938,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/audax-spa-wellness-centre.html",
-    "photo": "https://picsum.photos/seed/artiem-audax/600/400"
+    "photo": "https://picsum.photos/seed/artiem-audax/600/400",
+    "lat": 39.933,
+    "lng": 3.958
   },
   {
     "id": "hostal-entre-pinos",
@@ -1777,7 +1959,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hostal-entre-pinos.html",
-    "photo": "https://picsum.photos/seed/entre-pinos-formentera/600/400"
+    "photo": "https://picsum.photos/seed/entre-pinos-formentera/600/400",
+    "lat": 38.728,
+    "lng": 1.487
   },
   {
     "id": "cortijo-tayula",
@@ -1796,7 +1980,9 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/cortijo-tayula.html",
-    "photo": "https://picsum.photos/seed/cortijo-tayula/600/400"
+    "photo": "https://picsum.photos/seed/cortijo-tayula/600/400",
+    "lat": 36.889,
+    "lng": -3.424
   },
   {
     "id": "casas-rurales-benarum",
@@ -1815,7 +2001,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casas-rurales-benarum.html",
-    "photo": "https://picsum.photos/seed/benarum-spa/600/400"
+    "photo": "https://picsum.photos/seed/benarum-spa/600/400",
+    "lat": 36.928,
+    "lng": -3.217
   },
   {
     "id": "ora-priorat-torroja-del-priorat",
@@ -1834,7 +2022,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ora-priorat-torroja-del-priorat.html",
-    "photo": "https://picsum.photos/seed/ora-priorat/600/400"
+    "photo": "https://picsum.photos/seed/ora-priorat/600/400",
+    "lat": 41.246,
+    "lng": 0.785
   },
   {
     "id": "el-palauet-del-priorat-cornudella-de-montsant12",
@@ -1853,7 +2043,9 @@
       "Priorat"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-palauet-del-priorat-cornudella-de-montsant12.html",
-    "photo": "https://picsum.photos/seed/palauet-priorat/600/400"
+    "photo": "https://picsum.photos/seed/palauet-priorat/600/400",
+    "lat": 41.279,
+    "lng": 0.938
   },
   {
     "id": "casa-rural-spa-mirador-gredos",
@@ -1872,7 +2064,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rural-spa-mirador-gredos.html",
-    "photo": "https://picsum.photos/seed/mirador-gredos/600/400"
+    "photo": "https://picsum.photos/seed/mirador-gredos/600/400",
+    "lat": 40.538,
+    "lng": -5.863
   },
   {
     "id": "casa-rural-crisol-spa",
@@ -1891,7 +2085,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rural-crisol-spa.html",
-    "photo": "https://picsum.photos/seed/crisol-spa-gredos/600/400"
+    "photo": "https://picsum.photos/seed/crisol-spa-gredos/600/400",
+    "lat": 40.209,
+    "lng": -5.088
   },
   {
     "id": "el-retiro-albergue-rural-con-piscina-cubierta-y-spa",
@@ -1910,7 +2106,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-retiro-albergue-rural-con-piscina-cubierta-y-spa.html",
-    "photo": "https://picsum.photos/seed/el-retiro-segovia/600/400"
+    "photo": "https://picsum.photos/seed/el-retiro-segovia/600/400",
+    "lat": 40.943,
+    "lng": -4.109
   },
   {
     "id": "el-retiro-de-san-pedro",
@@ -1928,7 +2126,9 @@
       "gastronomía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-retiro-de-san-pedro.html",
-    "photo": "https://picsum.photos/seed/el-retiro-de-san-pedro/600/400"
+    "photo": "https://picsum.photos/seed/el-retiro-de-san-pedro/600/400",
+    "lat": 40.209,
+    "lng": -5.088
   },
   {
     "id": "jabata-spa",
@@ -1946,7 +2146,9 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/jabata-spa.html",
-    "photo": "https://picsum.photos/seed/jabata-spa/600/400"
+    "photo": "https://picsum.photos/seed/jabata-spa/600/400",
+    "lat": 40.657,
+    "lng": -4.7
   },
   {
     "id": "nature-retreat-confort-and-peaceful-in-a-eco-paradise",
@@ -1964,7 +2166,9 @@
       "retiro"
     ],
     "booking_url": "https://www.booking.com/hotel/es/nature-retreat-confort-and-peaceful-in-a-eco-paradise.html",
-    "photo": "https://picsum.photos/seed/nature-retreat-confort-and-peaceful-in-a-eco-paradise/600/400"
+    "photo": "https://picsum.photos/seed/nature-retreat-confort-and-peaceful-in-a-eco-paradise/600/400",
+    "lat": 28.09,
+    "lng": -17.12
   },
   {
     "id": "gomera-lounge",
@@ -1982,7 +2186,9 @@
       "relax"
     ],
     "booking_url": "https://www.booking.com/hotel/es/gomera-lounge.html",
-    "photo": "https://picsum.photos/seed/gomera-lounge/600/400"
+    "photo": "https://picsum.photos/seed/gomera-lounge/600/400",
+    "lat": 28.117,
+    "lng": -17.1
   },
   {
     "id": "casa-calma-yoga-guesthouse",
@@ -2000,7 +2206,9 @@
       "naturaleza"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-calma-yoga-guesthouse.html",
-    "photo": "https://picsum.photos/seed/casa-calma-yoga-guesthouse/600/400"
+    "photo": "https://picsum.photos/seed/casa-calma-yoga-guesthouse/600/400",
+    "lat": 28.099,
+    "lng": -15.701
   },
   {
     "id": "yoga-loft-canteras-las-palmas-de-gran-canaria",
@@ -2018,7 +2226,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/yoga-loft-canteras-las-palmas-de-gran-canaria.es.html",
-    "photo": "https://picsum.photos/seed/yoga-loft-canteras-las-palmas-de-gran-canaria/600/400"
+    "photo": "https://picsum.photos/seed/yoga-loft-canteras-las-palmas-de-gran-canaria/600/400",
+    "lat": 28.123,
+    "lng": -15.437
   },
   {
     "id": "casa-leon-monte-leon-gran-canaria",
@@ -2037,7 +2247,9 @@
       "piscina"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-leon-monte-leon-gran-canaria.html",
-    "photo": "https://picsum.photos/seed/casa-leon-monte-leon-gran-canaria/600/400"
+    "photo": "https://picsum.photos/seed/casa-leon-monte-leon-gran-canaria/600/400",
+    "lat": 27.731,
+    "lng": -15.59
   },
   {
     "id": "hacienda-de-abajo",
@@ -2056,7 +2268,9 @@
       "relax"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hacienda-de-abajo.html",
-    "photo": "https://picsum.photos/seed/hacienda-de-abajo/600/400"
+    "photo": "https://picsum.photos/seed/hacienda-de-abajo/600/400",
+    "lat": 28.643,
+    "lng": -17.91
   },
   {
     "id": "finca-la-tajea-la-guancha-tenerife-norte",
@@ -2074,7 +2288,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-la-tajea-la-guancha-tenerife-norte.html",
-    "photo": "https://picsum.photos/seed/finca-la-tajea-la-guancha-tenerife-norte/600/400"
+    "photo": "https://picsum.photos/seed/finca-la-tajea-la-guancha-tenerife-norte/600/400",
+    "lat": 28.353,
+    "lng": -16.644
   },
   {
     "id": "finca-paraiso",
@@ -2092,7 +2308,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-paraiso.html",
-    "photo": "https://picsum.photos/seed/finca-paraiso/600/400"
+    "photo": "https://picsum.photos/seed/finca-paraiso/600/400",
+    "lat": 28.491,
+    "lng": -16.32
   },
   {
     "id": "finca-rural-la-casa-verde",
@@ -2110,7 +2328,9 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-rural-la-casa-verde.html",
-    "photo": "https://picsum.photos/seed/finca-rural-la-casa-verde/600/400"
+    "photo": "https://picsum.photos/seed/finca-rural-la-casa-verde/600/400",
+    "lat": 28.491,
+    "lng": -16.32
   },
   {
     "id": "buen-retiro-casa-de-la-musica-y-el-sonido",
@@ -2128,7 +2348,9 @@
       "histórico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/buen-retiro-casa-de-la-musica-y-el-sonido.html",
-    "photo": "https://picsum.photos/seed/buen-retiro-casa-de-la-musica-y-el-sonido/600/400"
+    "photo": "https://picsum.photos/seed/buen-retiro-casa-de-la-musica-y-el-sonido/600/400",
+    "lat": 28.31,
+    "lng": -16.413
   },
   {
     "id": "cortijo-la-joya-de-cabo-de-gata",
@@ -2147,7 +2369,9 @@
       "senderismo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/cortijo-la-joya-de-cabo-de-gata.html",
-    "photo": "https://picsum.photos/seed/cortijo-la-joya-de-cabo-de-gata/600/400"
+    "photo": "https://picsum.photos/seed/cortijo-la-joya-de-cabo-de-gata/600/400",
+    "lat": 36.93,
+    "lng": -2.026
   },
   {
     "id": "spa-la-residencia-puerto",
@@ -2166,7 +2390,9 @@
       "surf"
     ],
     "booking_url": "https://www.booking.com/hotel/es/spa-la-residencia-puerto.html",
-    "photo": "https://picsum.photos/seed/spa-la-residencia-puerto/600/400"
+    "photo": "https://picsum.photos/seed/spa-la-residencia-puerto/600/400",
+    "lat": 36.014,
+    "lng": -5.604
   },
   {
     "id": "rural-finca-barral",
@@ -2184,7 +2410,9 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/rural-finca-barral.html",
-    "photo": "https://picsum.photos/seed/rural-finca-barral/600/400"
+    "photo": "https://picsum.photos/seed/rural-finca-barral/600/400",
+    "lat": 37.5,
+    "lng": -6.1
   },
   {
     "id": "casa-rural-el-olivar-sevilla",
@@ -2202,7 +2430,9 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rural-el-olivar-sevilla.html",
-    "photo": "https://picsum.photos/seed/casa-rural-el-olivar-sevilla/600/400"
+    "photo": "https://picsum.photos/seed/casa-rural-el-olivar-sevilla/600/400",
+    "lat": 37.7,
+    "lng": -5.6
   },
   {
     "id": "finca-rural-la-calderera",
@@ -2220,7 +2450,9 @@
       "sierra"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-rural-la-calderera.html",
-    "photo": "https://picsum.photos/seed/finca-rural-la-calderera/600/400"
+    "photo": "https://picsum.photos/seed/finca-rural-la-calderera/600/400",
+    "lat": 37.66,
+    "lng": -3.81
   },
   {
     "id": "el-palasiet",
@@ -2239,7 +2471,9 @@
       "médico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-palasiet.html",
-    "photo": "https://picsum.photos/seed/el-palasiet/600/400"
+    "photo": "https://picsum.photos/seed/el-palasiet/600/400",
+    "lat": 40.062,
+    "lng": -0.069
   },
   {
     "id": "abbi-suites-bocairent",
@@ -2258,7 +2492,9 @@
       "gastronomía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/abbi-suites-bocairent.html",
-    "photo": "https://picsum.photos/seed/abbi-suites-bocairent/600/400"
+    "photo": "https://picsum.photos/seed/abbi-suites-bocairent/600/400",
+    "lat": 38.78,
+    "lng": -0.601
   },
   {
     "id": "can-buch-ecoturisme-rural",
@@ -2277,7 +2513,9 @@
       "ciclismo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/can-buch-ecoturisme-rural.html",
-    "photo": "https://picsum.photos/seed/can-buch-ecoturisme-rural/600/400"
+    "photo": "https://picsum.photos/seed/can-buch-ecoturisme-rural/600/400",
+    "lat": 42.132,
+    "lng": 2.684
   },
   {
     "id": "espacio-finca-alegria",
@@ -2296,7 +2534,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/espacio-finca-alegria.html",
-    "photo": "https://picsum.photos/seed/espacio-finca-alegria/600/400"
+    "photo": "https://picsum.photos/seed/espacio-finca-alegria/600/400",
+    "lat": 37.6,
+    "lng": -0.99
   },
   {
     "id": "duerme-cuenca-3-la-moneda-46",
@@ -2314,7 +2554,9 @@
       "histórico"
     ],
     "booking_url": "https://www.booking.com/hotel/es/duerme-cuenca-3-la-moneda-46.html",
-    "photo": "https://picsum.photos/seed/duerme-cuenca-3-la-moneda-46/600/400"
+    "photo": "https://picsum.photos/seed/duerme-cuenca-3-la-moneda-46/600/400",
+    "lat": 40.065,
+    "lng": -2.135
   },
   {
     "id": "casa-rural-spa-mirador-de-la-covatilla",
@@ -2333,7 +2575,9 @@
       "pareja"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rural-spa-mirador-de-la-covatilla.html",
-    "photo": "https://picsum.photos/seed/casa-rural-spa-mirador-de-la-covatilla/600/400"
+    "photo": "https://picsum.photos/seed/casa-rural-spa-mirador-de-la-covatilla/600/400",
+    "lat": 40.538,
+    "lng": -5.863
   },
   {
     "id": "hotel-arcipreste-de-hita",
@@ -2353,7 +2597,9 @@
       "gastronomía"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-arcipreste-de-hita.html",
-    "photo": "https://picsum.photos/seed/hotel-arcipreste-de-hita/600/400"
+    "photo": "https://picsum.photos/seed/hotel-arcipreste-de-hita/600/400",
+    "lat": 40.717,
+    "lng": -4.011
   },
   {
     "id": "luces-del-poniente",
@@ -2373,7 +2619,9 @@
       "rural"
     ],
     "booking_url": "https://www.booking.com/hotel/es/luces-del-poniente.html",
-    "photo": "https://picsum.photos/seed/luces-del-poniente/600/400"
+    "photo": "https://picsum.photos/seed/luces-del-poniente/600/400",
+    "lat": 40.741,
+    "lng": -4.056
   },
   {
     "id": "los-cinco-enebros",
@@ -2393,7 +2641,9 @@
       "montaña"
     ],
     "booking_url": "https://www.booking.com/hotel/es/los-cinco-enebros.html",
-    "photo": "https://picsum.photos/seed/los-cinco-enebros/600/400"
+    "photo": "https://picsum.photos/seed/los-cinco-enebros/600/400",
+    "lat": 40.513,
+    "lng": -4.156
   },
   {
     "id": "ciclolodge-el-nevero",
@@ -2413,7 +2663,9 @@
       "senderismo"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ciclolodge-el-nevero.html",
-    "photo": "https://picsum.photos/seed/ciclolodge-el-nevero/600/400"
+    "photo": "https://picsum.photos/seed/ciclolodge-el-nevero/600/400",
+    "lat": 40.975,
+    "lng": -3.792
   },
   {
     "id": "posada-rural-con-granja-la-tejera-de-lozoya",
@@ -2432,7 +2684,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/posada-rural-con-granja-la-tejera-de-lozoya.html",
-    "photo": "https://picsum.photos/seed/posada-rural-con-granja-la-tejera-de-lozoya/600/400"
+    "photo": "https://picsum.photos/seed/posada-rural-con-granja-la-tejera-de-lozoya/600/400",
+    "lat": 40.977,
+    "lng": -3.757
   },
   {
     "id": "rural-el-valle",
@@ -2452,7 +2706,9 @@
       "montaña"
     ],
     "booking_url": "https://www.booking.com/hotel/es/rural-el-valle.html",
-    "photo": "https://picsum.photos/seed/rural-el-valle/600/400"
+    "photo": "https://picsum.photos/seed/rural-el-valle/600/400",
+    "lat": 40.896,
+    "lng": -3.876
   },
   {
     "id": "chinchonspa",
@@ -2471,7 +2727,9 @@
       "escapada"
     ],
     "booking_url": "https://www.booking.com/hotel/es/chinchonspa.html",
-    "photo": "https://picsum.photos/seed/chinchonspa/600/400"
+    "photo": "https://picsum.photos/seed/chinchonspa/600/400",
+    "lat": 40.137,
+    "lng": -3.441
   },
   {
     "id": "casa-rrural-la-graja",
@@ -2490,7 +2748,9 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rrural-la-graja.html",
-    "photo": "https://picsum.photos/seed/casa-rrural-la-graja/600/400"
+    "photo": "https://picsum.photos/seed/casa-rrural-la-graja/600/400",
+    "lat": 40.137,
+    "lng": -3.441
   },
   {
     "id": "posada-del-camino-real-torrelaguna",
@@ -2510,7 +2770,9 @@
       "Sierra Norte"
     ],
     "booking_url": "https://www.booking.com/hotel/es/posada-del-camino-real-torrelaguna.html",
-    "photo": "https://picsum.photos/seed/posada-del-camino-real-torrelaguna/600/400"
+    "photo": "https://picsum.photos/seed/posada-del-camino-real-torrelaguna/600/400",
+    "lat": 40.827,
+    "lng": -3.562
   },
   {
     "id": "parador-de-alcala-de-henares",
@@ -2529,6 +2791,8 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/parador-de-alcala-de-henares.html",
-    "photo": "https://picsum.photos/seed/parador-de-alcala-de-henares/600/400"
+    "photo": "https://picsum.photos/seed/parador-de-alcala-de-henares/600/400",
+    "lat": 40.482,
+    "lng": -3.362
   }
 ]
