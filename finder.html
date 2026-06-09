@@ -8,6 +8,8 @@
 <link rel="canonical" href="https://wellnest.guide/finder">
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <style>
 :root {
   --sage: #7a8c6e;
@@ -74,15 +76,13 @@ nav {
 .region-pill.selected { background:var(--sage); border-color:var(--sage); color:white; }
 .region-pill .region-emoji { font-size:16px; }
 
-.date-range-wrap { display:flex; gap:14px; }
-.date-field { flex:1; }
-.date-field label { display:block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--earth); margin-bottom:6px; }
-.date-field input[type=date] {
+.date-range-wrap { display:flex; flex-direction:column; gap:10px; }
+.date-fp-input {
   width:100%; padding:11px 14px; border:1.5px solid rgba(122,140,110,0.25); border-radius:2px;
   font-family:'DM Sans',sans-serif; font-size:13px; color:var(--charcoal); background:white; cursor:pointer;
 }
-.date-field input[type=date]:focus { outline:none; border-color:var(--sage); }
-.date-clear { margin-top:12px; font-size:11px; color:#aaa; cursor:pointer; text-decoration:underline; display:inline-block; }
+.date-fp-input:focus { outline:none; border-color:var(--sage); }
+.date-clear { margin-top:4px; font-size:11px; color:#aaa; cursor:pointer; text-decoration:underline; display:inline-block; }
 .date-clear:hover { color:var(--terracota); }
 
 .slider-wrap { padding:6px 0; }
@@ -445,16 +445,9 @@ function renderStep() {
   }
 
   if (s.type === 'date-range') {
-    const today = new Date().toISOString().split('T')[0];
+    const val = state.fechaInicio ? (state.fechaFin ? `${state.fechaInicio} to ${state.fechaFin}` : state.fechaInicio) : '';
     html += `<div class="date-range-wrap">
-      <div class="date-field">
-        <label>Llegada</label>
-        <input type="date" min="${today}" value="${state.fechaInicio || ''}" onchange="updateDate('fechaInicio', this.value)">
-      </div>
-      <div class="date-field">
-        <label>Salida</label>
-        <input type="date" min="${state.fechaInicio || today}" value="${state.fechaFin || ''}" onchange="updateDate('fechaFin', this.value)">
-      </div>
+      <input type="text" class="date-fp-input" id="finderDateRange" placeholder="Selecciona llegada y salida" readonly value="${val}">
     </div>
     ${(state.fechaInicio || state.fechaFin) ? `<div class="date-clear" onclick="clearDates()">✕ Quitar fechas</div>` : ''}`;
   }
@@ -500,6 +493,27 @@ function renderStep() {
   html += '</div>';
 
   document.getElementById('formContent').innerHTML = html;
+
+  // Init flatpickr for date range step
+  const dpEl = document.getElementById('finderDateRange');
+  if (dpEl) {
+    flatpickr(dpEl, {
+      mode: 'range',
+      minDate: 'today',
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'd M Y',
+      locale: { rangeSeparator: ' → ', firstDayOfWeek: 1 },
+      defaultDate: [state.fechaInicio, state.fechaFin].filter(Boolean),
+      onClose(dates) {
+        const [start, end] = dates;
+        state.fechaInicio = start ? flatpickr.formatDate(start, 'Y-m-d') : null;
+        state.fechaFin    = end   ? flatpickr.formatDate(end,   'Y-m-d') : null;
+        document.getElementById('formContent').querySelector('.date-clear') && renderStep();
+        if (!document.getElementById('formContent').querySelector('.date-clear') && state.fechaInicio) renderStep();
+      }
+    });
+  }
 }
 
 function canNext() {
@@ -516,6 +530,8 @@ function updateDate(field, value) {
 function clearDates() {
   state.fechaInicio = null;
   state.fechaFin = null;
+  const dp = document.getElementById('finderDateRange');
+  if (dp && dp._flatpickr) dp._flatpickr.clear();
   renderStep();
 }
 function formatDate(iso) {

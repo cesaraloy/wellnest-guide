@@ -9,6 +9,11 @@
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+.flatpickr-input { font-family:'DM Sans',sans-serif; font-size:12px; color:var(--charcoal); background:white; border:1px solid rgba(122,140,110,0.25); border-radius:2px; padding:5px 10px; cursor:pointer; outline:none; width:140px; flex-shrink:0; }
+.flatpickr-input::placeholder { color:#bbb; }
+</style>
 <style>
 :root {
   --sage: #7a8c6e; --sage-light: #b5c4a8; --sage-pale: #e8ede5;
@@ -215,10 +220,38 @@ select.filter-select {
 .popup-btn:hover { background:var(--sage); }
 .leaflet-popup-tip-container { display:none; }
 
+/* HAMBURGER */
+.hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; }
+.hamburger span { display:block; width:22px; height:2px; background:var(--charcoal); border-radius:2px; transition:all .25s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.mobile-nav-overlay {
+  display:none; position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
+  background:rgba(250,248,244,0.98); z-index:299; flex-direction:column;
+  align-items:center; justify-content:center; gap:32px;
+}
+.mobile-nav-overlay.open { display:flex; }
+.mobile-nav-overlay a { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
+.mobile-nav-overlay a.nav-cta { background:var(--sage); color:white; padding:12px 28px; border-radius:2px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+
+/* MOBILE MAP TOGGLE */
+.mobile-map-btn {
+  display:none; position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+  z-index:250; background:var(--charcoal); color:white;
+  border:none; border-radius:24px; padding:12px 24px;
+  font-family:'DM Sans',sans-serif; font-size:13px; letter-spacing:.06em;
+  cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.22);
+  display:flex; align-items:center; gap:8px; white-space:nowrap;
+}
+.mobile-map-btn svg { width:14px; height:14px; flex-shrink:0; }
+
 /* MOBILE */
 @media(max-width:900px) {
   nav { padding:14px 20px; }
   .nav-links { display:none; }
+  .hamburger { display:flex; }
+  .mobile-map-btn { display:flex; }
   .page-header { padding:80px 20px 20px; }
   .filters-bar { padding:0 14px; }
   .view-toggle { display:none; }
@@ -241,7 +274,15 @@ select.filter-select {
     <a href="/listings" class="active">Directorio</a>
     <a href="/finder" class="nav-cta">Buscador IA →</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <a href="/" onclick="toggleMobileNav()">Inicio</a>
+  <a href="/listings" onclick="toggleMobileNav()">Directorio</a>
+  <a href="/finder" class="nav-cta" onclick="toggleMobileNav()">Buscador IA →</a>
+</div>
 
 <div class="page-header">
   <div class="page-eyebrow">Directorio completo</div>
@@ -262,10 +303,7 @@ select.filter-select {
     <option value="€€€€">€€€€ lujo</option>
   </select>
   <div class="filter-sep"></div>
-  <span class="filter-label">Entrada</span>
-  <input type="date" class="filter-select" id="checkinFilter" style="padding:5px 8px;background-image:none;">
-  <span class="filter-label">Salida</span>
-  <input type="date" class="filter-select" id="checkoutFilter" style="padding:5px 8px;background-image:none;">
+  <input type="text" class="flatpickr-input" id="dateRangeFilter" placeholder="Fechas" readonly>
   <div class="filter-sep"></div>
   <span class="filter-label">Personas</span>
   <select class="filter-select" id="personasFilter">
@@ -306,6 +344,11 @@ select.filter-select {
   </div>
 </div>
 
+<button class="mobile-map-btn" id="mobileMapBtn" onclick="toggleMobileMap()">
+  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a4.5 4.5 0 0 0-4.5 4.5C3.5 9.5 8 15 8 15s4.5-5.5 4.5-9.5A4.5 4.5 0 0 0 8 1zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+  <span id="mobileMapBtnLabel">Ver mapa</span>
+</button>
+
 <footer style="background:#2c2c2c;color:rgba(255,255,255,.5);text-align:center;padding:28px 24px;font-size:12px;">
   © 2026 Wellnest Guide ·
   <a href="/legal#terminos" style="color:rgba(255,255,255,.4);text-decoration:none;">Términos</a> ·
@@ -313,6 +356,7 @@ select.filter-select {
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
 const BOOKING_AID = 'TU_AFFILIATE_ID';
 const FEATURED_TAGS = ['yoga','meditación','spa','surf','naturaleza','balneario','ayurveda','talasoterapia','solo adultos'];
@@ -337,17 +381,18 @@ async function init() {
   sel.addEventListener('change', e => { activeRegion = e.target.value; boundsFilter = false; render(); });
   document.getElementById('precioFilter').addEventListener('change', e => { activePrice = e.target.value; boundsFilter = false; render(); });
 
-  const today = new Date().toISOString().split('T')[0];
-  const ci = document.getElementById('checkinFilter');
-  const co = document.getElementById('checkoutFilter');
-  ci.min = today;
-  ci.addEventListener('change', e => {
-    activeCheckin = e.target.value;
-    co.min = activeCheckin || today;
-    if (activeCheckout && activeCheckout < activeCheckin) { activeCheckout = ''; co.value = ''; }
-    render();
+  flatpickr('#dateRangeFilter', {
+    mode: 'range',
+    minDate: 'today',
+    dateFormat: 'd M',
+    locale: { rangeSeparator: ' – ', firstDayOfWeek: 1 },
+    placeholder: 'Fechas',
+    onClose(dates) {
+      activeCheckin  = dates[0] ? flatpickr.formatDate(dates[0], 'Y-m-d') : '';
+      activeCheckout = dates[1] ? flatpickr.formatDate(dates[1], 'Y-m-d') : '';
+      render();
+    }
   });
-  co.addEventListener('change', e => { activeCheckout = e.target.value; render(); });
   document.getElementById('personasFilter').addEventListener('change', e => { activePersonas = e.target.value; render(); });
 
   // Tag pills
@@ -535,11 +580,24 @@ function reset() {
   activeCheckin = ''; activeCheckout = ''; activePersonas = '2';
   document.getElementById('regionFilter').value = '';
   document.getElementById('precioFilter').value = '';
-  document.getElementById('checkinFilter').value = '';
-  document.getElementById('checkoutFilter').value = '';
+  const fp = document.getElementById('dateRangeFilter')._flatpickr;
+  if (fp) fp.clear();
   document.getElementById('personasFilter').value = '2';
   document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
   render();
+}
+
+function toggleMobileNav() {
+  const btn = document.getElementById('hamburger');
+  const overlay = document.getElementById('mobileNavOverlay');
+  btn.classList.toggle('open');
+  overlay.classList.toggle('open');
+}
+
+function toggleMobileMap() {
+  const show = !mapVisible;
+  setView(show);
+  document.getElementById('mobileMapBtnLabel').textContent = show ? 'Ver lista' : 'Ver mapa';
 }
 
 // ── REAL PHOTOS ───────────────────────────────────────────────────────────────
