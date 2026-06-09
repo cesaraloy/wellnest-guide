@@ -533,51 +533,21 @@ async function findRetreats() {
   const durMap = { finde:'fin de semana (2-3 días)', semana_corta:'3-5 días', semana:'7 días', mas:'más de 7 días' };
   const excMap = { budget:'sencillo y auténtico', medio:'confort equilibrado', premium:'premium', exclusivo:'exclusivo y de lujo' };
 
-  const tipos = (state.tipo || []).map(t => tMap[t] || t).join(', ');
-  const regionLabel = rMap[state.region] || 'España';
-
-  const prompt = `Eres un experto en retiros de bienestar en España. El usuario busca:
-- Tipos de experiencia: ${tipos}
-- Región: ${regionLabel}
-- Duración: ${durMap[state.duracion] || state.duracion}${state.fechaInicio ? `\n- Fechas aproximadas: del ${state.fechaInicio}${state.fechaFin ? ' al ' + state.fechaFin : ''}` : ''}
-- Presupuesto máximo: ${state.presupuesto >= 3000 ? 'sin límite' : state.presupuesto + '€'}
-- Ambiente: ${excMap[state.exclusividad] || state.exclusividad}
-
-Genera EXACTAMENTE 4 recomendaciones de retiros reales en España (preferiblemente en ${regionLabel}) que encajen con estas preferencias.
-
-Para cada retiro, indica la plataforma más adecuada para reservarlo, teniendo en cuenta que GetYourGuide y Civitatis son catálogos de ACTIVIDADES Y EXPERIENCIAS DE UN SOLO DÍA (clases sueltas, talleres, tours guiados, sesiones puntuales de yoga/meditación al aire libre), NO de retiros de alojamiento de varios días:
-- "booking": para CUALQUIER retiro que incluya alojamiento de una o más noches (la inmensa mayoría de los retiros de bienestar). Es la opción por defecto.
-- "getyourguide": SOLO si la recomendación es una actividad o taller de un único día sin pernoctación (ej. "clase de yoga en la playa", "taller de un día de cocina ayurvédica", "ruta guiada de mindfulness en la naturaleza")
-- "civitatis": igual que getyourguide, solo para actividades/tours de un día sin alojamiento
-
-Si dudas entre alojamiento multi-noche o actividad de un día, elige siempre "booking". No fuerces "getyourguide" ni "civitatis" en retiros de varios días: el enlace resultante llevaría a una actividad que no se corresponde con la recomendación.
-
-Responde SOLO en JSON válido sin texto adicional ni backticks:
-{
-  "insight": "2-3 frases personalizadas y cálidas explicando por qué estas opciones encajan con el perfil.",
-  "retreats": [
-    {
-      "name": "Nombre del retiro o centro",
-      "location": "Pueblo o zona, Provincia",
-      "emoji": "emoji representativo del lugar o tipo",
-      "tipo": ["etiqueta1", "etiqueta2"],
-      "desc": "2-3 frases sobre la esencia del retiro y por qué encaja con este perfil concreto.",
-      "duracion": "ej: 5 días",
-      "precio_desde": 590,
-      "plataforma": "booking|getyourguide|civitatis",
-      "search_term": "término de búsqueda en español para encontrar este tipo de retiro",
-      "match": 92
-    }
-  ]
-}
-
-Reglas: precios realistas dentro del presupuesto, match entre 70-99, variedad de opciones.`;
+  const preferences = {
+    tipos: (state.tipo || []).map(t => tMap[t] || t).join(', '),
+    region: rMap[state.region] || 'España',
+    duracion: durMap[state.duracion] || state.duracion,
+    presupuesto: state.presupuesto,
+    exclusividad: excMap[state.exclusividad] || state.exclusividad,
+    fechaInicio: state.fechaInicio || null,
+    fechaFin: state.fechaFin || null
+  };
 
   try {
     const res = await fetch('/api/recommend', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt })
+      body: JSON.stringify({ preferences })
     });
     if (!res.ok) throw new Error(`Error ${res.status}`);
     const data = await res.json();
@@ -624,17 +594,13 @@ function renderResults(data) {
 
   data.retreats.forEach(r => {
     const bg = bgMap[r.tipo?.[0]] || bgMap.naturaleza;
-    const btnLabel = platformLabel[r.plataforma] || 'Ver disponibilidad';
+    const btnLabel = r.booking_url ? 'Ver en Booking' : (platformLabel[r.plataforma] || 'Ver disponibilidad');
 
-    let bookUrl;
-    if (r.plataforma === 'booking') bookUrl = buildBookingLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
-    else if (r.plataforma === 'getyourguide') bookUrl = buildGYGLink(r.search_term, r.location, state.fechaInicio, state.fechaFin);
-    else bookUrl = buildCivitatisLink(r.search_term, r.location, state.fechaInicio);
+    const bookUrl = r.booking_url || buildBookingLink(r.search_term || r.name, r.location, state.fechaInicio, state.fechaFin);
     r.bookUrl = bookUrl;
 
-    // seed determinista a partir del nombre, así cada retiro mantiene siempre las mismas fotos
-    const seed = (r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const photoMain = `https://picsum.photos/seed/${seed}-main/300/300`;
+    const seed = (r.id || r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const photoMain = r.photo || `https://picsum.photos/seed/${seed}-main/300/300`;
     const gallery = [1, 2, 3].map(n => `https://picsum.photos/seed/${seed}-g${n}/200/150`);
 
     html += `<div class="result-card">
