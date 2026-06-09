@@ -8,7 +8,15 @@
     "duracion": "3-5 noches",
     "precio_desde": 150,
     "precio_tag": "€€€",
-    "tags": ["yoga", "meditación", "ayurveda", "vegano", "solo adultos", "naturaleza", "holístico"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "ayurveda",
+      "vegano",
+      "solo adultos",
+      "naturaleza",
+      "holístico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/qi-the-energy-house.html",
     "photo": "https://picsum.photos/seed/masqi-alicante/600/400"
   },
@@ -21,7 +29,14 @@
     "duracion": "2-5 noches",
     "precio_desde": 186,
     "precio_tag": "€€€",
-    "tags": ["spa", "relax", "masía rural", "Costa Brava", "naturaleza", "solo adultos"],
+    "tags": [
+      "spa",
+      "relax",
+      "masía rural",
+      "Costa Brava",
+      "naturaleza",
+      "solo adultos"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/mas-vivent.html",
     "photo": "https://picsum.photos/seed/masvivent-girona/600/400"
   },
@@ -34,7 +49,15 @@
     "duracion": "3-10 noches",
     "precio_desde": 190,
     "precio_tag": "€€€€",
-    "tags": ["yoga", "meditación", "spa", "aguas termales", "lujo", "solo adultos", "Mallorca"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "spa",
+      "aguas termales",
+      "lujo",
+      "solo adultos",
+      "Mallorca"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/es-raco-d-arta.html",
     "photo": "https://picsum.photos/seed/esraco-arta/600/400"
   },
@@ -47,7 +70,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["naturaleza", "masajes", "desconexión", "Montseny", "rural", "solo adultos"],
+    "tags": [
+      "naturaleza",
+      "masajes",
+      "desconexión",
+      "Montseny",
+      "rural",
+      "solo adultos"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/mas-can-puig-de-fuirosos-barcelona2.es.html",
     "photo": "https://picsum.photos/seed/canpuig-montseny/600/400"
   },
@@ -60,7 +90,14 @@
     "duracion": "5-14 noches",
     "precio_desde": 115,
     "precio_tag": "€€",
-    "tags": ["surf", "yoga", "kitesurf", "holístico", "vegano", "naturaleza"],
+    "tags": [
+      "surf",
+      "yoga",
+      "kitesurf",
+      "holístico",
+      "vegano",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/surf-amp-yoga-retreats-fuerteventura.html",
     "photo": "https://picsum.photos/seed/surfy-fuerteventura/600/400"
   },
@@ -73,7 +110,12 @@
     "duracion": "3-7 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["yoga", "meditación", "naturaleza", "playa"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "naturaleza",
+      "playa"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/ibiza-yoga-villa-nova-1.html",
     "photo": "https://picsum.photos/seed/ibiza-yoga-villa-nova-1/600/400"
   },
@@ -86,7 +128,12 @@
     "duracion": "3-7 noches",
     "precio_desde": 130,
     "precio_tag": "€€",
-    "tags": ["yoga", "meditación", "naturaleza", "playa"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "naturaleza",
+      "playa"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/roca-5.html",
     "photo": "https://picsum.photos/seed/roca-5/600/400"
   },
@@ -99,7 +146,12 @@
     "duracion": "3-7 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["yoga", "meditación", "naturaleza", "mindfulness"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "naturaleza",
+      "mindfulness"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/ibiza-yoga-the-meditation-hut.html",
     "photo": "https://picsum.photos/seed/ibiza-yoga-meditation-hut/600/400"
   },
@@ -112,7 +164,12 @@
     "duracion": "5-7 noches",
     "precio_desde": 564,
     "precio_tag": "€€€€",
-    "tags": ["yoga", "naturaleza", "piscina", "retiro grupal"],
+    "tags": [
+      "yoga",
+      "naturaleza",
+      "piscina",
+      "retiro grupal"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/shavasana-yoga-retreats.html",
     "photo": "https://picsum.photos/seed/shavasana-yoga-retreats/600/400"
   },
@@ -125,7 +182,14 @@
     "duracion": "3-7 noches",
     "precio_desde": 380,
     "precio_tag": "€€€€",
-    "tags": ["yoga", "holístico", "vegetariano", "solo adultos", "naturaleza", "piscina"],
+    "tags": [
+      "yoga",
+      "holístico",
+      "vegetariano",
+      "solo adultos",
+      "naturaleza",
+      "piscina"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/cal-reiet-holistic-retreat.html",
     "photo": "https://picsum.photos/seed/cal-reiet-holistic-retreat/600/400"
   },
@@ -138,7 +202,15 @@
     "duracion": "3-7 noches",
     "precio_desde": 240,
     "precio_tag": "€€€",
-    "tags": ["yoga", "pilates", "detox", "spa", "ayurveda", "meditación", "bienestar"],
+    "tags": [
+      "yoga",
+      "pilates",
+      "detox",
+      "spa",
+      "ayurveda",
+      "meditación",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/shanti-som-wellbeing-retreat.html",
     "photo": "https://picsum.photos/seed/shanti-som-wellbeing-retreat/600/400"
   },
@@ -151,7 +223,14 @@
     "duracion": "2-5 noches",
     "precio_desde": 130,
     "precio_tag": "€€",
-    "tags": ["bienestar", "senderismo", "spa", "solo adultos", "naturaleza", "eco"],
+    "tags": [
+      "bienestar",
+      "senderismo",
+      "spa",
+      "solo adultos",
+      "naturaleza",
+      "eco"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/malaga-hills-boutique-amp-welness-b-amp-b.html",
     "photo": "https://picsum.photos/seed/malaga-hills-boutique/600/400"
   },
@@ -164,7 +243,14 @@
     "duracion": "3-7 noches",
     "precio_desde": 215,
     "precio_tag": "€€€",
-    "tags": ["ayurveda", "yoga", "meditación", "holístico", "solo adultos", "naturaleza"],
+    "tags": [
+      "ayurveda",
+      "yoga",
+      "meditación",
+      "holístico",
+      "solo adultos",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/harmony-home.html",
     "photo": "https://picsum.photos/seed/harmony-home/600/400"
   },
@@ -177,7 +263,13 @@
     "duracion": "2-5 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["yoga", "meditación", "masajes", "naturaleza", "olivar"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "masajes",
+      "naturaleza",
+      "olivar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/el-carmen-yoga-house.html",
     "photo": "https://picsum.photos/seed/el-carmen-yoga-house/600/400"
   },
@@ -190,7 +282,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 115,
     "precio_tag": "€€",
-    "tags": ["spa", "naturaleza", "rural", "bienestar", "piscina"],
+    "tags": [
+      "spa",
+      "naturaleza",
+      "rural",
+      "bienestar",
+      "piscina"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/la-vinuela.html",
     "photo": "https://picsum.photos/seed/la-vinuela/600/400"
   },
@@ -203,7 +301,13 @@
     "duracion": "2-5 noches",
     "precio_desde": 420,
     "precio_tag": "€€€€",
-    "tags": ["spa", "ski", "bienestar", "montaña", "lujo"],
+    "tags": [
+      "spa",
+      "ski",
+      "bienestar",
+      "montaña",
+      "lujo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/el-lodge.html",
     "photo": "https://picsum.photos/seed/el-lodge/600/400"
   },
@@ -216,7 +320,13 @@
     "duracion": "2-5 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["naturaleza", "montaña", "rural", "bienestar", "retiro"],
+    "tags": [
+      "naturaleza",
+      "montaña",
+      "rural",
+      "bienestar",
+      "retiro"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/finca-alvaita-sierra-nevada-resort.html",
     "photo": "https://picsum.photos/seed/finca-alvaita-sierra-nevada/600/400"
   },
@@ -229,7 +339,13 @@
     "duracion": "2-5 noches",
     "precio_desde": 100,
     "precio_tag": "€€",
-    "tags": ["retiro", "naturaleza", "detox", "montaña", "glamping"],
+    "tags": [
+      "retiro",
+      "naturaleza",
+      "detox",
+      "montaña",
+      "glamping"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/luxury-dome-retreat-dudar-47-granada.html",
     "photo": "https://picsum.photos/seed/luxury-dome-retreat/600/400"
   },
@@ -242,7 +358,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["bienestar", "solo adultos", "rural", "naturaleza", "olivar"],
+    "tags": [
+      "bienestar",
+      "solo adultos",
+      "rural",
+      "naturaleza",
+      "olivar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/cortijo-de-la-seda.html",
     "photo": "https://picsum.photos/seed/cortijo-de-la-seda/600/400"
   },
@@ -255,7 +377,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 140,
     "precio_tag": "€€",
-    "tags": ["yoga", "fitness", "solo adultos", "bienestar", "urbano"],
+    "tags": [
+      "yoga",
+      "fitness",
+      "solo adultos",
+      "bienestar",
+      "urbano"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/mdd4-health-experience-only-adults.html",
     "photo": "https://picsum.photos/seed/mdd4-health-experience/600/400"
   },
@@ -268,7 +396,13 @@
     "duracion": "3-5 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["bienestar", "piscina", "spa", "naturaleza", "retiro"],
+    "tags": [
+      "bienestar",
+      "piscina",
+      "spa",
+      "naturaleza",
+      "retiro"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/dragonfly-retreat.html",
     "photo": "https://picsum.photos/seed/dragonfly-retreat/600/400"
   },
@@ -281,7 +415,13 @@
     "duracion": "3-7 noches",
     "precio_desde": 80,
     "precio_tag": "€€",
-    "tags": ["surf", "kitesurf", "playa", "naturaleza", "activo"],
+    "tags": [
+      "surf",
+      "kitesurf",
+      "playa",
+      "naturaleza",
+      "activo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/surfer-tarifa.html",
     "photo": "https://picsum.photos/seed/surfer-tarifa/600/400"
   },
@@ -294,7 +434,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 95,
     "precio_tag": "€€",
-    "tags": ["surf", "yoga", "vegano", "naturaleza", "piscina"],
+    "tags": [
+      "surf",
+      "yoga",
+      "vegano",
+      "naturaleza",
+      "piscina"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/surf-amp-yoga-fuerteventura.html",
     "photo": "https://picsum.photos/seed/surf-amp-yoga-fuerteventura/600/400"
   },
@@ -307,7 +453,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["surf", "yoga", "spa", "naturaleza", "bienestar"],
+    "tags": [
+      "surf",
+      "yoga",
+      "spa",
+      "naturaleza",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/studio-agua-surf-amp-yoga-villa.html",
     "photo": "https://picsum.photos/seed/studio-agua-surf-yoga/600/400"
   },
@@ -320,7 +472,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["surf", "yoga", "sauna", "naturaleza", "bienestar"],
+    "tags": [
+      "surf",
+      "yoga",
+      "sauna",
+      "naturaleza",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/appartement-aire-surf-yoga-villa.html",
     "photo": "https://picsum.photos/seed/appartement-aire-surf-yoga/600/400"
   },
@@ -333,7 +491,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 85,
     "precio_tag": "€€",
-    "tags": ["surf", "yoga", "solo adultos", "naturaleza", "activo"],
+    "tags": [
+      "surf",
+      "yoga",
+      "solo adultos",
+      "naturaleza",
+      "activo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/puresurfcamps-surflodge-fuerteventura.html",
     "photo": "https://picsum.photos/seed/puresurfcamps-surflodge/600/400"
   },
@@ -346,7 +510,12 @@
     "duracion": "3-7 noches",
     "precio_desde": 65,
     "precio_tag": "€",
-    "tags": ["yoga", "meditación", "bienestar", "playa"],
+    "tags": [
+      "yoga",
+      "meditación",
+      "bienestar",
+      "playa"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/nirvana-yoga-c.html",
     "photo": "https://picsum.photos/seed/nirvana-yoga-c/600/400"
   },
@@ -359,7 +528,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 270,
     "precio_tag": "€€€",
-    "tags": ["yoga", "spa", "lujo", "bienestar", "retiro"],
+    "tags": [
+      "yoga",
+      "spa",
+      "lujo",
+      "bienestar",
+      "retiro"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/botanico-y-oriental-spa-garden.html",
     "photo": "https://picsum.photos/seed/botanico-oriental-spa/600/400"
   },
@@ -372,7 +547,14 @@
     "duracion": "5-7 noches",
     "precio_desde": 175,
     "precio_tag": "€€€",
-    "tags": ["spa", "ayurveda", "detox", "talasoterapia", "bienestar", "medico"],
+    "tags": [
+      "spa",
+      "ayurveda",
+      "detox",
+      "talasoterapia",
+      "bienestar",
+      "medico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/oceano.html",
     "photo": "https://picsum.photos/seed/oceano-health-spa/600/400"
   },
@@ -385,7 +567,13 @@
     "duracion": "3-7 noches",
     "precio_desde": 130,
     "precio_tag": "€€",
-    "tags": ["naturaleza", "senderismo", "montaña", "retiro", "bienestar"],
+    "tags": [
+      "naturaleza",
+      "senderismo",
+      "montaña",
+      "retiro",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/tenerife-nature-retreat.html",
     "photo": "https://picsum.photos/seed/tenerife-nature-retreat/600/400"
   },
@@ -398,7 +586,13 @@
     "duracion": "3-5 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "sauna", "piscina", "naturaleza"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "sauna",
+      "piscina",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/wellness-house.html",
     "photo": "https://picsum.photos/seed/wellness-house-tenerife/600/400"
   },
@@ -411,7 +605,13 @@
     "duracion": "3-7 noches",
     "precio_desde": 210,
     "precio_tag": "€€€",
-    "tags": ["spa", "piscina", "bienestar", "todo incluido", "playa"],
+    "tags": [
+      "spa",
+      "piscina",
+      "bienestar",
+      "todo incluido",
+      "playa"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/gloria-palace-royal-hotel-spa.html",
     "photo": "https://picsum.photos/seed/gloria-palace-royal/600/400"
   },
@@ -424,7 +624,13 @@
     "duracion": "3-7 noches",
     "precio_desde": 200,
     "precio_tag": "€€€",
-    "tags": ["spa", "talasoterapia", "lujo", "piscina", "bienestar"],
+    "tags": [
+      "spa",
+      "talasoterapia",
+      "lujo",
+      "piscina",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/lopesan-costa-meloneras-resort-spa-casino.html",
     "photo": "https://picsum.photos/seed/lopesan-costa-meloneras/600/400"
   },
@@ -437,7 +643,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 250,
     "precio_tag": "€€€",
-    "tags": ["bienestar", "golf", "spa", "lujo", "naturaleza"],
+    "tags": [
+      "bienestar",
+      "golf",
+      "spa",
+      "lujo",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-camiral.html",
     "photo": "https://picsum.photos/seed/hotel-camiral/600/400"
   },
@@ -450,7 +662,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 80,
     "precio_tag": "€€",
-    "tags": ["spa", "playa", "bienestar", "Costa Brava", "naturaleza"],
+    "tags": [
+      "spa",
+      "playa",
+      "bienestar",
+      "Costa Brava",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/s-agaro.html",
     "photo": "https://picsum.photos/seed/s-agaro/600/400"
   },
@@ -463,7 +681,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 165,
     "precio_tag": "€€€",
-    "tags": ["spa", "lujo", "gastronomía", "bienestar", "naturaleza"],
+    "tags": [
+      "spa",
+      "lujo",
+      "gastronomía",
+      "bienestar",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/villa-retiro.html",
     "photo": "https://picsum.photos/seed/villa-retiro/600/400"
   },
@@ -476,7 +700,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 280,
     "precio_tag": "€€€",
-    "tags": ["spa", "yoga", "tai chi", "lujo", "piscina", "bienestar"],
+    "tags": [
+      "spa",
+      "yoga",
+      "tai chi",
+      "lujo",
+      "piscina",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/asia-gardens.html",
     "photo": "https://picsum.photos/seed/asia-gardens/600/400"
   },
@@ -489,7 +720,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 180,
     "precio_tag": "€€€",
-    "tags": ["bienestar", "gastronomía", "naturaleza", "rural", "retiro", "lujo"],
+    "tags": [
+      "bienestar",
+      "gastronomía",
+      "naturaleza",
+      "rural",
+      "retiro",
+      "lujo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/retiro-costina-wellness-amp-villas-santa-comba8.html",
     "photo": "https://picsum.photos/seed/retiro-costina-wellness/600/400"
   },
@@ -502,7 +740,13 @@
     "duracion": "2-5 noches",
     "precio_desde": 150,
     "precio_tag": "€€€",
-    "tags": ["spa", "bienestar", "talasoterapia", "playa", "naturaleza"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "talasoterapia",
+      "playa",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/augusta-spa-resort.html",
     "photo": "https://picsum.photos/seed/augusta-spa-resort/600/400"
   },
@@ -515,7 +759,12 @@
     "duracion": "2-3 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "talasoterapia", "naturaleza"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "talasoterapia",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-bienestar-moana-booking.html",
     "photo": "https://picsum.photos/seed/hotel-bienestar-moana/600/400"
   },
@@ -528,7 +777,14 @@
     "duracion": "2-3 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "naturaleza", "lujo", "bosque", "solo adultos"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "naturaleza",
+      "lujo",
+      "bosque",
+      "solo adultos"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/arima.html",
     "photo": "https://picsum.photos/seed/arima/600/400"
   },
@@ -541,7 +797,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["spa", "montaña", "naturaleza", "bienestar", "rural"],
+    "tags": [
+      "spa",
+      "montaña",
+      "naturaleza",
+      "bienestar",
+      "rural"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/atxaspi.html",
     "photo": "https://picsum.photos/seed/atxaspi/600/400"
   },
@@ -554,7 +816,14 @@
     "duracion": "2-3 noches",
     "precio_desde": 100,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "rural", "naturaleza", "piscina", "vino"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "rural",
+      "naturaleza",
+      "piscina",
+      "vino"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/kinedomus-bienestar.html",
     "photo": "https://picsum.photos/seed/kinedomus-bienestar/600/400"
   },
@@ -567,7 +836,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 80,
     "precio_tag": "€€",
-    "tags": ["naturaleza", "senderismo", "rural", "retiro", "bienestar"],
+    "tags": [
+      "naturaleza",
+      "senderismo",
+      "rural",
+      "retiro",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/vado-del-duraton.html",
     "photo": "https://picsum.photos/seed/vado-del-duraton/600/400"
   },
@@ -580,7 +855,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 104,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "rural", "montaña", "naturaleza"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "rural",
+      "montaña",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/rural-spa-amp-wellness-hacienda-los-robles.html",
     "photo": "https://picsum.photos/seed/hacienda-los-robles/600/400"
   },
@@ -593,7 +874,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "Pirineos", "montaña", "rural"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "Pirineos",
+      "montaña",
+      "rural"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/sancho-abarca.html",
     "photo": "https://picsum.photos/seed/sancho-abarca-huesca/600/400"
   },
@@ -606,7 +893,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 160,
     "precio_tag": "€€€",
-    "tags": ["spa", "vino", "lujo", "bienestar", "naturaleza", "rural"],
+    "tags": [
+      "spa",
+      "vino",
+      "lujo",
+      "bienestar",
+      "naturaleza",
+      "rural"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/torre-del-marques-monroyo.html",
     "photo": "https://picsum.photos/seed/torre-del-marques-monroyo/600/400"
   },
@@ -619,7 +913,12 @@
     "duracion": "2-3 noches",
     "precio_desde": 85,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "ciudad", "hidroterapia"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "ciudad",
+      "hidroterapia"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/spa-ciudad-de-teruel.html",
     "photo": "https://picsum.photos/seed/spa-ciudad-teruel/600/400"
   },
@@ -632,7 +931,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 160,
     "precio_tag": "€€€",
-    "tags": ["spa", "eco", "lujo", "naturaleza", "Picos de Europa", "bienestar"],
+    "tags": [
+      "spa",
+      "eco",
+      "lujo",
+      "naturaleza",
+      "Picos de Europa",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/puebloastur-eco-resort-wellness.html",
     "photo": "https://picsum.photos/seed/puebloastur-eco-resort/600/400"
   },
@@ -645,7 +951,13 @@
     "duracion": "2-4 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "wellness", "playa", "naturaleza"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "wellness",
+      "playa",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/bal-spa.html",
     "photo": "https://picsum.photos/seed/artiem-asturias/600/400"
   },
@@ -658,7 +970,13 @@
     "duracion": "3-7 noches",
     "precio_desde": 55,
     "precio_tag": "€",
-    "tags": ["surf", "yoga", "naturaleza", "playa", "activo"],
+    "tags": [
+      "surf",
+      "yoga",
+      "naturaleza",
+      "playa",
+      "activo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/surfhousegijon.html",
     "photo": "https://picsum.photos/seed/north-surf-house-gijon/600/400"
   },
@@ -671,7 +989,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 80,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "naturaleza", "Picos de Europa", "bienestar"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "Picos de Europa",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-la-hermida.html",
     "photo": "https://picsum.photos/seed/balneario-la-hermida/600/400"
   },
@@ -684,7 +1009,13 @@
     "duracion": "5-7 noches",
     "precio_desde": 60,
     "precio_tag": "€",
-    "tags": ["surf", "yoga", "playa", "activo", "retiro"],
+    "tags": [
+      "surf",
+      "yoga",
+      "playa",
+      "activo",
+      "retiro"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/latas-surf-house.html",
     "photo": "https://picsum.photos/seed/latas-surf-house/600/400"
   },
@@ -697,7 +1028,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 95,
     "precio_tag": "€€",
-    "tags": ["spa", "rural", "bienestar", "masajes", "naturaleza"],
+    "tags": [
+      "spa",
+      "rural",
+      "bienestar",
+      "masajes",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/spa-rural-mies-de-rubayo.html",
     "photo": "https://picsum.photos/seed/spa-rural-mies-de-rubayo/600/400"
   },
@@ -710,7 +1047,13 @@
     "duracion": "3-5 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["talasoterapia", "spa", "bienestar", "Mar Menor", "naturaleza"],
+    "tags": [
+      "talasoterapia",
+      "spa",
+      "bienestar",
+      "Mar Menor",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/thalasia-thalasso-center.html",
     "photo": "https://picsum.photos/seed/thalasia-costa-murcia/600/400"
   },
@@ -723,7 +1066,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 100,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "naturaleza", "bienestar", "histórico"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "bienestar",
+      "histórico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/termas.html",
     "photo": "https://picsum.photos/seed/balneario-archena-termas/600/400"
   },
@@ -736,7 +1086,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 250,
     "precio_tag": "€€€",
-    "tags": ["spa", "golf", "lujo", "bienestar", "playa", "Mar Menor"],
+    "tags": [
+      "spa",
+      "golf",
+      "lujo",
+      "bienestar",
+      "playa",
+      "Mar Menor"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/grand-hyatt-lamanga-club.html",
     "photo": "https://picsum.photos/seed/grand-hyatt-la-manga/600/400"
   },
@@ -749,7 +1106,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 170,
     "precio_tag": "€€€",
-    "tags": ["spa", "lujo", "bienestar", "histórico", "naturaleza"],
+    "tags": [
+      "spa",
+      "lujo",
+      "bienestar",
+      "histórico",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/palacio-de-arenales-spa.html",
     "photo": "https://picsum.photos/seed/hospes-palacio-arenales/600/400"
   },
@@ -762,7 +1125,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 100,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "ciudad", "histórico", "piscina"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "ciudad",
+      "histórico",
+      "piscina"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/adealba.html",
     "photo": "https://picsum.photos/seed/hotel-spa-adealba/600/400"
   },
@@ -775,7 +1144,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 200,
     "precio_tag": "€€€",
-    "tags": ["yoga", "spa", "bienestar", "slow life", "diseño", "naturaleza"],
+    "tags": [
+      "yoga",
+      "spa",
+      "bienestar",
+      "slow life",
+      "diseño",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/menorca-experimental.html",
     "photo": "https://picsum.photos/seed/menorca-experimental/600/400"
   },
@@ -788,7 +1164,14 @@
     "duracion": "3-7 noches",
     "precio_desde": 280,
     "precio_tag": "€€€",
-    "tags": ["yoga", "spa", "lujo", "bienestar", "naturaleza", "Menorca"],
+    "tags": [
+      "yoga",
+      "spa",
+      "lujo",
+      "bienestar",
+      "naturaleza",
+      "Menorca"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/fontenille-menorca.html",
     "photo": "https://picsum.photos/seed/fontenille-menorca/600/400"
   },
@@ -801,7 +1184,14 @@
     "duracion": "3-7 noches",
     "precio_desde": 350,
     "precio_tag": "€€€€",
-    "tags": ["yoga", "spa", "lujo", "bienestar", "Mallorca", "gastronomía"],
+    "tags": [
+      "yoga",
+      "spa",
+      "lujo",
+      "bienestar",
+      "Mallorca",
+      "gastronomía"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-sa-torre-mallorca.html",
     "photo": "https://picsum.photos/seed/zoetry-mallorca/600/400"
   },
@@ -814,7 +1204,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "naturaleza", "bienestar", "terapéutico"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "bienestar",
+      "terapéutico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-arnedillo.html",
     "photo": "https://picsum.photos/seed/balneario-arnedillo/600/400"
   },
@@ -827,7 +1224,14 @@
     "duracion": "2-3 noches",
     "precio_desde": 450,
     "precio_tag": "€€€€",
-    "tags": ["spa", "vinoterapia", "lujo", "vino", "bienestar", "gastronomía"],
+    "tags": [
+      "spa",
+      "vinoterapia",
+      "lujo",
+      "vino",
+      "bienestar",
+      "gastronomía"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/marques-de-riscal-luxury-collection.html",
     "photo": "https://picsum.photos/seed/marques-de-riscal/600/400"
   },
@@ -840,7 +1244,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 80,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "bienestar", "Pirineos", "masajes"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "bienestar",
+      "Pirineos",
+      "masajes"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-elgorriaga.html",
     "photo": "https://picsum.photos/seed/balneario-elgorriaga/600/400"
   },
@@ -853,7 +1264,14 @@
     "duracion": "2-3 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "naturaleza", "bienestar", "bosque"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "bienestar",
+      "bosque"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balnearioareatza.html",
     "photo": "https://picsum.photos/seed/balneario-areatza/600/400"
   },
@@ -866,7 +1284,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 115,
     "precio_tag": "€€",
-    "tags": ["talasoterapia", "spa", "bienestar", "playa", "mar", "País Vasco"],
+    "tags": [
+      "talasoterapia",
+      "spa",
+      "bienestar",
+      "playa",
+      "mar",
+      "País Vasco"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/hotel-villa-antilla.html",
     "photo": "https://picsum.photos/seed/hotel-villa-antilla/600/400"
   },
@@ -879,7 +1304,14 @@
     "duracion": "2-3 noches",
     "precio_desde": 110,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "bienestar", "lavanda", "naturaleza"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "bienestar",
+      "lavanda",
+      "naturaleza"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/castilla-termal-brihuega.html",
     "photo": "https://picsum.photos/seed/castilla-termal-brihuega/600/400"
   },
@@ -892,7 +1324,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 95,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "Toledo", "naturaleza", "masajes"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "Toledo",
+      "naturaleza",
+      "masajes"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/la-salve.html",
     "photo": "https://picsum.photos/seed/hotel-spa-la-salve/600/400"
   },
@@ -905,7 +1343,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["spa", "bienestar", "ciudad", "Pirineos", "familiar"],
+    "tags": [
+      "spa",
+      "bienestar",
+      "ciudad",
+      "Pirineos",
+      "familiar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/spa-del-nastasi.html",
     "photo": "https://picsum.photos/seed/nastasi-hotel-spa/600/400"
   },
@@ -918,7 +1362,15 @@
     "duracion": "3-7 noches",
     "precio_desde": 85,
     "precio_tag": "€€",
-    "tags": ["yoga", "pilates", "spa", "tai chi", "bienestar", "playa", "ecológico"],
+    "tags": [
+      "yoga",
+      "pilates",
+      "spa",
+      "tai chi",
+      "bienestar",
+      "playa",
+      "ecológico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/lunaclubmalgratdemar.html",
     "photo": "https://picsum.photos/seed/luna-club-hotel-yoga/600/400"
   },
@@ -931,7 +1383,14 @@
     "duracion": "2-4 noches",
     "precio_desde": 120,
     "precio_tag": "€€",
-    "tags": ["spa", "eco", "bienestar", "rural", "naturaleza", "masía"],
+    "tags": [
+      "spa",
+      "eco",
+      "bienestar",
+      "rural",
+      "naturaleza",
+      "masía"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/mas-de-l-39-aranyo.html",
     "photo": "https://picsum.photos/seed/mas-de-l-aranyo/600/400"
   },
@@ -944,7 +1403,13 @@
     "duracion": "3-5 noches",
     "precio_desde": 90,
     "precio_tag": "€€",
-    "tags": ["spa", "talasoterapia", "bienestar", "playa", "Costa Brava"],
+    "tags": [
+      "spa",
+      "talasoterapia",
+      "bienestar",
+      "playa",
+      "Costa Brava"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/thalassa-sport-spa.html",
     "photo": "https://picsum.photos/seed/thalassa-sport-spa-roses/600/400"
   },
@@ -957,7 +1422,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 150,
     "precio_tag": "€€€",
-    "tags": ["yoga", "spa", "bienestar", "solo adultos", "naturaleza", "Costa Blanca"],
+    "tags": [
+      "yoga",
+      "spa",
+      "bienestar",
+      "solo adultos",
+      "naturaleza",
+      "Costa Blanca"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/casa-llibertat-rural-finca-with-wellness-retreat.html",
     "photo": "https://picsum.photos/seed/casa-llibertat-lliber/600/400"
   },
@@ -970,7 +1442,13 @@
     "duracion": "2-3 noches",
     "precio_desde": 100,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "bienestar", "histórico"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "bienestar",
+      "histórico"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-solares.html",
     "photo": "https://picsum.photos/seed/castilla-termal-solares/600/400"
   },
@@ -983,7 +1461,14 @@
     "duracion": "3-5 noches",
     "precio_desde": 85,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "naturaleza", "lago", "bienestar"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "lago",
+      "bienestar"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/balneario-termas-pallares.html",
     "photo": "https://picsum.photos/seed/termas-pallares-aragon/600/400"
   },
@@ -996,8 +1481,435 @@
     "duracion": "2-3 noches",
     "precio_desde": 115,
     "precio_tag": "€€",
-    "tags": ["balneario", "termal", "spa", "bienestar", "histórico", "lujo"],
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "bienestar",
+      "histórico",
+      "lujo"
+    ],
     "booking_url": "https://www.booking.com/hotel/es/termal-burgo-de-osma.html",
     "photo": "https://picsum.photos/seed/castilla-termal-burgo-osma/600/400"
+  },
+  {
+    "id": "arantza-hotela",
+    "name": "Arantza Hotela - Adults Only",
+    "location": "Arantza, Navarra",
+    "region": "Navarra",
+    "desc": "Hotel boutique solo para adultos en el corazón de Navarra, rodeado de las montañas Larrun e Izu. Las habitaciones cuentan con bañeras redondas junto a ventanales panorámicos y acceso a un completo centro de bienestar con spa y restaurante.",
+    "duracion": "2-4 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "adultos",
+      "naturaleza",
+      "montaña",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/arantza-hotela.html",
+    "photo": "https://picsum.photos/seed/arantza-hotela/600/400"
+  },
+  {
+    "id": "hospederia-de-los-parajes",
+    "name": "Hospedería de los Parajes",
+    "location": "Laguardia, La Rioja Alavesa",
+    "region": "La Rioja",
+    "desc": "Hospedería histórica en Laguardia con spa propio que incluye hammam, jacuzzi y vinoterapia. Bodega del siglo XV y habitaciones de diseño distribuidas alrededor de un patio con cubierta de cristal.",
+    "duracion": "2-4 noches",
+    "precio_desde": 130,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "vinoterapia",
+      "historia",
+      "bienestar",
+      "La Rioja"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hospederia-de-los-parajes.html",
+    "photo": "https://picsum.photos/seed/hospederia-de-los-parajes/600/400"
+  },
+  {
+    "id": "finca-de-los-arandinos",
+    "name": "Hotel-Bodega Finca de Los Arandinos",
+    "location": "Entrena, La Rioja",
+    "region": "La Rioja",
+    "desc": "Primer proyecto de enoturismo integral de La Rioja que combina bodega, hotel, restaurante y spa con vistas a la Sierra de Moncalvillo. El área de spa incluye piscina dinámica, sauna, baño turco y tratamientos de vinoterapia.",
+    "duracion": "2-4 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "vinoterapia",
+      "bodega",
+      "enoturismo",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-de-los-arandinos.html",
+    "photo": "https://picsum.photos/seed/finca-de-los-arandinos/600/400"
+  },
+  {
+    "id": "los-montejos",
+    "name": "Los Montejos & Spa",
+    "location": "Valverde del Fresno, Cáceres",
+    "region": "Extremadura",
+    "desc": "Casa rural de cuatro estrellas en la Sierra de Gata con spa íntimo que incluye jacuzzi, sauna, piscina climatizada y dos zonas de relax. Rodeada de naturaleza en el Valle del Jálama, ideal para retiros de desconexión total.",
+    "duracion": "2-5 noches",
+    "precio_desde": 89,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "sierra",
+      "rural",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/los-montejos.html",
+    "photo": "https://picsum.photos/seed/los-montejos/600/400"
+  },
+  {
+    "id": "alcuneza",
+    "name": "Molino de Alcuneza Relais & Châteaux",
+    "location": "Sigüenza, Guadalajara",
+    "region": "Castilla-La Mancha",
+    "desc": "Antiguo molino harinero del siglo XV a orillas del río Henares, convertido en hotel boutique Relais & Châteaux con spa que incluye hammam, sauna y duchas de contraste. Cocina regional de autor y jardines junto al río.",
+    "duracion": "2-4 noches",
+    "precio_desde": 180,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "historia",
+      "gastronomía",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/alcuneza.html",
+    "photo": "https://picsum.photos/seed/alcuneza/600/400"
+  },
+  {
+    "id": "dacha-toledo-casa-rural-amp-spa",
+    "name": "Dacha Toledo Casa Rural & Spa",
+    "location": "Los Navalucillos, Toledo",
+    "region": "Castilla-La Mancha",
+    "desc": "Casa rural con spa en plena naturaleza toledana, perfecta para escapadas de bienestar en la provincia de Toledo. Ofrece entorno tranquilo con instalaciones de spa y tratamientos para una desconexión total.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "naturaleza",
+      "bienestar",
+      "Toledo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/dacha-toledo-casa-rural-amp-spa.html",
+    "photo": "https://picsum.photos/seed/dacha-toledo/600/400"
+  },
+  {
+    "id": "daniya-denia-spa-business",
+    "name": "Daniya Denia Spa & Business",
+    "location": "Denia, Alicante",
+    "region": "Comunidad Valenciana",
+    "desc": "Hotel de 4 estrellas en la Costa Blanca con un completo circuito de spa que incluye piscina climatizada, jacuzzi, baño turco, duchas ciclónicas y amplia carta de tratamientos de belleza y masajes. A pocos metros de la playa Las Marinas.",
+    "duracion": "3-5 noches",
+    "precio_desde": 113,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "Costa Blanca",
+      "bienestar",
+      "mar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/daniya-denia-spa-business.html",
+    "photo": "https://picsum.photos/seed/daniya-denia-spa/600/400"
+  },
+  {
+    "id": "dormio-resort-costa-blanca",
+    "name": "Dormio Resort Costa Blanca Beach & Spa",
+    "location": "El Campello, Alicante",
+    "region": "Comunidad Valenciana",
+    "desc": "Resort de playa en la Costa Blanca con acceso directo al mar y centro de spa y bienestar. Ideal para familias y parejas que buscan combinar sol, mar y tratamientos de relajación en la costa alicantina.",
+    "duracion": "3-7 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "resort",
+      "Costa Blanca",
+      "familia"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/dormio-resort-costa-blanca.html",
+    "photo": "https://picsum.photos/seed/dormio-costa-blanca/600/400"
+  },
+  {
+    "id": "ourense-termal",
+    "name": "Ourense Termal",
+    "location": "Ourense, Galicia",
+    "region": "Galicia",
+    "desc": "Apartamento termal en el corazón de la ciudad termal de Ourense, a diez minutos a pie de las famosas termas de As Burgas. Ideal base para disfrutar de las aguas termales naturales de la ciudad y sus alrededores.",
+    "duracion": "2-4 noches",
+    "precio_desde": 65,
+    "precio_tag": "€",
+    "tags": [
+      "termas",
+      "aguas termales",
+      "Ourense",
+      "Galicia",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/ourense-termal.html",
+    "photo": "https://picsum.photos/seed/ourense-termal/600/400"
+  },
+  {
+    "id": "oca-imi-amp-spa",
+    "name": "IMI Hotel & Spa",
+    "location": "Ourense, Galicia",
+    "region": "Galicia",
+    "desc": "Primer hotel boutique con spa de la ciudad termal de Ourense, a 5 minutos a pie de las termas de As Burgas. Sus 21 habitaciones de diseño conviven con un spa que incluye sauna seca, sauna húmeda y piscina dinámica con jets.",
+    "duracion": "2-4 noches",
+    "precio_desde": 77,
+    "precio_tag": "€",
+    "tags": [
+      "spa",
+      "termas",
+      "boutique",
+      "Ourense",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/oca-imi-amp-spa.html",
+    "photo": "https://picsum.photos/seed/imi-hotel-spa/600/400"
+  },
+  {
+    "id": "eurostarsgranhotellatoja",
+    "name": "Eurostars Gran Hotel La Toja",
+    "location": "Isla de La Toja, Pontevedra",
+    "region": "Galicia",
+    "desc": "Icónico hotel de 5 estrellas del año 1907 en la Isla de La Toja, el único gran spa termal de Galicia. Sus aguas minero-medicinales y el extenso club termal con piscina dinámica, sauna finlandesa y baño turco lo convierten en referencia del bienestar gallego.",
+    "duracion": "3-5 noches",
+    "precio_desde": 143,
+    "precio_tag": "€€",
+    "tags": [
+      "termas",
+      "spa",
+      "lujo",
+      "isla",
+      "Galicia"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/eurostarsgranhotellatoja.html",
+    "photo": "https://picsum.photos/seed/eurostars-la-toja/600/400"
+  },
+  {
+    "id": "finca-serena-mallorca",
+    "name": "Finca Serena Mallorca, Small Luxury Hotels",
+    "location": "Montuiri, Mallorca",
+    "region": "Islas Baleares",
+    "desc": "Finca boutique solo para adultos de 5 estrellas en el corazón rural de Mallorca, integrada entre lavandas, olivos y viñedos. El spa ocupa el antiguo establo de la finca y ofrece yoga, meditación, tai chi, equitación y una serena piscina con vistas.",
+    "duracion": "3-7 noches",
+    "precio_desde": 350,
+    "precio_tag": "€€€€",
+    "tags": [
+      "spa",
+      "yoga",
+      "lujo",
+      "adultos",
+      "naturaleza",
+      "Mallorca"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-serena-mallorca.html",
+    "photo": "https://picsum.photos/seed/finca-serena-mallorca/600/400"
+  },
+  {
+    "id": "finca-rural-es-turo",
+    "name": "Finca Hotel Rural Es Turó Spa",
+    "location": "Colonia de Sant Jordi, Mallorca",
+    "region": "Islas Baleares",
+    "desc": "Hotel rural mallorquín con piscina exterior, jardín y zona chill-out con vistas a la isla de Cabrera. El pequeño spa incluye sauna, equipamiento fitness y piscina interior, perfecto para una escapada de descanso en el sur de Mallorca.",
+    "duracion": "3-6 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "naturaleza",
+      "Mallorca",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-rural-es-turo.html",
+    "photo": "https://picsum.photos/seed/finca-es-turo/600/400"
+  },
+  {
+    "id": "audax-spa-wellness-centre",
+    "name": "ARTIEM Audax - Adults Only",
+    "location": "Cala Galdana, Menorca",
+    "region": "Islas Baleares",
+    "desc": "Hotel solo para adultos en reserva natural de Menorca con el mayor spa termal de la isla: el Blue Spa incluye dos piscinas de hidroterapia, piscina tónica a 12°C, baño romano, sauna sueca, baño turco y circuito de duchas especiales. Frente a la bahía de Cala Galdana.",
+    "duracion": "4-7 noches",
+    "precio_desde": 233,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "adultos",
+      "playa",
+      "naturaleza",
+      "Menorca",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/audax-spa-wellness-centre.html",
+    "photo": "https://picsum.photos/seed/artiem-audax/600/400"
+  },
+  {
+    "id": "hostal-entre-pinos",
+    "name": "Hotel & Spa Entre Pinos - Adults Only",
+    "location": "Es Caló, Formentera",
+    "region": "Islas Baleares",
+    "desc": "Único hotel de Es Caló, exclusivo para adultos y rodeado de bosques protegidos en Formentera. Cuenta con piscina, spa, gimnasio y sala de masajes, a cinco minutos en coche de la playa de Arenals y en un entorno de total tranquilidad.",
+    "duracion": "4-7 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "adultos",
+      "Formentera",
+      "naturaleza",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hostal-entre-pinos.html",
+    "photo": "https://picsum.photos/seed/entre-pinos-formentera/600/400"
+  },
+  {
+    "id": "cortijo-tayula",
+    "name": "Cortijo Tayula - Centro de Recuperación y Descanso",
+    "location": "Órgiva, Granada",
+    "region": "Andalucía",
+    "desc": "Cortijo andaluz rehabilitado en el corazón de la Alpujarra granadina, exclusivo para adultos, con nueve habitaciones con baño privado, piscina exterior, clases de yoga y fitness, y jardín con vistas a la Sierra Nevada.",
+    "duracion": "3-7 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "yoga",
+      "naturaleza",
+      "Alpujarra",
+      "adultos",
+      "descanso"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/cortijo-tayula.html",
+    "photo": "https://picsum.photos/seed/cortijo-tayula/600/400"
+  },
+  {
+    "id": "casas-rurales-benarum",
+    "name": "Alojamientos Rurales Benarum con Spa",
+    "location": "Alpujarra de la Sierra, Granada",
+    "region": "Andalucía",
+    "desc": "Casas rurales en la Alpujarra con spa interior que incluye piscina climatizada, jacuzzi, baño árabe y sauna finlandesa, más dos piscinas exteriores con vistas a la Sierra Nevada. Un retiro completo de bienestar en el corazón de las montañas granadinas.",
+    "duracion": "3-6 noches",
+    "precio_desde": 75,
+    "precio_tag": "€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "Alpujarra",
+      "sierra",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casas-rurales-benarum.html",
+    "photo": "https://picsum.photos/seed/benarum-spa/600/400"
+  },
+  {
+    "id": "ora-priorat-torroja-del-priorat",
+    "name": "ORA Hotel Priorat, a Member of Design Hotels",
+    "location": "Torroja del Priorat, Tarragona",
+    "region": "Cataluña",
+    "desc": "Hotel boutique de diseño en una antigua abadía del pueblo vinícola de Torroja del Priorat, a 40 minutos de Tarragona. Ambiente de retiro contemplativo entre viñedos con terraza solarium, gastronomía de autor y la tranquilidad del Priorat.",
+    "duracion": "2-4 noches",
+    "precio_desde": 160,
+    "precio_tag": "€€€",
+    "tags": [
+      "retiro",
+      "naturaleza",
+      "vino",
+      "diseño",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/ora-priorat-torroja-del-priorat.html",
+    "photo": "https://picsum.photos/seed/ora-priorat/600/400"
+  },
+  {
+    "id": "el-palauet-del-priorat-cornudella-de-montsant12",
+    "name": "El Palauet del Priorat",
+    "location": "Cornudella de Montsant, Tarragona",
+    "region": "Cataluña",
+    "desc": "Casa rural señorial en Cornudella de Montsant, a 40 km de Tarragona, con jardín, terraza y restaurante en plena comarca del Priorat. Ideal para retiros de desconexión entre montañas, viñedos y la magia del Montsant.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "rural",
+      "naturaleza",
+      "vino",
+      "retiro",
+      "Priorat"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-palauet-del-priorat-cornudella-de-montsant12.html",
+    "photo": "https://picsum.photos/seed/palauet-priorat/600/400"
+  },
+  {
+    "id": "casa-rural-spa-mirador-gredos",
+    "name": "Casa Rural & SPA Mirador Gredos",
+    "location": "Guijo de Ávila, Salamanca",
+    "region": "Castilla y León",
+    "desc": "Casa rural con spa en la ladera de la Sierra de Gredos con vistas al lago. Las cuatro habitaciones se complementan con una zona de bienestar con jacuzzi y sauna, jardín y piscina exterior, perfecta para retiros en plena naturaleza.",
+    "duracion": "2-4 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "sierra",
+      "Gredos",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-rural-spa-mirador-gredos.html",
+    "photo": "https://picsum.photos/seed/mirador-gredos/600/400"
+  },
+  {
+    "id": "casa-rural-crisol-spa",
+    "name": "Casa Rural Crisol Spa",
+    "location": "Arenas de San Pedro, Ávila",
+    "region": "Castilla y León",
+    "desc": "Casa rural con spa y piscina con vistas a la Sierra de Gredos, en Arenas de San Pedro. Ofrece bienestar integral con jardín, terraza, baño al aire libre y spa completo, rodeada de montañas y el río Tiétar.",
+    "duracion": "2-5 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "Gredos",
+      "rural",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-rural-crisol-spa.html",
+    "photo": "https://picsum.photos/seed/crisol-spa-gredos/600/400"
+  },
+  {
+    "id": "el-retiro-albergue-rural-con-piscina-cubierta-y-spa",
+    "name": "El Retiro, Albergue Rural con Piscina Cubierta y Spa",
+    "location": "Segovia",
+    "region": "Castilla y León",
+    "desc": "Albergue rural segoviano con piscina cubierta y spa, ideal para grupos y familias que buscan bienestar en plena naturaleza de Segovia. Combina el encanto rural castellano con instalaciones de relax y descanso.",
+    "duracion": "2-4 noches",
+    "precio_desde": 70,
+    "precio_tag": "€",
+    "tags": [
+      "spa",
+      "rural",
+      "piscina",
+      "Segovia",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-retiro-albergue-rural-con-piscina-cubierta-y-spa.html",
+    "photo": "https://picsum.photos/seed/el-retiro-segovia/600/400"
   }
 ]
