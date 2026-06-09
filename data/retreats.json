@@ -1,0 +1,67 @@
+[
+  {
+    "id": "masqi-energy-house",
+    "name": "MasQi, The Energy House",
+    "location": "Banyeres de Mariola, Alicante",
+    "region": "Comunidad Valenciana",
+    "desc": "Masía del siglo XIX restaurada en pleno Parque Natural de la Sierra de Mariola. Adults-only, cocina macrobiótica y vegetariana, sesiones de yoga y healings energéticos. Piscina de agua salada y entorno de bosque mediterráneo.",
+    "duracion": "2–7 noches",
+    "precio_desde": 150,
+    "precio_tag": "€€€",
+    "tags": ["yoga", "detox", "macrobiótica", "energía", "naturaleza", "solo adultos"],
+    "booking_url": "https://www.booking.com/hotel/es/qi-the-energy-house.html",
+    "photo": "https://picsum.photos/seed/masqi-alicante/600/400"
+  },
+  {
+    "id": "mas-vivent-girona",
+    "name": "Mas Vivent",
+    "location": "Vilamaniscle, Alt Empordà, Girona",
+    "region": "Cataluña",
+    "desc": "Masía catalana renovada en el Alt Empordà, a pocos kilómetros de la Costa Brava. 8 habitaciones, piscina exterior, baño de inmersión, solarium y tratamientos de bienestar. Puntuación 9.4 en Booking.",
+    "duracion": "2–5 noches",
+    "precio_desde": 186,
+    "precio_tag": "€€€",
+    "tags": ["spa", "relax", "masía rural", "Costa Brava", "naturaleza", "solo adultos"],
+    "booking_url": "https://www.booking.com/hotel/es/mas-vivent.html",
+    "photo": "https://picsum.photos/seed/masvivent-girona/600/400"
+  },
+  {
+    "id": "es-raco-darta-mallorca",
+    "name": "Es Racó d'Artà",
+    "location": "Artà, Mallorca",
+    "region": "Islas Baleares",
+    "desc": "Santuario de 5 estrellas enclavado en la sierra de Artà, Mallorca. Yoga diario (Hatha, Vinyasa, Yin), aguas termales, spa, sauna y piscina exterior todo el año. Gastronomía nutritiva y talleres creativos. Exclusivamente adultos.",
+    "duracion": "3–10 noches",
+    "precio_desde": 190,
+    "precio_tag": "€€€€",
+    "tags": ["yoga", "meditación", "spa", "aguas termales", "lujo", "solo adultos", "Mallorca"],
+    "booking_url": "https://www.booking.com/hotel/es/es-raco-d-arta.html",
+    "photo": "https://picsum.photos/seed/esraco-arta/600/400"
+  },
+  {
+    "id": "mas-can-puig-fuirosos",
+    "name": "Mas Can Puig de Fuirosos",
+    "location": "La Batlloria, Sant Celoni, Girona",
+    "region": "Cataluña",
+    "desc": "Casa rural adults-only en plena naturaleza del Montseny. Masajes y tratamientos, piscina exterior, jardín privado y desayuno buffet incluido. El entorno perfecto para desconectar del ritmo urbano a 50 km de Barcelona.",
+    "duracion": "2–4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": ["naturaleza", "masajes", "desconexión", "Montseny", "rural", "solo adultos"],
+    "booking_url": "https://www.booking.com/hotel/es/mas-can-puig-de-fuirosos-barcelona2.es.html",
+    "photo": "https://picsum.photos/seed/canpuig-montseny/600/400"
+  },
+  {
+    "id": "surf-yoga-fuerteventura",
+    "name": "Surf & Yoga Retreats Fuerteventura",
+    "location": "El Roque, Fuerteventura",
+    "region": "Islas Canarias",
+    "desc": "Retiro activo frente al mar en Fuerteventura. Combina clases de surf para todos los niveles con sesiones de yoga restaurativo, meditación y alimentación saludable. Clima perfecto todo el año y playas de aguas cálidas.",
+    "duracion": "5–14 noches",
+    "precio_desde": 55,
+    "precio_tag": "€",
+    "tags": ["surf", "yoga", "playa", "activo", "deportivo", "Canarias", "economico"],
+    "booking_url": "https://www.booking.com/hotel/es/surf-amp-yoga-retreats-fuerteventura.html",
+    "photo": "https://picsum.photos/seed/surfy-fuerteventura/600/400"
+  }
+]
