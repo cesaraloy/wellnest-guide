@@ -2334,5 +2334,201 @@
     ],
     "booking_url": "https://www.booking.com/hotel/es/casa-rural-spa-mirador-de-la-covatilla.html",
     "photo": "https://picsum.photos/seed/casa-rural-spa-mirador-de-la-covatilla/600/400"
+  },
+  {
+    "id": "hotel-arcipreste-de-hita",
+    "name": "Hotel Hita \"Nature Experience\"",
+    "location": "Navacerrada, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel con circuito termal propio —piscina climatizada con jets, jacuzzi y sauna— con vistas a la sierra y el embalse. A tan solo 40 minutos de Madrid, combina gastronomía de autor con tratamientos de masaje y bienestar.",
+    "duracion": "2-3 noches",
+    "precio_desde": 110,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "circuito termal",
+      "naturaleza",
+      "montaña",
+      "rural",
+      "gastronomía"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hotel-arcipreste-de-hita.html",
+    "photo": "https://picsum.photos/seed/hotel-arcipreste-de-hita/600/400"
+  },
+  {
+    "id": "luces-del-poniente",
+    "name": "Luces del Poniente",
+    "location": "Cercedilla, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel boutique en pleno Parque Nacional de la Sierra de Guadarrama, a 10 minutos del Puerto de Navacerrada. Ofrece spa de temporada con piscina interior, ambiente íntimo y vistas espectaculares a la montaña.",
+    "duracion": "2-3 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "boutique",
+      "naturaleza",
+      "montaña",
+      "Guadarrama",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/luces-del-poniente.html",
+    "photo": "https://picsum.photos/seed/luces-del-poniente/600/400"
+  },
+  {
+    "id": "los-cinco-enebros",
+    "name": "Los Cinco Enebros Hotel & Spa",
+    "location": "Robledo de Chavela, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel y Spa entre las sierras de Guadarrama y Gredos, a 9 km del Monasterio de El Escorial. Spa con sauna, masajes y piscina exterior, más restaurante con dos Soles Repsol.",
+    "duracion": "2-4 noches",
+    "precio_desde": 130,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "gastronomía",
+      "naturaleza",
+      "rural",
+      "montaña"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/los-cinco-enebros.html",
+    "photo": "https://picsum.photos/seed/los-cinco-enebros/600/400"
+  },
+  {
+    "id": "ciclolodge-el-nevero",
+    "name": "CicloLodge",
+    "location": "Lozoya, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel y Spa en el Valle del Lozoya, Sierra Norte de Madrid, a 50 minutos de la capital. 16 habitaciones, sauna finlandesa, jacuzzi y retiros de yoga y meditación. Puntuación 8.6 en Booking.",
+    "duracion": "2-3 noches",
+    "precio_desde": 87,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "yoga",
+      "meditación",
+      "naturaleza",
+      "rural",
+      "senderismo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/ciclolodge-el-nevero.html",
+    "photo": "https://picsum.photos/seed/ciclolodge-el-nevero/600/400"
+  },
+  {
+    "id": "posada-rural-con-granja-la-tejera-de-lozoya",
+    "name": "Posada Rural SPA Granja La Tejera de Lozoya",
+    "location": "Gargantilla del Lozoya, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Posada rural con spa en el Valle del Lozoya, rodeada de bosques de la Sierra Norte. Combina la tranquilidad del entorno natural con instalaciones de bienestar y granja propia.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "naturaleza",
+      "Valle del Lozoya",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/posada-rural-con-granja-la-tejera-de-lozoya.html",
+    "photo": "https://picsum.photos/seed/posada-rural-con-granja-la-tejera-de-lozoya/600/400"
+  },
+  {
+    "id": "rural-el-valle",
+    "name": "Hotel Rural El Valle",
+    "location": "Rascafría, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel rural en el Valle del Paular, a 7 km del Monasterio de El Paular. Entorno privilegiado dentro de la Sierra Norte de Madrid, ideal para senderismo y desconexión total. Puntuación 8.6 en Booking.",
+    "duracion": "2-3 noches",
+    "precio_desde": 75,
+    "precio_tag": "€",
+    "tags": [
+      "rural",
+      "naturaleza",
+      "senderismo",
+      "Valle del Lozoya",
+      "bienestar",
+      "montaña"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rural-el-valle.html",
+    "photo": "https://picsum.photos/seed/rural-el-valle/600/400"
+  },
+  {
+    "id": "chinchonspa",
+    "name": "Chinchón Spa",
+    "location": "Chinchón, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel con spa en la localidad medieval de Chinchón, a 45 minutos de Madrid. Sauna, jacuzzi y WiFi gratuito en un enclave de gran encanto histórico cerca de la famosa Plaza Mayor.",
+    "duracion": "1-2 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "histórico",
+      "pareja",
+      "escapada"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/chinchonspa.html",
+    "photo": "https://picsum.photos/seed/chinchonspa/600/400"
+  },
+  {
+    "id": "casa-rrural-la-graja",
+    "name": "Casa Rural & Spa La Graja",
+    "location": "Chinchón, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Casa rural con spa en cueva a 1.640 m de la Plaza Mayor de Chinchón. El spa incluye piscina dinámica, baño turco, ducha de sensaciones y zona de relajación. Puntuación 9.0 en Booking.",
+    "duracion": "1-2 noches",
+    "precio_desde": 113,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "cueva",
+      "rural",
+      "pareja",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-rrural-la-graja.html",
+    "photo": "https://picsum.photos/seed/casa-rrural-la-graja/600/400"
+  },
+  {
+    "id": "posada-del-camino-real-torrelaguna",
+    "name": "Posada Del Camino Real",
+    "location": "Torrelaguna, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Posada rural del siglo XVII en Torrelaguna con spa privado (sauna, jacuzzi, ducha hidromasaje), restaurante mediterráneo y terraza. Cerca de Patones de Arriba. Puntuación 8.8 en Booking.",
+    "duracion": "1-2 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "histórico",
+      "pareja",
+      "naturaleza",
+      "Sierra Norte"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/posada-del-camino-real-torrelaguna.html",
+    "photo": "https://picsum.photos/seed/posada-del-camino-real-torrelaguna/600/400"
+  },
+  {
+    "id": "parador-de-alcala-de-henares",
+    "name": "Parador de Alcalá de Henares",
+    "location": "Alcalá de Henares, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Parador 4 estrellas en el antiguo convento de Santo Tomás (siglo XVI), Patrimonio de la Humanidad. Spa con piscina de hidromasaje, sauna finlandesa y baño turco. Puntuación 9.1 en Booking.",
+    "duracion": "1-2 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "parador",
+      "histórico",
+      "patrimonio UNESCO",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/parador-de-alcala-de-henares.html",
+    "photo": "https://picsum.photos/seed/parador-de-alcala-de-henares/600/400"
   }
 ]
