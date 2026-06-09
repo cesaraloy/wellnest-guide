@@ -294,6 +294,7 @@ function buildBookingLink(searchTerm, region, checkin, checkout) {
   let url = `https://www.booking.com/searchresults.es.html?aid=${BOOKING_AID}&ss=${dest}&lang=es`;
   if (checkin) url += `&checkin=${checkin}`;
   if (checkout) url += `&checkout=${checkout}`;
+  if (state.personas) url += `&group_adults=${state.personas}&no_rooms=1`;
   return url;
 }
 function buildGYGLink(searchTerm, region, checkin, checkout) {
@@ -318,6 +319,7 @@ const state = {
   duracion: null,
   fechaInicio: null,
   fechaFin: null,
+  personas: 2,
   presupuesto: 600,
   nivel: null,
   exclusividad: null,
@@ -378,6 +380,12 @@ const steps = [
     label: '¿Tienes fechas aproximadas?',
     hint: 'Opcional — nos ayuda a comprobar disponibilidad real en Booking, GetYourGuide y Civitatis',
     type: 'date-range'
+  },
+  {
+    id: 'personas',
+    label: '¿Cuántas personas sois?',
+    hint: 'El número de adultos para la reserva',
+    type: 'personas'
   },
   {
     id: 'presupuesto',
@@ -451,6 +459,13 @@ function renderStep() {
     ${(state.fechaInicio || state.fechaFin) ? `<div class="date-clear" onclick="clearDates()">✕ Quitar fechas</div>` : ''}`;
   }
 
+  if (s.type === 'personas') {
+    const opts = [1,2,3,4,5,6,7,8];
+    html += `<div class="pill-group">${opts.map(n =>
+      `<div class="pill${state.personas === n ? ' selected' : ''}" onclick="pick('personas',${n})">${n === 8 ? '8+' : n} ${n === 1 ? 'persona' : 'personas'}</div>`
+    ).join('')}</div>`;
+  }
+
   if (s.type === 'range') {
     const v = state[s.id] || s.min;
     html += `<div class="slider-wrap">
@@ -490,7 +505,7 @@ function renderStep() {
 function canNext() {
   const s = steps[state.step];
   if (s.type === 'multi-pill') return (state[s.id] || []).length > 0;
-  if (s.type === 'range' || s.type === 'date-range') return true;
+  if (s.type === 'range' || s.type === 'date-range' || s.type === 'personas') return true;
   return !!state[s.id];
 }
 function updateDate(field, value) {
@@ -537,6 +552,7 @@ async function findRetreats() {
     tipos: (state.tipo || []).map(t => tMap[t] || t).join(', '),
     region: rMap[state.region] || 'España',
     duracion: durMap[state.duracion] || state.duracion,
+    personas: state.personas || 2,
     presupuesto: state.presupuesto,
     exclusividad: excMap[state.exclusividad] || state.exclusividad,
     fechaInicio: state.fechaInicio || null,
@@ -588,7 +604,7 @@ function renderResults(data) {
     <div style="margin-bottom:28px;">
       <div class="results-eyebrow">Recomendaciones personalizadas</div>
       <div class="results-title">Encontramos <em>${data.retreats.length} retiros</em> para ti</div>
-      <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'Sin límite de presupuesto' : 'Hasta ' + state.presupuesto + '€'}${state.fechaInicio ? ` · 📅 ${formatDate(state.fechaInicio)}${state.fechaFin ? ' – ' + formatDate(state.fechaFin) : ''}` : ''}</div>
+      <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'Sin límite de presupuesto' : 'Hasta ' + state.presupuesto + '€'} · 👥 ${state.personas || 2} ${(state.personas || 2) === 1 ? 'persona' : 'personas'}${state.fechaInicio ? ` · 📅 ${formatDate(state.fechaInicio)}${state.fechaFin ? ' – ' + formatDate(state.fechaFin) : ''}` : ''}</div>
     </div>
     <div class="insight-box">${data.insight}</div>`;
 

@@ -262,6 +262,22 @@ select.filter-select {
     <option value="€€€€">€€€€ lujo</option>
   </select>
   <div class="filter-sep"></div>
+  <span class="filter-label">Entrada</span>
+  <input type="date" class="filter-select" id="checkinFilter" style="padding:5px 8px;background-image:none;">
+  <span class="filter-label">Salida</span>
+  <input type="date" class="filter-select" id="checkoutFilter" style="padding:5px 8px;background-image:none;">
+  <div class="filter-sep"></div>
+  <span class="filter-label">Personas</span>
+  <select class="filter-select" id="personasFilter">
+    <option value="">Cualquiera</option>
+    <option value="1">1</option>
+    <option value="2" selected>2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6+</option>
+  </select>
+  <div class="filter-sep"></div>
   <div id="tagFilters" style="display:flex;gap:6px;align-items:center;"></div>
   <div class="filter-sep"></div>
   <button class="btn-reset" id="btnReset">Limpiar</button>
@@ -303,6 +319,7 @@ const FEATURED_TAGS = ['yoga','meditación','spa','surf','naturaleza','balneario
 
 let allRetreats = [], filtered = [];
 let activeRegion = '', activePrice = '', activeTags = new Set();
+let activeCheckin = '', activeCheckout = '', activePersonas = '2';
 let mapVisible = false, map, markers = {}, boundsFilter = false;
 let activePopupId = null;
 
@@ -319,6 +336,19 @@ async function init() {
   regions.forEach(r => { const o = document.createElement('option'); o.value = r; o.textContent = r; sel.appendChild(o); });
   sel.addEventListener('change', e => { activeRegion = e.target.value; boundsFilter = false; render(); });
   document.getElementById('precioFilter').addEventListener('change', e => { activePrice = e.target.value; boundsFilter = false; render(); });
+
+  const today = new Date().toISOString().split('T')[0];
+  const ci = document.getElementById('checkinFilter');
+  const co = document.getElementById('checkoutFilter');
+  ci.min = today;
+  ci.addEventListener('change', e => {
+    activeCheckin = e.target.value;
+    co.min = activeCheckin || today;
+    if (activeCheckout && activeCheckout < activeCheckin) { activeCheckout = ''; co.value = ''; }
+    render();
+  });
+  co.addEventListener('change', e => { activeCheckout = e.target.value; render(); });
+  document.getElementById('personasFilter').addEventListener('change', e => { activePersonas = e.target.value; render(); });
 
   // Tag pills
   const tagWrap = document.getElementById('tagFilters');
@@ -398,7 +428,10 @@ function updateMarkers() {
 
 function openPopup(r, marker) {
   activePopupId = r.id;
-  const bookUrl = r.booking_url;
+  let bookUrl = r.booking_url;
+  if (activeCheckin)  bookUrl += `${bookUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+  if (activeCheckout) bookUrl += `&checkout=${activeCheckout}`;
+  if (activePersonas) bookUrl += `&group_adults=${activePersonas}&no_rooms=1`;
   const popup = L.popup({ offset: [0, -4], closeButton: true, maxWidth: 260 })
     .setLatLng([r.lat, r.lng])
     .setContent(`
@@ -458,6 +491,10 @@ function render() {
     grid.innerHTML = filtered.map(r => {
       const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
       const tags = (r.tags||[]).slice(0,3).map(t => `<span class="card-tag">${t}</span>`).join('');
+      let bUrl = r.booking_url;
+      if (activeCheckin)  bUrl += `${bUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+      if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
+      if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
       return `
       <div class="listing-card" id="card-${r.id}" onclick="onCardClick('${r.id}')">
         <div class="card-img-wrap">
@@ -474,7 +511,7 @@ function render() {
           <div class="card-tags">${tags}</div>
           <div class="card-footer-row">
             <div class="card-price">desde ${r.precio_desde}€ <span>/ noche</span></div>
-            <a href="${r.booking_url}" target="_blank" rel="noopener" class="card-book-btn" onclick="event.stopPropagation()">Reservar →</a>
+            <a href="${bUrl}" target="_blank" rel="noopener" class="card-book-btn" onclick="event.stopPropagation()">Reservar →</a>
           </div>
         </div>
       </div>`;
@@ -495,8 +532,12 @@ function onCardClick(id) {
 
 function reset() {
   activeRegion = ''; activePrice = ''; activeTags.clear(); boundsFilter = false;
+  activeCheckin = ''; activeCheckout = ''; activePersonas = '2';
   document.getElementById('regionFilter').value = '';
   document.getElementById('precioFilter').value = '';
+  document.getElementById('checkinFilter').value = '';
+  document.getElementById('checkoutFilter').value = '';
+  document.getElementById('personasFilter').value = '2';
   document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
   render();
 }

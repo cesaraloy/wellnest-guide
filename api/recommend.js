@@ -36,8 +36,9 @@ module.exports = async function handler(req, res) {
     const prompt = `Eres un experto en retiros de bienestar en España. El usuario busca:
 - Tipos de experiencia: ${preferences.tipos}
 - Región: ${preferences.region}
-- Duración: ${preferences.duracion}${preferences.fechaInicio ? `\n- Fechas aproximadas: del ${preferences.fechaInicio}${preferences.fechaFin ? ' al ' + preferences.fechaFin : ''}` : ''}
-- Presupuesto máximo: ${preferences.presupuesto >= 3000 ? 'sin límite' : preferences.presupuesto + '€'}
+- Duración: ${preferences.duracion}
+- Personas: ${preferences.personas || 2}${preferences.fechaInicio ? `\n- Fechas aproximadas: del ${preferences.fechaInicio}${preferences.fechaFin ? ' al ' + preferences.fechaFin : ''}` : ''}
+- Presupuesto máximo: ${preferences.presupuesto >= 3000 ? 'sin límite' : preferences.presupuesto + '€'} (total para ${preferences.personas || 2} personas)
 - Ambiente: ${preferences.exclusividad}
 
 Aquí está el catálogo completo de retiros disponibles:
