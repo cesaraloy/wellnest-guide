@@ -1911,5 +1911,428 @@
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-retiro-albergue-rural-con-piscina-cubierta-y-spa.html",
     "photo": "https://picsum.photos/seed/el-retiro-segovia/600/400"
+  },
+  {
+    "id": "el-retiro-de-san-pedro",
+    "name": "Hotel Rural El Retiro de San Pedro by RetiroRural",
+    "location": "Arenas de San Pedro, Ávila",
+    "region": "Castilla y León",
+    "desc": "Hotel rural en plena Sierra de Gredos con piscina, jardín y restaurante. Entorno de naturaleza privilegiado a los pies del Parque Regional de la Sierra de Gredos, ideal para el descanso activo y la desconexión.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "naturaleza",
+      "descanso",
+      "senderismo",
+      "gastronomía"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-retiro-de-san-pedro.html",
+    "photo": "https://picsum.photos/seed/el-retiro-de-san-pedro/600/400"
+  },
+  {
+    "id": "jabata-spa",
+    "name": "Jabata Spa",
+    "location": "Cabezas Altas, Ávila",
+    "region": "Castilla y León",
+    "desc": "Casa rural con spa en las laderas de la Sierra de Béjar, a 27 km de la Reserva Natural de la Garganta de los Infiernos. Ofrece hidromasaje, sauna y vistas a la montaña en un ambiente íntimo y tranquilo.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "montaña",
+      "descanso"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/jabata-spa.html",
+    "photo": "https://picsum.photos/seed/jabata-spa/600/400"
+  },
+  {
+    "id": "nature-retreat-confort-and-peaceful-in-a-eco-paradise",
+    "name": "Nature Retreat: confort and peaceful in a eco-paradise",
+    "location": "San Sebastián de La Gomera, La Gomera",
+    "region": "Islas Canarias",
+    "desc": "Casa de campo adults-only en una finca ecológica con árboles frutales tropicales y 7.700 m² de terraza ancestral junto al Parque Nacional de Garajonay. Clases de yoga y total privacidad en un paraíso verde.",
+    "duracion": "3-7 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "yoga",
+      "ecoturismo",
+      "naturaleza",
+      "retiro"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/nature-retreat-confort-and-peaceful-in-a-eco-paradise.html",
+    "photo": "https://picsum.photos/seed/nature-retreat-confort-and-peaceful-in-a-eco-paradise/600/400"
+  },
+  {
+    "id": "gomera-lounge",
+    "name": "The Gomera Lounge",
+    "location": "Valle Gran Rey, La Gomera",
+    "region": "Islas Canarias",
+    "desc": "Apartamentos boutique en el paseo marítimo de Valle Gran Rey con sauna, jacuzzi privado en terraza y piano bar con conciertos en vivo. Vistas al mar y ambiente cosmopolita en uno de los rincones más bellos de La Gomera.",
+    "duracion": "3-7 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "bienestar",
+      "spa",
+      "vistas al mar",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/gomera-lounge.html",
+    "photo": "https://picsum.photos/seed/gomera-lounge/600/400"
+  },
+  {
+    "id": "casa-calma-yoga-guesthouse",
+    "name": "Casa Calma Yoga Hostel",
+    "location": "Agaete, Gran Canaria",
+    "region": "Islas Canarias",
+    "desc": "Hostal con clases de yoga, terraza con vistas y espíritu de comunidad en el pintoresco pueblo de Agaete, a 15 minutos a pie de la Playa La Caleta. Un refugio informal y auténtico para practicantes de yoga y viajeros conscientes.",
+    "duracion": "3-7 noches",
+    "precio_desde": 45,
+    "precio_tag": "€",
+    "tags": [
+      "yoga",
+      "comunidad",
+      "playa",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-calma-yoga-guesthouse.html",
+    "photo": "https://picsum.photos/seed/casa-calma-yoga-guesthouse/600/400"
+  },
+  {
+    "id": "yoga-loft-canteras-las-palmas-de-gran-canaria",
+    "name": "Yoga Loft Canteras",
+    "location": "Las Palmas de Gran Canaria, Gran Canaria",
+    "region": "Islas Canarias",
+    "desc": "Alojamiento orientado al yoga junto a la famosa Playa de Las Canteras en Las Palmas. Espacio urbano y tranquilo pensado para la práctica del yoga y el bienestar, con acceso directo a una de las mejores playas urbanas de Europa.",
+    "duracion": "2-5 noches",
+    "precio_desde": 70,
+    "precio_tag": "€",
+    "tags": [
+      "yoga",
+      "playa",
+      "urbano",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/yoga-loft-canteras-las-palmas-de-gran-canaria.es.html",
+    "photo": "https://picsum.photos/seed/yoga-loft-canteras-las-palmas-de-gran-canaria/600/400"
+  },
+  {
+    "id": "casa-leon-monte-leon-gran-canaria",
+    "name": "Casa León Royal Retreat",
+    "location": "Maspalomas, Gran Canaria",
+    "region": "Islas Canarias",
+    "desc": "Retiro de bienestar adults-only en Maspalomas con piscina infinita, jacuzzi, sauna, gym y sesiones gratuitas de yoga y respiración. Cocina vegetariana, vegana y sin gluten disponible en un entorno de jardín tropical exuberante.",
+    "duracion": "4-7 noches",
+    "precio_desde": 180,
+    "precio_tag": "€€€",
+    "tags": [
+      "yoga",
+      "spa",
+      "wellness",
+      "adults-only",
+      "piscina"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-leon-monte-leon-gran-canaria.html",
+    "photo": "https://picsum.photos/seed/casa-leon-monte-leon-gran-canaria/600/400"
+  },
+  {
+    "id": "hacienda-de-abajo",
+    "name": "Hotel Hacienda de Abajo - Adults Only",
+    "location": "Tazacorte, La Palma",
+    "region": "Islas Canarias",
+    "desc": "Hotel boutique de lujo adults-only en el centro histórico de Tazacorte con acceso gratuito a spa, sauna finlandesa, piscina de hidromasaje y jardín con plantas exóticas. Gastronomía local con influencias internacionales.",
+    "duracion": "3-7 noches",
+    "precio_desde": 160,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "adults-only",
+      "naturaleza",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hacienda-de-abajo.html",
+    "photo": "https://picsum.photos/seed/hacienda-de-abajo/600/400"
+  },
+  {
+    "id": "finca-la-tajea-la-guancha-tenerife-norte",
+    "name": "Finca la Tajea",
+    "location": "La Guancha, Tenerife",
+    "region": "Islas Canarias",
+    "desc": "Finca rural en el norte de Tenerife con piscina privada, jacuzzi y vistas al mar. Entorno tranquilo y auténtico ideal para desconectar, con la naturaleza volcánica del norte de la isla a la puerta.",
+    "duracion": "3-7 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "naturaleza",
+      "descanso",
+      "piscina",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-la-tajea-la-guancha-tenerife-norte.html",
+    "photo": "https://picsum.photos/seed/finca-la-tajea-la-guancha-tenerife-norte/600/400"
+  },
+  {
+    "id": "finca-paraiso",
+    "name": "Finca Paraiso Casa Rural Tenerife",
+    "location": "La Laguna, Tenerife",
+    "region": "Islas Canarias",
+    "desc": "Casa rural con piscina de agua salada, gimnasio y jardín interior en La Laguna. Ofrece paquetes de bienestar y solarium en un entorno canario auténtico a 7 km del aeropuerto norte de Tenerife.",
+    "duracion": "3-7 noches",
+    "precio_desde": 75,
+    "precio_tag": "€",
+    "tags": [
+      "bienestar",
+      "naturaleza",
+      "piscina",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-paraiso.html",
+    "photo": "https://picsum.photos/seed/finca-paraiso/600/400"
+  },
+  {
+    "id": "finca-rural-la-casa-verde",
+    "name": "Finca Rural La Casa Verde Shalom",
+    "location": "Las Lagunas, La Laguna, Tenerife",
+    "region": "Islas Canarias",
+    "desc": "Bed & breakfast adults-only en una finca rural a pocos minutos del aeropuerto norte de Tenerife, con jardín, terraza y ambiente de calma total. Ideal para quienes buscan tranquilidad y contacto con la naturaleza canaria.",
+    "duracion": "2-5 noches",
+    "precio_desde": 60,
+    "precio_tag": "€",
+    "tags": [
+      "naturaleza",
+      "adults-only",
+      "rural",
+      "descanso"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-rural-la-casa-verde.html",
+    "photo": "https://picsum.photos/seed/finca-rural-la-casa-verde/600/400"
+  },
+  {
+    "id": "buen-retiro-casa-de-la-musica-y-el-sonido",
+    "name": "Hotel Buen Retiro Casa de la Música y el Sonido",
+    "location": "Güímar, Tenerife",
+    "region": "Islas Canarias",
+    "desc": "Hotel histórico de 1792 en Güímar, el primero de Tenerife, hoy convertido en museo musical y alojamiento de carácter único. Entorno tranquilo con jardín, terraza y cocina con opciones vegetarianas y sin gluten.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "cultura",
+      "naturaleza",
+      "descanso",
+      "histórico"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/buen-retiro-casa-de-la-musica-y-el-sonido.html",
+    "photo": "https://picsum.photos/seed/buen-retiro-casa-de-la-musica-y-el-sonido/600/400"
+  },
+  {
+    "id": "cortijo-la-joya-de-cabo-de-gata",
+    "name": "Cortijo La Joya de Cabo de Gata",
+    "location": "Agua Amarga, Almería",
+    "region": "Andalucía",
+    "desc": "Cortijo boutique a 1,9 km de la playa de Agua Amarga, dentro del Parque Natural Cabo de Gata-Níjar, con piscina, jacuzzi y actividades como yoga, senderismo, ciclismo y snorkel. Masajes y servicios de bienestar disponibles.",
+    "duracion": "3-7 noches",
+    "precio_desde": 140,
+    "precio_tag": "€€",
+    "tags": [
+      "yoga",
+      "naturaleza",
+      "playa",
+      "bienestar",
+      "senderismo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/cortijo-la-joya-de-cabo-de-gata.html",
+    "photo": "https://picsum.photos/seed/cortijo-la-joya-de-cabo-de-gata/600/400"
+  },
+  {
+    "id": "spa-la-residencia-puerto",
+    "name": "La Residencia Puerto Hotel & Spa",
+    "location": "Tarifa, Cádiz",
+    "region": "Andalucía",
+    "desc": "Hotel con spa, piscina climatizada exterior y clases gratuitas de yoga en la Costa de la Luz. A 1 minuto a pie de las mejores playas de Tarifa, con espectaculares vistas al Estrecho de Gibraltar y ambiente internacional.",
+    "duracion": "2-5 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€",
+    "tags": [
+      "yoga",
+      "spa",
+      "playa",
+      "bienestar",
+      "surf"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-la-residencia-puerto.html",
+    "photo": "https://picsum.photos/seed/spa-la-residencia-puerto/600/400"
+  },
+  {
+    "id": "rural-finca-barral",
+    "name": "Alojamiento Rural Finca Barral",
+    "location": "Arroyo de la Plata, Sevilla",
+    "region": "Andalucía",
+    "desc": "Finca rural en la Sierra Norte de Sevilla con piscina exterior, lago natural, caballos y extensas zonas verdes. Ideal para escapadas de desconexión en plena naturaleza andaluza, con actividades de senderismo, pesca y ciclismo.",
+    "duracion": "2-4 noches",
+    "precio_desde": 70,
+    "precio_tag": "€",
+    "tags": [
+      "naturaleza",
+      "rural",
+      "senderismo",
+      "descanso"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rural-finca-barral.html",
+    "photo": "https://picsum.photos/seed/rural-finca-barral/600/400"
+  },
+  {
+    "id": "casa-rural-el-olivar-sevilla",
+    "name": "Sierra El Retiro",
+    "location": "Sierra Norte, Sevilla",
+    "region": "Andalucía",
+    "desc": "Casa rural con piscina exterior, baño al aire libre y pista de tenis en plena naturaleza a 30 minutos del centro de Sevilla. Entorno de sierra con cielos limpios y ambiente de descanso total para una escapada de bienestar.",
+    "duracion": "2-4 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "naturaleza",
+      "rural",
+      "relax",
+      "descanso"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-rural-el-olivar-sevilla.html",
+    "photo": "https://picsum.photos/seed/casa-rural-el-olivar-sevilla/600/400"
+  },
+  {
+    "id": "finca-rural-la-calderera",
+    "name": "Finca Rural La Calderera",
+    "location": "Valdepeñas de Jaén, Jaén",
+    "region": "Andalucía",
+    "desc": "Finca rural renovada con vistas a la montaña, piscina y terraza privada en la comarca de Sierra Mágina, Jaén. Valorada con 9,7 por sus huéspedes, ofrece cinco habitaciones y cocina equipada para grupos que buscan retiro auténtico.",
+    "duracion": "2-5 noches",
+    "precio_desde": 65,
+    "precio_tag": "€",
+    "tags": [
+      "rural",
+      "naturaleza",
+      "descanso",
+      "sierra"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/finca-rural-la-calderera.html",
+    "photo": "https://picsum.photos/seed/finca-rural-la-calderera/600/400"
+  },
+  {
+    "id": "el-palasiet",
+    "name": "PALASIET Wellness Clinic & Thalasso",
+    "location": "Benicàssim, Castellón",
+    "region": "Comunidad Valenciana",
+    "desc": "Centro de talasoterapia a 75 metros del mar en la bahía de Benicàssim, rodeado de pinares naturales. Tratamientos bio-marinos, dieta macrobiótica, yoga y tai-chi supervisados por médicos, nutricionistas y fisioterapeutas.",
+    "duracion": "3-7 noches",
+    "precio_desde": 160,
+    "precio_tag": "€€€",
+    "tags": [
+      "thalasso",
+      "spa",
+      "yoga",
+      "bienestar",
+      "médico"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-palasiet.html",
+    "photo": "https://picsum.photos/seed/el-palasiet/600/400"
+  },
+  {
+    "id": "abbi-suites-bocairent",
+    "name": "ABBI SUITES Casa Rural, Suites & Spa",
+    "location": "Bocairent, Valencia",
+    "region": "Comunidad Valenciana",
+    "desc": "Casa rural boutique de lujo en el pueblo medieval de Bocairent con spa, suites con vistas a la montaña y desayuno continental. Valorado con un 9,7 por sus huéspedes, es uno de los alojamientos más exclusivos del interior valenciano.",
+    "duracion": "2-3 noches",
+    "precio_desde": 150,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "rural",
+      "bienestar",
+      "gastronomía"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/abbi-suites-bocairent.html",
+    "photo": "https://picsum.photos/seed/abbi-suites-bocairent/600/400"
+  },
+  {
+    "id": "can-buch-ecoturisme-rural",
+    "name": "ECOTurisme Can Buch Hotel",
+    "location": "Sant Aniol de Finestras, Girona",
+    "region": "Cataluña",
+    "desc": "Hotel de ecoturismo en plena naturaleza del Empordà interior, a 40 km del aeropuerto de Girona. Piscina exterior, fitness, yoga, senderismo y ciclismo con una puntuación de 9,6 en Booking.com, uno de los mejor valorados de Cataluña.",
+    "duracion": "2-5 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "ecoturismo",
+      "yoga",
+      "naturaleza",
+      "senderismo",
+      "ciclismo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/can-buch-ecoturisme-rural.html",
+    "photo": "https://picsum.photos/seed/can-buch-ecoturisme-rural/600/400"
+  },
+  {
+    "id": "espacio-finca-alegria",
+    "name": "Espacio Finca Alegría - Wellness Center",
+    "location": "Cartagena, Murcia",
+    "region": "Región de Murcia",
+    "desc": "Centro rural de bienestar cerca de Cartagena que combina alojamiento en casas rurales, hostel y camping con clases de yoga, fitness y baño exterior. Un espacio informal y comunitario para practicantes de bienestar y naturaleza.",
+    "duracion": "2-5 noches",
+    "precio_desde": 40,
+    "precio_tag": "€",
+    "tags": [
+      "yoga",
+      "bienestar",
+      "naturaleza",
+      "comunidad",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/espacio-finca-alegria.html",
+    "photo": "https://picsum.photos/seed/espacio-finca-alegria/600/400"
+  },
+  {
+    "id": "duerme-cuenca-3-la-moneda-46",
+    "name": "Moneda 46",
+    "location": "Cuenca, Castilla-La Mancha",
+    "region": "Castilla-La Mancha",
+    "desc": "Apartamento boutique con spa y jacuzzi privado en el corazón del casco antiguo de Cuenca, a 7 minutos de las Casas Colgadas. Vistas a la montaña y acceso a tratamientos de bienestar en un entorno Patrimonio de la Humanidad.",
+    "duracion": "2-3 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "cultura",
+      "bienestar",
+      "histórico"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/duerme-cuenca-3-la-moneda-46.html",
+    "photo": "https://picsum.photos/seed/duerme-cuenca-3-la-moneda-46/600/400"
+  },
+  {
+    "id": "casa-rural-spa-mirador-de-la-covatilla",
+    "name": "Casa Rural & SPA Mirador de la Covatilla",
+    "location": "Guijo de Ávila, Ávila",
+    "region": "Castilla y León",
+    "desc": "Casa rural con spa en las estribaciones de la Sierra de Béjar, con jacuzzi, sauna y vistas a las cumbres de la Covatilla. Ambiente íntimo y romántico para parejas que buscan desconexión total en la naturaleza abulense.",
+    "duracion": "2-3 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "montaña",
+      "naturaleza",
+      "descanso",
+      "pareja"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/casa-rural-spa-mirador-de-la-covatilla.html",
+    "photo": "https://picsum.photos/seed/casa-rural-spa-mirador-de-la-covatilla/600/400"
   }
 ]
