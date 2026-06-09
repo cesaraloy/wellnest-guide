@@ -290,10 +290,16 @@ function render() {
     const tags = (r.tags || []).slice(0,4).map(t =>
       `<span class="card-tag">${t}</span>`
     ).join('');
+    const isPicsum = r.photo && r.photo.includes('picsum.photos');
+    const photoSrc = r.photo;
+    const photoFallback = `https://picsum.photos/seed/${r.id}/600/400`;
     return `
     <div class="listing-card">
       <div class="card-img-wrap">
-        <img src="${r.photo}" alt="${r.name}" loading="lazy">
+        <img src="${photoSrc}" alt="${r.name}" loading="lazy"
+          ${isPicsum ? `data-booking-url="${encodeURIComponent(r.booking_url)}"` : ''}
+          onerror="this.onerror=null;this.src='${photoFallback}'"
+          class="card-photo${isPicsum ? ' needs-real-photo' : ''}">
         <span class="card-region-badge">${r.region}</span>
         <span class="card-price-badge">${r.precio_tag}</span>
       </div>
@@ -309,9 +315,51 @@ function render() {
       </div>
     </div>`;
   }).join('');
+  loadRealPhotos();
 }
 
 init().catch(console.error);
+
+// Lazy-load real Booking photos for cards that still show Picsum placeholders.
+// Uses IntersectionObserver so we only fetch when the card enters the viewport.
+const photoCache = {};
+
+function loadRealPhotos() {
+  const imgs = document.querySelectorAll('img.needs-real-photo');
+  if (!imgs.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      observer.unobserve(img);
+
+      const bookingUrl = decodeURIComponent(img.dataset.bookingUrl || '');
+      if (!bookingUrl) return;
+
+      if (photoCache[bookingUrl]) {
+        img.src = photoCache[bookingUrl];
+        img.classList.remove('needs-real-photo');
+        return;
+      }
+
+      fetch(`/api/booking-photo?url=${encodeURIComponent(bookingUrl)}`)
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          if (data && data.photo) {
+            photoCache[bookingUrl] = data.photo;
+            img.src = data.photo;
+            img.classList.remove('needs-real-photo');
+          }
+        })
+        .catch(() => {});
+    });
+  }, { rootMargin: '200px' });
+
+  imgs.forEach(img => observer.observe(img));
+}
+
+
 </script>
 </body>
 </html>
