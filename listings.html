@@ -235,30 +235,82 @@ select.filter-select {
 .mobile-nav-overlay a { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
 .mobile-nav-overlay a.nav-cta { background:var(--sage); color:white; padding:12px 28px; border-radius:2px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
 
-/* MOBILE MAP TOGGLE */
+/* MOBILE MAP TOGGLE BUTTON (list mode) */
 .mobile-map-btn {
   display:none; position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
   z-index:250; background:var(--charcoal); color:white;
   border:none; border-radius:24px; padding:12px 24px;
   font-family:'DM Sans',sans-serif; font-size:13px; letter-spacing:.06em;
   cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.22);
-  display:flex; align-items:center; gap:8px; white-space:nowrap;
+  align-items:center; gap:8px; white-space:nowrap;
 }
 .mobile-map-btn svg { width:14px; height:14px; flex-shrink:0; }
+
+/* MOBILE CARD STRIP */
+.mobile-card-strip {
+  display:none; position:fixed; bottom:0; left:0; right:0; z-index:250;
+  overflow-x:auto; overflow-y:visible;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+  gap:12px; padding:16px 0 28px;
+  background:linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+  -ms-overflow-style:none; scrollbar-width:none;
+  align-items:flex-end;
+}
+.mobile-card-strip::-webkit-scrollbar { display:none; }
+.mobile-strip-spacer { flex-shrink:0; width:calc(50vw - 140px); }
+.mobile-strip-card {
+  scroll-snap-align:center; flex-shrink:0; width:280px;
+  background:white; border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.14);
+  overflow:hidden; display:flex; flex-direction:column;
+  border:2px solid transparent; transition:border-color .2s, box-shadow .2s;
+  cursor:pointer;
+}
+.mobile-strip-card.active { border-color:var(--sage); box-shadow:0 6px 24px rgba(122,140,110,0.3); }
+.strip-card-img { width:100%; height:120px; object-fit:cover; display:block; }
+.strip-card-body { padding:10px 12px; }
+.strip-card-name { font-family:'Cormorant Garamond',serif; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px; }
+.strip-card-loc { font-size:11px; color:#aaa; margin-bottom:6px; }
+.strip-card-footer { display:flex; align-items:center; justify-content:space-between; }
+.strip-card-price { font-size:12px; color:var(--earth); }
+.strip-card-btn { font-size:10px; letter-spacing:.06em; text-transform:uppercase; background:var(--charcoal); color:white; text-decoration:none; padding:5px 10px; border-radius:2px; }
+
+/* MOBILE LIST BACK BUTTON (shown in map mode) */
+.mobile-back-list {
+  display:none; position:fixed; top:calc(var(--nav-h) + var(--filters-h) + 12px); left:12px;
+  z-index:260; background:white; border:none; border-radius:20px;
+  padding:8px 14px; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--charcoal);
+  box-shadow:0 2px 10px rgba(0,0,0,0.15); cursor:pointer; align-items:center; gap:6px;
+}
+.mobile-back-list svg { width:12px; height:12px; }
 
 /* MOBILE */
 @media(max-width:900px) {
   nav { padding:14px 20px; }
   .nav-links { display:none; }
   .hamburger { display:flex; }
-  .mobile-map-btn { display:flex; }
   .page-header { padding:80px 20px 20px; }
   .filters-bar { padding:0 14px; }
   .view-toggle { display:none; }
   .main-layout { flex-direction:column; height:auto; position:static; }
-  .main-layout.map-visible .list-panel { flex:unset; border-right:none; padding:16px; }
-  .main-layout.map-visible .map-panel { height:55vw; min-height:300px; display:block; }
-  .main-layout.map-visible .listings-grid { grid-template-columns:1fr 1fr; }
+  /* default: no map */
+  .mobile-map-btn { display:flex; }
+
+  /* map visible on mobile: full-screen map + card strip */
+  body.mobile-map-active .page-header { display:none; }
+  body.mobile-map-active .filters-bar { display:none; }
+  body.mobile-map-active .main-layout {
+    position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
+    height:auto; flex-direction:row;
+  }
+  body.mobile-map-active .main-layout .list-panel { display:none; }
+  body.mobile-map-active .main-layout .map-panel {
+    display:block; flex:1; height:100%;
+  }
+  body.mobile-map-active #map { height:100%; }
+  body.mobile-map-active .mobile-card-strip { display:flex; }
+  body.mobile-map-active .mobile-map-btn { display:none; }
+  body.mobile-map-active .mobile-back-list { display:flex; }
 }
 @media(max-width:540px) {
   .main-layout.map-visible .listings-grid { grid-template-columns:1fr; }
@@ -346,8 +398,15 @@ select.filter-select {
 
 <button class="mobile-map-btn" id="mobileMapBtn" onclick="toggleMobileMap()">
   <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a4.5 4.5 0 0 0-4.5 4.5C3.5 9.5 8 15 8 15s4.5-5.5 4.5-9.5A4.5 4.5 0 0 0 8 1zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
-  <span id="mobileMapBtnLabel">Ver mapa</span>
+  Ver mapa
 </button>
+
+<button class="mobile-back-list" id="mobileBackList" onclick="toggleMobileMap()">
+  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2L4 6l4 4"/></svg>
+  Ver lista
+</button>
+
+<div class="mobile-card-strip" id="mobileCardStrip"></div>
 
 <footer style="background:#2c2c2c;color:rgba(255,255,255,.5);text-align:center;padding:28px 24px;font-size:12px;">
   © 2026 Wellnest Guide ·
@@ -473,6 +532,10 @@ function updateMarkers() {
 
 function openPopup(r, marker) {
   activePopupId = r.id;
+  if (isMobile()) {
+    scrollStripToId(r.id);
+    return;
+  }
   let bookUrl = r.booking_url;
   if (activeCheckin)  bookUrl += `${bookUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
   if (activeCheckout) bookUrl += `&checkout=${activeCheckout}`;
@@ -488,7 +551,6 @@ function openPopup(r, marker) {
       </div>`)
     .openOn(map);
 
-  // Highlight card
   document.querySelectorAll('.listing-card').forEach(c => c.classList.remove('highlighted'));
   const card = document.getElementById('card-' + r.id);
   if (card) { card.classList.add('highlighted'); card.scrollIntoView({ behavior:'smooth', block:'nearest' }); }
@@ -565,6 +627,10 @@ function render() {
   }
 
   refreshMarkerStyles();
+
+  if (document.body.classList.contains('mobile-map-active')) {
+    renderMobileCards();
+  }
 }
 
 function onCardClick(id) {
@@ -594,10 +660,93 @@ function toggleMobileNav() {
   overlay.classList.toggle('open');
 }
 
+function isMobile() { return window.innerWidth <= 900; }
+
 function toggleMobileMap() {
   const show = !mapVisible;
-  setView(show);
-  document.getElementById('mobileMapBtnLabel').textContent = show ? 'Ver lista' : 'Ver mapa';
+  if (isMobile()) {
+    mapVisible = show;
+    if (show) {
+      document.body.classList.add('mobile-map-active');
+      if (!map) { initMap(); }
+      else { setTimeout(() => map.invalidateSize(), 50); updateMarkers(); }
+      renderMobileCards();
+    } else {
+      document.body.classList.remove('mobile-map-active');
+      mapVisible = false;
+      render();
+    }
+  } else {
+    setView(show);
+  }
+}
+
+function renderMobileCards() {
+  const strip = document.getElementById('mobileCardStrip');
+  if (!strip) return;
+  const spacer = '<div class="mobile-strip-spacer"></div>';
+  strip.innerHTML = spacer + filtered.map((r, i) => {
+    const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
+    const photo = r.photo || fallback;
+    let bUrl = r.booking_url;
+    if (activeCheckin)  bUrl += `${bUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+    if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
+    if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+    return `<div class="mobile-strip-card" id="scard-${r.id}" data-id="${r.id}" data-idx="${i}" onclick="onStripCardClick('${r.id}')">
+      <img class="strip-card-img" src="${photo}" alt="${r.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}'">
+      <div class="strip-card-body">
+        <div class="strip-card-name">${r.name}</div>
+        <div class="strip-card-loc">📍 ${r.location}</div>
+        <div class="strip-card-footer">
+          <div class="strip-card-price">desde ${r.precio_desde}€ · ${r.precio_tag}</div>
+          <a href="${bUrl}" target="_blank" rel="noopener" class="strip-card-btn" onclick="event.stopPropagation()">Reservar →</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('') + spacer;
+
+  // Scroll → pan map (debounced)
+  let scrollTimer;
+  strip.onscroll = () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const centerX = strip.scrollLeft + strip.clientWidth / 2;
+      let closest = null, minDist = Infinity;
+      strip.querySelectorAll('.mobile-strip-card').forEach(card => {
+        const cx = card.offsetLeft - strip.scrollLeft + card.offsetWidth / 2 - (strip.clientWidth / 2 - strip.scrollLeft);
+        const dist = Math.abs(card.offsetLeft + card.offsetWidth / 2 - (strip.scrollLeft + strip.clientWidth / 2));
+        if (dist < minDist) { minDist = dist; closest = card; }
+      });
+      if (closest) {
+        const id = closest.dataset.id;
+        setActiveStripCard(id);
+        const r = allRetreats.find(x => x.id === id);
+        if (r && r.lat && map) map.panTo([r.lat, r.lng], { animate: true, duration: 0.5 });
+      }
+    }, 120);
+  };
+}
+
+function setActiveStripCard(id) {
+  document.querySelectorAll('.mobile-strip-card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
+  // update marker style
+  activePopupId = id;
+  refreshMarkerStyles();
+}
+
+function scrollStripToId(id) {
+  const strip = document.getElementById('mobileCardStrip');
+  const card = document.getElementById('scard-' + id);
+  if (!strip || !card) return;
+  const target = card.offsetLeft - strip.clientWidth / 2 + card.offsetWidth / 2;
+  strip.scrollTo({ left: target, behavior: 'smooth' });
+  setActiveStripCard(id);
+}
+
+function onStripCardClick(id) {
+  const r = allRetreats.find(x => x.id === id);
+  if (r && r.lat && map) map.setView([r.lat, r.lng], Math.max(map.getZoom(), 11), { animate: true });
+  setActiveStripCard(id);
 }
 
 // ── REAL PHOTOS ───────────────────────────────────────────────────────────────
