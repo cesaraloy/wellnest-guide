@@ -4314,5 +4314,193 @@
     "photo": "https://picsum.photos/seed/talasoterapia-zelai-zumaia/600/400",
     "lat": 43.2967,
     "lng": -2.2589
+  },
+  {
+    "id": "bull-eugenia-victoria-spa",
+    "name": "Bull Eugenia Victoria & SPA",
+    "location": "Playa del Inglés, Gran Canaria",
+    "region": "Islas Canarias",
+    "desc": "Hotel frente a la playa de Playa del Inglés con spa que incluye jacuzzi, sauna finlandesa, baño turco y piscina interior. Servicio de transporte gratuito a la playa y tratamientos de masaje y belleza disponibles.",
+    "duracion": "3-5 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "talasoterapia",
+      "playa",
+      "sauna",
+      "Islas Canarias"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/eugenia-victoria.html",
+    "photo": "https://picsum.photos/seed/bull-eugenia-victoria-spa/600/400",
+    "lat": 27.7556,
+    "lng": -15.5817
+  },
+  {
+    "id": "isla-mallorca-spa-palma",
+    "name": "Isla Mallorca & Spa",
+    "location": "Palma de Mallorca, Mallorca",
+    "region": "Islas Baleares",
+    "desc": "Hotel en Palma de Mallorca con spa de bienestar que incluye sauna, hammam y baño de vapor, además de servicio de masajes y otros tratamientos corporales.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "hammam",
+      "sauna",
+      "Islas Baleares",
+      "masajes"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/islamallorca.html",
+    "photo": "https://picsum.photos/seed/isla-mallorca-spa-palma/600/400",
+    "lat": 39.5696,
+    "lng": 2.6502
+  },
+  {
+    "id": "ibiza-yoga-villa-nova",
+    "name": "Ibiza Yoga - Villa Nova 1",
+    "location": "Sant Joan de Labritja, Ibiza",
+    "region": "Islas Baleares",
+    "desc": "Villa retiro de yoga a poco más de 300 metros de la playa de Cala Benirràs, en el norte de Ibiza. Programas de yoga, meditación y desayunos vegetarianos y veganos en un entorno natural tranquilo.",
+    "duracion": "5-7 noches",
+    "precio_desde": 120,
+    "precio_tag": "€€€",
+    "tags": [
+      "yoga",
+      "meditación",
+      "vegano",
+      "retiro",
+      "Islas Baleares",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/ibiza-yoga-villa-nova-1.en-gb.html",
+    "photo": "https://picsum.photos/seed/ibiza-yoga-villa-nova/600/400",
+    "lat": 39.0667,
+    "lng": 1.5333
+  },
+  {
+    "id": "extremadura-hotel-caceres",
+    "name": "Extremadura Hotel",
+    "location": "Cáceres",
+    "region": "Extremadura",
+    "desc": "Hotel en el centro de Cáceres con zona de bienestar y servicios de spa, ideal como base para combinar turismo cultural por el casco histórico Patrimonio de la Humanidad con momentos de relax.",
+    "duracion": "2-3 noches",
+    "precio_desde": 70,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "ciudad histórica",
+      "Extremadura",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/extremadura.html",
+    "photo": "https://picsum.photos/seed/extremadura-hotel-caceres/600/400",
+    "lat": 39.4753,
+    "lng": -6.3724
+  },
+  {
+    "id": "akla-hotel-badajoz",
+    "name": "Akla Hotel Badajoz",
+    "location": "Badajoz",
+    "region": "Extremadura",
+    "desc": "Hotel moderno en Badajoz con jardín, terraza y paquetes de bienestar que incluyen acceso a jacuzzi. Habitaciones familiares con todas las comodidades para una estancia relajante.",
+    "duracion": "2-3 noches",
+    "precio_desde": 65,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "jacuzzi",
+      "Extremadura",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/adealba-badajoz.html",
+    "photo": "https://picsum.photos/seed/akla-hotel-badajoz/600/400",
+    "lat": 38.8794,
+    "lng": -6.9707
+  },
+  {
+    "id": "balneario-el-raposo",
+    "name": "Hotel Balneario El Raposo",
+    "location": "Puebla de Sancho Pérez, Badajoz",
+    "region": "Extremadura",
+    "desc": "Hotel balneario histórico rodeado de casi 15 hectáreas de jardines, con complejo termal, piscina exterior, sala de lectura y aguas mineromedicinales tradicionales de Extremadura.",
+    "duracion": "3-6 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "Extremadura",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-el-raposo.html",
+    "photo": "https://picsum.photos/seed/balneario-el-raposo/600/400",
+    "lat": 38.4167,
+    "lng": -6.4167
+  },
+  {
+    "id": "villa-preciosa-deluxe-spa-mazarron",
+    "name": "Villa Preciosa de Luxe and Spa",
+    "location": "Mazarrón, Murcia",
+    "region": "Región de Murcia",
+    "desc": "Villa de lujo en Mazarrón con spa privado, ideal para una escapada de bienestar en la costa cálida murciana, cerca de playas y de los campos de golf de Camposol.",
+    "duracion": "3-5 noches",
+    "precio_desde": 110,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "villa",
+      "playa",
+      "Región de Murcia",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/villa-camposol.html",
+    "photo": "https://picsum.photos/seed/villa-preciosa-deluxe-spa-mazarron/600/400",
+    "lat": 37.5928,
+    "lng": -1.3175
+  },
+  {
+    "id": "dwo-rioja-wine-hotel-cenicero",
+    "name": "DWO Rioja Wine Hotel",
+    "location": "Cenicero, La Rioja",
+    "region": "La Rioja",
+    "desc": "Hotel temático del vino en pleno corazón de la Rioja Alta, con habitaciones modernas, vinoterapia y vistas a los viñedos. Punto de partida ideal para rutas enológicas y tratamientos basados en uva.",
+    "duracion": "2-4 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€€",
+    "tags": [
+      "vinoterapia",
+      "spa",
+      "vino",
+      "La Rioja",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/4us-rioja-wine.html",
+    "photo": "https://picsum.photos/seed/dwo-rioja-wine-hotel-cenicero/600/400",
+    "lat": 42.4814,
+    "lng": -2.6356
+  },
+  {
+    "id": "hotel-vinicola-real-200-monges",
+    "name": "Hotel Vinícola Real-200 Monges",
+    "location": "Albelda de Iregua, La Rioja",
+    "region": "La Rioja",
+    "desc": "Hotel-bodega ligado a una vinícola centenaria, con servicios de masaje y vinoterapia en un entorno de viñedos riojanos. Combina turismo enológico con momentos de relajación.",
+    "duracion": "2-3 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "vinoterapia",
+      "vino",
+      "masajes",
+      "La Rioja",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/lacasadelcofrade.html",
+    "photo": "https://picsum.photos/seed/hotel-vinicola-real-200-monges/600/400",
+    "lat": 42.3958,
+    "lng": -2.4694
   }
 ]
