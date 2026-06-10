@@ -3711,5 +3711,293 @@
     "photo": "https://picsum.photos/seed/el-retiro-de-la-mancha-consuegra/600/400",
     "lat": 39.459,
     "lng": -3.605
+  },
+  {
+    "id": "hotel-spa-arzuaga-quintanilla",
+    "name": "Hotel & Spa Arzuaga",
+    "location": "Quintanilla de Onésimo, Valladolid",
+    "region": "Castilla y León",
+    "desc": "Hotel de lujo entre los viñedos de Ribera del Duero con un spa especializado en vinoterapia. Tratamientos con extracto de uva, piscina cubierta, sauna y circuito de hidroterapia en plena naturaleza castellana.",
+    "duracion": "2-3 noches",
+    "precio_desde": 130,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "vinoterapia",
+      "bienestar",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-arzuaga.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-arzuaga-quintanilla/600/400",
+    "lat": 41.587,
+    "lng": -4.118
+  },
+  {
+    "id": "spa-rio-dulce-aragosa",
+    "name": "Spa y Casa Rural Río Dulce",
+    "location": "Aragosa, Guadalajara",
+    "region": "Castilla-La Mancha",
+    "desc": "Casa rural con spa privado en plena naturaleza junto al Parque Natural del Alto Tajo. Clases de yoga, piscina cubierta climatizada y entorno tranquilo ideal para una escapada de bienestar.",
+    "duracion": "2-3 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "yoga",
+      "rural",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-rio-dulce.html",
+    "photo": "https://picsum.photos/seed/spa-rio-dulce-aragosa/600/400",
+    "lat": 40.875,
+    "lng": -2.435
+  },
+  {
+    "id": "retiro-costina-wellness-santa-comba",
+    "name": "Retiro Costiña Wellness & Villas",
+    "location": "Santa Comba, A Coruña",
+    "region": "Galicia",
+    "desc": "Conjunto de villas independientes en un entorno silencioso y natural pensado para la desconexión total. Ideal para retiros de meditación y descanso rodeados de bosque gallego.",
+    "duracion": "3-5 noches",
+    "precio_desde": 110,
+    "precio_tag": "€€€",
+    "tags": [
+      "retiro",
+      "silencio",
+      "naturaleza",
+      "desconexión",
+      "meditación"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/retiro-costina-wellness-amp-villas-santa-comba8.html",
+    "photo": "https://picsum.photos/seed/retiro-costina-wellness-santa-comba/600/400",
+    "lat": 43.029,
+    "lng": -8.811
+  },
+  {
+    "id": "hotel-riopar-spa",
+    "name": "Hotel Riópar Spa",
+    "location": "Riópar, Albacete",
+    "region": "Castilla-La Mancha",
+    "desc": "Hotel de montaña en la Sierra del Segura con spa interior, jacuzzi, camas de hidromasaje y duchas de sensaciones. Tratamientos de masaje y aromaterapia en un entorno perfecto para senderismo y desconexión.",
+    "duracion": "2-3 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "masaje",
+      "desconexión",
+      "montaña"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-riopar.html",
+    "photo": "https://picsum.photos/seed/hotel-riopar-spa/600/400",
+    "lat": 38.508,
+    "lng": -2.444
+  },
+  {
+    "id": "hotel-spa-rio-ucero-burgo-osma",
+    "name": "Hotel Spa Río Ucero",
+    "location": "El Burgo de Osma, Soria",
+    "region": "Castilla y León",
+    "desc": "Hotel con spa junto al río Ucero, con jacuzzi, piscina climatizada, duchas terapéuticas, piscina fría y gimnasio. Punto de partida ideal para visitar el Cañón del Río Lobos en un retiro de naturaleza y bienestar.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "bienestar",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rio-ucero.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-rio-ucero-burgo-osma/600/400",
+    "lat": 41.586,
+    "lng": -3.066
+  },
+  {
+    "id": "hotel-spa-casa-mudejar-segovia",
+    "name": "Hotel Spa La Casa Mudéjar",
+    "location": "Segovia",
+    "region": "Castilla y León",
+    "desc": "Hospedería del siglo XV en el centro histórico de Segovia, a pasos de la Plaza Mayor, con un spa que incluye jacuzzi, sauna y baños turcos. Una opción de bienestar urbano con encanto histórico.",
+    "duracion": "1-2 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "bienestar",
+      "escapada urbana",
+      "histórico"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/la-casa-mudejar-hospederia.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-casa-mudejar-segovia/600/400",
+    "lat": 40.949,
+    "lng": -4.118
+  },
+  {
+    "id": "hotel-rural-spa-puente-duraton-sepulveda",
+    "name": "Hotel Rural & Spa Puente del Duratón",
+    "location": "Sepúlveda, Segovia",
+    "region": "Castilla y León",
+    "desc": "Hotel rural de 4 estrellas cerca del Hayedo de Tejera Negra, con spa y entorno natural privilegiado en las Hoces del Río Duratón. Perfecto para un retiro de naturaleza y relax en Castilla y León.",
+    "duracion": "2-3 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rural-puente-del-duraton.html",
+    "photo": "https://picsum.photos/seed/hotel-rural-spa-puente-duraton-sepulveda/600/400",
+    "lat": 41.298,
+    "lng": -3.747
+  },
+  {
+    "id": "balneario-archena-hotel-termas",
+    "name": "Balneario de Archena - Hotel Termas",
+    "location": "Archena, Murcia",
+    "region": "Región de Murcia",
+    "desc": "Histórico balneario termal en el Valle de Ricote, junto al río Segura, considerado uno de los mejores de España por la calidad de sus aguas y tratamientos. Piscinas termales y circuitos de hidroterapia.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "salud",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/termas.html",
+    "photo": "https://picsum.photos/seed/balneario-archena-hotel-termas/600/400",
+    "lat": 38.123,
+    "lng": -1.299
+  },
+  {
+    "id": "urso-hotel-spa-madrid",
+    "name": "URSO Hotel & Spa",
+    "location": "Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel boutique de lujo (Small Luxury Hotels of the World) en un palacete del barrio de Justicia, con spa y gimnasio de alto nivel. Una propuesta de bienestar urbano sofisticado en el corazón de Madrid.",
+    "duracion": "1-2 noches",
+    "precio_desde": 180,
+    "precio_tag": "€€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "escapada urbana",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/urso.html",
+    "photo": "https://picsum.photos/seed/urso-hotel-spa-madrid/600/400",
+    "lat": 40.428,
+    "lng": -3.697
+  },
+  {
+    "id": "siete-playas-surf-house-valdovino",
+    "name": "Siete Playas Surf House",
+    "location": "Valdoviño, A Coruña",
+    "region": "Galicia",
+    "desc": "Casa frente a la playa con vistas espectaculares al mar, cerca de Pantín, la playa de surf más famosa de Galicia. Ofrece actividades de yoga, senderismo y noches de cine en un ambiente relajado de surf y bienestar.",
+    "duracion": "3-5 noches",
+    "precio_desde": 70,
+    "precio_tag": "€€",
+    "tags": [
+      "surf",
+      "yoga",
+      "playa",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/siete-playas-surf-house.html",
+    "photo": "https://picsum.photos/seed/siete-playas-surf-house-valdovino/600/400",
+    "lat": 43.6,
+    "lng": -8.137
+  },
+  {
+    "id": "bonnies-suites-spa-valencia",
+    "name": "BONNIES Suites & Spa Valencia",
+    "location": "Valencia",
+    "region": "Comunidad Valenciana",
+    "desc": "Suites modernas en el centro de Valencia con centro de bienestar compartido que incluye sauna y jacuzzi. Una base cómoda para combinar turismo urbano con momentos de relax y spa.",
+    "duracion": "2-3 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "escapada urbana",
+      "bienestar",
+      "sauna"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/bonnies-suites-amp-spa-valencia.html",
+    "photo": "https://picsum.photos/seed/bonnies-suites-spa-valencia/600/400",
+    "lat": 39.469,
+    "lng": -0.376
+  },
+  {
+    "id": "retiro-playa-spa-tavernes-valldigna",
+    "name": "Retiro Playa y Spa",
+    "location": "Tavernes de Valldigna, Valencia",
+    "region": "Comunidad Valenciana",
+    "desc": "Alojamiento frente a la playa con centro de bienestar que incluye sauna, jacuzzi y gimnasio. Un retiro costero ideal para desconectar entre el mar Mediterráneo y la huerta valenciana.",
+    "duracion": "2-4 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "bienestar",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/retiro-playa-y-spa.html",
+    "photo": "https://picsum.photos/seed/retiro-playa-spa-tavernes-valldigna/600/400",
+    "lat": 39.06,
+    "lng": -0.252
+  },
+  {
+    "id": "kmc-madrid-la-sierra-mataelpino",
+    "name": "KMC Madrid La Sierra",
+    "location": "Mataelpino, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Centro de meditación budista en plena Sierra de Guadarrama, con vistas al valle y a la montaña. Programa de clases de meditación de distintos niveles en un entorno de paz y naturaleza, ideal para un retiro espiritual.",
+    "duracion": "2-3 noches",
+    "precio_desde": 65,
+    "precio_tag": "€€",
+    "tags": [
+      "meditación",
+      "retiro",
+      "espiritual",
+      "naturaleza",
+      "silencio"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/kmc-la-sierra.html",
+    "photo": "https://picsum.photos/seed/kmc-madrid-la-sierra-mataelpino/600/400",
+    "lat": 40.69,
+    "lng": -4.024
+  },
+  {
+    "id": "hacienda-los-robles-navacerrada",
+    "name": "Hotel Rural Spa & Wellness Hacienda Los Robles",
+    "location": "Navacerrada, Madrid",
+    "region": "Comunidad de Madrid",
+    "desc": "Hotel rural en la sierra de Navacerrada rodeado de bosques de robles y pinos, con spa y centro de bienestar. Perfecto para un retiro de baño de bosque y desconexión cerca de Madrid.",
+    "duracion": "2-3 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "bosque",
+      "desconexión",
+      "rural"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rural-spa-amp-wellness-hacienda-los-robles.html",
+    "photo": "https://picsum.photos/seed/hacienda-los-robles-navacerrada/600/400",
+    "lat": 40.726,
+    "lng": -4.012
   }
 ]
