@@ -3424,5 +3424,292 @@
     "photo": "https://picsum.photos/seed/cala-san-miguel-ibiza-curio-collection/600/400",
     "lat": 39.067,
     "lng": 1.4
+  },
+  {
+    "id": "balneario-elgorriaga",
+    "name": "Balneario Elgorriaga",
+    "location": "Elgorriaga, Navarra",
+    "region": "Navarra",
+    "desc": "Balneario centenario en el valle del Malerreka, con piscinas termales, sauna, hammam y centro de fitness. Habitaciones con vistas al campo en un entorno rural tranquilo del Pirineo navarro.",
+    "duracion": "2-4 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-elgorriaga.html",
+    "photo": "https://picsum.photos/seed/balneario-elgorriaga/600/400",
+    "lat": 43.197,
+    "lng": -1.73
+  },
+  {
+    "id": "spa-el-mirador-de-ulzama",
+    "name": "Hotel & Spa El Mirador de Ulzama",
+    "location": "Urrizola-Galáin, Navarra",
+    "region": "Navarra",
+    "desc": "Hotel con spa y centro de bienestar en el valle de Ulzama, con sauna, piscina exterior de temporada, bañera de hidromasaje, hammam y servicio de masajes en pleno entorno pirenaico.",
+    "duracion": "2-3 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "relax",
+      "montaña"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-el-mirador-de-ulzama.html",
+    "photo": "https://picsum.photos/seed/spa-el-mirador-de-ulzama/600/400",
+    "lat": 43.038,
+    "lng": -1.668
+  },
+  {
+    "id": "atxaspi",
+    "name": "Hotel SPA Atxaspi",
+    "location": "Lesaka, Navarra",
+    "region": "Navarra",
+    "desc": "Hotel acogedor de estilo tradicional con vigas de madera vistas, ubicado en el valle de Bortziriak. Cuenta con zona de relax con sauna y spa para desconectar en plena naturaleza vasco-navarra.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "rural",
+      "naturaleza",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/atxaspi.html",
+    "photo": "https://picsum.photos/seed/atxaspi/600/400",
+    "lat": 43.281,
+    "lng": -1.706
+  },
+  {
+    "id": "castillo-de-gorraiz",
+    "name": "Hotel Castillo de Gorraiz & Spa",
+    "location": "Gorraiz, Navarra",
+    "region": "Navarra",
+    "desc": "Hotel de 4 estrellas junto a un campo de golf, que combina elegancia y tranquilidad con un completo spa. Ideal para una escapada de bienestar cerca de Pamplona.",
+    "duracion": "2-3 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "golf",
+      "relax",
+      "lujo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/castillo-de-gorraiz.html",
+    "photo": "https://picsum.photos/seed/castillo-de-gorraiz/600/400",
+    "lat": 42.793,
+    "lng": -1.604
+  },
+  {
+    "id": "balneario-arnedillo",
+    "name": "Hotel SPA TermaEuropa Balneario Arnedillo",
+    "location": "Arnedillo, La Rioja",
+    "region": "La Rioja",
+    "desc": "Balneario histórico enclavado en un entorno montañoso del valle del Cidacos, con tratamientos termales para la relajación y el bienestar, rodeado de paisajes naturales de La Rioja.",
+    "duracion": "2-4 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-arnedillo.html",
+    "photo": "https://picsum.photos/seed/balneario-arnedillo/600/400",
+    "lat": 42.226,
+    "lng": -2.246
+  },
+  {
+    "id": "etxegana",
+    "name": "Hotel & Spa Etxegana",
+    "location": "Zeanuri, País Vasco",
+    "region": "País Vasco",
+    "desc": "Hotel rural y spa situado en pleno Parque Natural de Gorbeia, con piscina interior, baño de hidromasaje y sauna finlandesa. Un refugio de bienestar rodeado de bosques vascos.",
+    "duracion": "2-3 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "rural",
+      "relax",
+      "montaña"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/rural-etxegana.html",
+    "photo": "https://picsum.photos/seed/etxegana/600/400",
+    "lat": 43.087,
+    "lng": -2.751
+  },
+  {
+    "id": "agua-viva-eco-wellness-castro-urdiales",
+    "name": "Agua Viva Eco H Wellness Castro Urdiales",
+    "location": "Castro-Urdiales, Cantabria",
+    "region": "Cantabria",
+    "desc": "Alojamiento eco-wellness con habitaciones familiares, terraza solárium, jardín y bañera de hidromasaje, en la villa marinera de Castro-Urdiales, costa cántabra.",
+    "duracion": "2-3 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "eco",
+      "relax",
+      "costa"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/posda-spa-aguaviva.html",
+    "photo": "https://picsum.photos/seed/agua-viva-eco-wellness-castro-urdiales/600/400",
+    "lat": 43.385,
+    "lng": -3.215
+  },
+  {
+    "id": "gran-balneario-de-lierganes",
+    "name": "Gran Hotel Balneario de Liérganes",
+    "location": "Liérganes, Cantabria",
+    "region": "Cantabria",
+    "desc": "Gran hotel balneario en un entorno tranquilo del valle de Liérganes, con completas instalaciones termales y spa para tratamientos de salud y relajación junto al río Miera.",
+    "duracion": "2-4 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "relax",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/gran-balneario-de-lierganes.html",
+    "photo": "https://picsum.photos/seed/gran-balneario-de-lierganes/600/400",
+    "lat": 43.292,
+    "lng": -3.755
+  },
+  {
+    "id": "balneario-termas-pallares",
+    "name": "Hotel Parque Balneario Termas Pallarés",
+    "location": "Alhama de Aragón, Aragón",
+    "region": "Aragón",
+    "desc": "Histórico balneario rodeado de un extenso parque, con lago de aguas termales naturales, completo spa y centro de fitness. Un clásico destino termal aragonés desde el siglo XIX.",
+    "duracion": "3-5 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "naturaleza",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-termas-pallares.html",
+    "photo": "https://picsum.photos/seed/balneario-termas-pallares/600/400",
+    "lat": 41.305,
+    "lng": -1.901
+  },
+  {
+    "id": "balneario-de-la-virgen-jaraba",
+    "name": "Hotel Balneario de La Virgen",
+    "location": "Jaraba, Aragón",
+    "region": "Aragón",
+    "desc": "Balneario tradicional en la localidad termal de Jaraba, conocida por sus aguas minero-medicinales. Spa con tratamientos termales en un entorno rural tranquilo de la provincia de Zaragoza.",
+    "duracion": "2-4 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "spa",
+      "rural",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-de-la-virgen.html",
+    "photo": "https://picsum.photos/seed/balneario-de-la-virgen-jaraba/600/400",
+    "lat": 41.273,
+    "lng": -1.857
+  },
+  {
+    "id": "puebloastur-eco-resort-cofino",
+    "name": "Puebloastur Eco Resort Hotel & Spa Gran Lujo",
+    "location": "Cofiño, Asturias",
+    "region": "Asturias",
+    "desc": "Eco resort de gran lujo con vistas a los Picos de Europa, spa con piscina interior y jardines con piscina exterior de temporada. Una experiencia de bienestar de alta gama en plena naturaleza asturiana.",
+    "duracion": "2-4 noches",
+    "precio_desde": 180,
+    "precio_tag": "€€€€",
+    "tags": [
+      "spa",
+      "lujo",
+      "naturaleza",
+      "eco",
+      "montaña",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/puebloastur-eco-resort-wellness.html",
+    "photo": "https://picsum.photos/seed/puebloastur-eco-resort-cofino/600/400",
+    "lat": 43.273,
+    "lng": -5.187
+  },
+  {
+    "id": "spa-maria-manuela-onis-asturias",
+    "name": "Hotel & Spa María Manuela",
+    "location": "Onís, Asturias",
+    "region": "Asturias",
+    "desc": "Hotel con spa situado en el espectacular valle del Güeña, con piscina exterior de temporada, terraza y centro de fitness. Punto de partida ideal para el bienestar entre los Picos de Europa.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "montaña",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/maria-manuela.html",
+    "photo": "https://picsum.photos/seed/spa-maria-manuela-onis-asturias/600/400",
+    "lat": 43.286,
+    "lng": -5.062
+  },
+  {
+    "id": "retiro-siete-aguas",
+    "name": "Retiro Siete Aguas",
+    "location": "Siete Aguas, Comunidad Valenciana",
+    "region": "Comunidad Valenciana",
+    "desc": "Alojamiento con jardín, salón compartido, piscina y wifi gratuito en un entorno tranquilo de montaña, ideal para un retiro de desconexión cerca de Valencia.",
+    "duracion": "2-4 noches",
+    "precio_desde": 65,
+    "precio_tag": "€€",
+    "tags": [
+      "retiro",
+      "naturaleza",
+      "relax",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/retiro-siete-aguas.html",
+    "photo": "https://picsum.photos/seed/retiro-siete-aguas/600/400",
+    "lat": 39.547,
+    "lng": -0.917
+  },
+  {
+    "id": "el-retiro-de-la-mancha-consuegra",
+    "name": "El Retiro de La Mancha",
+    "location": "Consuegra, Castilla-La Mancha",
+    "region": "Castilla-La Mancha",
+    "desc": "Casa de vacaciones con jardines y terrazas junto a los famosos molinos de viento de Consuegra, un lugar tranquilo para un retiro de desconexión en el corazón de La Mancha.",
+    "duracion": "2-3 noches",
+    "precio_desde": 60,
+    "precio_tag": "€€",
+    "tags": [
+      "retiro",
+      "rural",
+      "desconexión",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-retiro-de-la-mancha.html",
+    "photo": "https://picsum.photos/seed/el-retiro-de-la-mancha-consuegra/600/400",
+    "lat": 39.459,
+    "lng": -3.605
   }
 ]
