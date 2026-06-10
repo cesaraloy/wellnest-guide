@@ -203,11 +203,21 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 }
 .book-btn:hover { background:var(--sage); }
 
+.edit-search-bar {
+  display:none; align-items:center; gap:8px; margin-bottom:18px;
+  font-size:12px; color:var(--sage); cursor:pointer; letter-spacing:.04em;
+  background:none; border:none; padding:0; font-family:'DM Sans',sans-serif;
+}
+.edit-search-bar svg { width:12px; height:12px; }
+
 @media(max-width:900px) {
   nav { padding:14px 20px; }
   .app { grid-template-columns:1fr; min-height:auto; }
   .panel-left { padding:32px 20px 28px; border-right:none; border-bottom:1px solid rgba(122,140,110,0.12); }
   .panel-right { padding:32px 20px 48px; }
+  .app.results-active .panel-left { display:none; }
+  .app.results-active .panel-right { min-height:calc(100vh - 62px); padding-top:24px; }
+  .app.results-active .edit-search-bar { display:flex; }
   .form-title { font-size:30px; }
   .radio-grid { grid-template-columns:1fr 1fr; }
   .region-pill-group { grid-template-columns:1fr 1fr; }
@@ -378,7 +388,7 @@ const steps = [
   {
     id: 'fechas',
     label: '¿Tienes fechas aproximadas?',
-    hint: 'Opcional — nos ayuda a comprobar disponibilidad real en Booking, GetYourGuide y Civitatis',
+    hint: 'Opcional — nos ayuda a comprobar disponibilidad real en Booking',
     type: 'date-range'
   },
   {
@@ -616,7 +626,13 @@ function renderResults(data) {
   // Platform label for booking button only
   const platformLabel = { booking:'Ver en Booking', getyourguide:'Ver en GetYourGuide', civitatis:'Ver en Civitatis' };
 
+  document.querySelector('.app').classList.add('results-active');
+
   let html = `
+    <button class="edit-search-bar" onclick="editSearch()">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2L4 6l4 4"/></svg>
+      Editar búsqueda
+    </button>
     <div style="margin-bottom:28px;">
       <div class="results-eyebrow">Recomendaciones personalizadas</div>
       <div class="results-title">Encontramos <em>${data.retreats.length} retiros</em> para ti</div>
@@ -706,7 +722,13 @@ function sendRecommendationsEmail(data) {
 function reset() {
   Object.assign(state, { step:0, tipo:[], region:null, duracion:null, fechaInicio:null, fechaFin:null, presupuesto:600, nivel:null, exclusividad:null });
   renderStep();
+  document.querySelector('.app').classList.remove('results-active');
   document.getElementById('rightPanel').innerHTML = `<div class="empty-state"><div class="empty-icon">🌿</div><div class="empty-title">Tus recomendaciones<br>aparecerán aquí</div><div class="empty-sub">Completa el formulario y nuestra IA buscará<br>los retiros que mejor encajan contigo.</div></div>`;
+}
+
+function editSearch() {
+  document.querySelector('.app').classList.remove('results-active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ── TRACKING ─────────────────────────────────────────────────────────
