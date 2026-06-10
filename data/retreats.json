@@ -3999,5 +3999,320 @@
     "photo": "https://picsum.photos/seed/hacienda-los-robles-navacerrada/600/400",
     "lat": 40.726,
     "lng": -4.012
+  },
+  {
+    "id": "magic-alhambra-retreat-granada",
+    "name": "Magic Alhambra Retreat",
+    "location": "Granada",
+    "region": "Andalucía",
+    "desc": "Retiro boutique a los pies de la Alhambra, en el barrio del Albaicín. Terrazas con vistas a la fortaleza nazarí, ambiente tranquilo ideal para desconexión, yoga matutino y paseos por el Sacromonte.",
+    "duracion": "2-4 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "yoga",
+      "meditación",
+      "naturaleza",
+      "vistas",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/magic-alhambra-retreat.html",
+    "photo": "https://picsum.photos/seed/magic-alhambra-retreat-granada/600/400",
+    "lat": 37.1773,
+    "lng": -3.5886
+  },
+  {
+    "id": "esencia-lodge-almunecar",
+    "name": "Esencia Lodge - Off-Grid Cabin Retreat",
+    "location": "Almuñécar, Granada",
+    "region": "Andalucía",
+    "desc": "Cabaña de lujo totalmente autosuficiente y off-grid, situada en un paraje secreto de la Costa Tropical granadina. Energía solar, recogida de agua de lluvia y aislamiento total para una experiencia profunda de desconexión y mindfulness.",
+    "duracion": "3-7 noches",
+    "precio_desde": 180,
+    "precio_tag": "€€€",
+    "tags": [
+      "eco",
+      "desconexión",
+      "naturaleza",
+      "silencio",
+      "off-grid",
+      "solo adultos"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/esencia-lodge-luxurious-off-grid-cabin-retreat.html",
+    "photo": "https://picsum.photos/seed/esencia-lodge-almunecar/600/400",
+    "lat": 36.7396,
+    "lng": -3.69
+  },
+  {
+    "id": "hide-away-peace-serenity-genalguacil",
+    "name": "Hide Away In Spain – Peace & Serenity",
+    "location": "Genalguacil, Málaga",
+    "region": "Andalucía",
+    "desc": "Refugio rural en uno de los 'pueblos museo' de la Serranía de Ronda. Jardín, piscina privada y entorno de montaña ideal para retiros de silencio, escritura o meditación lejos del bullicio costero.",
+    "duracion": "3-6 noches",
+    "precio_desde": 110,
+    "precio_tag": "€€",
+    "tags": [
+      "silencio",
+      "naturaleza",
+      "desconexión",
+      "rural",
+      "meditación"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hide-away-in-spain-peace-serenity.html",
+    "photo": "https://picsum.photos/seed/hide-away-peace-serenity-genalguacil/600/400",
+    "lat": 36.5611,
+    "lng": -5.2406
+  },
+  {
+    "id": "cerdanya-viva-ecoestades-prullans",
+    "name": "Cerdanya Viva Ecoestades",
+    "location": "Prullans, Lleida",
+    "region": "Cataluña",
+    "desc": "Resort ecológico en el pueblo de montaña de Prullans, en pleno Pirineo de la Cerdanya. Piscinas interior y exterior, centro de bienestar y entorno natural perfecto para retiros de aire puro y reconexión.",
+    "duracion": "2-5 noches",
+    "precio_desde": 105,
+    "precio_tag": "€€",
+    "tags": [
+      "eco",
+      "montaña",
+      "naturaleza",
+      "spa",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/muntanya.html",
+    "photo": "https://picsum.photos/seed/cerdanya-viva-ecoestades-prullans/600/400",
+    "lat": 42.3853,
+    "lng": 1.7444
+  },
+  {
+    "id": "hotel-spa-aguas-de-los-mallos",
+    "name": "Hotel Spa Aguas de los Mallos",
+    "location": "Murillo de Gállego, Zaragoza",
+    "region": "Aragón",
+    "desc": "Hotel con spa enclavado en el Prepirineo aragonés, frente a los espectaculares Mallos de Riglos. Piscina exterior de verano, circuito termal y entorno privilegiado para senderismo y relax de montaña.",
+    "duracion": "2-4 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "montaña",
+      "naturaleza",
+      "balneario",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-aguas-de-los-mallos.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-aguas-de-los-mallos/600/400",
+    "lat": 42.3119,
+    "lng": -0.7558
+  },
+  {
+    "id": "monasterio-de-boltana-spa",
+    "name": "Hotel & Spa Monasterio de Boltaña",
+    "location": "Boltaña, Huesca",
+    "region": "Aragón",
+    "desc": "Antiguo monasterio del siglo XVI restaurado a orillas del río Ara, en el corazón del Sobrarbe pirenaico. Amplio spa con circuito termal, vistas a las montañas y ambiente de retiro histórico y sereno.",
+    "duracion": "2-4 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "montaña",
+      "historia",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/barcelo-monasterio-de-boltana-spa.html",
+    "photo": "https://picsum.photos/seed/monasterio-de-boltana-spa/600/400",
+    "lat": 42.4475,
+    "lng": 0.0689
+  },
+  {
+    "id": "gran-hotel-balneario-panticosa",
+    "name": "Gran Hotel - Balneario de Panticosa",
+    "location": "Panticosa, Huesca",
+    "region": "Aragón",
+    "desc": "Histórico balneario rodeado de picos pirenaicos a más de 1600 metros de altitud. Aguas termales naturales, tratamientos de hidroterapia y un valle glaciar de gran belleza para retiros de montaña.",
+    "duracion": "3-5 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "montaña",
+      "naturaleza",
+      "desconexión"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/gran-gl.html",
+    "photo": "https://picsum.photos/seed/gran-hotel-balneario-panticosa/600/400",
+    "lat": 42.7672,
+    "lng": -0.1789
+  },
+  {
+    "id": "hotel-continental-balneario-panticosa",
+    "name": "Hotel Continental - Balneario de Panticosa",
+    "location": "Panticosa, Huesca",
+    "region": "Aragón",
+    "desc": "Parte del histórico complejo termal de Panticosa, junto a la estación de esquí de Panticosa. Tratamientos termales, aire puro de montaña y un entorno natural protegido ideal para desconectar.",
+    "duracion": "2-5 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "balneario",
+      "termal",
+      "montaña",
+      "esquí",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/contiental.html",
+    "photo": "https://picsum.photos/seed/hotel-continental-balneario-panticosa/600/400",
+    "lat": 42.7665,
+    "lng": -0.1781
+  },
+  {
+    "id": "hostal-aragon-teruel",
+    "name": "Hostal Aragón",
+    "location": "Teruel",
+    "region": "Aragón",
+    "desc": "Alojamiento sencillo y acogedor en el centro histórico de Teruel, ciudad mudéjar Patrimonio de la Humanidad. Punto de partida tranquilo para escapadas culturales y de bienestar por el Maestrazgo turolense.",
+    "duracion": "1-3 noches",
+    "precio_desde": 50,
+    "precio_tag": "€",
+    "tags": [
+      "escapada",
+      "cultura",
+      "tranquilidad",
+      "centro histórico"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hostal-araga3n.html",
+    "photo": "https://picsum.photos/seed/hostal-aragon-teruel/600/400",
+    "lat": 40.3456,
+    "lng": -1.1065
+  },
+  {
+    "id": "hotel-montecarlo-spa-roses",
+    "name": "Hotel Montecarlo Spa & Wellness",
+    "location": "Roses, Girona",
+    "region": "Cataluña",
+    "desc": "Hotel frente al mar en la Costa Brava con un completo centro de spa y wellness. Circuito de hidroterapia, sauna y vistas a la bahía de Roses, ideal para combinar playa y bienestar.",
+    "duracion": "2-5 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "wellness",
+      "Costa Brava",
+      "hidroterapia"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/montecarlo-roses.html",
+    "photo": "https://picsum.photos/seed/hotel-montecarlo-spa-roses/600/400",
+    "lat": 42.262,
+    "lng": 3.1762
+  },
+  {
+    "id": "hotel-cala-del-pi-platja-aro",
+    "name": "Hotel Cala del Pi - Adults Only",
+    "location": "Platja d'Aro, Girona",
+    "region": "Cataluña",
+    "desc": "Hotel solo para adultos con acceso directo a la Cala del Pi, en plena Costa Brava. Spa gratuito, piscina exterior con vistas al mar y ambiente exclusivo para una escapada de relax en pareja.",
+    "duracion": "2-4 noches",
+    "precio_desde": 140,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "playa",
+      "solo adultos",
+      "Costa Brava",
+      "lujo"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-cala-del-pi.en-gb.html",
+    "photo": "https://picsum.photos/seed/hotel-cala-del-pi-platja-aro/600/400",
+    "lat": 41.8107,
+    "lng": 3.0808
+  },
+  {
+    "id": "hotel-cap-roig-spa-platja-aro",
+    "name": "Hotel Cap Roig & Spa by Brava Hoteles",
+    "location": "Platja d'Aro, Girona",
+    "region": "Cataluña",
+    "desc": "Hotel construido sobre los acantilados de Platja d'Aro, con el spa Sa La Mar integrado en la roca natural. Vistas espectaculares al Mediterráneo y tratamientos de talasoterapia y bienestar.",
+    "duracion": "2-4 noches",
+    "precio_desde": 130,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "talasoterapia",
+      "playa",
+      "Costa Brava",
+      "vistas"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/cap-roig.html",
+    "photo": "https://picsum.photos/seed/hotel-cap-roig-spa-platja-aro/600/400",
+    "lat": 41.7989,
+    "lng": 3.0697
+  },
+  {
+    "id": "htop-calella-palace-spa",
+    "name": "H·TOP Calella Palace & Spa",
+    "location": "Calella, Barcelona",
+    "region": "Cataluña",
+    "desc": "Gran hotel frente al mar en la Costa del Maresme con amplio spa y circuito de bienestar. Piscinas interiores y exteriores, sauna, baño turco y propuestas de relax para escapadas cortas desde Barcelona.",
+    "duracion": "2-4 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "wellness",
+      "familia",
+      "Maresme"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/htopcalellapalace.en-gb.html",
+    "photo": "https://picsum.photos/seed/htop-calella-palace-spa/600/400",
+    "lat": 41.6142,
+    "lng": 2.6553
+  },
+  {
+    "id": "talaso-atlantico-mougas",
+    "name": "Talaso Atlántico",
+    "location": "Mougás, Pontevedra",
+    "region": "Galicia",
+    "desc": "Hotel balneario frente al océano Atlántico en las Rías Baixas, con centro de talasoterapia que aprovecha el agua de mar para tratamientos de salud y belleza. Piscina climatizada de agua marina y vistas al mar.",
+    "duracion": "3-5 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "talasoterapia",
+      "spa",
+      "playa",
+      "naturaleza",
+      "Rías Baixas"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/talaso-atlantico.html",
+    "photo": "https://picsum.photos/seed/talaso-atlantico-mougas/600/400",
+    "lat": 42.0833,
+    "lng": -8.8667
+  },
+  {
+    "id": "talasoterapia-zelai-zumaia",
+    "name": "Hotel & Talasoterapia Zelai",
+    "location": "Zumaia, Guipúzcoa",
+    "region": "País Vasco",
+    "desc": "Hotel frente a la playa de Zumaia con centro de talasoterapia: piscina interior de agua marina, baños turcos, jacuzzis y duchas de chorro. Entorno de costa vasca con acantilados y senderos naturales.",
+    "duracion": "2-4 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "talasoterapia",
+      "spa",
+      "playa",
+      "naturaleza",
+      "País Vasco"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/talasoterapia-zelai.html",
+    "photo": "https://picsum.photos/seed/talasoterapia-zelai-zumaia/600/400",
+    "lat": 43.2967,
+    "lng": -2.2589
   }
 ]
