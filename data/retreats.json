@@ -4502,5 +4502,47 @@
     "photo": "https://picsum.photos/seed/hotel-vinicola-real-200-monges/600/400",
     "lat": 42.3958,
     "lng": -2.4694
+  },
+  {
+    "id": "ght-costa-brava-spa-tossa",
+    "name": "GHT Costa Brava & Spa",
+    "location": "Tossa de Mar, Girona",
+    "region": "Cataluña",
+    "desc": "Hotel a 300 metros de la playa de Tossa de Mar con gran piscina exterior, sauna y piscina cubierta. Una opción de bienestar costero en plena Costa Brava catalana.",
+    "duracion": "2-4 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "sauna",
+      "playa",
+      "Cataluña",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hotel-costa-brava.html",
+    "photo": "https://picsum.photos/seed/ght-costa-brava-spa-tossa/600/400",
+    "lat": 41.7194,
+    "lng": 2.9347
+  },
+  {
+    "id": "fuerteventura-sol-gym-house-spa",
+    "name": "Fuerteventura Sol Gym House and Spa",
+    "location": "Tuineje, Fuerteventura",
+    "region": "Islas Canarias",
+    "desc": "Apartamento de un dormitorio con terraza y balcón en Tuineje. Cuenta con instalaciones de spa, gimnasio, jacuzzi, solárium y zona de barbacoa, ideal para una estancia de bienestar activo en Fuerteventura.",
+    "duracion": "3-5 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "gimnasio",
+      "jacuzzi",
+      "Islas Canarias",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/fuerteventura-sol-gym-house-and-spa.html",
+    "photo": "https://picsum.photos/seed/fuerteventura-sol-gym-house-spa/600/400",
+    "lat": 28.3167,
+    "lng": -14.0667
   }
 ]
