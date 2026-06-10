@@ -674,6 +674,7 @@ function toggleMobileMap() {
     } else {
       document.body.classList.remove('mobile-map-active');
       mapVisible = false;
+      boundsFilter = false;
       render();
     }
   } else {
