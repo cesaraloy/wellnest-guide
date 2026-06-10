@@ -2794,5 +2794,256 @@
     "photo": "https://picsum.photos/seed/parador-de-alcala-de-henares/600/400",
     "lat": 40.482,
     "lng": -3.362
+  },
+  {
+    "id": "galicia-retreat-ortigueira",
+    "name": "Galicia Retreat",
+    "location": "Santa Marta de Ortigueira, A Coruña",
+    "region": "Galicia",
+    "desc": "Casa de campo con vistas al río, montaña y al puerto de Ortigueira. Terraza, jardín, chimenea y zona de barbacoa en un entorno tranquilo cerca del Cabo Ortegal. Puntuación 8.9 en Booking.",
+    "duracion": "3-7 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "naturaleza",
+      "rural",
+      "desconexión",
+      "vistas al mar",
+      "tranquilidad"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/galicia-retreat.html",
+    "photo": "https://picsum.photos/seed/galicia-retreat-ortigueira/600/400",
+    "lat": 43.682,
+    "lng": -7.852
+  },
+  {
+    "id": "hotel-spa-maria-manuela-onis",
+    "name": "Hotel & Spa María Manuela",
+    "location": "Onís, Asturias",
+    "region": "Asturias",
+    "desc": "Hotel con spa situado en el valle del Güeña, junto a los Picos de Europa. Piscina exterior de temporada, terraza y gimnasio. Puntuación 8.3 en Booking.",
+    "duracion": "2-4 noches",
+    "precio_desde": 90,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "montaña",
+      "bienestar",
+      "picos de europa"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/maria-manuela.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-maria-manuela-onis/600/400",
+    "lat": 43.31,
+    "lng": -5.083
+  },
+  {
+    "id": "hotel-spa-princesa-munia-oviedo",
+    "name": "Hotel & Spa Princesa Munia",
+    "location": "Oviedo, Asturias",
+    "region": "Asturias",
+    "desc": "Hotel contemporáneo en el centro de Oviedo, a pocos minutos de la Catedral. Spa con bañera de hidromasaje y baños turcos, además de centro de belleza con tratamientos y masajes.",
+    "duracion": "1-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "urbano",
+      "masajes",
+      "bienestar",
+      "patrimonio"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/princesamunia.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-princesa-munia-oviedo/600/400",
+    "lat": 43.361,
+    "lng": -5.849
+  },
+  {
+    "id": "castilla-termal-monasterio-de-valbuena",
+    "name": "Castilla Termal Monasterio de Valbuena",
+    "location": "Valbuena de Duero, Valladolid",
+    "region": "Castilla y León",
+    "desc": "Hotel 5 estrellas en un monasterio cisterciense del siglo XII rodeado de viñedos en la Ribera del Duero. Spa termal de más de 2.000 m² con piscinas de aguas termales, sauna, baño de hielo y circuito de contrastes.",
+    "duracion": "2-3 noches",
+    "precio_desde": 160,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa termal",
+      "monasterio",
+      "lujo",
+      "vinoterapia",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/termal-monasterio-de-valbuena.html",
+    "photo": "https://picsum.photos/seed/castilla-termal-monasterio-de-valbuena/600/400",
+    "lat": 41.665,
+    "lng": -4.243
+  },
+  {
+    "id": "castilla-termal-olmedo",
+    "name": "Castilla Termal Olmedo",
+    "location": "Olmedo, Valladolid",
+    "region": "Castilla y León",
+    "desc": "Hotel ubicado en un convento reformado del siglo XII, a 40 km de Valladolid. Complejo de spa con aguas minerales termales, piscinas interiores y exteriores y tratamientos de bienestar.",
+    "duracion": "2-3 noches",
+    "precio_desde": 140,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa termal",
+      "histórico",
+      "bienestar",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/balneario-villa-de-olmedo.html",
+    "photo": "https://picsum.photos/seed/castilla-termal-olmedo/600/400",
+    "lat": 41.286,
+    "lng": -4.69
+  },
+  {
+    "id": "hotel-spa-arzuaga-ribera-del-duero",
+    "name": "Hotel & Spa Arzuaga",
+    "location": "Quintanilla de Onésimo, Valladolid",
+    "region": "Castilla y León",
+    "desc": "Hotel rodeado de viñedos en la Ribera del Duero, con spa de vinoterapia, piscina cubierta, sauna y jacuzzi. Combina enoturismo con tratamientos de bienestar.",
+    "duracion": "2-3 noches",
+    "precio_desde": 130,
+    "precio_tag": "€€€",
+    "tags": [
+      "spa",
+      "vinoterapia",
+      "naturaleza",
+      "enoturismo",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/spa-arzuaga.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-arzuaga-ribera-del-duero/600/400",
+    "lat": 41.628,
+    "lng": -4.043
+  },
+  {
+    "id": "hotel-lodomar-spa-talasoterapia",
+    "name": "Hotel Lodomar Spa & Talasoterapia",
+    "location": "San Pedro del Pinatar, Murcia",
+    "region": "Región de Murcia",
+    "desc": "Hotel frente al Mar Menor con spa marino de talasoterapia (con suplemento), piscina exterior y tratamientos basados en agua de mar y barros termales.",
+    "duracion": "2-4 noches",
+    "precio_desde": 100,
+    "precio_tag": "€€",
+    "tags": [
+      "talasoterapia",
+      "spa",
+      "mar menor",
+      "bienestar",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/lodomar.html",
+    "photo": "https://picsum.photos/seed/hotel-lodomar-spa-talasoterapia/600/400",
+    "lat": 37.832,
+    "lng": -0.792
+  },
+  {
+    "id": "apartamentos-spa-cantabria-infinita",
+    "name": "Apartamentos Spa Cantabria Infinita",
+    "location": "Cillorigo de Liébana, Cantabria",
+    "region": "Cantabria",
+    "desc": "Apartamentos con piscina interior, jacuzzi y sauna situados en el valle de Liébana, justo a las puertas del Parque Nacional de los Picos de Europa.",
+    "duracion": "2-4 noches",
+    "precio_desde": 80,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "montaña",
+      "picos de europa",
+      "relax"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/apartamentos-spa-cantabria-infinita.html",
+    "photo": "https://picsum.photos/seed/apartamentos-spa-cantabria-infinita/600/400",
+    "lat": 43.171,
+    "lng": -4.605
+  },
+  {
+    "id": "hotel-torresport-torrelavega",
+    "name": "Hotel Torresport",
+    "location": "Torrelavega, Cantabria",
+    "region": "Cantabria",
+    "desc": "Hotel moderno en Torrelavega con un completo spa que incluye baños de vapor, saunas y un amplio gimnasio, ideal como base para explorar Cantabria.",
+    "duracion": "1-3 noches",
+    "precio_desde": 75,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "gimnasio",
+      "urbano",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/hotel-torresport.html",
+    "photo": "https://picsum.photos/seed/hotel-torresport-torrelavega/600/400",
+    "lat": 43.35,
+    "lng": -4.046
+  },
+  {
+    "id": "hotel-spa-el-muelle-de-suances",
+    "name": "Hotel Spa El Muelle de Suances",
+    "location": "Suances, Cantabria",
+    "region": "Cantabria",
+    "desc": "Hotel de decoración contemporánea cerca de la playa de Suances, con spa y zona de relax, ideal para una escapada de bienestar en la costa cántabra.",
+    "duracion": "2-3 noches",
+    "precio_desde": 85,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "playa",
+      "relax",
+      "costa",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/el-muelle-de-suances.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-el-muelle-de-suances/600/400",
+    "lat": 43.439,
+    "lng": -4.041
+  },
+  {
+    "id": "agroturismo-atzaro-ibiza",
+    "name": "Agroturismo Atzaró",
+    "location": "Santa Eulalia del Río, Ibiza",
+    "region": "Islas Baleares",
+    "desc": "Hotel rural rodeado de un naranjal en el campo ibicenco, con piscina exterior y spa que incluye hammam marroquí, sauna, masajes y una zona dedicada a la práctica de yoga.",
+    "duracion": "3-5 noches",
+    "precio_desde": 220,
+    "precio_tag": "€€€€",
+    "tags": [
+      "yoga",
+      "spa",
+      "agroturismo",
+      "lujo",
+      "bienestar",
+      "naturaleza"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/atzaro.html",
+    "photo": "https://picsum.photos/seed/agroturismo-atzaro-ibiza/600/400",
+    "lat": 39.005,
+    "lng": 1.479
+  },
+  {
+    "id": "hotel-spa-gametxo-ibarrangelu",
+    "name": "Hotel Spa Gametxo",
+    "location": "Ibarrangelu, Bizkaia",
+    "region": "País Vasco",
+    "desc": "Hotel sobre una colina entre las playas de Laida y Laga, dentro de la Reserva de la Biosfera de Urdaibai. Spa con vistas al mar y a la montaña, con suplemento y reserva previa.",
+    "duracion": "2-3 noches",
+    "precio_desde": 95,
+    "precio_tag": "€€",
+    "tags": [
+      "spa",
+      "naturaleza",
+      "vistas al mar",
+      "reserva de la biosfera",
+      "bienestar"
+    ],
+    "booking_url": "https://www.booking.com/hotel/es/gametxo.html",
+    "photo": "https://picsum.photos/seed/hotel-spa-gametxo-ibarrangelu/600/400",
+    "lat": 43.443,
+    "lng": -2.617
   }
 ]
