@@ -295,7 +295,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 
 <script>
 // ── AFFILIATE CONFIG ────────────────────────────────────────────────
-const BOOKING_AID = 'TU_AFFILIATE_ID';
+const BOOKING_AID = '818286';
 const GYG_PARTNER_ID = 'TU_GYG_PARTNER_ID';
 const CIVITATIS_AFF = 'TU_CIVITATIS_ID';
 
@@ -644,7 +644,9 @@ function renderResults(data) {
     const bg = bgMap[r.tipo?.[0]] || bgMap.naturaleza;
     const btnLabel = r.booking_url ? 'Ver en Booking' : (platformLabel[r.plataforma] || 'Ver disponibilidad');
 
-    const bookUrl = r.booking_url || buildBookingLink(r.search_term || r.name, r.location, state.fechaInicio, state.fechaFin);
+    const bookUrl = r.booking_url
+      ? r.booking_url + (r.booking_url.includes('?') ? '&' : '?') + 'aid=' + BOOKING_AID
+      : buildBookingLink(r.search_term || r.name, r.location, state.fechaInicio, state.fechaFin);
     r.bookUrl = bookUrl;
 
     const seed = (r.id || r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');

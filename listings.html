@@ -427,7 +427,8 @@ select.filter-select {
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-const BOOKING_AID = 'TU_AFFILIATE_ID';
+const BOOKING_AID = '818286';
+function withAid(url) { return url + (url.includes('?') ? '&' : '?') + 'aid=' + BOOKING_AID; }
 const FEATURED_TAGS = ['yoga','meditación','spa','surf','naturaleza','balneario','ayurveda','talasoterapia','solo adultos'];
 
 let allRetreats = [], filtered = [];
@@ -548,8 +549,8 @@ function openPopup(r, marker) {
     scrollStripToId(r.id);
     return;
   }
-  let bookUrl = r.booking_url;
-  if (activeCheckin)  bookUrl += `${bookUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+  let bookUrl = withAid(r.booking_url);
+  if (activeCheckin)  bookUrl += `&checkin=${activeCheckin}`;
   if (activeCheckout) bookUrl += `&checkout=${activeCheckout}`;
   if (activePersonas) bookUrl += `&group_adults=${activePersonas}&no_rooms=1`;
   const popup = L.popup({ offset: [0, -4], closeButton: true, maxWidth: 260 })
@@ -620,8 +621,8 @@ function render() {
     grid.innerHTML = visible.map(r => {
       const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
       const tags = (r.tags||[]).slice(0,3).map(t => `<span class="card-tag">${t}</span>`).join('');
-      let bUrl = r.booking_url;
-      if (activeCheckin)  bUrl += `${bUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+      let bUrl = withAid(r.booking_url);
+      if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
       if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
       if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
       return `
@@ -714,8 +715,8 @@ function renderMobileCards() {
   strip.innerHTML = spacer + filtered.map((r, i) => {
     const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
     const photo = r.photo || fallback;
-    let bUrl = r.booking_url;
-    if (activeCheckin)  bUrl += `${bUrl.includes('?') ? '&' : '?'}checkin=${activeCheckin}`;
+    let bUrl = withAid(r.booking_url);
+    if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
     if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
     if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
     return `<div class="mobile-strip-card" id="scard-${r.id}" data-id="${r.id}" data-idx="${i}" onclick="onStripCardClick('${r.id}')">
