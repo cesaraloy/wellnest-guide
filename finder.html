@@ -137,16 +137,25 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 
 .insight-box { background:white; border-left:3px solid var(--sage); padding:14px 18px; border-radius:0 2px 2px 0; margin-bottom:24px; font-size:13px; line-height:1.65; color:#555; font-weight:300; }
 
-.result-card { background:white; border-radius:2px; margin-bottom:18px; overflow:hidden; transition:box-shadow .3s; border:1px solid rgba(122,140,110,0.1); }
-.result-card:hover { box-shadow:0 8px 32px rgba(0,0,0,0.08); }
-.card-header { display:grid; grid-template-columns:96px 1fr; }
-.card-visual { position:relative; overflow:hidden; }
-.card-visual img { display:block; width:100%; height:100%; object-fit:cover; }
-.card-visual .card-emoji { position:absolute; bottom:6px; right:6px; font-size:16px; background:rgba(255,255,255,.85); border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; }
-.card-info { padding:14px 14px 14px 0; }
-.card-gallery { display:flex; gap:6px; padding:0 14px 12px; }
-.card-gallery img { width:64px; height:48px; object-fit:cover; border-radius:2px; cursor:pointer; transition:opacity .2s; flex:0 0 auto; }
-.card-gallery img:hover { opacity:.75; }
+.result-card {
+  background:white; border-radius:4px; margin-bottom:22px; overflow:hidden;
+  border:1px solid rgba(122,140,110,0.1);
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.result-card:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,0.1); border-color:var(--sage-light); }
+.card-img-wrap { position:relative; height:220px; overflow:hidden; background:var(--mist); }
+.card-img-wrap img { display:block; width:100%; height:100%; object-fit:cover; }
+.card-match-badge {
+  position:absolute; top:12px; left:12px; background:rgba(255,255,255,.95);
+  color:var(--sage); font-size:11px; font-weight:500; letter-spacing:.02em;
+  padding:5px 12px; border-radius:20px; display:flex; align-items:center; gap:5px;
+}
+.card-match-badge::before { content:'✓'; font-size:10px; }
+.card-emoji-badge {
+  position:absolute; top:12px; right:12px; font-size:17px; background:rgba(255,255,255,.95);
+  border-radius:50%; width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+}
+.card-info { padding:18px 20px 0; }
 
 /* Lead capture modal */
 .lead-overlay { position:fixed; inset:0; z-index:900; background:rgba(44,44,42,0.5); backdrop-filter:blur(3px); display:none; align-items:center; justify-content:center; padding:20px; }
@@ -168,39 +177,21 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 .lead-legal a { color:var(--sage); text-decoration:underline; }
 .lead-error { font-size:12px; color:#c0392b; margin-top:8px; min-height:16px; }
 
-/* Lightbox */
-.lightbox { position:fixed; inset:0; z-index:1000; background:rgba(20,20,18,0.92); display:none; align-items:center; justify-content:center; padding:32px; }
-.lightbox.open { display:flex; }
-.lightbox img { max-width:min(900px,100%); max-height:85vh; border-radius:2px; box-shadow:0 20px 60px rgba(0,0,0,0.4); }
-.lightbox-close { position:absolute; top:20px; right:28px; font-size:32px; color:white; background:none; border:none; cursor:pointer; opacity:.8; transition:opacity .2s; line-height:1; }
-.lightbox-close:hover { opacity:1; }
-.lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.12); border:none; color:white; font-size:22px; width:46px; height:46px; border-radius:50%; cursor:pointer; transition:background .2s; display:flex; align-items:center; justify-content:center; }
-.lightbox-nav:hover { background:rgba(255,255,255,0.25); }
-.lightbox-prev { left:20px; }
-.lightbox-next { right:20px; }
-@media(max-width:600px) {
-  .lightbox-nav { width:40px; height:40px; font-size:18px; }
-  .lightbox-close { top:12px; right:16px; font-size:28px; }
-}
-.card-name { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400; line-height:1.2; margin-bottom:3px; }
-.card-location { font-size:11px; color:#bbb; letter-spacing:.04em; margin-bottom:8px; }
-.card-tags { display:flex; gap:5px; flex-wrap:wrap; }
-.card-tag { font-size:10px; padding:2px 8px; background:var(--sage-pale); color:var(--sage); border-radius:20px; }
-.card-body { padding:0 14px 14px; border-top:1px solid var(--mist); }
-.card-desc { font-size:12px; color:#888; line-height:1.6; font-weight:300; padding:10px 0 12px; }
-.card-footer { display:flex; align-items:center; justify-content:space-between; }
+.card-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; line-height:1.25; margin-bottom:4px; }
+.card-location { font-size:12px; color:#aaa; letter-spacing:.02em; margin-bottom:10px; }
+.card-tags { display:flex; gap:6px; flex-wrap:wrap; }
+.card-tag { font-size:10px; padding:3px 10px; background:var(--sage-pale); color:var(--sage); border-radius:20px; }
+.card-desc { font-size:13px; color:#888; line-height:1.65; font-weight:300; padding:12px 0 0; }
+.card-body { padding:14px 20px 18px; border-top:1px solid var(--mist); margin-top:16px; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; }
 .price-from { font-size:10px; color:#bbb; }
-.price-num { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:300; color:var(--charcoal); line-height:1; }
+.price-num { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; color:var(--charcoal); line-height:1; }
 .price-unit { font-size:10px; color:#bbb; }
-.card-right { display:flex; flex-direction:column; align-items:flex-end; gap:7px; }
-.match-wrap { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--sage); font-weight:500; }
-.match-bar { width:50px; height:3px; background:var(--sage-pale); border-radius:2px; overflow:hidden; }
-.match-fill { height:100%; background:var(--sage); border-radius:2px; }
 .book-btn {
-  padding:10px 22px; background:var(--charcoal); color:white; border:none;
+  padding:11px 24px; background:var(--charcoal); color:white; border:none;
   font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:.1em;
   text-transform:uppercase; cursor:pointer; border-radius:1px; transition:background .2s;
-  text-decoration:none; display:inline-block;
+  text-decoration:none; display:inline-block; flex-shrink:0;
 }
 .book-btn:hover { background:var(--sage); }
 
@@ -222,8 +213,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
   .form-title { font-size:30px; }
   .radio-grid { grid-template-columns:1fr 1fr; }
   .region-pill-group { grid-template-columns:1fr 1fr; }
-  .card-footer { flex-wrap:wrap; gap:10px; }
-  .card-right { align-items:flex-start; flex-direction:row; flex-wrap:wrap; gap:8px; }
+  .card-img-wrap { height:180px; }
   .comm-summary { overflow-x:auto; }
   .comm-row { font-size:11px; }
   .comm-label { max-width:180px; }
@@ -237,9 +227,9 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
   .region-pill-group { grid-template-columns:1fr; }
   .pill { padding:8px 14px; font-size:12px; }
   .results-title { font-size:22px; }
-  .card-header { grid-template-columns:72px 1fr; }
-  .card-name { font-size:15px; }
-  .card-right { flex-direction:column; align-items:flex-end; }
+  .card-img-wrap { height:160px; }
+  .card-name { font-size:17px; }
+  .card-footer { flex-wrap:wrap; gap:10px; }
 }
 </style>
 </head>
@@ -268,13 +258,6 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
     <div id="leadError" class="lead-error"></div>
     <button class="cta-btn" style="margin-top:6px;" onclick="submitLead()">✦ Ver mis recomendaciones</button>
   </div>
-</div>
-
-<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">×</button>
-  <button class="lightbox-nav lightbox-prev" onclick="lightboxStep(-1)" aria-label="Anterior">‹</button>
-  <img id="lightboxImg" src="" alt="">
-  <button class="lightbox-nav lightbox-next" onclick="lightboxStep(1)" aria-label="Siguiente">›</button>
 </div>
 
 <div class="app">
@@ -651,42 +634,31 @@ function renderResults(data) {
     r.bookUrl = bookUrl;
 
     const seed = (r.id || r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    const photoMain = r.photo || `https://picsum.photos/seed/${seed}-main/300/300`;
-    const gallery = [1, 2, 3].map(n => `https://picsum.photos/seed/${seed}-g${n}/200/150`);
+    const photoMain = r.photo || `https://picsum.photos/seed/${seed}-main/600/400`;
 
     html += `<div class="result-card">
-      <div class="card-header">
-        <div class="card-visual" style="background:${bg};">
-          <img src="${photoMain}" alt="${r.name}" loading="lazy">
-          <span class="card-emoji">${r.emoji || '🌿'}</span>
-        </div>
-        <div class="card-info">
-          <div class="card-name">${r.name}</div>
-          <div class="card-location">📍 ${r.location}</div>
-          <div class="card-tags">
-            ${(r.tipo || []).map(t => `<span class="card-tag">${t}</span>`).join('')}
-            <span class="card-tag">${r.duracion}</span>
-          </div>
-        </div>
+      <div class="card-img-wrap" style="background:${bg};">
+        <img src="${photoMain}" alt="${r.name}" loading="lazy">
+        <span class="card-match-badge">${r.match || 88}% encaje</span>
+        <span class="card-emoji-badge">${r.emoji || '🌿'}</span>
       </div>
-      <div class="card-gallery">
-        ${gallery.map((src, i) => `<img src="${src}" alt="Foto de ${r.name}" loading="lazy" onclick='openLightbox(${JSON.stringify(gallery.map(s=>s.replace("/200/150","/900/650")))}, ${i})'>`).join('')}
+      <div class="card-info">
+        <div class="card-name">${r.name}</div>
+        <div class="card-location">📍 ${r.location}</div>
+        <div class="card-tags">
+          ${(r.tipo || []).map(t => `<span class="card-tag">${t}</span>`).join('')}
+          <span class="card-tag">${r.duracion}</span>
+        </div>
+        <div class="card-desc">${r.desc}</div>
       </div>
       <div class="card-body">
-        <div class="card-desc">${r.desc}</div>
         <div class="card-footer">
           <div>
             <div class="price-from">desde</div>
             <div class="price-num">${r.precio_desde}€</div>
             <div class="price-unit">/ persona</div>
           </div>
-          <div class="card-right">
-            <div class="match-wrap">
-              <div class="match-bar"><div class="match-fill" style="width:${r.match || 88}%"></div></div>
-              ${r.match || 88}% encaje
-            </div>
-            <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='trackEvent("click",{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})'>${btnLabel} →</a>
-          </div>
+          <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='trackEvent("click",{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})'>${btnLabel} →</a>
         </div>
       </div>
     </div>`;
@@ -785,30 +757,6 @@ function submitLead() {
 }
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && document.getElementById('leadModal').classList.contains('open')) closeLeadModal();
-});
-
-// ── LIGHTBOX ─────────────────────────────────────────────────────────
-let lightboxImages = [];
-let lightboxIndex = 0;
-
-function openLightbox(images, index) {
-  lightboxImages = images;
-  lightboxIndex = index;
-  document.getElementById('lightboxImg').src = lightboxImages[lightboxIndex];
-  document.getElementById('lightbox').classList.add('open');
-}
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-}
-function lightboxStep(dir) {
-  lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
-  document.getElementById('lightboxImg').src = lightboxImages[lightboxIndex];
-}
-document.addEventListener('keydown', (e) => {
-  if (!document.getElementById('lightbox').classList.contains('open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') lightboxStep(-1);
-  if (e.key === 'ArrowRight') lightboxStep(1);
 });
 
 // ── DEBUG MODE (?debug=1): ver resultados sin completar el formulario ──
