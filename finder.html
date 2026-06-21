@@ -811,7 +811,46 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') lightboxStep(1);
 });
 
-renderStep();
+// ── DEBUG MODE (?debug=1): ver resultados sin completar el formulario ──
+// No llama a /api/recommend (sin coste de IA) ni envía email (no hay leadEmail).
+const __debugParams = new URLSearchParams(location.search);
+if (__debugParams.get('debug') === '1') {
+  state.tipo = ['yoga', 'meditacion'];
+  state.region = 'andalucia';
+  state.presupuesto = 600;
+  state.personas = 2;
+  renderResults({
+    insight: "[DEBUG] Texto de ejemplo del insight generado por la IA — aquí iría la explicación de por qué estos retiros encajan con tus preferencias.",
+    retreats: [
+      {
+        id: 'masqi-energy-house', name: 'MasQi, The Energy House',
+        location: 'Banyeres de Mariola, Alicante',
+        desc: 'Masía del siglo XIX restaurada en pleno Parque Natural de la Sierra de Mariola. Adults-only, cocina macrobiótica y vegetariana, sesiones de yoga y healings energéticos.',
+        duracion: '3-5 noches', precio_desde: 150, tipo: ['yoga', 'meditacion'], emoji: '🌿', match: 94,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/644642328.jpg?k=7066efc0280d093f2656cbf3a118158dff23ce0235958d49259a3fbd6abb2166&o=',
+        booking_url: 'https://www.booking.com/hotel/es/qi-the-energy-house.html'
+      },
+      {
+        id: 'shanti-som-wellbeing-retreat', name: 'Shanti Som Wellbeing Retreat',
+        location: 'Alhaurín el Grande, Málaga',
+        desc: 'Retiro boutique en plena Sierra de Mijas con programas de yoga, meditación y detox. Piscina natural, sauna y vistas a la Costa del Sol.',
+        duracion: '4-7 noches', precio_desde: 280, tipo: ['yoga', 'detox'], emoji: '🧘', match: 89,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/520494752.jpg?k=a29b867f4842d66f2c2a65f1f811c0be32f352d117ebd20eefe6b1487b3f84c4&o=',
+        booking_url: 'https://www.booking.com/hotel/es/shanti-som-wellbeing-retreat.html'
+      },
+      {
+        id: 'mas-vivent-girona', name: 'Mas Vivent',
+        location: 'Sant Julià de Ramis, Girona',
+        desc: 'Masía catalana del s.XI rodeada de viñedos. Programas de yoga y meditación con vistas al Pirineo, cocina ecológica de proximidad.',
+        duracion: '2-4 noches', precio_desde: 195, tipo: ['yoga', 'naturaleza'], emoji: '🌾', match: 86,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/475857691.jpg?k=7b67e54edc47b841762f24d6426e4d35972785cb38550343a8820fd1f497011c&o=',
+        booking_url: 'https://www.booking.com/hotel/es/mas-vivent.html'
+      }
+    ]
+  });
+} else {
+  renderStep();
+}
 </script>
 </body>
 </html>
