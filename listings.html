@@ -622,12 +622,9 @@ function render() {
     grid.innerHTML = visible.map(r => {
       const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
       const tags = (r.tags||[]).slice(0,3).map(t => `<span class="card-tag">${t}</span>`).join('');
-      let bUrl = withAid(r.booking_url);
-      if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
-      if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
-      if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+      const bUrl = buildBookingUrl(r);
       return `
-      <div class="listing-card" id="card-${r.id}" onclick="onCardClick('${r.id}')">
+      <div class="listing-card" id="card-${r.id}" onclick="onCardClick('${r.id}', '${bUrl}')">
         <div class="card-img-wrap">
           <img src="${r.photo||fallback}" alt="${r.name}" loading="lazy"
             onerror="this.onerror=null;this.src='${fallback}'"
@@ -660,12 +657,23 @@ function render() {
   }
 }
 
-function onCardClick(id) {
-  if (!mapVisible) return;
-  const r = allRetreats.find(x => x.id === id);
-  if (!r || !r.lat) return;
-  map.setView([r.lat, r.lng], Math.max(map.getZoom(), 10), { animate: true });
-  openPopup(r, markers[id]);
+function buildBookingUrl(r) {
+  let bUrl = withAid(r.booking_url);
+  if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
+  if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
+  if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+  return bUrl;
+}
+
+function onCardClick(id, bUrl) {
+  if (mapVisible) {
+    const r = allRetreats.find(x => x.id === id);
+    if (r && r.lat) {
+      map.setView([r.lat, r.lng], Math.max(map.getZoom(), 10), { animate: true });
+      openPopup(r, markers[id]);
+    }
+  }
+  window.open(bUrl, '_blank', 'noopener');
 }
 
 function reset() {
