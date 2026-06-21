@@ -7,7 +7,7 @@
 <meta name="description" content="Encuentra tu retiro de bienestar ideal en España. Buscador inteligente personalizado a tu perfil, presupuesto y experiencia.">
 <link rel="canonical" href="https://wellnest.guide/finder">
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <style>
@@ -31,7 +31,9 @@ nav {
   background:rgba(250,248,244,0.95); backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(122,140,110,0.15);
 }
-.nav-logo img { height:26px; display:block; }
+.nav-logo { display:flex; align-items:baseline; gap:4px; text-decoration:none; line-height:1; }
+.brand-bold { font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; letter-spacing:.01em; color:var(--charcoal); }
+.brand-script { font-family:'Caveat',cursive; font-weight:600; font-size:24px; color:var(--charcoal); margin-left:-1px; }
 .nav-back { font-size:12px; color:#888; text-decoration:none; letter-spacing:.06em; display:flex; align-items:center; gap:6px; transition:color .2s; }
 .nav-back:hover { color:var(--sage); }
 
@@ -245,7 +247,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 <body>
 
 <nav>
-  <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Wellnest Guide"></a>
+  <a href="/" class="nav-logo"><span class="brand-bold">WELLNEST</span><span class="brand-script">guide</span></a>
   <a href="/" class="nav-back">← Volver al directorio</a>
 </nav>
 

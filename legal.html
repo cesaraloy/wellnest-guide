@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://wellnest.guide/legal">
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
 :root {
   --sage: #7a8c6e; --sage-light: #b5c4a8; --sage-pale: #e8ede5;
@@ -23,7 +23,9 @@ nav {
   background:rgba(250,248,244,0.95); backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(122,140,110,0.15);
 }
-.nav-logo img { height:26px; display:block; }
+.nav-logo { display:flex; align-items:baseline; gap:4px; text-decoration:none; line-height:1; }
+.brand-bold { font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px; letter-spacing:.01em; color:var(--charcoal); }
+.brand-script { font-family:'Caveat',cursive; font-weight:600; font-size:24px; color:var(--charcoal); margin-left:-1px; }
 .nav-back { font-size:12px; color:#888; text-decoration:none; letter-spacing:.06em; transition:color .2s; }
 .nav-back:hover { color:var(--sage); }
 main { max-width:720px; margin:0 auto; padding:140px 24px 100px; }
@@ -47,7 +49,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 <body>
 
 <nav>
-  <a href="/" class="nav-logo"><img src="/assets/logo.svg" alt="Wellnest Guide"></a>
+  <a href="/" class="nav-logo"><span class="brand-bold">WELLNEST</span><span class="brand-script">guide</span></a>
   <a href="/" class="nav-back">← Volver al directorio</a>
 </nav>
 
