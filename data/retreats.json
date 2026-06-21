@@ -1852,7 +1852,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/oca-imi-amp-spa.html",
-    "photo": "https://picsum.photos/seed/imi-hotel-spa/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310502253.jpg?k=05ba5858e284d95de5e36df0171eb80ed93a25a3c9028432432fce0a5d50ea12&o=",
     "lat": 42.336,
     "lng": -7.864
   },
@@ -1873,7 +1873,7 @@
       "Galicia"
     ],
     "booking_url": "https://www.booking.com/hotel/es/eurostarsgranhotellatoja.html",
-    "photo": "https://picsum.photos/seed/eurostars-la-toja/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/158615798.jpg?k=c7eeeb5282b9b581ac8fc352059c16df9b1b66a7b1e9ea9e141d8f00bc270e14&o=",
     "lat": 42.493,
     "lng": -8.842
   },
@@ -1895,7 +1895,7 @@
       "Mallorca"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-serena-mallorca.html",
-    "photo": "https://picsum.photos/seed/finca-serena-mallorca/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/820771246.jpg?k=14b3607389667e8c79dd9492a54b423dafbb40df3739fafec5049e11d2bd3a24&o=",
     "lat": 39.568,
     "lng": 3.019
   },
@@ -1916,7 +1916,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/finca-rural-es-turo.html",
-    "photo": "https://picsum.photos/seed/finca-es-turo/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/266841758.jpg?k=ff11b485c2bbb2d417aae46f799d823923bf2b2e5e976188ffbaf028fd0dcc39&o=",
     "lat": 39.318,
     "lng": 3.012
   },
@@ -1938,7 +1938,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/audax-spa-wellness-centre.html",
-    "photo": "https://picsum.photos/seed/artiem-audax/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/264598549.jpg?k=c1c07697605f86f78f2ed449527c99dbd9c60e786570e3b9d8e2e09dff75c56d&o=",
     "lat": 39.933,
     "lng": 3.958
   },
@@ -1959,7 +1959,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/hostal-entre-pinos.html",
-    "photo": "https://picsum.photos/seed/entre-pinos-formentera/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/208470472.jpg?k=11f819f16337d45633dae7a0f79ff371b74e0ffb5f1cdfb5a903498bd0d994d7&o=",
     "lat": 38.728,
     "lng": 1.487
   },
@@ -1980,7 +1980,7 @@
       "descanso"
     ],
     "booking_url": "https://www.booking.com/hotel/es/cortijo-tayula.html",
-    "photo": "https://picsum.photos/seed/cortijo-tayula/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/442175879.jpg?k=0dcecf4f5fb9d8c546bfed9b718a15dcc02b6e2f12efc9bdb4d6146534d23cc6&o=",
     "lat": 36.889,
     "lng": -3.424
   },
@@ -2001,7 +2001,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/casas-rurales-benarum.es.html",
-    "photo": "https://picsum.photos/seed/benarum-spa/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/325168195.jpg?k=1c5a0a4ceb549eb9cb51f4aac994d38259d5b1fd2c0e4b95895f1c3ba3f1327c&o=",
     "lat": 36.928,
     "lng": -3.217
   },
@@ -2022,7 +2022,7 @@
       "bienestar"
     ],
     "booking_url": "https://www.booking.com/hotel/es/ora-priorat-torroja-del-priorat.html",
-    "photo": "https://picsum.photos/seed/ora-priorat/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/388691580.jpg?k=16e265946a0e25d8e185b595fd0b8728d0523eb72955fbb5c16068d0bce04b4d&o=",
     "lat": 41.246,
     "lng": 0.785
   },
@@ -2043,7 +2043,7 @@
       "Priorat"
     ],
     "booking_url": "https://www.booking.com/hotel/es/el-palauet-del-priorat-cornudella-de-montsant12.html",
-    "photo": "https://picsum.photos/seed/palauet-priorat/600/400",
+    "photo": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/703646608.jpg?k=b39f101346f56cc78b1a997c8b9e78265e1355d86eb9e22369719e597fc7b5d9&o=",
     "lat": 41.279,
     "lng": 0.938
   },
