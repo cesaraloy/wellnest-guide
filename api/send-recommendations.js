@@ -1,12 +1,36 @@
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const hits = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const windowStart = now - RATE_LIMIT_WINDOW_MS;
+  const timestamps = (hits.get(ip) || []).filter(t => t > windowStart);
+  timestamps.push(now);
+  hits.set(ip, timestamps);
+  if (hits.size > 5000) hits.clear();
+  return timestamps.length > RATE_LIMIT_MAX;
+}
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const ip = (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown').split(',')[0].trim();
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: 'Demasiadas solicitudes, inténtalo de nuevo en un minuto' });
+  }
+
   try {
     const { lead, insight, retreats } = req.body || {};
 
-    if (!lead || !lead.email || !Array.isArray(retreats) || retreats.length === 0) {
+    if (!lead || !lead.email || typeof lead.email !== 'string' || !EMAIL_RE.test(lead.email) || lead.email.length > 254) {
+      return res.status(400).json({ error: 'Invalid email' });
+    }
+    if (!Array.isArray(retreats) || retreats.length === 0 || retreats.length > 10) {
       return res.status(400).json({ error: 'Missing lead or retreats data' });
     }
 
@@ -70,11 +94,13 @@ module.exports = async function handler(req, res) {
 
     const responseText = await response.text();
     if (!response.ok) {
-      return res.status(502).json({ error: 'Resend API error', detail: responseText });
+      console.error('Resend API error', response.status, responseText);
+      return res.status(502).json({ error: 'No se pudo enviar el correo' });
     }
 
     return res.status(200).json({ ok: true });
   } catch (err) {
-    return res.status(500).json({ error: err.message });
+    console.error('send-recommendations handler error', err);
+    return res.status(500).json({ error: 'Error interno' });
   }
 };
