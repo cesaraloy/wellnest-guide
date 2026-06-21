@@ -139,7 +139,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 
 .result-card {
   background:white; border-radius:6px; margin-bottom:22px; overflow:hidden;
-  border:1px solid rgba(122,140,110,0.1);
+  border:1px solid rgba(122,140,110,0.1); cursor:pointer;
   transition:transform .2s, box-shadow .2s, border-color .2s;
 }
 .result-card:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,0.1); border-color:var(--sage-light); }
@@ -648,7 +648,7 @@ function renderResults(data) {
     const seed = (r.id || r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const photoMain = r.photo || `https://picsum.photos/seed/${seed}-main/600/400`;
 
-    html += `<div class="result-card">
+    html += `<div class="result-card" onclick="window.open(${JSON.stringify(bookUrl)}, '_blank', 'noopener'); trackEvent('click',{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})">
       <div class="card-top">
         <div class="card-img-wrap" style="background:${bg};">
           <img src="${photoMain}" alt="${r.name}" loading="lazy">
@@ -673,7 +673,7 @@ function renderResults(data) {
             <div class="price-num">${r.precio_desde}€</div>
             <div class="price-unit">/ persona</div>
           </div>
-          <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='trackEvent("click",{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})'>${btnLabel} →</a>
+          <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='event.stopPropagation()'>${btnLabel} →</a>
         </div>
       </div>
     </div>`;
