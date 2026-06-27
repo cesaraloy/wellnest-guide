@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retreat Finder — Wellnest Guide</title>
+<meta name="description" content="Find your ideal wellness retreat in Spain. Smart finder personalized to your profile, budget and experience.">
+<meta property="og:title" content="Wellness Retreat Finder — Wellnest Guide">
+<meta property="og:description" content="Find your ideal wellness retreat in Spain. Smart finder personalized to your profile, budget and experience.">
+<meta property="og:url" content="https://wellnest.guide/en/finder">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://wellnest.guide/assets/wellnest-yoga-studio.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wellness Retreat Finder — Wellnest Guide">
+<meta name="twitter:description" content="Find your ideal wellness retreat in Spain. Smart finder personalized to your profile, budget and experience.">
+<meta name="twitter:image" content="https://wellnest.guide/assets/wellnest-yoga-studio.jpg">
+<link rel="canonical" href="https://wellnest.guide/en/finder">
+<link rel="alternate" hreflang="es" href="https://wellnest.guide/finder">
+<link rel="alternate" hreflang="en" href="https://wellnest.guide/en/finder">
+<link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/finder">
+<link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder">
+<link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder">
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<style>
+:root {
+  --sage: #7a8c6e;
+  --sage-light: #b5c4a8;
+  --sage-pale: #e8ede5;
+  --warm-white: #faf8f4;
+  --earth: #8b6f47;
+  --earth-light: #c4a882;
+  --charcoal: #2c2c2c;
+  --mist: #f0f4ee;
+  --terracota: #c4714a;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--charcoal); min-height:100vh; }
+
+nav {
+  position:fixed; top:0; width:100%; z-index:200;
+  padding:18px 48px; display:flex; align-items:center; justify-content:space-between;
+  background:rgba(250,248,244,0.95); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(122,140,110,0.15);
+}
+.nav-logo { display:flex; align-items:center; text-decoration:none; }
+.nav-logo img { height:26px; display:block; }
+.nav-back { font-size:12px; color:#888; text-decoration:none; letter-spacing:.06em; display:flex; align-items:center; gap:6px; transition:color .2s; }
+.nav-back:hover { color:var(--sage); }
+
+.app { display:grid; grid-template-columns:1fr 1fr; min-height:100vh; padding-top:62px; }
+
+.panel-left { padding:52px 52px 52px 60px; overflow-y:auto; border-right:1px solid rgba(122,140,110,0.12); background:var(--warm-white); }
+.form-eyebrow { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--earth); display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.form-eyebrow::before { content:''; display:block; width:24px; height:1px; background:var(--earth-light); }
+.form-title { font-family:'Cormorant Garamond',serif; font-size:38px; font-weight:300; line-height:1.15; margin-bottom:8px; }
+.form-title em { font-style:italic; color:var(--sage); }
+.form-sub { font-size:14px; color:#888; font-weight:300; line-height:1.6; margin-bottom:40px; }
+
+.steps-indicator { display:flex; gap:8px; margin-bottom:36px; }
+.step-dot { height:3px; border-radius:2px; background:var(--sage-pale); transition:all .4s; flex:1; }
+.step-dot.active { background:var(--sage); }
+.step-dot.done { background:var(--sage-light); }
+
+.q-block { margin-bottom:32px; animation:fadeIn .4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.q-label { font-size:13px; font-weight:500; color:var(--charcoal); margin-bottom:4px; }
+.q-hint { font-size:12px; color:#aaa; margin-bottom:14px; }
+
+.pill-group { display:flex; flex-wrap:wrap; gap:10px; }
+.pill {
+  padding:9px 18px; border-radius:2px; cursor:pointer;
+  font-size:13px; border:1.5px solid rgba(122,140,110,0.25);
+  background:white; color:#666; transition:all .2s; user-select:none;
+}
+.pill:hover { border-color:var(--sage); color:var(--sage); }
+.pill.selected { background:var(--sage); border-color:var(--sage); color:white; }
+.pill.multi.selected { background:var(--sage-pale); border-color:var(--sage); color:var(--sage); }
+
+/* Region grid — wider pills */
+.region-pill-group { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.region-pill {
+  padding:12px 16px; border-radius:2px; cursor:pointer;
+  font-size:13px; border:1.5px solid rgba(122,140,110,0.25);
+  background:white; color:#666; transition:all .2s; user-select:none;
+  display:flex; align-items:center; gap:8px;
+}
+.region-pill:hover { border-color:var(--sage); color:var(--sage); }
+.region-pill.selected { background:var(--sage); border-color:var(--sage); color:white; }
+.region-pill .region-emoji { font-size:16px; }
+
+.date-range-wrap { display:flex; flex-direction:column; gap:10px; }
+.date-fp-input {
+  width:100%; padding:11px 14px; border:1.5px solid rgba(122,140,110,0.25); border-radius:2px;
+  font-family:'DM Sans',sans-serif; font-size:13px; color:var(--charcoal); background:white; cursor:pointer;
+}
+.date-fp-input:focus { outline:none; border-color:var(--sage); }
+.date-clear { margin-top:4px; font-size:11px; color:#aaa; cursor:pointer; text-decoration:underline; display:inline-block; }
+.date-clear:hover { color:var(--terracota); }
+
+.slider-wrap { padding:6px 0; }
+.range-val { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:300; color:var(--charcoal); margin-bottom:10px; }
+.range-labels { display:flex; justify-content:space-between; font-size:11px; color:#bbb; margin-top:8px; }
+input[type=range] { -webkit-appearance:none; width:100%; height:3px; background:var(--sage-pale); border-radius:2px; outline:none; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--sage); cursor:pointer; box-shadow:0 2px 8px rgba(122,140,110,0.4); }
+
+.radio-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.radio-card { border:1.5px solid rgba(122,140,110,0.2); border-radius:2px; padding:14px; cursor:pointer; transition:all .2s; background:white; }
+.radio-card:hover { border-color:var(--sage); }
+.radio-card.selected { border-color:var(--sage); background:var(--sage-pale); }
+.radio-card-icon { font-size:20px; margin-bottom:6px; }
+.radio-card-title { font-size:13px; font-weight:500; margin-bottom:2px; }
+.radio-card-sub { font-size:11px; color:#999; font-weight:300; }
+
+.cta-btn {
+  width:100%; padding:15px; background:var(--sage); color:white; border:none;
+  font-family:'DM Sans',sans-serif; font-size:12px; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:500; cursor:pointer; border-radius:2px;
+  margin-top:12px; transition:background .2s;
+}
+.cta-btn:hover { background:var(--earth); }
+.cta-btn:disabled { background:#ccc; cursor:default; }
+.back-btn {
+  flex:0 0 auto; padding:13px 20px; background:white;
+  border:1.5px solid rgba(122,140,110,0.3); border-radius:2px;
+  cursor:pointer; font-family:'DM Sans',sans-serif; font-size:11px;
+  letter-spacing:.08em; text-transform:uppercase; color:#888; transition:all .2s;
+}
+.back-btn:hover { border-color:var(--sage); color:var(--sage); }
+
+.panel-right { background:var(--mist); overflow-y:auto; padding:44px 44px 44px 36px; }
+
+.loading-wrap { text-align:center; padding:80px 0; }
+.spinner { width:30px; height:30px; border:2px solid var(--sage-pale); border-top-color:var(--sage); border-radius:50%; animation:spin .8s linear infinite; margin:0 auto 20px; }
+@keyframes spin { to{transform:rotate(360deg)} }
+.loading-txt { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:#888; }
+.loading-sub { font-size:12px; color:#bbb; margin-top:8px; }
+
+.empty-state { text-align:center; padding:100px 40px; }
+.empty-icon { font-size:48px; margin-bottom:20px; opacity:.4; }
+.empty-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; color:#aaa; margin-bottom:8px; }
+.empty-sub { font-size:13px; color:#ccc; line-height:1.6; }
+
+.results-eyebrow { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--earth); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.results-eyebrow::before { content:''; display:block; width:20px; height:1px; background:var(--earth-light); }
+.results-title { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:300; line-height:1.2; margin-bottom:6px; }
+.results-title em { font-style:italic; color:var(--sage); }
+.results-sub { font-size:12px; color:#bbb; margin-bottom:24px; }
+
+.insight-box { background:white; border-left:3px solid var(--sage); padding:14px 18px; border-radius:0 2px 2px 0; margin-bottom:24px; font-size:13px; line-height:1.65; color:#555; font-weight:300; }
+
+.result-card {
+  background:white; border-radius:6px; margin-bottom:22px; overflow:hidden;
+  border:1px solid rgba(122,140,110,0.1); cursor:pointer;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.result-card:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(0,0,0,0.1); border-color:var(--sage-light); }
+.card-top { display:flex; align-items:stretch; }
+.card-img-wrap { position:relative; overflow:hidden; background:var(--mist); width:38%; max-width:380px; flex-shrink:0; min-height:280px; }
+.card-img-wrap img { display:block; width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+.card-match-wrap { position:absolute; top:14px; left:14px; z-index:1; }
+.card-match-badge {
+  --m: 88;
+  width:54px; height:54px; border-radius:50%;
+  background:conic-gradient(var(--sage) calc(var(--m) * 1%), rgba(255,255,255,.5) 0);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 3px 12px rgba(0,0,0,.18);
+}
+.card-match-badge::after {
+  content:''; position:absolute; width:46px; height:46px; border-radius:50%; background:white;
+}
+.card-match-badge span {
+  position:relative; z-index:1; display:flex; flex-direction:column; align-items:center;
+  font-family:'DM Sans',sans-serif; font-weight:700;
+  font-size:14px; color:var(--sage); line-height:1.1;
+}
+.card-match-badge span small { font-size:6px; font-weight:600; letter-spacing:.06em; color:var(--earth); margin-top:1px; }
+.card-info { flex:1; padding:22px 26px; display:flex; flex-direction:column; min-width:0; }
+.card-info .card-desc { flex:1; }
+
+/* Lead capture modal */
+.lead-overlay { position:fixed; inset:0; z-index:900; background:rgba(44,44,42,0.5); backdrop-filter:blur(3px); display:none; align-items:center; justify-content:center; padding:20px; }
+.lead-overlay.open { display:flex; }
+.lead-card { background:var(--warm-white); border-radius:3px; padding:40px; max-width:420px; width:100%; position:relative; box-shadow:0 30px 80px rgba(0,0,0,0.25); animation:fadeUpModal .3s ease; }
+@keyframes fadeUpModal { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.lead-close { position:absolute; top:14px; right:16px; font-size:24px; background:none; border:none; cursor:pointer; color:#aaa; transition:color .2s; line-height:1; }
+.lead-close:hover { color:var(--charcoal); }
+.lead-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; line-height:1.2; margin:14px 0 8px; }
+.lead-title em { font-style:italic; color:var(--sage); }
+.lead-sub { font-size:13px; color:#888; line-height:1.6; font-weight:300; margin-bottom:24px; }
+.lead-label { display:block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--earth); margin-bottom:6px; }
+.lead-input {
+  width:100%; padding:12px 14px; border:1.5px solid rgba(122,140,110,0.25); border-radius:2px;
+  font-family:'DM Sans',sans-serif; font-size:14px; color:var(--charcoal); background:white;
+}
+.lead-input:focus { outline:none; border-color:var(--sage); }
+.lead-legal { font-size:11px; color:#aaa; line-height:1.6; margin:14px 0 4px; }
+.lead-legal a { color:var(--sage); text-decoration:underline; }
+.lead-error { font-size:12px; color:#c0392b; margin-top:8px; min-height:16px; }
+
+.card-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:400; line-height:1.25; margin-bottom:4px; }
+.card-location { font-size:12px; color:#aaa; letter-spacing:.02em; margin-bottom:10px; }
+.card-tags { display:flex; gap:6px; flex-wrap:wrap; }
+.card-tag { font-size:10px; padding:3px 10px; background:var(--sage-pale); color:var(--sage); border-radius:20px; text-transform:uppercase; }
+.card-desc { font-size:13px; color:#888; line-height:1.65; font-weight:300; padding:12px 0 0; }
+.card-body { padding:14px 20px 18px; border-top:1px solid var(--mist); }
+.card-footer { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.price-from { font-size:10px; color:#bbb; }
+.price-num { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:300; color:var(--charcoal); line-height:1; }
+.price-unit { font-size:10px; color:#bbb; }
+.book-btn {
+  padding:11px 24px; background:var(--charcoal); color:white; border:none;
+  font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; cursor:pointer; border-radius:1px; transition:background .2s;
+  text-decoration:none; display:inline-block; flex-shrink:0;
+}
+.book-btn:hover { background:var(--sage); }
+
+.edit-search-bar {
+  display:none; align-items:center; gap:8px; margin-bottom:18px;
+  font-size:12px; color:var(--sage); cursor:pointer; letter-spacing:.04em;
+  background:none; border:none; padding:0; font-family:'DM Sans',sans-serif;
+}
+.edit-search-bar svg { width:12px; height:12px; }
+
+@media(max-width:700px) {
+  .card-top { flex-direction:column; }
+  .card-img-wrap { width:100%; max-width:none; min-height:200px; height:200px; }
+}
+
+@media(max-width:900px) {
+  nav { padding:14px 20px; }
+  .app { grid-template-columns:1fr; min-height:auto; }
+  .panel-left { padding:32px 20px 28px; border-right:none; border-bottom:1px solid rgba(122,140,110,0.12); }
+  .panel-right { padding:32px 20px 48px; }
+  .app.results-active .panel-left { display:none; }
+  .app.results-active .panel-right { min-height:calc(100vh - 62px); padding-top:24px; }
+  .app.results-active .edit-search-bar { display:flex; }
+  .form-title { font-size:30px; }
+  .radio-grid { grid-template-columns:1fr 1fr; }
+  .region-pill-group { grid-template-columns:1fr 1fr; }
+  .comm-summary { overflow-x:auto; }
+  .comm-row { font-size:11px; }
+  .comm-label { max-width:180px; }
+}
+
+@media(max-width:480px) {
+  .panel-left { padding:24px 16px 20px; }
+  .panel-right { padding:24px 16px 40px; }
+  .form-title { font-size:26px; }
+  .radio-grid { grid-template-columns:1fr; }
+  .region-pill-group { grid-template-columns:1fr; }
+  .pill { padding:8px 14px; font-size:12px; }
+  .results-title { font-size:22px; }
+  .card-name { font-size:17px; }
+  .card-footer { flex-wrap:wrap; gap:10px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/en" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
+  <a href="/en" class="nav-back">← Back to directory</a>
+</nav>
+
+<div class="lead-overlay" id="leadModal" onclick="if(event.target===this)closeLeadModal()">
+  <div class="lead-card">
+    <button class="lead-close" onclick="closeLeadModal()" aria-label="Close">×</button>
+    <div class="form-eyebrow">One last step</div>
+    <h3 class="lead-title">Who should we send<br>your <em>recommendations</em> to?</h3>
+    <p class="lead-sub">We'll show them to you instantly and, if you like, save them so you don't lose them.</p>
+    <div class="q-block" style="margin-bottom:14px;">
+      <label class="lead-label">Name</label>
+      <input type="text" id="leadName" class="lead-input" placeholder="Your name" autocomplete="name">
+    </div>
+    <div class="q-block" style="margin-bottom:6px;">
+      <label class="lead-label">Email</label>
+      <input type="email" id="leadEmail" class="lead-input" placeholder="youremail@example.com" autocomplete="email">
+    </div>
+    <p class="lead-legal">By entering your name and email you accept the <a href="/en/legal#terms" target="_blank">terms of service</a> and the <a href="/en/legal#privacy" target="_blank">privacy policy</a> of Wellnest Guide.</p>
+    <div id="leadError" class="lead-error"></div>
+    <button class="cta-btn" style="margin-top:6px;" onclick="submitLead()">✦ See my recommendations</button>
+  </div>
+</div>
+
+<div class="app">
+  <div class="panel-left">
+    <div class="form-eyebrow">Smart finder</div>
+    <h1 class="form-title">Your <em>perfect</em> retreat<br>in 2 minutes</h1>
+    <p class="form-sub">Tell us what you need and our AI will find the best verified options in Spain.</p>
+    <div class="steps-indicator" id="stepsIndicator"></div>
+    <div id="formContent"></div>
+  </div>
+  <div class="panel-right" id="rightPanel">
+    <div class="empty-state">
+      <div class="empty-icon">🌿</div>
+      <div class="empty-title">Your recommendations<br>will appear here</div>
+      <div class="empty-sub">Complete the form and our AI will search<br>for the retreats that best fit you.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── AFFILIATE CONFIG ────────────────────────────────────────────────
+const BOOKING_AID = '818286';
+const GYG_PARTNER_ID = 'TU_GYG_PARTNER_ID';
+const CIVITATIS_AFF = 'TU_CIVITATIS_ID';
+
+function buildBookingLink(searchTerm, region, checkin, checkout) {
+  const dest = encodeURIComponent((region && region !== 'cualquiera' ? region + ' ' : '') + (searchTerm || 'retiro bienestar') + ' España');
+  let url = `https://www.booking.com/searchresults.en.html?aid=${BOOKING_AID}&ss=${dest}&lang=en`;
+  if (checkin) url += `&checkin=${checkin}`;
+  if (checkout) url += `&checkout=${checkout}`;
+  if (state.personas) url += `&group_adults=${state.personas}&no_rooms=1`;
+  return url;
+}
+function buildGYGLink(searchTerm, region, checkin, checkout) {
+  const q = encodeURIComponent((searchTerm || 'retiro bienestar') + (region && region !== 'cualquiera' ? ' ' + region : '') + ' España');
+  let url = `https://www.getyourguide.com/s/?q=${q}&partner_id=${GYG_PARTNER_ID}`;
+  if (checkin) url += `&date_from=${checkin}`;
+  if (checkout) url += `&date_to=${checkout}`;
+  return url;
+}
+function buildCivitatisLink(searchTerm, region, checkin) {
+  const q = encodeURIComponent((searchTerm || 'retiro') + (region && region !== 'cualquiera' ? '-' + region : '-espana'));
+  let url = `https://www.civitatis.com/en/espana/?aid=${CIVITATIS_AFF}&q=${q}`;
+  if (checkin) url += `&date=${checkin}`;
+  return url;
+}
+
+// ── STATE ───────────────────────────────────────────────────────────
+const state = {
+  step: 0,
+  tipo: [],
+  region: null,
+  duracion: null,
+  fechaInicio: null,
+  fechaFin: null,
+  personas: 2,
+  presupuesto: 600,
+  nivel: null,
+  exclusividad: null,
+  leadName: null,
+  leadEmail: null
+};
+
+const steps = [
+  {
+    id: 'tipo',
+    label: 'What type of experience are you looking for?',
+    hint: 'You can choose more than one option',
+    type: 'multi-pill',
+    options: [
+      { value:'yoga', label:'🧘 Yoga' },
+      { value:'meditacion', label:'🕯️ Meditation' },
+      { value:'detox', label:'🌿 Detox' },
+      { value:'silencio', label:'🤫 Silence' },
+      { value:'ayurveda', label:'✨ Ayurveda' },
+      { value:'naturaleza', label:'🏔️ Nature' },
+      { value:'respiracion', label:'💨 Breathwork' },
+      { value:'escritura', label:'✍️ Creative writing' }
+    ]
+  },
+  {
+    id: 'region',
+    label: 'Where do you want to go?',
+    hint: 'Choose a region or let us surprise you',
+    type: 'region',
+    options: [
+      { value:'andalucia', emoji:'🌞', label:'Andalusia' },
+      { value:'cataluna', emoji:'🌊', label:'Catalonia' },
+      { value:'galicia', emoji:'🌿', label:'Galicia' },
+      { value:'canarias', emoji:'🏝️', label:'Canary Islands' },
+      { value:'madrid', emoji:'🏙️', label:'Madrid' },
+      { value:'valencia', emoji:'🍊', label:'Valencia' },
+      { value:'pais_vasco', emoji:'🏔️', label:'Basque Country' },
+      { value:'baleares', emoji:'⛵', label:'Balearic Islands' },
+      { value:'aragon', emoji:'🦅', label:'Aragon' },
+      { value:'castilla', emoji:'🌾', label:'Castile' },
+      { value:'cualquiera', emoji:'✨', label:'Surprise me' }
+    ]
+  },
+  {
+    id: 'duracion',
+    label: 'How much time do you have?',
+    hint: 'Choose the option that best fits your schedule',
+    type: 'pill',
+    options: [
+      { value:'finde', label:'A weekend' },
+      { value:'semana_corta', label:'3–5 days' },
+      { value:'semana', label:'One week' },
+      { value:'mas', label:'More than a week' }
+    ]
+  },
+  {
+    id: 'fechas',
+    label: 'Do you have approximate dates?',
+    hint: 'Optional — it helps us check real availability on Booking',
+    type: 'date-range'
+  },
+  {
+    id: 'personas',
+    label: 'How many people are you?',
+    hint: 'Number of adults for the booking',
+    type: 'personas'
+  },
+  {
+    id: 'presupuesto',
+    label: 'What is your maximum budget?',
+    hint: 'Total price including accommodation',
+    type: 'range',
+    min: 100, max: 3000, step: 50,
+    format: (v) => v >= 3000 ? 'No limit' : `${v}€`
+  },
+  {
+    id: 'exclusividad',
+    label: 'What kind of atmosphere do you prefer?',
+    hint: null,
+    type: 'radio-card',
+    options: [
+      { value:'budget', icon:'🏕️', label:'Simple and authentic', sub:'The experience is what matters' },
+      { value:'medio', icon:'🏡', label:'Balanced comfort', sub:'Good facilities, reasonable price' },
+      { value:'premium', icon:'🏛️', label:'Premium', sub:'High standard, small groups' },
+      { value:'exclusivo', icon:'💎', label:'Exclusive', sub:'Maximum luxury, full personalization' }
+    ]
+  }
+];
+
+// ── RENDER ──────────────────────────────────────────────────────────
+function renderStep() {
+  const s = steps[state.step];
+
+  // dots
+  document.getElementById('stepsIndicator').innerHTML = steps.map((_, i) => {
+    const cls = i < state.step ? 'done' : i === state.step ? 'active' : '';
+    return `<div class="step-dot ${cls}"></div>`;
+  }).join('');
+
+  let html = `<div class="q-block">
+    <div class="q-label">${s.label}</div>
+    ${s.hint ? `<div class="q-hint">${s.hint}</div>` : ''}`;
+
+  if (s.type === 'multi-pill') {
+    const arr = state[s.id] || [];
+    html += `<div class="pill-group">${s.options.map(o =>
+      `<div class="pill multi${arr.includes(o.value) ? ' selected' : ''}" onclick="toggle('${s.id}','${o.value}')">${o.label}</div>`
+    ).join('')}</div>`;
+  }
+
+  if (s.type === 'region') {
+    html += `<div class="region-pill-group">${s.options.map(o =>
+      `<div class="region-pill${state[s.id] === o.value ? ' selected' : ''}" onclick="pick('${s.id}','${o.value}')">
+        <span class="region-emoji">${o.emoji}</span>${o.label}
+      </div>`
+    ).join('')}</div>`;
+  }
+
+  if (s.type === 'pill') {
+    html += `<div class="pill-group">${s.options.map(o =>
+      `<div class="pill${state[s.id] === o.value ? ' selected' : ''}" onclick="pick('${s.id}','${o.value}')">${o.label}</div>`
+    ).join('')}</div>`;
+  }
+
+  if (s.type === 'date-range') {
+    const val = state.fechaInicio ? (state.fechaFin ? `${state.fechaInicio} to ${state.fechaFin}` : state.fechaInicio) : '';
+    html += `<div class="date-range-wrap">
+      <input type="text" class="date-fp-input" id="finderDateRange" placeholder="Select arrival and departure" readonly value="${val}">
+    </div>
+    ${(state.fechaInicio || state.fechaFin) ? `<div class="date-clear" onclick="clearDates()">✕ Remove dates</div>` : ''}`;
+  }
+
+  if (s.type === 'personas') {
+    const opts = [1,2,3,4,5,6,7,8];
+    html += `<div class="pill-group">${opts.map(n =>
+      `<div class="pill${state.personas === n ? ' selected' : ''}" onclick="pick('personas',${n})">${n === 8 ? '8+' : n} ${n === 1 ? 'person' : 'people'}</div>`
+    ).join('')}</div>`;
+  }
+
+  if (s.type === 'range') {
+    const v = state[s.id] || s.min;
+    html += `<div class="slider-wrap">
+      <div class="range-val" id="rv">${s.format(v)}</div>
+      <input type="range" min="${s.min}" max="${s.max}" step="${s.step}" value="${v}"
+        oninput="updateRange('${s.id}', this.value)">
+      <div class="range-labels"><span>${s.format(s.min)}</span><span>${s.format(s.max)}</span></div>
+    </div>`;
+  }
+
+  if (s.type === 'radio-card') {
+    html += `<div class="radio-grid">${s.options.map(o =>
+      `<div class="radio-card${state[s.id] === o.value ? ' selected' : ''}" onclick="pick('${s.id}','${o.value}')">
+        <div class="radio-card-icon">${o.icon}</div>
+        <div class="radio-card-title">${o.label}</div>
+        <div class="radio-card-sub">${o.sub}</div>
+      </div>`
+    ).join('')}</div>`;
+  }
+
+  html += '</div>';
+
+  const isLast = state.step === steps.length - 1;
+  const ok = canNext();
+  html += `<div style="display:flex;gap:10px;margin-top:4px;">`;
+  if (state.step > 0) html += `<button class="back-btn" onclick="prev()">← Back</button>`;
+  if (!isLast) {
+    html += `<button class="cta-btn" onclick="next()" ${ok ? '' : 'disabled'} style="margin-top:0;">Continue →</button>`;
+  } else {
+    html += `<button class="cta-btn" onclick="openLeadModal()" ${ok ? '' : 'disabled'} style="margin-top:0;">✦ Find my retreat</button>`;
+  }
+  html += '</div>';
+
+  document.getElementById('formContent').innerHTML = html;
+
+  // Init flatpickr for date range step
+  const dpEl = document.getElementById('finderDateRange');
+  if (dpEl) {
+    flatpickr(dpEl, {
+      mode: 'range',
+      minDate: 'today',
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'd M Y',
+      locale: { rangeSeparator: ' → ', firstDayOfWeek: 1 },
+      defaultDate: [state.fechaInicio, state.fechaFin].filter(Boolean),
+      onClose(dates) {
+        const [start, end] = dates;
+        state.fechaInicio = start ? flatpickr.formatDate(start, 'Y-m-d') : null;
+        state.fechaFin    = end   ? flatpickr.formatDate(end,   'Y-m-d') : null;
+        document.getElementById('formContent').querySelector('.date-clear') && renderStep();
+        if (!document.getElementById('formContent').querySelector('.date-clear') && state.fechaInicio) renderStep();
+      }
+    });
+  }
+}
+
+function canNext() {
+  const s = steps[state.step];
+  if (s.type === 'multi-pill') return (state[s.id] || []).length > 0;
+  if (s.type === 'range' || s.type === 'date-range' || s.type === 'personas') return true;
+  return !!state[s.id];
+}
+function updateDate(field, value) {
+  state[field] = value || null;
+  if (field === 'fechaInicio' && state.fechaFin && state.fechaFin < value) state.fechaFin = null;
+  renderStep();
+}
+function clearDates() {
+  state.fechaInicio = null;
+  state.fechaFin = null;
+  const dp = document.getElementById('finderDateRange');
+  if (dp && dp._flatpickr) dp._flatpickr.clear();
+  renderStep();
+}
+function formatDate(iso) {
+  const [y, m, d] = iso.split('-');
+  return `${d}/${m}/${y}`;
+}
+function pick(f, v) { state[f] = v; renderStep(); }
+function toggle(f, v) {
+  if (!state[f]) state[f] = [];
+  const i = state[f].indexOf(v);
+  i > -1 ? state[f].splice(i, 1) : state[f].push(v);
+  renderStep();
+}
+function updateRange(f, v) {
+  state[f] = parseInt(v);
+  const el = document.getElementById('rv');
+  if (el) el.textContent = steps[state.step].format(parseInt(v));
+}
+function next() { if (canNext()) { state.step++; renderStep(); } }
+function prev() { if (state.step > 0) { state.step--; renderStep(); } }
+
+// ── FIND RETREATS ────────────────────────────────────────────────────
+async function findRetreats() {
+  const right = document.getElementById('rightPanel');
+  right.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div class="loading-txt">Finding your ideal retreat…</div><div class="loading-sub">Analyzing options in Spain</div></div>`;
+  document.querySelector('.cta-btn').disabled = true;
+
+  const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura creativa' };
+  const rMap = { andalucia:'Andalucía', cataluna:'Cataluña', galicia:'Galicia', canarias:'Canarias', madrid:'Madrid', valencia:'Valencia', pais_vasco:'País Vasco', baleares:'Baleares', aragon:'Aragón', castilla:'Castilla y León', cualquiera:'cualquier región de España' };
+  const durMap = { finde:'fin de semana (2-3 días)', semana_corta:'3-5 días', semana:'7 días', mas:'más de 7 días' };
+  const excMap = { budget:'sencillo y auténtico', medio:'confort equilibrado', premium:'premium', exclusivo:'exclusivo y de lujo' };
+
+  const preferences = {
+    tipos: (state.tipo || []).map(t => tMap[t] || t).join(', '),
+    region: rMap[state.region] || 'España',
+    duracion: durMap[state.duracion] || state.duracion,
+    personas: state.personas || 2,
+    presupuesto: state.presupuesto,
+    exclusividad: excMap[state.exclusividad] || state.exclusividad,
+    fechaInicio: state.fechaInicio || null,
+    fechaFin: state.fechaFin || null
+  };
+
+  try {
+    const res = await fetch('/api/recommend', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ preferences })
+    });
+    if (!res.ok) throw new Error(`Error ${res.status}`);
+    const data = await res.json();
+    const result = JSON.parse(data.result.replace(/```json|```/g, '').trim());
+    renderResults(result);
+  } catch (err) {
+    right.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Error loading results</div><div class="empty-sub" style="color:#c0392b">${err.message}</div></div>`;
+    document.querySelector('.cta-btn').disabled = false;
+    document.querySelector('.cta-btn').textContent = 'Try again';
+  }
+}
+
+// ── RENDER RESULTS ───────────────────────────────────────────────────
+function renderResults(data) {
+  const right = document.getElementById('rightPanel');
+  if (window.innerWidth <= 900) right.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura' };
+  const rMap = { andalucia:'Andalucía', cataluna:'Cataluña', galicia:'Galicia', canarias:'Canarias', madrid:'Madrid', valencia:'Valencia', pais_vasco:'País Vasco', baleares:'Baleares', aragon:'Aragón', castilla:'Castilla', cualquiera:'España' };
+
+  const tipos = (state.tipo || []).map(t => tMap[t] || t).join(' · ');
+  const regionLabel = rMap[state.region] || 'España';
+
+  const bgMap = {
+    yoga:'linear-gradient(135deg,#8fa37e,#5a7250)',
+    meditacion:'linear-gradient(135deg,#a89070,#6d5540)',
+    detox:'linear-gradient(135deg,#6b9e8a,#3d7060)',
+    silencio:'linear-gradient(135deg,#9090a0,#505060)',
+    ayurveda:'linear-gradient(135deg,#c4a060,#8a6030)',
+    naturaleza:'linear-gradient(135deg,#7aaa7a,#3a6a3a)',
+    respiracion:'linear-gradient(135deg,#7a9cb0,#4a6a80)',
+    escritura:'linear-gradient(135deg,#a07090,#704060)'
+  };
+
+  // Platform label for booking button only
+  const platformLabel = { booking:'View on Booking', getyourguide:'View on GetYourGuide', civitatis:'View on Civitatis' };
+
+  document.querySelector('.app').classList.add('results-active');
+
+  let html = `
+    <button class="edit-search-bar" onclick="editSearch()">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2L4 6l4 4"/></svg>
+      Edit search
+    </button>
+    <div style="margin-bottom:28px;">
+      <div class="results-eyebrow">Personalized recommendations</div>
+      <div class="results-title">We found <em>${data.retreats.length} retreats</em> for you</div>
+      <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'No budget limit' : 'Up to ' + state.presupuesto + '€'} · 👥 ${state.personas || 2} ${(state.personas || 2) === 1 ? 'person' : 'people'}${state.fechaInicio ? ` · 📅 ${formatDate(state.fechaInicio)}${state.fechaFin ? ' – ' + formatDate(state.fechaFin) : ''}` : ''}</div>
+    </div>
+    <div class="insight-box">${data.insight}</div>`;
+
+  data.retreats.forEach(r => {
+    const bg = bgMap[r.tipo?.[0]] || bgMap.naturaleza;
+    const btnLabel = r.booking_url ? 'View on Booking' : (platformLabel[r.plataforma] || 'View availability');
+
+    const bookUrl = r.booking_url
+      ? r.booking_url + (r.booking_url.includes('?') ? '&' : '?') + 'aid=' + BOOKING_AID
+      : buildBookingLink(r.search_term || r.name, r.location, state.fechaInicio, state.fechaFin);
+    r.bookUrl = bookUrl;
+
+    const seed = (r.id || r.name || 'retiro').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const photoMain = r.photo || `https://picsum.photos/seed/${seed}-main/600/400`;
+
+    html += `<div class="result-card" onclick="window.open(${JSON.stringify(bookUrl)}, '_blank', 'noopener'); trackEvent('click',{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})">
+      <div class="card-top">
+        <div class="card-img-wrap" style="background:${bg};">
+          <img src="${photoMain}" alt="${r.name}" loading="lazy">
+          <div class="card-match-wrap">
+            <div class="card-match-badge" style="--m:${r.match || 88}"><span>${r.match || 88}%<small>MATCH</small></span></div>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-name">${r.name}</div>
+          <div class="card-location">📍 ${r.location}</div>
+          <div class="card-tags">
+            ${(r.tipo || []).map(t => `<span class="card-tag">${t}</span>`).join('')}
+            <span class="card-tag">${r.duracion}</span>
+          </div>
+          <div class="card-desc">${r.desc}</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-footer">
+          <div>
+            <div class="price-from">from</div>
+            <div class="price-num">${r.precio_desde}€</div>
+            <div class="price-unit">/ person</div>
+          </div>
+          <a href="${bookUrl}" target="_blank" rel="noopener" class="book-btn" onclick='event.stopPropagation()'>${btnLabel} →</a>
+        </div>
+      </div>
+    </div>`;
+  });
+
+  html += `<div style="margin-top:16px;text-align:center;">
+    <button onclick="reset()" style="background:none;border:none;font-size:12px;color:#bbb;cursor:pointer;text-decoration:underline;">Search with different criteria</button>
+  </div>`;
+
+  right.innerHTML = html;
+  sendRecommendationsEmail(data);
+}
+
+function sendRecommendationsEmail(data) {
+  if (!state.leadEmail) return;
+  fetch('/api/send-recommendations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      lead: { name: state.leadName, email: state.leadEmail },
+      insight: data.insight,
+      retreats: data.retreats.map(r => ({
+        name: r.name, location: r.location, desc: r.desc,
+        duracion: r.duracion, precio_desde: r.precio_desde,
+        match: r.match, bookUrl: r.bookUrl
+      }))
+    })
+  })
+  .then(async (resp) => {
+    if (!resp.ok) console.error('Wellnest: error al enviar email de recomendaciones', resp.status, await resp.text());
+    else console.log('Wellnest: email de recomendaciones enviado correctamente');
+  })
+  .catch((e) => console.error('Wellnest: fallo de red al enviar email de recomendaciones', e));
+}
+
+function reset() {
+  Object.assign(state, { step:0, tipo:[], region:null, duracion:null, fechaInicio:null, fechaFin:null, presupuesto:600, nivel:null, exclusividad:null });
+  renderStep();
+  document.querySelector('.app').classList.remove('results-active');
+  document.getElementById('rightPanel').innerHTML = `<div class="empty-state"><div class="empty-icon">🌿</div><div class="empty-title">Your recommendations<br>will appear here</div><div class="empty-sub">Complete the form and our AI will search<br>for the retreats that best fit you.</div></div>`;
+}
+
+function editSearch() {
+  document.querySelector('.app').classList.remove('results-active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── TRACKING ─────────────────────────────────────────────────────────
+function trackEvent(type, extra) {
+  if (!state.leadEmail) return;
+  const payload = {
+    type,
+    lead: { name: state.leadName, email: state.leadEmail }
+  };
+  if (type === 'search') {
+    payload.search = {
+      tipo: state.tipo, region: state.region, duracion: state.duracion,
+      fechaInicio: state.fechaInicio, fechaFin: state.fechaFin,
+      presupuesto: state.presupuesto, nivel: state.nivel, exclusividad: state.exclusividad
+    };
+  }
+  if (type === 'click') payload.retreat = extra;
+
+  try {
+    fetch('/api/track-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true
+    });
+  } catch (e) { /* no bloquear la navegación si falla el tracking */ }
+}
+
+// ── LEAD CAPTURE ─────────────────────────────────────────────────────
+function openLeadModal() {
+  document.getElementById('leadError').textContent = '';
+  document.getElementById('leadModal').classList.add('open');
+}
+function closeLeadModal() {
+  document.getElementById('leadModal').classList.remove('open');
+}
+function submitLead() {
+  const name = document.getElementById('leadName').value.trim();
+  const email = document.getElementById('leadEmail').value.trim();
+  const errEl = document.getElementById('leadError');
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!name) { errEl.textContent = 'Please enter your name.'; return; }
+  if (!emailOk) { errEl.textContent = 'Please enter a valid email.'; return; }
+
+  state.leadName = name;
+  state.leadEmail = email;
+  closeLeadModal();
+  trackEvent('search');
+  findRetreats();
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && document.getElementById('leadModal').classList.contains('open')) closeLeadModal();
+});
+
+// ── DEBUG MODE (?debug=1): ver resultados sin completar el formulario ──
+// No llama a /api/recommend (sin coste de IA) ni envía email (no hay leadEmail).
+const __debugParams = new URLSearchParams(location.search);
+if (__debugParams.get('debug') === '1') {
+  state.tipo = ['yoga', 'meditacion'];
+  state.region = 'andalucia';
+  state.presupuesto = 600;
+  state.personas = 2;
+  renderResults({
+    insight: "[DEBUG] Sample insight text generated by AI — here would go the explanation of why these retreats match your preferences.",
+    retreats: [
+      {
+        id: 'masqi-energy-house', name: 'MasQi, The Energy House',
+        location: 'Banyeres de Mariola, Alicante',
+        desc: 'Masía del siglo XIX restaurada en pleno Parque Natural de la Sierra de Mariola. Adults-only, cocina macrobiótica y vegetariana, sesiones de yoga y healings energéticos.',
+        duracion: '3-5 noches', precio_desde: 150, tipo: ['yoga', 'meditacion'], emoji: '🌿', match: 94,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/644642328.jpg?k=7066efc0280d093f2656cbf3a118158dff23ce0235958d49259a3fbd6abb2166&o=',
+        booking_url: 'https://www.booking.com/hotel/es/qi-the-energy-house.html'
+      },
+      {
+        id: 'shanti-som-wellbeing-retreat', name: 'Shanti Som Wellbeing Retreat',
+        location: 'Alhaurín el Grande, Málaga',
+        desc: 'Retiro boutique en plena Sierra de Mijas con programas de yoga, meditación y detox. Piscina natural, sauna y vistas a la Costa del Sol.',
+        duracion: '4-7 noches', precio_desde: 280, tipo: ['yoga', 'detox'], emoji: '🧘', match: 89,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/520494752.jpg?k=a29b867f4842d66f2c2a65f1f811c0be32f352d117ebd20eefe6b1487b3f84c4&o=',
+        booking_url: 'https://www.booking.com/hotel/es/shanti-som-wellbeing-retreat.html'
+      },
+      {
+        id: 'mas-vivent-girona', name: 'Mas Vivent',
+        location: 'Sant Julià de Ramis, Girona',
+        desc: 'Masía catalana del s.XI rodeada de viñedos. Programas de yoga y meditación con vistas al Pirineo, cocina ecológica de proximidad.',
+        duracion: '2-4 noches', precio_desde: 195, tipo: ['yoga', 'naturaleza'], emoji: '🌾', match: 86,
+        photo: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/475857691.jpg?k=7b67e54edc47b841762f24d6426e4d35972785cb38550343a8820fd1f497011c&o=',
+        booking_url: 'https://www.booking.com/hotel/es/mas-vivent.html'
+      }
+    ]
+  });
+} else {
+  renderStep();
+}
+</script>
+</body>
+</html>
