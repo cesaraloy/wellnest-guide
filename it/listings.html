@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elenco dei Ritiri — Wellnest Guide</title>
+<meta name="description" content="Esplora l'elenco completo dei ritiri di benessere in Spagna. Filtra per regione, attività e prezzo.">
+<meta property="og:title" content="Elenco dei Ritiri di Benessere in Spagna — Wellnest Guide">
+<meta property="og:description" content="Esplora l'elenco completo dei ritiri di benessere in Spagna. Filtra per regione, attività e prezzo.">
+<meta property="og:url" content="https://wellnest.guide/it/listings">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://wellnest.guide/assets/wellnest-centros-banner.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elenco dei Ritiri di Benessere in Spagna — Wellnest Guide">
+<meta name="twitter:description" content="Esplora l'elenco completo dei ritiri di benessere in Spagna. Filtra per regione, attività e prezzo.">
+<meta name="twitter:image" content="https://wellnest.guide/assets/wellnest-centros-banner.jpg">
+<link rel="canonical" href="https://wellnest.guide/it/listings">
+<link rel="alternate" hreflang="es" href="https://wellnest.guide/listings">
+<link rel="alternate" hreflang="en" href="https://wellnest.guide/en/listings">
+<link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/listings">
+<link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings">
+<link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings">
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+.flatpickr-input { font-family:'DM Sans',sans-serif; font-size:12px; color:var(--charcoal); background:white; border:1px solid rgba(122,140,110,0.25); border-radius:2px; padding:5px 10px; cursor:pointer; outline:none; width:140px; flex-shrink:0; }
+.flatpickr-input::placeholder { color:#bbb; }
+</style>
+<style>
+:root {
+  --sage: #7a8c6e; --sage-light: #b5c4a8; --sage-pale: #e8ede5;
+  --warm-white: #faf8f4; --earth: #8b6f47; --earth-light: #c4a882;
+  --charcoal: #2c2c2c; --mist: #f0f4ee;
+  --nav-h: 63px;
+  --filters-h: 53px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--charcoal); overflow-x:hidden; }
+
+/* NAV */
+nav {
+  position:fixed; top:0; width:100%; z-index:300; padding:18px 48px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:rgba(250,248,244,0.97); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(122,140,110,0.15); height:var(--nav-h);
+}
+.nav-logo { display:flex; align-items:center; text-decoration:none; }
+.nav-logo img { height:26px; display:block; }
+.nav-links { display:flex; gap:28px; align-items:center; }
+.nav-links a { text-decoration:none; font-size:13px; color:#666; letter-spacing:.04em; transition:color .2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--sage); }
+.nav-cta { background:var(--sage)!important; color:white!important; padding:8px 20px; border-radius:2px; font-size:12px!important; letter-spacing:.08em!important; text-transform:uppercase; }
+
+/* PAGE HEADER */
+.page-header {
+  padding: 100px 48px 28px;
+  background: linear-gradient(180deg, var(--mist) 0%, var(--warm-white) 100%);
+  border-bottom: 1px solid rgba(122,140,110,0.12);
+}
+.page-eyebrow { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--earth); display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.page-eyebrow::before { content:''; display:block; width:24px; height:1px; background:var(--earth-light); }
+.page-header h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,40px); font-weight:300; line-height:1.15; }
+.page-header h1 em { font-style:italic; color:var(--sage); }
+.page-header p { font-size:13px; color:#999; margin-top:8px; font-weight:300; }
+
+/* FILTERS BAR */
+.filters-bar {
+  position:sticky; top:var(--nav-h); z-index:200;
+  background:rgba(250,248,244,0.97); backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(122,140,110,0.12);
+  padding:0 48px; height:var(--filters-h);
+  display:flex; gap:12px; align-items:center; flex-wrap:nowrap; overflow-x:auto;
+}
+.filters-bar::-webkit-scrollbar { display:none; }
+.filter-sep { width:1px; height:22px; background:rgba(122,140,110,0.18); flex-shrink:0; }
+.filter-label { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#bbb; white-space:nowrap; }
+select.filter-select {
+  font-family:'DM Sans',sans-serif; font-size:12px; color:var(--charcoal);
+  background:white; border:1px solid rgba(122,140,110,0.25); border-radius:2px;
+  padding:5px 26px 5px 10px; cursor:pointer; outline:none;
+  appearance:none; -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237a8c6e'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 8px center;
+  flex-shrink:0;
+}
+.tag-pill {
+  font-size:11px; padding:5px 12px; border-radius:20px;
+  border:1px solid rgba(122,140,110,0.25); background:white; color:#888;
+  cursor:pointer; transition:all .15s; white-space:nowrap; flex-shrink:0;
+}
+.tag-pill.active { background:var(--sage); color:white; border-color:var(--sage); }
+.tag-pill:hover:not(.active) { border-color:var(--sage); color:var(--sage); }
+.btn-reset { font-size:11px; color:#bbb; background:none; border:none; cursor:pointer; text-decoration:underline; flex-shrink:0; padding:0; }
+.btn-reset:hover { color:var(--sage); }
+
+/* VIEW TOGGLE */
+.view-toggle {
+  margin-left:auto; display:flex; gap:4px; flex-shrink:0;
+}
+.view-btn {
+  font-size:11px; letter-spacing:.06em; padding:5px 12px; border-radius:2px;
+  border:1px solid rgba(122,140,110,0.25); background:white; color:#888;
+  cursor:pointer; transition:all .15s; display:flex; align-items:center; gap:5px;
+}
+.view-btn.active { background:var(--charcoal); color:white; border-color:var(--charcoal); }
+.view-btn svg { width:13px; height:13px; }
+
+/* MAIN LAYOUT */
+.main-layout {
+  display:flex;
+}
+.main-layout.map-visible {
+  height: calc(100vh - var(--nav-h) - var(--filters-h));
+  position:sticky;
+  top: calc(var(--nav-h) + var(--filters-h));
+}
+
+/* LIST PANEL */
+.list-panel {
+  flex: 0 0 100%;
+  padding:28px 32px 60px;
+}
+.main-layout.map-visible .list-panel {
+  flex: 0 0 460px;
+  min-width:0;
+  overflow-y:auto;
+  border-right:1px solid rgba(122,140,110,0.12);
+}
+.results-info { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
+.results-count { font-size:12px; color:#aaa; }
+.map-hint { font-size:11px; color:var(--sage); display:none; }
+.main-layout.map-visible .map-hint { display:block; }
+
+.listings-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:18px;
+}
+.main-layout.map-visible .listings-grid {
+  grid-template-columns: 1fr;
+}
+
+/* CARDS */
+.listing-card {
+  background:white; border-radius:4px; overflow:hidden;
+  border:1px solid rgba(122,140,110,0.1);
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+  display:flex; flex-direction:column; cursor:pointer;
+}
+.listing-card:hover, .listing-card.highlighted {
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  border-color:var(--sage-light);
+}
+.main-layout.map-visible .listing-card { flex-direction:row; }
+.card-img-wrap {
+  position:relative; overflow:hidden;
+  aspect-ratio:4/3;
+  flex-shrink:0;
+}
+.main-layout.map-visible .card-img-wrap {
+  width:110px; aspect-ratio:1;
+}
+.card-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.listing-card:hover .card-img-wrap img { transform:scale(1.04); }
+.card-region-badge {
+  position:absolute; bottom:8px; left:8px;
+  background:rgba(44,44,44,0.72); backdrop-filter:blur(4px);
+  color:white; font-size:9px; letter-spacing:.07em; text-transform:uppercase;
+  padding:3px 7px; border-radius:2px;
+}
+.card-price-badge {
+  position:absolute; top:8px; right:8px;
+  background:white; color:var(--earth); font-size:12px; font-weight:500;
+  padding:3px 7px; border-radius:2px; box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+.card-body { padding:14px 16px; flex:1; display:flex; flex-direction:column; gap:6px; min-width:0; }
+.card-name { font-family:'Cormorant Garamond',serif; font-size:16px; font-weight:400; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.main-layout:not(.map-visible) .card-name { font-size:18px; white-space:normal; }
+.card-location { font-size:11px; color:#aaa; }
+.card-desc { font-size:12px; line-height:1.6; color:#777; font-weight:300; flex:1;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.main-layout:not(.map-visible) .card-desc { -webkit-line-clamp:3; }
+.card-tags { display:flex; gap:4px; flex-wrap:wrap; }
+.card-tag { font-size:10px; padding:2px 7px; border-radius:20px; background:var(--sage-pale); color:var(--sage); }
+.card-footer-row { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:10px; border-top:1px solid rgba(122,140,110,0.1); }
+.card-price { font-size:12px; color:var(--earth); }
+.card-price span { font-size:10px; color:#ccc; }
+.card-book-btn {
+  font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+  background:var(--charcoal); color:white; text-decoration:none;
+  padding:6px 12px; border-radius:2px; transition:background .2s;
+}
+.card-book-btn:hover { background:var(--sage); }
+.empty-state { grid-column:1/-1; text-align:center; padding:60px 24px; color:#aaa; }
+
+/* LOAD MORE */
+.load-more-wrap { grid-column:1/-1; display:flex; justify-content:center; padding:32px 0 8px; }
+.btn-load-more {
+  font-family:'DM Sans',sans-serif; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  background:white; color:var(--sage); border:1.5px solid var(--sage);
+  padding:11px 28px; border-radius:2px; cursor:pointer; transition:all .2s;
+}
+.btn-load-more:hover { background:var(--sage); color:white; }
+
+/* MAP PANEL */
+.map-panel {
+  flex:1; position:relative; display:none;
+}
+.main-layout.map-visible .map-panel { display:block; }
+#map { width:100%; height:100%; }
+
+/* Leaflet custom marker */
+.wn-marker {
+  background:var(--charcoal); color:white;
+  font-family:'DM Sans',sans-serif; font-size:11px; font-weight:500;
+  padding:5px 9px; border-radius:20px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.25);
+  white-space:nowrap; cursor:pointer;
+  transition:background .15s, transform .15s;
+  border:2px solid white;
+}
+.wn-marker:hover, .wn-marker.active { background:var(--sage); transform:scale(1.1); }
+.wn-marker.dimmed { background:#aaa; opacity:0.6; }
+
+/* Leaflet popup override */
+.leaflet-popup-content-wrapper {
+  border-radius:4px; box-shadow:0 4px 16px rgba(0,0,0,0.12);
+  font-family:'DM Sans',sans-serif; padding:0; overflow:hidden;
+}
+.leaflet-popup-content { margin:0; font-size:13px; min-width:200px; }
+.popup-inner { padding:14px 16px; }
+.popup-name { font-family:'Cormorant Garamond',serif; font-size:16px; margin-bottom:3px; }
+.popup-loc { font-size:11px; color:#aaa; margin-bottom:8px; }
+.popup-price { font-size:12px; color:var(--earth); margin-bottom:10px; }
+.popup-btn {
+  display:block; text-align:center;
+  background:var(--charcoal); color:white; text-decoration:none;
+  font-size:11px; letter-spacing:.07em; text-transform:uppercase;
+  padding:8px 12px; border-radius:2px; transition:background .2s;
+}
+.popup-btn:hover { background:var(--sage); }
+.leaflet-popup-tip-container { display:none; }
+
+/* HAMBURGER */
+.hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; }
+.hamburger span { display:block; width:22px; height:2px; background:var(--charcoal); border-radius:2px; transition:all .25s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.mobile-nav-overlay {
+  display:none; position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
+  background:rgba(250,248,244,0.98); z-index:299; flex-direction:column;
+  align-items:center; justify-content:center; gap:32px;
+}
+.mobile-nav-overlay.open { display:flex; }
+.mobile-nav-overlay a { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
+.mobile-nav-overlay a.nav-cta { background:var(--sage); color:white; padding:12px 28px; border-radius:2px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+
+/* MOBILE MAP TOGGLE BUTTON (list mode) */
+.mobile-map-btn {
+  display:none; position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
+  z-index:250; background:var(--charcoal); color:white;
+  border:none; border-radius:24px; padding:12px 24px;
+  font-family:'DM Sans',sans-serif; font-size:13px; letter-spacing:.06em;
+  cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.22);
+  align-items:center; gap:8px; white-space:nowrap;
+}
+.mobile-map-btn svg { width:14px; height:14px; flex-shrink:0; }
+
+/* MOBILE CARD STRIP */
+.mobile-card-strip {
+  display:none; position:fixed; bottom:0; left:0; right:0; z-index:250;
+  overflow-x:auto; overflow-y:visible;
+  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+  gap:12px; padding:16px 0 28px;
+  background:linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+  -ms-overflow-style:none; scrollbar-width:none;
+  align-items:flex-end;
+}
+.mobile-card-strip::-webkit-scrollbar { display:none; }
+.mobile-strip-spacer { flex-shrink:0; width:calc(50vw - 140px); }
+.mobile-strip-card {
+  scroll-snap-align:center; flex-shrink:0; width:280px;
+  background:white; border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.14);
+  overflow:hidden; display:flex; flex-direction:column;
+  border:2px solid transparent; transition:border-color .2s, box-shadow .2s;
+  cursor:pointer;
+}
+.mobile-strip-card.active { border-color:var(--sage); box-shadow:0 6px 24px rgba(122,140,110,0.3); }
+.strip-card-img { width:100%; height:120px; object-fit:cover; display:block; }
+.strip-card-body { padding:10px 12px; }
+.strip-card-name { font-family:'Cormorant Garamond',serif; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px; }
+.strip-card-loc { font-size:11px; color:#aaa; margin-bottom:6px; }
+.strip-card-footer { display:flex; align-items:center; justify-content:space-between; }
+.strip-card-price { font-size:12px; color:var(--earth); }
+.strip-card-btn { font-size:10px; letter-spacing:.06em; text-transform:uppercase; background:var(--charcoal); color:white; text-decoration:none; padding:5px 10px; border-radius:2px; }
+
+/* MOBILE LIST BACK BUTTON (shown in map mode) */
+.mobile-back-list {
+  display:none; position:fixed; top:calc(var(--nav-h) + var(--filters-h) + 12px); left:12px;
+  z-index:260; background:white; border:none; border-radius:20px;
+  padding:8px 14px; font-family:'DM Sans',sans-serif; font-size:12px; color:var(--charcoal);
+  box-shadow:0 2px 10px rgba(0,0,0,0.15); cursor:pointer; align-items:center; gap:6px;
+}
+.mobile-back-list svg { width:12px; height:12px; }
+
+/* MOBILE */
+@media(max-width:900px) {
+  nav { padding:14px 20px; }
+  .nav-links { display:none; }
+  .hamburger { display:flex; }
+  .page-header { padding:80px 20px 20px; }
+  .filters-bar { padding:0 14px; }
+  .view-toggle { display:none; }
+  .main-layout { flex-direction:column; height:auto; position:static; }
+  /* default: no map */
+  .mobile-map-btn { display:flex; }
+
+  /* map visible on mobile: full-screen map + card strip */
+  body.mobile-map-active .page-header { display:none; }
+  body.mobile-map-active .filters-bar { display:none; }
+  body.mobile-map-active .main-layout {
+    position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
+    height:auto; flex-direction:row;
+  }
+  body.mobile-map-active .main-layout .list-panel { display:none; }
+  body.mobile-map-active .main-layout .map-panel {
+    display:block; flex:1; height:100%;
+  }
+  body.mobile-map-active #map { height:100%; }
+  body.mobile-map-active .mobile-card-strip { display:flex; }
+  body.mobile-map-active .mobile-map-btn { display:none; }
+  body.mobile-map-active .mobile-back-list { display:flex; }
+}
+@media(max-width:540px) {
+  .main-layout.map-visible .listings-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/it" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
+  <div class="nav-links">
+    <a href="/it">Home</a>
+    <a href="/it/listings" class="active">Elenco</a>
+    <a href="/it/finder" class="nav-cta">Ricerca IA →</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <a href="/it" onclick="toggleMobileNav()">Home</a>
+  <a href="/it/listings" onclick="toggleMobileNav()">Elenco</a>
+  <a href="/it/finder" class="nav-cta" onclick="toggleMobileNav()">Ricerca IA →</a>
+</div>
+
+<div class="page-header">
+  <div class="page-eyebrow">Elenco completo</div>
+  <h1>Ritiri di <em>benessere</em> in Spagna</h1>
+  <p id="totalCount">Caricamento ritiri…</p>
+</div>
+
+<div class="filters-bar">
+  <span class="filter-label">Regione</span>
+  <select class="filter-select" id="regionFilter"><option value="">Tutte</option></select>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Prezzo</span>
+  <select class="filter-select" id="precioFilter">
+    <option value="">Qualsiasi</option>
+    <option value="€">€ economico</option>
+    <option value="€€">€€ medio</option>
+    <option value="€€€">€€€ premium</option>
+    <option value="€€€€">€€€€ lusso</option>
+  </select>
+  <div class="filter-sep"></div>
+  <input type="text" class="flatpickr-input" id="dateRangeFilter" placeholder="Date" readonly>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Persone</span>
+  <select class="filter-select" id="personasFilter">
+    <option value="">Qualsiasi</option>
+    <option value="1">1</option>
+    <option value="2" selected>2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6+</option>
+  </select>
+  <div class="filter-sep"></div>
+  <div id="tagFilters" style="display:flex;gap:6px;align-items:center;"></div>
+  <div class="filter-sep"></div>
+  <button class="btn-reset" id="btnReset">Azzera</button>
+  <div class="view-toggle">
+    <button class="view-btn active" id="btnList" title="Vista lista">
+      <svg viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="1" width="16" height="3" rx="1"/><rect x="0" y="6.5" width="16" height="3" rx="1"/><rect x="0" y="12" width="16" height="3" rx="1"/></svg>
+      Lista
+    </button>
+    <button class="view-btn" id="btnMap" title="Vista mappa">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a4.5 4.5 0 0 0-4.5 4.5C3.5 9.5 8 15 8 15s4.5-5.5 4.5-9.5A4.5 4.5 0 0 0 8 1zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+      Mappa
+    </button>
+  </div>
+</div>
+
+<div class="main-layout" id="mainLayout">
+  <div class="list-panel" id="listPanel">
+    <div class="results-info">
+      <span class="results-count" id="resultsCount"></span>
+      <span class="map-hint">Sposta la mappa per filtrare per zona</span>
+    </div>
+    <div class="listings-grid" id="grid"></div>
+  </div>
+  <div class="map-panel" id="mapPanel">
+    <div id="map"></div>
+  </div>
+</div>
+
+<button class="mobile-map-btn" id="mobileMapBtn" onclick="toggleMobileMap()">
+  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a4.5 4.5 0 0 0-4.5 4.5C3.5 9.5 8 15 8 15s4.5-5.5 4.5-9.5A4.5 4.5 0 0 0 8 1zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+  Vedi mappa
+</button>
+
+<button class="mobile-back-list" id="mobileBackList" onclick="toggleMobileMap()">
+  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2L4 6l4 4"/></svg>
+  Vedi lista
+</button>
+
+<div class="mobile-card-strip" id="mobileCardStrip"></div>
+
+<footer style="background:#2c2c2c;color:rgba(255,255,255,.5);text-align:center;padding:28px 24px;font-size:12px;">
+  © 2026 Wellnest Guide ·
+  <a href="/it/legal#termini" style="color:rgba(255,255,255,.4);text-decoration:none;">Termini</a> ·
+  <a href="/it/legal#privacy" style="color:rgba(255,255,255,.4);text-decoration:none;">Privacy</a>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+const BOOKING_AID = '818286';
+function withAid(url) { return url + (url.includes('?') ? '&' : '?') + 'aid=' + BOOKING_AID; }
+const FEATURED_TAGS = ['yoga','meditación','spa','surf','naturaleza','balneario','ayurveda','talasoterapia','solo adultos'];
+
+let allRetreats = [], filtered = [];
+let activeRegion = '', activePrice = '', activeTags = new Set();
+const PAGE_SIZE = 24;
+let visibleCount = PAGE_SIZE;
+let activeCheckin = '', activeCheckout = '', activePersonas = '2';
+let mapVisible = false, map, markers = {}, boundsFilter = false;
+let activePopupId = null;
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+async function init() {
+  const resp = await fetch('/data/retreats.json');
+  allRetreats = await resp.json();
+  document.getElementById('totalCount').textContent =
+    `${allRetreats.length} ritiri selezionati in tutta la Spagna`;
+
+  // Region select
+  const regions = [...new Set(allRetreats.map(r => r.region))].sort();
+  const sel = document.getElementById('regionFilter');
+  regions.forEach(r => { const o = document.createElement('option'); o.value = r; o.textContent = r; sel.appendChild(o); });
+  sel.addEventListener('change', e => { activeRegion = e.target.value; boundsFilter = false; render(); });
+  document.getElementById('precioFilter').addEventListener('change', e => { activePrice = e.target.value; boundsFilter = false; render(); });
+
+  flatpickr('#dateRangeFilter', {
+    mode: 'range',
+    minDate: 'today',
+    dateFormat: 'd M',
+    locale: { rangeSeparator: ' – ', firstDayOfWeek: 1 },
+    placeholder: 'Date',
+    onClose(dates) {
+      activeCheckin  = dates[0] ? flatpickr.formatDate(dates[0], 'Y-m-d') : '';
+      activeCheckout = dates[1] ? flatpickr.formatDate(dates[1], 'Y-m-d') : '';
+      render();
+    }
+  });
+  document.getElementById('personasFilter').addEventListener('change', e => { activePersonas = e.target.value; render(); });
+
+  // Tag pills
+  const tagWrap = document.getElementById('tagFilters');
+  FEATURED_TAGS.forEach(tag => {
+    const p = document.createElement('button');
+    p.className = 'tag-pill'; p.textContent = tag;
+    p.addEventListener('click', () => {
+      activeTags.has(tag) ? (activeTags.delete(tag), p.classList.remove('active'))
+                           : (activeTags.add(tag),    p.classList.add('active'));
+      boundsFilter = false; render();
+    });
+    tagWrap.appendChild(p);
+  });
+
+  document.getElementById('btnReset').addEventListener('click', reset);
+  document.getElementById('btnList').addEventListener('click', () => setView(false));
+  document.getElementById('btnMap').addEventListener('click', () => setView(true));
+
+  render();
+}
+
+// ── VIEW TOGGLE ───────────────────────────────────────────────────────────────
+function setView(showMap) {
+  mapVisible = showMap;
+  const layout = document.getElementById('mainLayout');
+  const btnList = document.getElementById('btnList');
+  const btnMap  = document.getElementById('btnMap');
+
+  if (mapVisible) {
+    layout.classList.add('map-visible');
+    btnList.classList.remove('active'); btnMap.classList.add('active');
+    if (!map) initMap();
+    else { setTimeout(() => map.invalidateSize(), 350); updateMarkers(); }
+  } else {
+    layout.classList.remove('map-visible');
+    btnList.classList.add('active'); btnMap.classList.remove('active');
+    boundsFilter = false; render();
+  }
+}
+
+// ── MAP ────────────────────────────────────────────────────────────────────────
+function initMap() {
+  map = L.map('map', { zoomControl: true, attributionControl: true })
+    .setView([40.0, -3.5], 6);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  updateMarkers();
+
+  map.on('moveend zoomend', () => {
+    if (!mapVisible) return;
+    boundsFilter = true;
+    render();
+  });
+}
+
+function updateMarkers() {
+  if (!map) return;
+  // Remove old markers
+  Object.values(markers).forEach(m => map.removeLayer(m));
+  markers = {};
+
+  allRetreats.filter(r => r.lat && r.lng).forEach(r => {
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="wn-marker" id="mk-${r.id}">${r.precio_tag}</div>`,
+      iconAnchor: [20, 14]
+    });
+    const marker = L.marker([r.lat, r.lng], { icon }).addTo(map);
+    marker.on('click', () => openPopup(r, marker));
+    markers[r.id] = marker;
+  });
+}
+
+function openPopup(r, marker) {
+  activePopupId = r.id;
+  if (isMobile()) {
+    scrollStripToId(r.id);
+    return;
+  }
+  let bookUrl = withAid(r.booking_url);
+  if (activeCheckin)  bookUrl += `&checkin=${activeCheckin}`;
+  if (activeCheckout) bookUrl += `&checkout=${activeCheckout}`;
+  if (activePersonas) bookUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+  const popup = L.popup({ offset: [0, -4], closeButton: true, maxWidth: 260 })
+    .setLatLng([r.lat, r.lng])
+    .setContent(`
+      <div class="popup-inner">
+        <div class="popup-name">${r.name}</div>
+        <div class="popup-loc">📍 ${r.location}</div>
+        <div class="popup-price">da ${r.precio_desde}€ · ${r.precio_tag}</div>
+        <a href="${bookUrl}" target="_blank" rel="noopener" class="popup-btn">Vedi su Booking →</a>
+      </div>`)
+    .openOn(map);
+
+  document.querySelectorAll('.listing-card').forEach(c => c.classList.remove('highlighted'));
+  const card = document.getElementById('card-' + r.id);
+  if (card) { card.classList.add('highlighted'); card.scrollIntoView({ behavior:'smooth', block:'nearest' }); }
+
+  popup.on('remove', () => {
+    activePopupId = null;
+    document.querySelectorAll('.listing-card').forEach(c => c.classList.remove('highlighted'));
+    refreshMarkerStyles();
+  });
+  refreshMarkerStyles();
+}
+
+function refreshMarkerStyles() {
+  Object.entries(markers).forEach(([id, m]) => {
+    const el = document.getElementById('mk-' + id);
+    if (!el) return;
+    const inFiltered = filtered.some(r => r.id === id);
+    el.classList.toggle('active', id === activePopupId);
+    el.classList.toggle('dimmed', !inFiltered);
+  });
+}
+
+// ── FILTER & RENDER ───────────────────────────────────────────────────────────
+function applyFilters(list) {
+  let f = list;
+  if (activeRegion) f = f.filter(r => r.region === activeRegion);
+  if (activePrice)  f = f.filter(r => r.precio_tag === activePrice);
+  if (activeTags.size) f = f.filter(r => [...activeTags].every(t => (r.tags||[]).includes(t)));
+  if (boundsFilter && map) {
+    const b = map.getBounds();
+    f = f.filter(r => r.lat && r.lng && b.contains([r.lat, r.lng]));
+  }
+  return f;
+}
+
+function loadMore() {
+  visibleCount += PAGE_SIZE;
+  render();
+}
+
+let lastFilterSig = '';
+function render() {
+  filtered = applyFilters(allRetreats);
+
+  const sig = JSON.stringify([activeRegion, activePrice, [...activeTags], activeCheckin, activeCheckout, activePersonas, boundsFilter]);
+  if (sig !== lastFilterSig) { visibleCount = PAGE_SIZE; lastFilterSig = sig; }
+  document.getElementById('resultsCount').textContent =
+    `${filtered.length} ritiro${filtered.length !== 1 ? 'i' : ''}`;
+
+  const grid = document.getElementById('grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state"><div style="font-size:32px;margin-bottom:8px">🌿</div><p style="font-size:13px;color:#aaa">Nessun risultato con questi filtri</p></div>`;
+  } else {
+    const visible = filtered.slice(0, visibleCount);
+    grid.innerHTML = visible.map(r => {
+      const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
+      const tags = (r.tags||[]).slice(0,3).map(t => `<span class="card-tag">${t}</span>`).join('');
+      const bUrl = buildBookingUrl(r);
+      return `
+      <div class="listing-card" id="card-${r.id}" onclick="onCardClick('${r.id}', '${bUrl}')">
+        <div class="card-img-wrap">
+          <img src="${r.photo||fallback}" alt="${r.name}" loading="lazy"
+            onerror="this.onerror=null;this.src='${fallback}'"
+            ${(r.photo||'').includes('picsum') ? `class="needs-real-photo" data-booking-url="${encodeURIComponent(r.booking_url)}"` : ''}>
+          <span class="card-region-badge">${r.region}</span>
+          <span class="card-price-badge">${r.precio_tag}</span>
+        </div>
+        <div class="card-body">
+          <div class="card-name">${r.name}</div>
+          <div class="card-location">📍 ${r.location}</div>
+          <div class="card-desc">${r.desc}</div>
+          <div class="card-tags">${tags}</div>
+          <div class="card-footer-row">
+            <div class="card-price">da ${r.precio_desde}€ <span>/ notte</span></div>
+            <a href="${bUrl}" target="_blank" rel="noopener" class="card-book-btn" onclick="event.stopPropagation()">Prenota →</a>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+    if (visibleCount < filtered.length) {
+      grid.innerHTML += `<div class="load-more-wrap"><button class="btn-load-more" onclick="loadMore()">Carica altri (${filtered.length - visibleCount} rimanenti)</button></div>`;
+    }
+    loadRealPhotos();
+  }
+
+  refreshMarkerStyles();
+
+  if (document.body.classList.contains('mobile-map-active')) {
+    renderMobileCards();
+  }
+}
+
+function buildBookingUrl(r) {
+  let bUrl = withAid(r.booking_url);
+  if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
+  if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
+  if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+  return bUrl;
+}
+
+function onCardClick(id, bUrl) {
+  if (mapVisible) {
+    const r = allRetreats.find(x => x.id === id);
+    if (r && r.lat) {
+      map.setView([r.lat, r.lng], Math.max(map.getZoom(), 10), { animate: true });
+      openPopup(r, markers[id]);
+    }
+  }
+  window.open(bUrl, '_blank', 'noopener');
+}
+
+function reset() {
+  activeRegion = ''; activePrice = ''; activeTags.clear(); boundsFilter = false;
+  activeCheckin = ''; activeCheckout = ''; activePersonas = '2';
+  document.getElementById('regionFilter').value = '';
+  document.getElementById('precioFilter').value = '';
+  const fp = document.getElementById('dateRangeFilter')._flatpickr;
+  if (fp) fp.clear();
+  document.getElementById('personasFilter').value = '2';
+  document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+  render();
+}
+
+function toggleMobileNav() {
+  const btn = document.getElementById('hamburger');
+  const overlay = document.getElementById('mobileNavOverlay');
+  btn.classList.toggle('open');
+  overlay.classList.toggle('open');
+}
+
+function isMobile() { return window.innerWidth <= 900; }
+
+function toggleMobileMap() {
+  const show = !mapVisible;
+  if (isMobile()) {
+    mapVisible = show;
+    if (show) {
+      document.body.classList.add('mobile-map-active');
+      if (!map) { initMap(); }
+      else { setTimeout(() => map.invalidateSize(), 50); updateMarkers(); }
+      renderMobileCards();
+    } else {
+      document.body.classList.remove('mobile-map-active');
+      mapVisible = false;
+      boundsFilter = false;
+      render();
+    }
+  } else {
+    setView(show);
+  }
+}
+
+function renderMobileCards() {
+  const strip = document.getElementById('mobileCardStrip');
+  if (!strip) return;
+  const spacer = '<div class="mobile-strip-spacer"></div>';
+  strip.innerHTML = spacer + filtered.map((r, i) => {
+    const fallback = `https://picsum.photos/seed/${r.id}/600/400`;
+    const photo = r.photo || fallback;
+    let bUrl = withAid(r.booking_url);
+    if (activeCheckin)  bUrl += `&checkin=${activeCheckin}`;
+    if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
+    if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
+    return `<div class="mobile-strip-card" id="scard-${r.id}" data-id="${r.id}" data-idx="${i}" onclick="onStripCardClick('${r.id}')">
+      <img class="strip-card-img" src="${photo}" alt="${r.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}'">
+      <div class="strip-card-body">
+        <div class="strip-card-name">${r.name}</div>
+        <div class="strip-card-loc">📍 ${r.location}</div>
+        <div class="strip-card-footer">
+          <div class="strip-card-price">da ${r.precio_desde}€ · ${r.precio_tag}</div>
+          <a href="${bUrl}" target="_blank" rel="noopener" class="strip-card-btn" onclick="event.stopPropagation()">Prenota →</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('') + spacer;
+
+  // Scroll → pan map (debounced)
+  let scrollTimer;
+  strip.onscroll = () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const centerX = strip.scrollLeft + strip.clientWidth / 2;
+      let closest = null, minDist = Infinity;
+      strip.querySelectorAll('.mobile-strip-card').forEach(card => {
+        const cx = card.offsetLeft - strip.scrollLeft + card.offsetWidth / 2 - (strip.clientWidth / 2 - strip.scrollLeft);
+        const dist = Math.abs(card.offsetLeft + card.offsetWidth / 2 - (strip.scrollLeft + strip.clientWidth / 2));
+        if (dist < minDist) { minDist = dist; closest = card; }
+      });
+      if (closest) {
+        const id = closest.dataset.id;
+        setActiveStripCard(id);
+        const r = allRetreats.find(x => x.id === id);
+        if (r && r.lat && map) map.panTo([r.lat, r.lng], { animate: true, duration: 0.5 });
+      }
+    }, 120);
+  };
+}
+
+function setActiveStripCard(id) {
+  document.querySelectorAll('.mobile-strip-card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
+  // update marker style
+  activePopupId = id;
+  refreshMarkerStyles();
+}
+
+function scrollStripToId(id) {
+  const strip = document.getElementById('mobileCardStrip');
+  const card = document.getElementById('scard-' + id);
+  if (!strip || !card) return;
+  const target = card.offsetLeft - strip.clientWidth / 2 + card.offsetWidth / 2;
+  strip.scrollTo({ left: target, behavior: 'smooth' });
+  setActiveStripCard(id);
+}
+
+function onStripCardClick(id) {
+  const r = allRetreats.find(x => x.id === id);
+  if (r && r.lat && map) map.setView([r.lat, r.lng], Math.max(map.getZoom(), 11), { animate: true });
+  setActiveStripCard(id);
+}
+
+// ── REAL PHOTOS ───────────────────────────────────────────────────────────────
+const photoCache = {};
+function loadRealPhotos() {
+  const imgs = document.querySelectorAll('img.needs-real-photo');
+  if (!imgs.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      observer.unobserve(img);
+      const url = decodeURIComponent(img.dataset.bookingUrl || '');
+      if (!url) return;
+      if (photoCache[url]) { img.src = photoCache[url]; img.classList.remove('needs-real-photo'); return; }
+      fetch(`/api/booking-photo?url=${encodeURIComponent(url)}`)
+        .then(r => r.ok ? r.json() : null)
+        .then(d => { if (d?.photo) { photoCache[url] = d.photo; img.src = d.photo; img.classList.remove('needs-real-photo'); } })
+        .catch(() => {});
+    });
+  }, { rootMargin: '300px' });
+  imgs.forEach(img => observer.observe(img));
+}
+
+init().catch(console.error);
+</script>
+</body>
+</html>
