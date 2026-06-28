@@ -315,6 +315,11 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
   .hamburger { display:flex; }
 }
 </style>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
 
@@ -670,6 +675,7 @@ function startLoadingMessages() {
 }
 
 async function findRetreats() {
+  if (window.va) va('event', { name: 'finder_search' });
   const right = document.getElementById('rightPanel');
   document.querySelector('.app').classList.add('results-active');
   right.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div class="loading-txt" id="loadingTxt" style="transition:opacity .2s;">${LOADING_MESSAGES[0]}</div><div class="loading-sub">Analyse des options en Espagne</div></div>`;
@@ -714,6 +720,7 @@ async function findRetreats() {
 
 // ── RENDER RESULTS ───────────────────────────────────────────────────
 function renderResults(data) {
+  if (window.va) va('event', { name: 'finder_results_shown', data: { count: data.retreats.length } });
   const right = document.getElementById('rightPanel');
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura' };
@@ -843,6 +850,7 @@ function editSearch() {
 
 // ── TRACKING ─────────────────────────────────────────────────────────
 function trackEvent(type, extra) {
+  if (window.va) va('event', { name: 'finder_' + type, data: extra || {} });
   if (!state.leadEmail) return;
   const payload = {
     type,
@@ -869,6 +877,7 @@ function trackEvent(type, extra) {
 
 // ── LEAD CAPTURE ─────────────────────────────────────────────────────
 function openLeadModal() {
+  if (window.va) va('event', { name: 'finder_lead_modal_open' });
   document.getElementById('leadError').textContent = '';
   document.getElementById('leadModal').classList.add('open');
 }
