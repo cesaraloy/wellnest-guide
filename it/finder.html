@@ -254,6 +254,10 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
   .comm-summary { overflow-x:auto; }
   .comm-row { font-size:11px; }
   .comm-label { max-width:180px; }
+  .app.results-active .edit-search-bar {
+    position:sticky; top:0; z-index:50;
+    background:var(--mist); margin:-24px -20px 14px; padding:14px 20px 10px;
+  }
 }
 
 @media(max-width:480px) {
@@ -646,9 +650,30 @@ function next() { if (canNext()) { state.step++; renderStep(); } }
 function prev() { if (state.step > 0) { state.step--; renderStep(); } }
 
 // ── FIND RETREATS ────────────────────────────────────────────────────
+const LOADING_MESSAGES = [
+  'Analisi delle tue preferenze…',
+  'Selezione delle migliori destinazioni…',
+  'Personalizzazione dei risultati…'
+];
+let loadingMsgInterval = null;
+
+function startLoadingMessages() {
+  const el = document.getElementById('loadingTxt');
+  if (!el) return;
+  let i = 0;
+  clearInterval(loadingMsgInterval);
+  loadingMsgInterval = setInterval(() => {
+    i = (i + 1) % LOADING_MESSAGES.length;
+    el.style.opacity = 0;
+    setTimeout(() => { el.textContent = LOADING_MESSAGES[i]; el.style.opacity = 1; }, 200);
+  }, 1800);
+}
+
 async function findRetreats() {
   const right = document.getElementById('rightPanel');
-  right.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div class="loading-txt">Ricerca del tuo ritiro ideale…</div><div class="loading-sub">Analisi delle opzioni in Spagna</div></div>`;
+  document.querySelector('.app').classList.add('results-active');
+  right.innerHTML = `<div class="loading-wrap"><div class="spinner"></div><div class="loading-txt" id="loadingTxt" style="transition:opacity .2s;">${LOADING_MESSAGES[0]}</div><div class="loading-sub">Analisi delle opzioni in Spagna</div></div>`;
+  startLoadingMessages();
   document.querySelector('.cta-btn').disabled = true;
 
   const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura creativa' };
@@ -676,8 +701,11 @@ async function findRetreats() {
     if (!res.ok) throw new Error(`Error ${res.status}`);
     const data = await res.json();
     const result = JSON.parse(data.result.replace(/```json|```/g, '').trim());
+    clearInterval(loadingMsgInterval);
     renderResults(result);
   } catch (err) {
+    clearInterval(loadingMsgInterval);
+    document.querySelector('.app').classList.remove('results-active');
     right.innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Errore durante il caricamento</div><div class="empty-sub" style="color:#c0392b">${err.message}</div></div>`;
     document.querySelector('.cta-btn').disabled = false;
     document.querySelector('.cta-btn').textContent = 'Riprova';
