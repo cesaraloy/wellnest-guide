@@ -132,21 +132,25 @@ select.filter-select {
 /* MAIN LAYOUT */
 .main-layout {
   display:flex;
+  background:var(--warm-white);
 }
 .main-layout.map-visible {
   height: calc(100vh - var(--nav-h) - var(--filters-h));
   position:sticky;
   top: calc(var(--nav-h) + var(--filters-h));
+  align-items:stretch;
 }
 
 /* LIST PANEL */
 .list-panel {
   flex: 0 0 100%;
   padding:28px 32px 60px;
+  background:var(--warm-white);
 }
 .main-layout.map-visible .list-panel {
   flex: 0 0 460px;
   min-width:0;
+  height:100%;
   overflow-y:auto;
   border-right:1px solid rgba(122,140,110,0.12);
 }
