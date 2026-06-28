@@ -226,9 +226,21 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
 }
 .edit-search-bar svg { width:12px; height:12px; }
 
-@media(max-width:700px) {
-  .card-top { flex-direction:column; }
-  .card-img-wrap { width:100%; max-width:none; min-height:200px; height:200px; }
+/* Results full-screen mode (both desktop and mobile) */
+.app.results-active { grid-template-columns:1fr; }
+.app.results-active .panel-left { display:none; }
+.app.results-active .panel-right { min-height:calc(100vh - 62px); padding-top:24px; }
+.app.results-active .edit-search-bar { display:flex; }
+
+.results-grid { display:grid; grid-template-columns:1fr; gap:20px; }
+
+@media(min-width:860px) {
+  .results-grid { grid-template-columns:repeat(2,1fr); }
+  .results-grid .card-top { flex-direction:column; }
+  .results-grid .card-img-wrap { width:100%; max-width:none; min-height:200px; height:200px; }
+}
+@media(min-width:1320px) {
+  .results-grid { grid-template-columns:repeat(3,1fr); }
 }
 
 @media(max-width:900px) {
@@ -236,9 +248,6 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; h
   .app { grid-template-columns:1fr; min-height:auto; }
   .panel-left { padding:32px 20px 28px; border-right:none; border-bottom:1px solid rgba(122,140,110,0.12); }
   .panel-right { padding:32px 20px 48px; }
-  .app.results-active .panel-left { display:none; }
-  .app.results-active .panel-right { min-height:calc(100vh - 62px); padding-top:24px; }
-  .app.results-active .edit-search-bar { display:flex; }
   .form-title { font-size:30px; }
   .radio-grid { grid-template-columns:1fr 1fr; }
   .region-pill-group { grid-template-columns:1fr 1fr; }
@@ -678,7 +687,7 @@ async function findRetreats() {
 // ── RENDER RESULTS ───────────────────────────────────────────────────
 function renderResults(data) {
   const right = document.getElementById('rightPanel');
-  if (window.innerWidth <= 900) right.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   const tMap = { yoga:'Yoga', meditacion:'Meditación', detox:'Detox', silencio:'Silencio', ayurveda:'Ayurveda', naturaleza:'Naturaleza', respiracion:'Breathwork', escritura:'Escritura' };
   const rMap = { andalucia:'Andalucía', cataluna:'Cataluña', galicia:'Galicia', canarias:'Canarias', madrid:'Madrid', valencia:'Valencia', pais_vasco:'País Vasco', baleares:'Baleares', aragon:'Aragón', castilla:'Castilla', cualquiera:'España' };
 
@@ -711,7 +720,8 @@ function renderResults(data) {
       <div class="results-title">Nous avons trouvé <em>${data.retreats.length} retraites</em> pour vous</div>
       <div class="results-sub">${tipos} · ${regionLabel} · ${state.presupuesto >= 3000 ? 'Sans limite de budget' : 'Jusqu\'à ' + state.presupuesto + '€'} · 👥 ${state.personas || 2} ${(state.personas || 2) === 1 ? 'personne' : 'personnes'}${state.fechaInicio ? ` · 📅 ${formatDate(state.fechaInicio)}${state.fechaFin ? ' – ' + formatDate(state.fechaFin) : ''}` : ''}</div>
     </div>
-    <div class="insight-box">${data.insight}</div>`;
+    <div class="insight-box">${data.insight}</div>
+    <div class="results-grid">`;
 
   data.retreats.forEach(r => {
     const bg = bgMap[r.tipo?.[0]] || bgMap.naturaleza;
@@ -756,8 +766,13 @@ function renderResults(data) {
     </div>`;
   });
 
-  html += `<div style="margin-top:16px;text-align:center;">
-    <button onclick="reset()" style="background:none;border:none;font-size:12px;color:#bbb;cursor:pointer;text-decoration:underline;">Rechercher avec d'autres critères</button>
+  html += `</div>
+  <div style="margin-top:24px;text-align:center;">
+    <button onclick="reset()" style="background:none;border:none;font-size:12px;color:#bbb;cursor:pointer;text-decoration:underline;">↺ Démarrer une nouvelle recherche</button>
+  </div>
+  <div style="margin-top:20px;text-align:center;padding:28px 20px;background:white;border-radius:6px;border:1px solid rgba(122,140,110,0.12);">
+    <p style="margin:0 0 14px;font-size:13px;color:#888;line-height:1.6;">Aucun résultat ne vous convainc ? Consultez notre annuaire complet pour découvrir d'autres destinations.</p>
+    <a href="/fr/listings" style="display:inline-block;padding:11px 24px;background:var(--charcoal);color:white;text-decoration:none;font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;">Annuaire complet →</a>
   </div>`;
 
   right.innerHTML = html;
