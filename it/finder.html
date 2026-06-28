@@ -775,7 +775,7 @@ function sendRecommendationsEmail(data) {
       retreats: data.retreats.map(r => ({
         name: r.name, location: r.location, desc: r.desc,
         duracion: r.duracion, precio_desde: r.precio_desde,
-        match: r.match, bookUrl: r.bookUrl
+        match: r.match, bookUrl: r.bookUrl, photo: r.photo
       }))
     })
   })

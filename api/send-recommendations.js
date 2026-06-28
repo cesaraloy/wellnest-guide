@@ -52,11 +52,14 @@ module.exports = async function handler(req, res) {
     const cardsHtml = retreats.map(r => `
       <tr>
         <td style="padding:16px 0;border-bottom:1px solid #eee;">
+          ${r.photo ? `<img src="${escape(r.photo)}" alt="${escape(r.name)}" width="100%" style="display:block;width:100%;max-height:220px;object-fit:cover;border-radius:4px;margin:0 0 12px;">` : ''}
           <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:18px;color:#2c2c2c;">${escape(r.name)}</p>
           <p style="margin:0 0 6px;font-size:12px;color:#999;letter-spacing:.04em;">📍 ${escape(r.location)} · ${escape(r.duracion)}</p>
           <p style="margin:0 0 10px;font-size:13px;line-height:1.6;color:#666;">${escape(r.desc)}</p>
           <p style="margin:0 0 12px;font-size:13px;color:#7a8c6e;font-weight:bold;">desde ${escape(r.precio_desde)}€ · ${escape(r.match || 88)}% de encaje</p>
-          <a href="${r.bookUrl}" style="display:inline-block;background:#2c2c2c;color:#ffffff;text-decoration:none;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:2px;">Ver disponibilidad →</a>
+          <table cellpadding="0" cellspacing="0"><tr><td align="right">
+            <a href="${r.bookUrl}" style="display:inline-block;background:#2c2c2c;color:#ffffff;text-decoration:none;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:2px;">Ver disponibilidad →</a>
+          </td></tr></table>
         </td>
       </tr>
     `).join('');
@@ -65,7 +68,7 @@ module.exports = async function handler(req, res) {
       <div style="font-family:Helvetica,Arial,sans-serif;background:#faf8f4;padding:32px 16px;">
         <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:4px;overflow:hidden;">
           <div style="background:#2c2c2c;padding:24px 32px;">
-            <span style="font-family:Georgia,serif;color:#ffffff;font-size:20px;letter-spacing:.04em;">Wellnest Guide</span>
+            <img src="https://wellnest.guide/assets/wellnest-inline_light.png" alt="Wellnest Guide" height="24" style="display:block;height:24px;">
           </div>
           <div style="padding:32px;">
             <p style="margin:0 0 4px;font-size:13px;color:#999;letter-spacing:.1em;text-transform:uppercase;">Hola ${escape(lead.name)},</p>
