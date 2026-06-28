@@ -503,7 +503,7 @@ async function init() {
   sel.addEventListener('change', e => { activeRegion = e.target.value; boundsFilter = false; render(); });
   document.getElementById('precioFilter').addEventListener('change', e => { activePrice = e.target.value; boundsFilter = false; render(); });
 
-  flatpickr('#dateRangeFilter', {
+  const dateFp = flatpickr('#dateRangeFilter', {
     mode: 'range',
     minDate: 'today',
     dateFormat: 'd M',
@@ -543,10 +543,49 @@ async function init() {
   }
   const tagParam = urlParams.get('tag');
   if (tagParam) {
+    const wantedTags = tagParam.split(',');
     tagWrap.querySelectorAll('.tag-pill').forEach(p => {
-      if (p.textContent === tagParam) { p.classList.add('active'); activeTags.add(tagParam); }
+      if (wantedTags.includes(p.textContent)) { p.classList.add('active'); activeTags.add(p.textContent); }
     });
   }
+  const precioParam = urlParams.get('precio');
+  if (precioParam) {
+    document.getElementById('precioFilter').value = precioParam;
+    activePrice = precioParam;
+  }
+  const personasParam = urlParams.get('personas');
+  if (personasParam) {
+    document.getElementById('personasFilter').value = personasParam;
+    activePersonas = personasParam;
+  }
+  const checkinParam = urlParams.get('checkin');
+  const checkoutParam = urlParams.get('checkout');
+  if (checkinParam && checkoutParam) {
+    activeCheckin = checkinParam;
+    activeCheckout = checkoutParam;
+    dateFp.setDate([checkinParam, checkoutParam], false);
+  }
+
+  // Keep current search criteria when switching language
+  function currentFilterQuery() {
+    const p = new URLSearchParams();
+    if (activeRegion) p.set('regionFilter', activeRegion);
+    if (activeTags.size) p.set('tag', [...activeTags].join(','));
+    if (activePrice) p.set('precio', activePrice);
+    if (activePersonas) p.set('personas', activePersonas);
+    if (activeCheckin) p.set('checkin', activeCheckin);
+    if (activeCheckout) p.set('checkout', activeCheckout);
+    return p.toString();
+  }
+  document.querySelectorAll('.lang-menu a, .mobile-lang-row a').forEach(a => {
+    a.addEventListener('click', e => {
+      const q = currentFilterQuery();
+      if (q) {
+        e.preventDefault();
+        window.location.href = a.href + (a.href.includes('?') ? '&' : '?') + q;
+      }
+    });
+  });
 
   render();
 }
