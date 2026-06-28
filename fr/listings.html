@@ -281,6 +281,10 @@ select.filter-select {
 .mobile-nav-overlay a { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
 .mobile-nav-overlay a.nav-cta { background:var(--sage); color:white; padding:12px 28px; border-radius:2px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
 
+.mobile-lang-row { display:flex; gap:10px; margin-top:4px; flex-wrap:wrap; justify-content:center; }
+.mobile-lang-row a { font-size:12px; padding:6px 14px; border:1px solid rgba(122,140,110,.35); border-radius:20px; color:#666; text-decoration:none; letter-spacing:.05em; }
+.mobile-lang-row a.active { color:var(--sage); border-color:var(--sage); background:var(--sage-pale); }
+
 /* MOBILE MAP TOGGLE BUTTON (list mode) */
 .mobile-map-btn {
   display:none; position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
@@ -389,6 +393,7 @@ select.filter-select {
   <a href="/fr" onclick="toggleMobileNav()">Accueil</a>
   <a href="/fr/listings" onclick="toggleMobileNav()">Annuaire</a>
   <a href="/fr/finder" class="nav-cta" onclick="toggleMobileNav()">Recherche IA →</a>
+<div class="mobile-lang-row"><a href="https://wellnest.guide/listings" class="es">ES</a><a href="https://wellnest.guide/en/listings" class="en">EN</a><a href="https://wellnest.guide/fr/listings" class="fr active">FR</a><a href="https://wellnest.guide/it/listings" class="it">IT</a></div>
 </div>
 
 <div class="page-header">

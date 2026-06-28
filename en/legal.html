@@ -68,13 +68,24 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 }
 .lang-menu a:hover { background:#f0f4ee; color:#7a8c6e; }
 .lang-menu a.active { color:#7a8c6e; font-weight:600; }
+
+@media(max-width:600px){
+  .lang-switcher { margin-left:0; }
+  .lang-current { display:none; }
+  .lang-menu {
+    position:static; opacity:1; visibility:visible; transform:none;
+    box-shadow:none; border:none; background:none; min-width:auto;
+    display:flex; gap:6px;
+  }
+  .lang-menu a { padding:5px 10px; border:1px solid rgba(122,140,110,.3); border-radius:16px; font-size:11px; }
+}
 </style>
 </head>
 <body>
 
 <nav>
   <a href="/en" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
-  <div style="display:flex;align-items:center;gap:16px;"><a href="/en" class="nav-back">← Back to directory</a><div class="lang-switcher" tabindex="0">
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><a href="/en" class="nav-back">← Back to directory</a><div class="lang-switcher" tabindex="0">
       <button class="lang-current">EN</button>
       <div class="lang-menu">
       <a href="https://wellnest.guide/legal" class="es">ES</a>
