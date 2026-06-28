@@ -502,10 +502,41 @@ let activeCheckin = '', activeCheckout = '', activePersonas = '2';
 let mapVisible = false, map, markers = {}, boundsFilter = false;
 let activePopupId = null;
 
+function injectItemListSchema(retreats) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Wellness retreats in Spain',
+    itemListElement: retreats.slice(0, 50).map((r, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'TouristTrip',
+        name: r.name,
+        description: r.desc,
+        url: r.booking_url,
+        image: r.photo,
+        touristType: r.tags,
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'EUR',
+          price: r.precio_desde,
+          url: r.booking_url
+        }
+      }
+    }))
+  };
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
 // ── INIT ──────────────────────────────────────────────────────────────────────
 async function init() {
   const resp = await fetch('/data/retreats.json');
   allRetreats = await resp.json();
+  injectItemListSchema(allRetreats);
   document.getElementById('totalCount').textContent =
     `${allRetreats.length} curated retreats across Spain`;
 

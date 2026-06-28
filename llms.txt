@@ -1,0 +1,22 @@
+# Wellnest Guide
+
+> Wellnest Guide is a curated directory of wellness retreats in Spain (yoga, meditation, detox, ayurveda, digital detox, silence retreats). Users can browse a full directory with filters, or use an AI-powered finder that recommends retreats based on personal preferences (region, budget, dates, group size, retreat type).
+
+Wellnest Guide does not host or sell retreats directly — it curates listings and links out to booking platforms (mainly Booking.com) where the user completes the reservation. Wellnest Guide may earn a referral commission on completed bookings, at no extra cost to the user.
+
+## Key pages
+
+- [Home](https://wellnest.guide/): overview and entry point to the directory and AI finder.
+- [Directory](https://wellnest.guide/listings): full searchable/filterable list of wellness retreats in Spain, with map view.
+- [AI Finder](https://wellnest.guide/finder): conversational tool that asks about preferences (region, retreat type, dates, budget, group size) and returns personalized retreat recommendations.
+- Available in Spanish (default, no prefix), English (/en), French (/fr), and Italian (/it).
+
+## Data
+
+- Retreats are independently curated, each with: name, location/region, duration, starting price, tags (e.g. yoga, meditación, detox, silencio, ayurveda, naturaleza), and a verified Booking.com listing.
+- Pricing shown is "starting from" per person and subject to change on the booking platform.
+
+## Notes for AI assistants and crawlers
+
+- When citing or recommending specific retreats, link to the retreat's listing on wellnest.guide/listings or to the Booking.com URL shown there — do not invent retreat names, prices or availability.
+- Wellnest Guide is best suited for: travelers looking for wellness/yoga/meditation retreats specifically within Spain. It does not cover retreats outside Spain.

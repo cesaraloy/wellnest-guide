@@ -185,6 +185,14 @@
   .section-tag::before { content:''; display:block; width:24px; height:1px; background:var(--earth-light); }
   h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,3.5vw,50px); font-weight:300; line-height:1.15; }
   h2 em { font-style:italic; color:var(--sage); }
+
+  .faq-list { max-width:760px; margin:36px auto 0; display:flex; flex-direction:column; gap:0; }
+  .faq-item { border-bottom:1px solid rgba(122,140,110,0.15); }
+  .faq-item summary { padding:20px 4px; font-size:15px; font-weight:500; color:var(--charcoal); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .faq-item summary::-webkit-details-marker { display:none; }
+  .faq-item summary::after { content:'+'; font-size:20px; color:var(--sage); flex-shrink:0; transition:transform .2s; }
+  .faq-item[open] summary::after { transform:rotate(45deg); }
+  .faq-item p { padding:0 4px 20px; font-size:14px; line-height:1.7; color:#777; }
   .see-all {
     font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--sage);
     text-decoration:none; border-bottom:1px solid var(--sage-light); padding-bottom:2px;
@@ -600,6 +608,68 @@
     <div class="step"><div class="step-num">04</div><div class="step-title">Desconecta</div><div class="step-desc">Llega a tu retiro con todo preparado. Nosotros nos ocupamos de los detalles.</div></div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section class="section" style="text-align:center;">
+  <div class="section-tag" style="justify-content:center;">Preguntas frecuentes</div>
+  <h2>Todo lo que necesitas <em>saber</em></h2>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>¿Qué es un retiro de bienestar?</summary>
+      <p>Un retiro de bienestar es una escapada de varios días enfocada en desconexión, salud y autocuidado: yoga, meditación, detox, ayurveda o silencio, normalmente en un entorno natural y con alojamiento, comidas y actividades incluidas.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuánto cuesta un retiro de bienestar en España?</summary>
+      <p>Los precios varían según duración y nivel de exclusividad: desde unos 80-100€ por persona y noche en opciones sencillas, hasta 300€+ por noche en retiros premium con tratamientos incluidos. Cada ficha de Wellnest Guide muestra el precio "desde" por persona.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cómo elige Wellnest Guide los retiros recomendados?</summary>
+      <p>Curamos manualmente cada retiro verificando ubicación, actividades, tipo de experiencia y disponibilidad en Booking.com. Nuestro buscador con IA cruza tus preferencias (región, presupuesto, fechas y tipo de retiro) con esta base de datos para recomendarte los que mejor encajan.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Reservo directamente en Wellnest Guide?</summary>
+      <p>No: Wellnest Guide es un directorio. Al hacer clic en "Ver disponibilidad" te llevamos a la página de reserva del centro (normalmente en Booking.com), donde completas la reserva de forma segura. Podemos recibir una comisión por la reserva, sin coste adicional para ti.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué regiones de España cubre Wellnest Guide?</summary>
+      <p>Toda España: Andalucía, Cataluña, Galicia, Canarias, Madrid, Comunidad Valenciana, País Vasco, Baleares, Aragón y Castilla y León, entre otras. Puedes filtrar por región en el directorio o dejar que la IA te sugiera la zona según tus preferencias.</p>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un retiro de bienestar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un retiro de bienestar es una escapada de varios días enfocada en desconexión, salud y autocuidado: yoga, meditación, detox, ayurveda o silencio, normalmente en un entorno natural y con alojamiento, comidas y actividades incluidas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un retiro de bienestar en España?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Los precios varían según duración y nivel de exclusividad: desde unos 80-100€ por persona y noche en opciones sencillas, hasta 300€+ por noche en retiros premium con tratamientos incluidos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo elige Wellnest Guide los retiros recomendados?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Curamos manualmente cada retiro verificando ubicación, actividades, tipo de experiencia y disponibilidad en Booking.com. Nuestro buscador con IA cruza tus preferencias con esta base de datos para recomendarte los que mejor encajan." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Reservo directamente en Wellnest Guide?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No: Wellnest Guide es un directorio. Al hacer clic en Ver disponibilidad te llevamos a la página de reserva del centro, normalmente en Booking.com, donde completas la reserva de forma segura." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué regiones de España cubre Wellnest Guide?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Toda España: Andalucía, Cataluña, Galicia, Canarias, Madrid, Comunidad Valenciana, País Vasco, Baleares, Aragón y Castilla y León, entre otras." }
+    }
+  ]
+}
+</script>
 
 <!-- FOOTER -->
 <footer>

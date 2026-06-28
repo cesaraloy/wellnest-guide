@@ -185,6 +185,14 @@
   .section-tag::before { content:''; display:block; width:24px; height:1px; background:var(--earth-light); }
   h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,3.5vw,50px); font-weight:300; line-height:1.15; }
   h2 em { font-style:italic; color:var(--sage); }
+
+  .faq-list { max-width:760px; margin:36px auto 0; display:flex; flex-direction:column; gap:0; }
+  .faq-item { border-bottom:1px solid rgba(122,140,110,0.15); }
+  .faq-item summary { padding:20px 4px; font-size:15px; font-weight:500; color:var(--charcoal); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .faq-item summary::-webkit-details-marker { display:none; }
+  .faq-item summary::after { content:'+'; font-size:20px; color:var(--sage); flex-shrink:0; transition:transform .2s; }
+  .faq-item[open] summary::after { transform:rotate(45deg); }
+  .faq-item p { padding:0 4px 20px; font-size:14px; line-height:1.7; color:#777; }
   .see-all {
     font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--sage);
     text-decoration:none; border-bottom:1px solid var(--sage-light); padding-bottom:2px;
@@ -600,6 +608,68 @@
     <div class="step"><div class="step-num">04</div><div class="step-title">Disconnect</div><div class="step-desc">Arrive at your retreat with everything ready. We take care of the details.</div></div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section class="section" style="text-align:center;">
+  <div class="section-tag" style="justify-content:center;">Frequently asked questions</div>
+  <h2>Everything you need <em>to know</em></h2>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>What is a wellness retreat?</summary>
+      <p>A wellness retreat is a multi-day getaway focused on disconnecting, health and self-care: yoga, meditation, detox, ayurveda or silence, usually in a natural setting with accommodation, meals and activities included.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How much does a wellness retreat in Spain cost?</summary>
+      <p>Prices vary by duration and exclusivity level: from around €80-100 per person per night for simple options, up to €300+ per night for premium retreats with treatments included. Each Wellnest Guide listing shows the starting price per person.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How does Wellnest Guide choose its recommended retreats?</summary>
+      <p>We manually curate every retreat, verifying location, activities, experience type and availability on Booking.com. Our AI finder matches your preferences (region, budget, dates and retreat type) against this database to recommend the best fit.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I book directly on Wellnest Guide?</summary>
+      <p>No: Wellnest Guide is a directory. Clicking "Check availability" takes you to the venue's booking page, usually on Booking.com, where you complete the reservation securely. We may earn a commission on the booking, at no extra cost to you.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which regions of Spain does Wellnest Guide cover?</summary>
+      <p>All of Spain: Andalusia, Catalonia, Galicia, the Canary Islands, Madrid, Valencia, the Basque Country, the Balearic Islands, Aragón and Castile and León, among others. You can filter by region in the directory or let the AI suggest one based on your preferences.</p>
+    </details>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a wellness retreat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A wellness retreat is a multi-day getaway focused on disconnecting, health and self-care: yoga, meditation, detox, ayurveda or silence, usually in a natural setting with accommodation, meals and activities included." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a wellness retreat in Spain cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Prices vary by duration and exclusivity level: from around €80-100 per person per night for simple options, up to €300+ per night for premium retreats with treatments included. Each Wellnest Guide listing shows the starting price per person." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Wellnest Guide choose its recommended retreats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We manually curate every retreat, verifying location, activities, experience type and availability on Booking.com. Our AI finder matches your preferences (region, budget, dates and retreat type) against this database to recommend the best fit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I book directly on Wellnest Guide?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No: Wellnest Guide is a directory. Clicking \"Check availability\" takes you to the venue's booking page, usually on Booking.com, where you complete the reservation securely. We may earn a commission on the booking, at no extra cost to you." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which regions of Spain does Wellnest Guide cover?",
+      "acceptedAnswer": { "@type": "Answer", "text": "All of Spain: Andalusia, Catalonia, Galicia, the Canary Islands, Madrid, Valencia, the Basque Country, the Balearic Islands, Aragón and Castile and León, among others. You can filter by region in the directory or let the AI suggest one based on your preferences." }
+    }
+  ]
+}
+</script>
 
 <!-- FOOTER -->
 <footer>
