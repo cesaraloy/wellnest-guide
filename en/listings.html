@@ -240,16 +240,18 @@ select.filter-select {
 
 /* Leaflet custom marker */
 .wn-marker {
-  background:var(--charcoal); color:white;
-  font-family:'DM Sans',sans-serif; font-size:11px; font-weight:500;
-  padding:5px 9px; border-radius:20px;
+  width:38px; height:38px; border-radius:50%;
+  background:#ffffff;
   box-shadow:0 2px 8px rgba(0,0,0,0.25);
-  white-space:nowrap; cursor:pointer;
-  transition:background .15s, transform .15s;
-  border:2px solid white;
+  cursor:pointer;
+  transition:transform .15s, box-shadow .15s, border-color .15s;
+  border:2px solid var(--charcoal);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
 }
-.wn-marker:hover, .wn-marker.active { background:var(--sage); transform:scale(1.1); }
-.wn-marker.dimmed { background:#aaa; opacity:0.6; }
+.wn-marker img { width:22px; height:22px; object-fit:contain; display:block; }
+.wn-marker:hover, .wn-marker.active { transform:scale(1.12); border-color:var(--sage); box-shadow:0 4px 14px rgba(122,140,110,0.4); }
+.wn-marker.dimmed { opacity:0.45; }
 
 /* Leaflet popup override */
 .leaflet-popup-content-wrapper {
@@ -632,6 +634,28 @@ function initMap() {
   });
 }
 
+const TAG_ICON_MAP = [
+  { icon: 'surf', tags: ['surf','kitesurf'] },
+  { icon: 'yoga', tags: ['yoga'] },
+  { icon: 'meditation', tags: ['meditación','meditation','méditation','meditazione'] },
+  { icon: 'detox', tags: ['detox'] },
+  { icon: 'thalassotherapy', tags: ['talasoterapia','thalasso'] },
+  { icon: 'hot-springs', tags: ['aguas termales','termal','termas','balneario','spa termal','circuito termal'] },
+  { icon: 'massage', tags: ['masajes'] },
+  { icon: 'beach', tags: ['playa','vistas al mar','mar','isla','costa','mar menor'] },
+  { icon: 'mountain', tags: ['montaña','sierra','pirineos','picos de europa','alpujarra','guadarrama','valle del lozoya'] },
+  { icon: 'pool', tags: ['piscina'] },
+  { icon: 'nature', tags: ['naturaleza','bosque','rural','senderismo','eco','ecoturismo','reserva de la biosfera','agroturismo'] },
+  { icon: 'spa', tags: ['spa','wellness','bienestar','relax','hammam'] }
+];
+function getMarkerIcon(r) {
+  const tags = (r.tags||[]).map(t => t.toLowerCase());
+  for (const entry of TAG_ICON_MAP) {
+    if (entry.tags.some(t => tags.includes(t))) return entry.icon;
+  }
+  return 'spa';
+}
+
 function updateMarkers() {
   if (!map) return;
   // Remove old markers
@@ -641,8 +665,8 @@ function updateMarkers() {
   allRetreats.filter(r => r.lat && r.lng).forEach(r => {
     const icon = L.divIcon({
       className: '',
-      html: `<div class="wn-marker" id="mk-${r.id}">${r.precio_tag}</div>`,
-      iconAnchor: [20, 14]
+      html: `<div class="wn-marker" id="mk-${r.id}"><img src="/assets/icons/${getMarkerIcon(r)}.png" alt=""></div>`,
+      iconAnchor: [19, 19]
     });
     const marker = L.marker([r.lat, r.lng], { icon }).addTo(map);
     marker.on('click', () => openPopup(r, marker));
