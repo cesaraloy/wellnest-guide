@@ -533,6 +533,20 @@ async function init() {
   document.getElementById('btnList').addEventListener('click', () => setView(false));
   document.getElementById('btnMap').addEventListener('click', () => setView(true));
 
+  // Pre-fill filters from URL params (e.g. ?regionFilter=Andalucía or ?tag=yoga)
+  const urlParams = new URLSearchParams(window.location.search);
+  const regionParam = urlParams.get('regionFilter') || urlParams.get('region');
+  if (regionParam && regions.includes(regionParam)) {
+    sel.value = regionParam;
+    activeRegion = regionParam;
+  }
+  const tagParam = urlParams.get('tag');
+  if (tagParam) {
+    tagWrap.querySelectorAll('.tag-pill').forEach(p => {
+      if (p.textContent === tagParam) { p.classList.add('active'); activeTags.add(tagParam); }
+    });
+  }
+
   render();
 }
 
