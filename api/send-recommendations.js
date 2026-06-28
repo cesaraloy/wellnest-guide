@@ -52,7 +52,7 @@ module.exports = async function handler(req, res) {
     const cardsHtml = retreats.map(r => `
       <tr>
         <td style="padding:16px 0;border-bottom:1px solid #eee;">
-          ${r.photo ? `<img src="${escape(r.photo)}" alt="${escape(r.name)}" width="100%" style="display:block;width:100%;max-height:220px;object-fit:cover;border-radius:4px;margin:0 0 12px;">` : ''}
+          ${r.photo ? `<a href="${r.bookUrl}"><img src="${escape(r.photo)}" alt="${escape(r.name)}" width="100%" style="display:block;width:100%;max-height:220px;object-fit:cover;border-radius:4px;margin:0 0 12px;"></a>` : ''}
           <p style="margin:0 0 4px;font-family:Georgia,serif;font-size:18px;color:#2c2c2c;">${escape(r.name)}</p>
           <p style="margin:0 0 6px;font-size:12px;color:#999;letter-spacing:.04em;">📍 ${escape(r.location)} · ${escape(r.duracion)}</p>
           <p style="margin:0 0 10px;font-size:13px;line-height:1.6;color:#666;">${escape(r.desc)}</p>
@@ -67,8 +67,8 @@ module.exports = async function handler(req, res) {
     const html = `
       <div style="font-family:Helvetica,Arial,sans-serif;background:#faf8f4;padding:32px 16px;">
         <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:4px;overflow:hidden;">
-          <div style="background:#2c2c2c;padding:24px 32px;">
-            <img src="https://wellnest.guide/assets/wellnest-inline_light.png" alt="Wellnest Guide" height="24" style="display:block;height:24px;">
+          <div style="background:#2c2c2c;padding:24px 32px;text-align:center;">
+            <img src="https://wellnest.guide/assets/wellnest-inline_light.png" alt="Wellnest Guide" height="24" style="display:inline-block;height:24px;">
           </div>
           <div style="padding:32px;">
             <p style="margin:0 0 4px;font-size:13px;color:#999;letter-spacing:.1em;text-transform:uppercase;">Hola ${escape(lead.name)},</p>
