@@ -9,7 +9,8 @@ Wellnest Guide does not host or sell retreats directly — it curates listings a
 - [Home](https://wellnest.guide/): overview and entry point to the directory and AI finder.
 - [Directory](https://wellnest.guide/listings): full searchable/filterable list of wellness retreats in Spain, with map view.
 - [AI Finder](https://wellnest.guide/finder): conversational tool that asks about preferences (region, retreat type, dates, budget, group size) and returns personalized retreat recommendations.
-- Available in Spanish (default, no prefix), English (/en), French (/fr), and Italian (/it).
+- [Blog](https://wellnest.guide/blog): practical guides about wellness retreats in Spain (silence retreats, beginner yoga retreats, digital detox, pricing). Spanish only for now.
+- Directory, finder and home are available in Spanish (default, no prefix), English (/en), French (/fr), and Italian (/it). The blog is currently Spanish-only.
 
 ## Data
 
