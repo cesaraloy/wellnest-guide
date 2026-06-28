@@ -22,6 +22,10 @@
 <link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder">
 <link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder">
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
@@ -789,7 +793,7 @@ function renderResults(data) {
     html += `<div class="result-card" onclick="window.open(${JSON.stringify(bookUrl)}, '_blank', 'noopener'); trackEvent('click',{name:${JSON.stringify(r.name)},location:${JSON.stringify(r.location)},plataforma:${JSON.stringify(r.plataforma)},precio_desde:${JSON.stringify(r.precio_desde)},bookUrl:${JSON.stringify(bookUrl)}})">
       <div class="card-top">
         <div class="card-img-wrap" style="background:${bg};">
-          <img src="${photoMain}" alt="${r.name}" loading="lazy">
+          <img src="${photoMain}" alt="${r.name} — ritiro benessere a ${r.location}" loading="lazy">
           <div class="card-match-wrap">
             <div class="card-match-badge" style="--m:${r.match || 88}"><span>${r.match || 88}%<small>MATCH</small></span></div>
           </div>

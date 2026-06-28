@@ -22,6 +22,10 @@
 <link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings">
 <link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings">
 <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -794,7 +798,7 @@ function render() {
       return `
       <div class="listing-card" id="card-${r.id}" onclick="onCardClick('${r.id}', '${bUrl}')">
         <div class="card-img-wrap">
-          <img src="${r.photo||fallback}" alt="${r.name}" loading="lazy"
+          <img src="${r.photo||fallback}" alt="${r.name} — wellness retreat in ${r.location||r.region}" loading="lazy"
             onerror="this.onerror=null;this.src='${fallback}'"
             ${(r.photo||'').includes('picsum') ? `class="needs-real-photo" data-booking-url="${encodeURIComponent(r.booking_url)}"` : ''}>
           <span class="card-region-badge">${r.region}</span>
@@ -897,7 +901,7 @@ function renderMobileCards() {
     if (activeCheckout) bUrl += `&checkout=${activeCheckout}`;
     if (activePersonas) bUrl += `&group_adults=${activePersonas}&no_rooms=1`;
     return `<div class="mobile-strip-card" id="scard-${r.id}" data-id="${r.id}" data-idx="${i}" onclick="onStripCardClick('${r.id}')">
-      <img class="strip-card-img" src="${photo}" alt="${r.name}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}'">
+      <img class="strip-card-img" src="${photo}" alt="${r.name} — wellness retreat in ${r.location||r.region}" loading="lazy" onerror="this.onerror=null;this.src='${fallback}'">
       <div class="strip-card-body">
         <div class="strip-card-name">${r.name}</div>
         <div class="strip-card-loc">📍 ${r.location}</div>
