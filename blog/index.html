@@ -138,7 +138,39 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <h1>El <em>blog</em> de bienestar</h1>
     <p>Guías prácticas sobre retiros de yoga, meditación, silencio y detox digital en España: qué esperar, cómo elegir y cuánto cuesta.</p>
   </div>
-  <div class="blog-grid">
+  <div class="blog-grid" id="blogGrid">
+    <a class="blog-card" data-publish="2026-07-09" href="/blog/mejor-epoca-para-un-retiro-de-bienestar-en-espana">
+      <img src="/assets/wellnest-sierra-nevada.jpg" alt="¿Cuál es la mejor época para un retiro de bienestar en España?" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Estacionalidad</div>
+        <div class="blog-card-title">¿Cuál es la mejor época para un retiro de bienestar en España?</div>
+        <div class="blog-card-desc">Cómo varía la experiencia de un retiro de bienestar según la estación, qué región encaja mejor con cada momento del año y cuándo encontrar mejores precios.</div>
+      </div>
+    </a>
+    <a class="blog-card" data-publish="2026-07-06" href="/blog/viajar-sola-a-un-retiro-de-bienestar">
+      <img src="/assets/wellnest-yoga-studio.jpg" alt="Viajar sola a un retiro de bienestar: guía completa" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Viajar sola</div>
+        <div class="blog-card-title">Viajar sola a un retiro de bienestar: guía completa</div>
+        <div class="blog-card-desc">Por qué cada vez más mujeres (y hombres) eligen viajar solos a un retiro de bienestar, qué seguridad y ambiente social puedes esperar y cómo elegir el destino adecuado.</div>
+      </div>
+    </a>
+    <a class="blog-card" data-publish="2026-07-02" href="/blog/retiro-de-bienestar-en-pareja">
+      <img src="/assets/wellnest-spa-retreat.jpg" alt="Retiro de bienestar en pareja: cómo elegir el ideal" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Parejas</div>
+        <div class="blog-card-title">Retiro de bienestar en pareja: cómo elegir el ideal</div>
+        <div class="blog-card-desc">Qué diferencia un retiro de bienestar pensado para parejas, qué actividades suelen incluir y cómo elegir entre desconexión, romance o trabajo conjunto sobre la relación.</div>
+      </div>
+    </a>
+    <a class="blog-card" data-publish="2026-06-30" href="/blog/ayurveda-en-espana-guia-retiro-ayurvedico">
+      <img src="/assets/wellnest-cat-ayurveda.jpg" alt="Ayurveda en España: qué es un retiro ayurvédico y qué esperar" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-tag">Ayurveda</div>
+        <div class="blog-card-title">Ayurveda en España: qué es un retiro ayurvédico y qué esperar</div>
+        <div class="blog-card-desc">Qué es la ayurveda, en qué se diferencia un retiro ayurvédico de uno de yoga convencional, y qué tratamientos y rutinas encontrarás en los mejores centros de España.</div>
+      </div>
+    </a>
     <a class="blog-card" href="/blog/retiros-de-silencio-en-espana">
       <img src="/assets/wellnest-cat-silencio.jpg" alt="Retiros de silencio en España: la guía completa para tu primera vez" loading="lazy">
       <div class="blog-card-body">
@@ -206,6 +238,12 @@ document.addEventListener('click', (e) => {
   const links = document.getElementById('navLinks');
   if (links && links.classList.contains('open') && e.target.closest('a')) links.classList.remove('open');
 });
+(function () {
+  const today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('#blogGrid .blog-card[data-publish]').forEach((card) => {
+    if (card.dataset.publish > today) card.remove();
+  });
+})();
 </script>
 </body>
 </html>
