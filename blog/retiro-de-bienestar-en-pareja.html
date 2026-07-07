@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774"
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <div class="post-eyebrow">Guías · Parejas</div>
     <h1>Retiro de bienestar en pareja: cómo elegir el <em>ideal</em></h1>
     <p class="post-meta">Publicado el 2 de julio de 2026 · 6 min de lectura</p>
-    <img class="post-hero" src="https://images.pexels.com/photos/20504932/pexels-photo-20504932.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de spa para una escapada de bienestar en pareja en España">
+    <img class="post-hero" srcset="https://images.pexels.com/photos/20504932/pexels-photo-20504932.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/20504932/pexels-photo-20504932.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/20504932/pexels-photo-20504932.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de spa para una escapada de bienestar en pareja en España">
 
     <p>No todos los retiros pensados "para parejas" buscan lo mismo. Algunos están orientados al romance y la desconexión (spa, cenas, tiempo a solas); otros incluyen sesiones guiadas para trabajar la comunicación o reconectar después de una etapa de mucho estrés. Saber qué tipo de experiencia buscas antes de reservar evita encontrarte con un programa muy distinto al que esperabas.</p>
 

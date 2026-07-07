@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 </head>
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
       <div class="post-eyebrow">Wellnest Guide</div>
       <h1>Retiros de bienestar en Andalucía: Sierra Nevada, Alpujarra y <em>Costa</em></h1>
       <p class="post-meta">10 de julio de 2026 · 8 min de lectura</p>
-      <img class="post-hero" src="https://images.pexels.com/photos/9121929/pexels-photo-9121929.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Paisaje de Andalucía para retiros de bienestar: sierra y naturaleza">
+      <img class="post-hero" srcset="https://images.pexels.com/photos/9121929/pexels-photo-9121929.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/9121929/pexels-photo-9121929.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/9121929/pexels-photo-9121929.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Paisaje de Andalucía para retiros de bienestar: sierra y naturaleza">
 
       <h2>Por qué Andalucía es uno de los mejores destinos de bienestar de España</h2>
       <p>Andalucía concentra una combinación difícil de superar: más de 300 días de sol al año, paisajes radicalmente distintos a menos de dos horas entre sí (sierra, campiña, costa atlántica y mediterránea), una tradición milenaria de baños y termalismo árabe, y una gastronomía mediterránea que en sí misma es parte del programa de bienestar. No es casualidad que la región cuente con uno de los mayores concentraciones de centros de retiros de toda España.</p>

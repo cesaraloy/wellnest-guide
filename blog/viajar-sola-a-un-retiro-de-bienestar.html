@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774"
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <div class="post-eyebrow">Guías · Viajar sola</div>
     <h1>Viajar sola a un retiro de bienestar: guía <em>completa</em></h1>
     <p class="post-meta">Publicado el 6 de julio de 2026 · 7 min de lectura</p>
-    <img class="post-hero" src="https://images.pexels.com/photos/2519212/pexels-photo-2519212.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de yoga y meditación en un retiro de bienestar para viajar sola en España">
+    <img class="post-hero" srcset="https://images.pexels.com/photos/2519212/pexels-photo-2519212.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/2519212/pexels-photo-2519212.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/2519212/pexels-photo-2519212.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de yoga y meditación en un retiro de bienestar para viajar sola en España">
 
     <p>Los retiros de bienestar son, junto con los cruceros y algunos circuitos culturales, uno de los formatos de viaje en solitario con mejor experiencia para quien nunca lo ha hecho: hay estructura (sabes qué vas a hacer cada día), hay grupo (no comes sola si no quieres) y hay un propósito compartido con el resto de huéspedes, lo que facilita socializar sin esfuerzo.</p>
 

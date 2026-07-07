@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 </head>
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
       <div class="post-eyebrow">Wellnest Guide</div>
       <h1>Retiro de fin de semana en España: qué puedes conseguir en <em>2-3 días</em></h1>
       <p class="post-meta">7 de julio de 2026 · 7 min de lectura</p>
-      <img class="post-hero" src="https://images.pexels.com/photos/35047590/pexels-photo-35047590.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Retiro de bienestar de fin de semana en entorno natural en España">
+      <img class="post-hero" srcset="https://images.pexels.com/photos/35047590/pexels-photo-35047590.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/35047590/pexels-photo-35047590.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/35047590/pexels-photo-35047590.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Retiro de bienestar de fin de semana en entorno natural en España">
 
       <h2>¿Tiene sentido un retiro tan corto?</h2>
       <p>La respuesta directa es sí — con matices. Un retiro de fin de semana no va a transformar hábitos de años, pero sí puede hacer algo que muchos necesitan más: interrumpir el piloto automático. Dos o tres días de desconexión real, sin agenda laboral, sin móvil encendido a todas horas y con alguna práctica de bienestar estructurada producen un efecto de "reseteo" que muchos describen como claridad mental, reducción del ritmo cardíaco y mejor calidad del sueño durante la semana siguiente.</p>

@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774"
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <div class="post-eyebrow">Guías · Ayurveda</div>
     <h1>Ayurveda en España: qué es un retiro ayurvédico y qué <em>esperar</em></h1>
     <p class="post-meta">Publicado el 30 de junio de 2026 · 7 min de lectura</p>
-    <img class="post-hero" src="https://images.pexels.com/photos/6978215/pexels-photo-6978215.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Tratamiento y rutina ayurvédica en un retiro de bienestar en España">
+    <img class="post-hero" srcset="https://images.pexels.com/photos/6978215/pexels-photo-6978215.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/6978215/pexels-photo-6978215.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/6978215/pexels-photo-6978215.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Tratamiento y rutina ayurvédica en un retiro de bienestar en España">
 
     <p>La ayurveda es un sistema de medicina tradicional originario de la India, con más de 3.000 años de historia, centrado en el equilibrio entre cuerpo, mente y alimentación según la constitución de cada persona (los famosos "doshas": vata, pitta y kapha). En España, ha pasado de ser una palabra que solo conocían unos pocos a convertirse en una de las categorías de retiro con más búsquedas, sobre todo entre quienes ya han probado yoga o meditación y buscan algo más profundo.</p>
 

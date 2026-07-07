@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774"
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <div class="post-eyebrow">Guías · Presupuesto</div>
     <h1>¿Cuánto cuesta un retiro de bienestar en España? Guía de <em>precios 2026</em></h1>
     <p class="post-meta">Publicado el 2 de junio de 2026 · 6 min de lectura</p>
-    <img class="post-hero" src="https://images.pexels.com/photos/4057839/pexels-photo-4057839.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de spa y bienestar en un retiro en España">
+    <img class="post-hero" srcset="https://images.pexels.com/photos/4057839/pexels-photo-4057839.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/4057839/pexels-photo-4057839.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/4057839/pexels-photo-4057839.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Espacio de spa y bienestar en un retiro en España">
 
     <p>El precio de un retiro de bienestar en España puede ir de 80€ a más de 300€ por noche y persona, y la diferencia no siempre es solo "lujo vs. sencillo": también depende de qué está incluido, la duración y la región. Esta guía resume los rangos más habituales para que sepas qué esperar antes de comparar opciones.</p>
 

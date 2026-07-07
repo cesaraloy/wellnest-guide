@@ -119,6 +119,8 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
 .footer-bottom { max-width:1100px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:10px; }
 @media(max-width:860px) { .footer-grid { grid-template-columns:1fr 1fr; } .footer-bottom { flex-direction:column; } }
 @media(max-width:600px) { .footer-grid { grid-template-columns:1fr; } .post-hero { height:220px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 </style>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774"
@@ -144,7 +146,7 @@ footer { background:var(--charcoal); color:rgba(255,255,255,0.7); padding:64px 4
     <div class="post-eyebrow">Guías · Planificación</div>
     <h1>¿Cuál es la mejor época para un retiro de bienestar en <em>España</em>?</h1>
     <p class="post-meta">Publicado el 9 de julio de 2026 · 6 min de lectura</p>
-    <img class="post-hero" src="https://images.pexels.com/photos/8303110/pexels-photo-8303110.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Retiro de bienestar en Sierra Nevada según la estación del año">
+    <img class="post-hero" srcset="https://images.pexels.com/photos/8303110/pexels-photo-8303110.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/8303110/pexels-photo-8303110.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w" sizes="(max-width:600px) 100vw, 720px"  src="https://images.pexels.com/photos/8303110/pexels-photo-8303110.jpeg?auto=compress&cs=tinysrgb&w=1200" fetchpriority="high" alt="Retiro de bienestar en Sierra Nevada según la estación del año">
 
     <p>España tiene suficiente variedad de climas y regiones como para que la "mejor época" para un retiro dependa sobre todo de qué tipo de experiencia buscas y dónde. No es lo mismo planear un retiro de silencio en la Alpujarra en agosto que un detox digital en la costa gallega en febrero — el clima cambia completamente la experiencia.</p>
 
