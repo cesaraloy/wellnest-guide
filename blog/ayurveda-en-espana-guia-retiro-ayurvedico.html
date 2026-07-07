@@ -228,5 +228,30 @@ document.addEventListener('click', (e) => {
   if (links && links.classList.contains('open') && e.target.closest('a')) links.classList.remove('open');
 });
 </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#faf8f4;border-top:1px solid rgba(122,140,110,0.2);box-shadow:0 -4px 24px rgba(0,0,0,0.08);padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'DM Sans',sans-serif;">
+  <p style="font-size:13px;color:#666;line-height:1.6;margin:0;max-width:680px;">
+    Usamos cookies propias y de terceros (Google AdSense, Vercel Analytics) para mejorar tu experiencia y mostrarte publicidad relevante.
+    <a href="/legal#cookies" style="color:#7a8c6e;text-decoration:underline;">Política de cookies</a>
+  </p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="setCookieChoice('necessary')" style="font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.06em;padding:9px 18px;border:1px solid rgba(122,140,110,0.4);background:transparent;color:#666;border-radius:2px;cursor:pointer;">Solo necesarias</button>
+    <button onclick="setCookieChoice('all')" style="font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.06em;padding:9px 20px;border:none;background:#7a8c6e;color:white;border-radius:2px;cursor:pointer;">Aceptar todo</button>
+  </div>
+</div>
+<script>
+(function(){
+  if(!localStorage.getItem('wg_cookie_consent')){
+    var b=document.getElementById('cookieBanner');
+    if(b) b.style.display='flex';
+  }
+})();
+function setCookieChoice(c){
+  localStorage.setItem('wg_cookie_consent',c);
+  document.getElementById('cookieBanner').style.display='none';
+}
+</script>
+
 </body>
 </html>
