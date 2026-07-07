@@ -733,6 +733,11 @@
     document.getElementById('navLinks').classList.remove('open');
     document.getElementById('navHamburger').classList.remove('open');
   }
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) document.querySelectorAll('.faq-item[open]').forEach(o => { if (o !== item) o.removeAttribute('open'); });
+    });
+  });
 </script>
 </body>
 </html>
