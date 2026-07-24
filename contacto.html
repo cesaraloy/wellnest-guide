@@ -166,14 +166,14 @@
         <div class="contact-way-icon">✉️</div>
         <div class="contact-way-text">
           <h4>Email general</h4>
-          <p><a href="mailto:hola@wellnest.guide">hola@wellnest.guide</a></p>
+          <p><a href="mailto:hello@wellnest.guide">hello@wellnest.guide</a></p>
         </div>
       </div>
       <div class="contact-way">
         <div class="contact-way-icon">🏡</div>
         <div class="contact-way-text">
           <h4>Para centros de bienestar</h4>
-          <p>¿Quieres aparecer en el directorio?<br><a href="mailto:centros@wellnest.guide">centros@wellnest.guide</a></p>
+          <p>¿Quieres aparecer en el directorio?<br><a href="mailto:hello@wellnest.guide">hello@wellnest.guide</a></p>
         </div>
       </div>
       <div class="contact-way">
@@ -204,7 +204,7 @@
       </div>
       <div class="faq-mini-item">
         <h4>¿Puedo sugerir un retiro que he visitado?</h4>
-        <p>¡Por supuesto! Nos encanta recibir recomendaciones de la comunidad. Escríbenos a hola@wellnest.guide con el nombre del centro y tu experiencia.</p>
+        <p>¡Por supuesto! Nos encanta recibir recomendaciones de la comunidad. Escríbenos a hello@wellnest.guide con el nombre del centro y tu experiencia.</p>
       </div>
     </div>
   </div>
@@ -314,7 +314,7 @@ function handleSubmit(e){
   e.preventDefault();
   const form = document.getElementById('contactForm');
   const data = new FormData(form);
-  const mailto = 'mailto:hola@wellnest.guide?subject=' +
+  const mailto = 'mailto:hello@wellnest.guide?subject=' +
     encodeURIComponent('[' + data.get('type') + '] ' + data.get('subject')) +
     '&body=' + encodeURIComponent('Nombre: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\n\n' + data.get('message'));
   window.location.href = mailto;
