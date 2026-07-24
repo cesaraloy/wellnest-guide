@@ -1,149 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wellnest.guide/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/en</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/fr</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/it</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/"/>
   </url>
   <url>
     <loc>https://wellnest.guide/listings</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/listings"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/listings"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/listings"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/en/listings</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/listings"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/listings"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/listings"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/fr/listings</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/listings"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/listings"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/listings"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings"/>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/it/listings</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/listings"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/listings"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/listings"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/listings"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/listings"/>
   </url>
   <url>
     <loc>https://wellnest.guide/finder</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/finder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/finder"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/finder"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder"/>
   </url>
   <url>
-    <loc>https://wellnest.guide/en/finder</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://wellnest.guide/blog</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/finder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/finder"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/finder"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder"/>
   </url>
   <url>
-    <loc>https://wellnest.guide/fr/finder</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/finder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/finder"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/finder"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder"/>
+    <loc>https://wellnest.guide/sobre-nosotros</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wellnest.guide/it/finder</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://wellnest.guide/finder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://wellnest.guide/en/finder"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/finder"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://wellnest.guide/it/finder"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wellnest.guide/finder"/>
+    <loc>https://wellnest.guide/contacto</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wellnest.guide/legal</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://wellnest.guide/blog</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://wellnest.guide/blog/retiros-de-silencio-en-espana</loc>
