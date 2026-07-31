@@ -203,11 +203,9 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 
 <footer>© 2026 Wellnest Guide · wellnest.guide</footer>
 <script>
-function toggleMobileNav() {
-  const btn = document.getElementById('hamburger');
-  const overlay = document.getElementById('mobileNavOverlay');
-  btn.classList.toggle('open');
-  overlay.classList.toggle('open');
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
 }
 </script>
 
