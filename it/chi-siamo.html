@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi siamo — Wellnest Guide</title>
+<meta name="description" content="Scopri il team e la storia dietro Wellnest Guide, la directory di riferimento per i ritiri benessere in Spagna.">
+<meta property="og:title" content="Chi siamo — Wellnest Guide">
+<meta property="og:description" content="Scopri il team e la storia dietro Wellnest Guide.">
+<meta property="og:url" content="https://wellnest.guide/it/chi-siamo">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://wellnest.guide/assets/wellnest-sierra-nevada.jpg">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+<link rel="canonical" href="https://wellnest.guide/it/chi-siamo">
+<link rel="alternate" hreflang="es" href="https://wellnest.guide/sobre-nosotros">
+<link rel="alternate" hreflang="en" href="https://wellnest.guide/en/about">
+<link rel="alternate" hreflang="fr" href="https://wellnest.guide/fr/a-propos">
+<link rel="alternate" hreflang="it" href="https://wellnest.guide/it/chi-siamo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap"></noscript>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1190380170696774" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --sage: #7a8c6e; --sage-light: #b5c4a8; --sage-pale: #e8ede5;
+    --cream: #f5f0e8; --warm-white: #faf8f4; --earth: #8b6f47;
+    --earth-light: #c4a882; --charcoal: #2c2c2c; --mist: #f0f4ee;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--charcoal); overflow-x:hidden; }
+
+  nav {
+    position:fixed; top:0; width:100%; z-index:100;
+    padding:20px 48px; display:flex; align-items:center; justify-content:space-between;
+    background:rgba(250,248,244,0.92); backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(122,140,110,0.15); transition:padding .3s;
+  }
+  nav.scrolled { padding:14px 48px; }
+  .nav-logo { display:flex; align-items:center; text-decoration:none; }
+  .nav-logo img { height:28px; display:block; }
+  .nav-links { display:flex; gap:32px; align-items:center; }
+  .nav-links a { text-decoration:none; font-size:13px; font-weight:400; color:#666; letter-spacing:.04em; transition:color .2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--sage); }
+  .nav-cta { background:var(--sage) !important; color:white !important; padding:9px 22px; border-radius:2px; font-size:12px !important; letter-spacing:.08em !important; text-transform:uppercase; transition:background .2s !important; }
+  .nav-cta:hover { background:var(--earth) !important; }
+  .nav-hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+  .nav-hamburger span { display:block; width:22px; height:1.5px; background:var(--charcoal); transition:all .3s; }
+  .nav-hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+  .lang-switcher { position:relative; margin-left:8px; }
+  .lang-current { background:none; border:1px solid rgba(0,0,0,.15); border-radius:20px; padding:5px 12px; font-size:12px; letter-spacing:.05em; font-weight:500; color:inherit; font-family:inherit; cursor:pointer; display:flex; align-items:center; gap:5px; }
+  .lang-current::after { content:'▾'; font-size:9px; opacity:.6; }
+  .lang-menu { position:absolute; top:calc(100% + 8px); right:0; background:#fff; border:1px solid rgba(0,0,0,.1); border-radius:8px; box-shadow:0 10px 28px rgba(0,0,0,.14); min-width:96px; opacity:0; visibility:hidden; transform:translateY(-6px); transition:opacity .15s,transform .15s,visibility .15s; z-index:300; overflow:hidden; }
+  .lang-switcher:hover .lang-menu, .lang-switcher:focus-within .lang-menu { opacity:1; visibility:visible; transform:translateY(0); }
+  .lang-menu a { display:block; padding:9px 14px; font-size:12px; text-decoration:none; color:#666; letter-spacing:.02em; }
+  .lang-menu a:hover { background:#f0f4ee; color:#7a8c6e; }
+  .lang-menu a.active { color:#7a8c6e; font-weight:600; }
+
+  .page-hero {
+    padding: 160px 80px 80px;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 100%);
+    border-bottom: 1px solid rgba(122,140,110,0.12);
+  }
+  .page-tag { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--earth); display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+  .page-tag::before { content:''; display:block; width:32px; height:1px; background:var(--earth-light); }
+  .page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(42px,5vw,64px); font-weight:300; line-height:1.1; margin-bottom:20px; }
+  .page-hero h1 em { font-style:italic; color:var(--sage); }
+  .page-hero p { font-size:17px; line-height:1.75; color:#777; font-weight:300; max-width:600px; }
+
+  .content { max-width:820px; margin:0 auto; padding:80px 40px; }
+  .content h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3vw,38px); font-weight:300; line-height:1.2; margin:56px 0 20px; color:var(--charcoal); }
+  .content h2 em { font-style:italic; color:var(--sage); }
+  .content h3 { font-size:16px; font-weight:600; letter-spacing:.04em; margin:32px 0 12px; color:var(--charcoal); }
+  .content p { font-size:15px; line-height:1.8; color:#555; margin-bottom:20px; }
+  .content p strong { color:var(--charcoal); font-weight:600; }
+  .lead { font-size:18px; line-height:1.75; color:#555; font-weight:300; margin-bottom:32px; border-left:3px solid var(--sage); padding-left:24px; }
+
+  .values-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin:40px 0; }
+  .value-card { background:white; padding:32px; border-radius:2px; border:1px solid rgba(122,140,110,0.15); }
+  .value-icon { font-size:28px; margin-bottom:16px; }
+  .value-card h3 { font-size:15px; font-weight:600; margin-bottom:10px; color:var(--charcoal); }
+  .value-card p { font-size:14px; line-height:1.7; color:#777; margin:0; }
+
+  .mission-block { background:var(--sage-pale); padding:48px; margin:48px 0; border-radius:2px; }
+  .mission-block h2 { margin-top:0; }
+  .mission-block p { color:#555; }
+
+  .team-note { background:var(--cream); padding:40px; border-radius:2px; margin:48px 0; border-left:4px solid var(--sage); }
+  .team-note p { margin-bottom:12px; }
+  .team-note p:last-child { margin-bottom:0; }
+
+  .cta-block { text-align:center; padding:64px 40px; background:white; border-radius:2px; border:1px solid rgba(122,140,110,0.15); margin-top:48px; }
+  .cta-block h2 { margin-top:0; }
+  .cta-block p { max-width:480px; margin:0 auto 32px; }
+  .btn-primary { display:inline-block; background:var(--sage); color:white; padding:14px 36px; text-decoration:none; font-size:12px; letter-spacing:.1em; text-transform:uppercase; border-radius:2px; transition:background .2s; }
+  .btn-primary:hover { background:var(--earth); }
+  .btn-secondary { display:inline-block; border:1px solid var(--sage); color:var(--sage); padding:13px 36px; text-decoration:none; font-size:12px; letter-spacing:.1em; text-transform:uppercase; border-radius:2px; transition:all .2s; margin-left:12px; }
+  .btn-secondary:hover { background:var(--sage); color:white; }
+
+  footer { background:#2c2c2c; padding:64px 80px 40px; color:rgba(255,255,255,.7); }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+  .footer-logo { margin-bottom:16px; }
+  .footer-logo img { height:24px; }
+  .footer-desc { font-size:13px; line-height:1.7; max-width:280px; font-weight:300; }
+  .footer-col h4 { font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--sage-light); margin-bottom:20px; font-weight:500; }
+  .footer-col a { display:block; font-size:13px; color:rgba(255,255,255,.6); text-decoration:none; margin-bottom:10px; font-weight:300; transition:color .2s; }
+  .footer-col a:hover { color:white; }
+  .footer-bottom { border-top:1px solid rgba(255,255,255,.1); padding-top:24px; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:rgba(255,255,255,.4); }
+
+  @media(max-width:768px){
+    nav { padding:16px 20px; }
+    .nav-hamburger { display:flex; }
+    .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,244,0.98); padding:16px 20px; gap:0; border-bottom:1px solid rgba(122,140,110,0.15); }
+    .nav-links.open { display:flex; }
+    .nav-links a { padding:13px 0; border-bottom:1px solid rgba(122,140,110,0.08); font-size:15px; }
+    .nav-links a:last-child { border-bottom:none; }
+    .nav-cta { display:block; margin-top:8px; text-align:center !important; padding:13px 22px !important; }
+    .page-hero { padding:120px 24px 60px; }
+    .content { padding:48px 24px; }
+    .values-grid { grid-template-columns:1fr; }
+    .mission-block { padding:32px 24px; }
+    footer { padding:48px 24px 32px; }
+    .footer-grid { grid-template-columns:1fr 1fr; gap:32px; margin-bottom:32px; }
+    .footer-grid > div:first-child { grid-column:1/-1; }
+    .footer-bottom { flex-direction:column; gap:8px; text-align:center; }
+  }
+  @media(max-width:768px){
+    .nav-links .lang-switcher { margin:8px 0 0; }
+    .nav-links .lang-current { display:none; }
+    .nav-links .lang-menu { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; border:none; border-radius:0; background:transparent; display:flex; flex-direction:row; gap:8px; padding:0; min-width:0; }
+    .nav-links .lang-menu a { padding:6px 12px; border:1px solid rgba(122,140,110,0.2); border-radius:20px; font-size:12px; color:#888; }
+    .nav-links .lang-menu a.active { color:#7a8c6e; border-color:#7a8c6e; font-weight:600; }
+  }
+</style>
+<link rel="stylesheet" href="/assets/dark-mode.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="/it" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="/it/listings">Directory</a>
+    <a href="/it/finder">Ricerca IA</a>
+    <a href="/blog">Blog</a>
+    <a href="/it/chi-siamo" class="active">Chi siamo</a>
+    <a href="/it/contatto">Per i centri</a>
+    <a href="/it/finder" class="nav-cta">Trova il mio ritiro</a>
+    <div class="lang-switcher" tabindex="0">
+      <button class="lang-current">IT</button>
+      <div class="lang-menu">
+        <a href="https://wellnest.guide/sobre-nosotros" class="es">ES</a>
+        <a href="https://wellnest.guide/en/about" class="en">EN</a>
+        <a href="https://wellnest.guide/fr/a-propos" class="fr">FR</a>
+        <a href="https://wellnest.guide/it/chi-siamo" class="it active">IT</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">La nostra storia</div>
+  <h1>Nato da un <em>bisogno reale</em></h1>
+  <p>Wellnest Guide è nato dalla frustrazione di non trovare un posto dove confrontare i ritiri benessere in Spagna in modo chiaro, onesto e ragionato. Abbiamo deciso di costruirlo noi stessi.</p>
+</div>
+
+<div class="content">
+
+  <p class="lead">Siamo un piccolo team appassionato di benessere, viaggi consapevoli e tecnologia ben applicata. La nostra missione è rendere la ricerca del ritiro perfetto facile come prenotare un hotel.</p>
+
+  <h2>Perché <em>Wellnest Guide</em>?</h2>
+  <p>La Spagna ha una ricchezza straordinaria in materia di benessere: dagli oliveti dell'Andalusia alle foreste della Galizia, dalle spiagge di Formentera alle vette dei Pirenei, c'è un ritiro per ogni persona e ogni momento della vita. Eppure trovare quel ritiro con informazioni affidabili, prezzi reali e recensioni oneste era un compito frustrante.</p>
+  <p>Le grandi piattaforme di viaggio non sono specializzate nel benessere. I motori di ricerca mostrano risultati generici e pieni di pubblicità. I siti web dei centri stessi, per quanto belli, non permettono di confrontare. <strong>Non esisteva un luogo di riferimento che mettesse il benessere al centro.</strong></p>
+  <p>Wellnest Guide è nato per colmare questo vuoto. Una directory curata, con filtri intelligenti, contenuti editoriali di qualità e una visione chiara: connettere le persone in cerca di una trasformazione reale con gli spazi che possono offrirla.</p>
+
+  <div class="mission-block">
+    <h2>La nostra <em>missione</em></h2>
+    <p>Facilitare che chiunque in Spagna — o che viaggi in Spagna — possa trovare, confrontare e prenotare il ritiro benessere più adatto alle proprie esigenze, budget e momento di vita.</p>
+    <p>Crediamo che il benessere non sia un lusso. È un bisogno, e merita la stessa attenzione, cura e rigore nell'informazione di qualsiasi altra decisione importante nella vita.</p>
+  </div>
+
+  <h2>Come <em>selezioniamo</em> i ritiri</h2>
+  <p>Non ogni centro trova posto in Wellnest Guide. Esaminiamo manualmente ogni proposta prima di includerla nella directory. I nostri criteri di selezione includono:</p>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🌿</div>
+      <h3>Autenticità dell'approccio</h3>
+      <p>Privilegiamo i centri con una filosofia coerente e una storia consolidata, non progetti opportunistici che cavalcano la moda del wellness.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">📋</div>
+      <h3>Trasparenza dei prezzi</h3>
+      <p>Richiediamo che i centri comunichino le proprie tariffe in modo chiaro, specificando cosa è e cosa non è incluso nel prezzo.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🏡</div>
+      <h3>Qualità dello spazio</h3>
+      <p>Le strutture devono essere all'altezza di ciò che promettono. Valorizziamo ambienti naturali, infrastrutture curate e attenzione ai dettagli.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">👥</div>
+      <h3>Team qualificato</h3>
+      <p>Istruttori, terapeuti e facilitatori devono avere una formazione verificabile ed esperienza comprovata nelle loro discipline.</p>
+    </div>
+  </div>
+
+  <h2>I nostri <em>contenuti editoriali</em></h2>
+  <p>Oltre alla directory, pubblichiamo articoli e guide scritti con rigore per aiutarti a prendere decisioni migliori: come scegliere il tuo primo ritiro, quanto costa davvero, cosa distingue un ritiro di yoga da uno di meditazione, cosa aspettarsi se viaggi da sola…</p>
+  <p>Tutti i nostri contenuti sono originali, scritti da persone con esperienza reale nel settore del benessere e dei viaggi consapevoli in Spagna. Non copiamo, non traduciamo automaticamente, non pubblichiamo contenuti senza revisione.</p>
+  <p>Crediamo che l'informazione di qualità sia la base di ogni buona decisione. Per questo ci prendiamo il tempo necessario per ricercare, verificare e spiegare bene le cose.</p>
+
+  <h2>Per i <em>centri benessere</em></h2>
+  <p>Se gestisci un centro ritiri, uno spazio yoga o un programma benessere in Spagna, ci piacerebbe conoscerti. Wellnest Guide è costruito per essere un ponte tra centri impegnati nella qualità e persone che cercano esattamente ciò che offri.</p>
+  <p>Lavoriamo con centri di tutte le dimensioni: dai piccoli ritiri rurali con capienza per 8 persone ai grandi complessi benessere con programmi annuali. Ciò che ci importa è l'autenticità, non le dimensioni.</p>
+
+  <div class="team-note">
+    <h3>Una nota dal team</h3>
+    <p>Wellnest Guide è un progetto in crescita. Siamo piccoli, ma impegnati. Ogni decisione che prendiamo è guidata dalla domanda: questo migliora l'esperienza per la persona che cerca un ritiro?</p>
+    <p>Se hai suggerimenti, correzioni o semplicemente vuoi condividere la tua esperienza di un ritiro in Spagna, scrivici. Leggiamo tutti i messaggi e apprezziamo profondamente i feedback della nostra comunità.</p>
+    <p>Grazie per aver scelto Wellnest Guide per la tua prossima fuga benessere.</p>
+    <p><strong>— Il team di Wellnest Guide</strong></p>
+  </div>
+
+  <div class="cta-block">
+    <h2>Iniziamo a <em>cercare</em>?</h2>
+    <p>Esplora la directory o usa la nostra ricerca IA per trovare il ritiro che si adatta esattamente a ciò di cui hai bisogno.</p>
+    <a href="/it/finder" class="btn-primary">Ricerca IA</a>
+    <a href="/it/listings" class="btn-secondary">Vedi la directory</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="/assets/wellnest-inline_light.png" alt="Wellnest Guide"></div>
+      <p class="footer-desc">La directory di riferimento per i ritiri benessere in Spagna. Yoga, meditazione, detox e molto altro.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Esplora</h4>
+      <a href="/it/listings?tag=yoga">Yoga</a>
+      <a href="/it/listings?tag=meditazione">Meditazione</a>
+      <a href="/it/listings?tag=detox">Detox</a>
+      <a href="/it/listings?tag=silenzio">Silenzio</a>
+      <a href="/it/listings?tag=ayurveda">Ayurveda</a>
+    </div>
+    <div class="footer-col">
+      <h4>Destinazioni</h4>
+      <a href="/it/listings?regionFilter=Andaluc%C3%ADa">Andalusia</a>
+      <a href="/it/listings?regionFilter=Catalu%C3%B1a">Catalogna</a>
+      <a href="/it/listings?regionFilter=Galicia">Galizia</a>
+      <a href="/it/listings?regionFilter=Islas%20Canarias">Isole Canarie</a>
+      <a href="/it/listings?regionFilter=Comunidad%20de%20Madrid">Madrid</a>
+    </div>
+    <div class="footer-col">
+      <h4>Wellnest Guide</h4>
+      <a href="/it/listings">Directory</a>
+      <a href="/it/finder">Ricerca IA</a>
+      <a href="/blog">Blog</a>
+      <a href="/it/chi-siamo">Chi siamo</a>
+      <a href="/it/contatto">Contatto</a>
+      <a href="/it/legal">Note legali</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Wellnest Guide · wellnest.guide</span>
+    <span><a href="/it/legal#privacy" style="color:inherit;">Privacy</a> · <a href="/it/legal#cookies" style="color:inherit;">Cookie</a> · <a href="/it/legal#termini" style="color:inherit;">Termini</a></span>
+  </div>
+</footer>
+
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#faf8f4;border-top:1px solid rgba(122,140,110,0.2);box-shadow:0 -4px 24px rgba(0,0,0,0.08);padding:18px 32px;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'DM Sans',sans-serif;">
+  <p style="font-size:13px;color:#666;line-height:1.6;margin:0;max-width:680px;">
+    Utilizziamo cookie propri e di terze parti (Google AdSense, Vercel Analytics) per migliorare la tua esperienza e mostrarti pubblicità pertinente.
+    <a href="/it/legal#cookies" style="color:#7a8c6e;text-decoration:underline;">Informativa sui cookie</a>
+  </p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="setCookieChoice('necessary')" style="padding:10px 20px;border:1px solid #7a8c6e;background:transparent;color:#7a8c6e;font-size:13px;cursor:pointer;border-radius:2px;font-family:'DM Sans',sans-serif;">Solo necessari</button>
+    <button onclick="setCookieChoice('all')" style="padding:10px 20px;border:none;background:#7a8c6e;color:white;font-size:13px;cursor:pointer;border-radius:2px;font-family:'DM Sans',sans-serif;">Accetta tutto</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  if(!localStorage.getItem('wg_cookie_consent')){
+    var b=document.getElementById('cookieBanner');
+    if(b) b.style.display='flex';
+  }
+})();
+function setCookieChoice(c){
+  localStorage.setItem('wg_cookie_consent',c);
+  document.getElementById('cookieBanner').style.display='none';
+}
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
+}
+</script>
+</body>
+</html>
