@@ -1,0 +1,211 @@
+/*
+ * Wellnest Guide — Dark Mode
+ * Activated automatically via prefers-color-scheme: dark
+ * Single source of truth for all pages.
+ */
+
+@media (prefers-color-scheme: dark) {
+
+  /* ── Token overrides ─────────────────────────────────────── */
+  :root {
+    --sage:       #96aa87;   /* lighter on dark bg */
+    --sage-light: #7a8c6e;
+    --sage-pale:  #232e21;   /* dark sage-tinted surface */
+    --cream:      #201f1d;
+    --warm-white: #1a1917;   /* page background */
+    --earth:      #c4a882;   /* lighter on dark bg */
+    --earth-light:#a08060;
+    --charcoal:   #e8e3d8;   /* primary text (was dark, now light) */
+    --mist:       #222120;   /* subtle surface */
+  }
+
+  /* ── Global ──────────────────────────────────────────────── */
+  body { background: var(--warm-white); color: var(--charcoal); }
+
+  /* ── Logo: swap dark→light version ──────────────────────── */
+  .nav-logo img[src*="inline_dark"] {
+    content: url('/assets/wellnest-inline_light.png');
+  }
+  .footer-logo img[src*="inline_dark"],
+  .footer-logo img[src*="wellnest_dark"] {
+    content: url('/assets/wellnest-inline_light.png');
+  }
+
+  /* ── Navigation bar ──────────────────────────────────────── */
+  nav {
+    background: rgba(22, 21, 19, 0.95) !important;
+    border-bottom-color: rgba(150, 170, 135, 0.12) !important;
+  }
+  /* Mobile dropdown */
+  .nav-links {
+    background: rgba(22, 21, 19, 0.98) !important;
+    border-bottom-color: rgba(150, 170, 135, 0.12) !important;
+  }
+  .nav-links a {
+    color: rgba(232, 227, 216, 0.65) !important;
+    border-bottom-color: rgba(150, 170, 135, 0.1) !important;
+  }
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--sage) !important; }
+  .nav-hamburger span { background: var(--charcoal) !important; }
+
+  /* ── Language switcher ───────────────────────────────────── */
+  .lang-current {
+    border-color: rgba(255,255,255,0.15) !important;
+    color: var(--charcoal) !important;
+  }
+  .lang-menu {
+    background: #252320 !important;
+    border-color: rgba(255,255,255,0.08) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.5) !important;
+  }
+  .lang-menu a { color: rgba(232,227,216,0.7) !important; }
+  .lang-menu a:hover { background: var(--sage-pale) !important; color: var(--sage) !important; }
+  .nav-links .lang-menu a {
+    border-color: rgba(150,170,135,0.25) !important;
+    color: rgba(232,227,216,0.6) !important;
+  }
+  .nav-links .lang-menu a.active {
+    border-color: var(--sage) !important;
+    background: var(--sage-pale) !important;
+    color: var(--sage) !important;
+  }
+
+  /* ── Text neutrals (hardcoded greys → warm light) ────────── */
+  p, li { color: rgba(232,227,216,0.72); }
+  .post p, .post li { color: rgba(232,227,216,0.72) !important; }
+
+  /* ── White surfaces → dark surfaces ─────────────────────── */
+
+  /* Blog cards */
+  .blog-card {
+    background: #232120 !important;
+    border-color: rgba(150,170,135,0.15) !important;
+  }
+  .blog-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important; }
+  .blog-card-body h3 { color: var(--charcoal) !important; }
+  .blog-card-body p  { color: rgba(232,227,216,0.55) !important; }
+
+  /* Retreat listing cards */
+  .retreat-card,
+  .card { background: #232120 !important; }
+
+  /* Finder */
+  .radio-card {
+    background: #242220 !important;
+    border-color: rgba(150,170,135,0.2) !important;
+    color: var(--charcoal) !important;
+  }
+  .radio-card.selected { background: var(--sage-pale) !important; }
+  .pill, .region-pill {
+    background: #242220 !important;
+    color: rgba(232,227,216,0.65) !important;
+    border-color: rgba(150,170,135,0.25) !important;
+  }
+  .pill.selected, .region-pill.selected {
+    background: var(--sage) !important;
+    color: white !important;
+    border-color: var(--sage) !important;
+  }
+  .pill.multi.selected {
+    background: var(--sage-pale) !important;
+    color: var(--sage) !important;
+  }
+  .back-btn {
+    background: #242220 !important;
+    border-color: rgba(150,170,135,0.2) !important;
+    color: var(--charcoal) !important;
+  }
+  .insight-box {
+    background: #242220 !important;
+    color: rgba(232,227,216,0.7) !important;
+  }
+  .lead-card { background: #252320 !important; }
+  .lead-overlay { background: rgba(10,10,9,0.6) !important; }
+
+  /* Contact form */
+  .contact-form-wrap {
+    background: #1e1d1b !important;
+    border-color: rgba(150,170,135,0.15) !important;
+  }
+
+  /* Nosotros */
+  .value-card {
+    background: #232120 !important;
+    border-color: rgba(150,170,135,0.15) !important;
+  }
+  .cta-block {
+    background: #232120 !important;
+    border-color: rgba(150,170,135,0.15) !important;
+  }
+  .mission-block { border-color: rgba(150,170,135,0.15) !important; }
+
+  /* Blog article */
+  .toc {
+    background: #232120 !important;
+    border-color: rgba(150,170,135,0.15) !important;
+  }
+  .post-cta { background: var(--mist) !important; }
+  blockquote.pull-quote { border-left-color: var(--sage) !important; }
+
+  /* Filters bar (listings) */
+  .filters-bar {
+    background: rgba(22,21,19,0.97) !important;
+    border-bottom-color: rgba(150,170,135,0.1) !important;
+  }
+  select.filter-select,
+  .flatpickr-input {
+    background: #242220 !important;
+    color: var(--charcoal) !important;
+    border-color: rgba(150,170,135,0.2) !important;
+  }
+  .tag-pill {
+    background: #242220 !important;
+    color: rgba(232,227,216,0.6) !important;
+    border-color: rgba(150,170,135,0.2) !important;
+  }
+  .tag-pill.active { background: var(--sage) !important; color: white !important; border-color: var(--sage) !important; }
+  .tag-pill:hover:not(.active) { border-color: var(--sage) !important; color: var(--sage) !important; }
+  .view-btn {
+    background: #242220 !important;
+    border-color: rgba(150,170,135,0.2) !important;
+    color: rgba(232,227,216,0.6) !important;
+  }
+  .view-btn.active { background: var(--charcoal) !important; color: var(--warm-white) !important; }
+
+  /* Form inputs across site */
+  input:not([type=range]),
+  textarea,
+  select {
+    background: #242220 !important;
+    color: var(--charcoal) !important;
+    border-color: rgba(150,170,135,0.25) !important;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--sage) !important;
+  }
+
+  /* ── Page heroes ─────────────────────────────────────────── */
+  .page-hero {
+    background: linear-gradient(135deg, #201f1d 0%, var(--warm-white) 100%) !important;
+  }
+  .page-header {
+    background: linear-gradient(180deg, var(--mist) 0%, var(--warm-white) 100%) !important;
+    border-bottom-color: rgba(150,170,135,0.1) !important;
+  }
+
+  /* ── Cookie banner ───────────────────────────────────────── */
+  #cookieBanner {
+    background: #252320 !important;
+    border-top-color: rgba(150,170,135,0.15) !important;
+    color: var(--charcoal) !important;
+  }
+  #cookieBanner p { color: rgba(232,227,216,0.75) !important; }
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  footer { background: #0f0e0d !important; }
+
+  /* ── Scrollbar (webkit) ──────────────────────────────────── */
+  ::-webkit-scrollbar { background: #1a1917; }
+  ::-webkit-scrollbar-thumb { background: #3a3835; border-radius: 4px; }
+}
