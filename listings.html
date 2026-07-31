@@ -280,23 +280,11 @@ select.filter-select {
 .leaflet-popup-tip-container { display:none; }
 
 /* HAMBURGER */
-.hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; }
-.hamburger span { display:block; width:22px; height:2px; background:var(--charcoal); border-radius:2px; transition:all .25s; }
-.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity:0; }
-.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-.mobile-nav-overlay {
-  display:none; position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
-  background:rgba(250,248,244,0.98); z-index:299; flex-direction:column;
-  align-items:center; justify-content:center; gap:32px;
-}
-.mobile-nav-overlay.open { display:flex; }
-.mobile-nav-overlay a { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
-.mobile-nav-overlay a.nav-cta { background:var(--sage); color:white; padding:12px 28px; border-radius:2px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
-
-.mobile-lang-row { display:flex; gap:10px; margin-top:4px; flex-wrap:wrap; justify-content:center; }
-.mobile-lang-row a { font-size:12px; padding:6px 14px; border:1px solid rgba(122,140,110,.35); border-radius:20px; color:#666; text-decoration:none; letter-spacing:.05em; }
-.mobile-lang-row a.active { color:var(--sage); border-color:var(--sage); background:var(--sage-pale); }
+.nav-hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; }
+.nav-hamburger span { display:block; width:22px; height:1.5px; background:var(--charcoal); transition:all .3s; }
+.nav-hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity:0; }
+.nav-hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
 
 /* MOBILE MAP TOGGLE BUTTON (list mode) */
 .mobile-map-btn {
@@ -350,8 +338,17 @@ select.filter-select {
 /* MOBILE */
 @media(max-width:900px) {
   nav { padding:14px 20px; }
-  .nav-links { display:none; }
-  .hamburger { display:flex; }
+  .nav-hamburger { display:flex; }
+  .nav-links { display:none; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,244,0.98); backdrop-filter:blur(12px); flex-direction:column; padding:16px 20px 24px; gap:0; border-bottom:1px solid rgba(122,140,110,0.15); z-index:299; }
+  .nav-links.open { display:flex; }
+  .nav-links a { padding:13px 0; border-bottom:1px solid rgba(122,140,110,0.08); font-size:15px; letter-spacing:.02em; }
+  .nav-links a:last-child { border-bottom:none; }
+  .nav-cta { display:block; margin-top:8px; text-align:center !important; padding:13px 22px !important; border-radius:2px; }
+  .nav-links .lang-switcher { width:100%; margin:10px 0 0; padding-top:13px; border-top:1px solid rgba(122,140,110,0.08); }
+  .nav-links .lang-current { display:none; }
+  .nav-links .lang-menu { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; border:none; background:none; min-width:auto; display:flex; gap:8px; justify-content:center; }
+  .nav-links .lang-menu a { padding:7px 14px; border:1px solid rgba(122,140,110,.3); border-radius:20px; font-size:12px; color:#666; }
+  .nav-links .lang-menu a.active { border-color:var(--sage); background:var(--sage-pale); color:var(--sage); }
   .page-header { padding:80px 20px 20px; }
   .filters-bar { padding:0 14px; }
   .view-toggle { display:none; }
@@ -391,7 +388,7 @@ select.filter-select {
 
 <nav>
   <a href="/" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="/listings" class="active">Directorio</a>
     <a href="/finder">Buscador IA</a>
     <a href="/blog">Blog</a>
@@ -408,19 +405,10 @@ select.filter-select {
       </div>
     </div>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMobileNav()">
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menú" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
   </nav>
-<div class="mobile-nav-overlay" id="mobileNavOverlay">
-  <a href="/listings" onclick="toggleMobileNav()">Directorio</a>
-  <a href="/finder" onclick="toggleMobileNav()">Buscador IA</a>
-  <a href="/blog" onclick="toggleMobileNav()">Blog</a>
-  <a href="/sobre-nosotros" onclick="toggleMobileNav()">Nosotros</a>
-  <a href="/contacto" onclick="toggleMobileNav()">Para centros</a>
-  <a href="/finder" class="nav-cta" onclick="toggleMobileNav()">Encontrar mi retiro</a>
-<div class="mobile-lang-row"><a href="https://wellnest.guide/listings" class="es active">ES</a><a href="https://wellnest.guide/en/listings" class="en">EN</a><a href="https://wellnest.guide/fr/listings" class="fr">FR</a><a href="https://wellnest.guide/it/listings" class="it">IT</a></div>
-</div>
 
 <div class="page-header">
   <div class="page-eyebrow">Directorio completo</div>
@@ -634,7 +622,7 @@ async function init() {
     if (activeCheckout) p.set('checkout', activeCheckout);
     return p.toString();
   }
-  document.querySelectorAll('.lang-menu a, .mobile-lang-row a').forEach(a => {
+  document.querySelectorAll('.lang-menu a').forEach(a => {
     a.addEventListener('click', e => {
       const q = currentFilterQuery();
       if (q) {
@@ -882,11 +870,9 @@ function reset() {
   render();
 }
 
-function toggleMobileNav() {
-  const btn = document.getElementById('hamburger');
-  const overlay = document.getElementById('mobileNavOverlay');
-  btn.classList.toggle('open');
-  overlay.classList.toggle('open');
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
 }
 
 function isMobile() { return window.innerWidth <= 900; }
