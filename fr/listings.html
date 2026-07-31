@@ -623,7 +623,7 @@ async function init() {
     if (activeCheckout) p.set('checkout', activeCheckout);
     return p.toString();
   }
-  document.querySelectorAll('.lang-menu a, .mobile-lang-row a').forEach(a => {
+  document.querySelectorAll('.lang-menu a').forEach(a => {
     a.addEventListener('click', e => {
       const q = currentFilterQuery();
       if (q) {
@@ -858,11 +858,9 @@ function reset() {
   render();
 }
 
-function toggleMobileNav() {
-  const btn = document.getElementById('hamburger');
-  const overlay = document.getElementById('mobileNavOverlay');
-  btn.classList.toggle('open');
-  overlay.classList.toggle('open');
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
 }
 
 function isMobile() { return window.innerWidth <= 900; }

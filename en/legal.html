@@ -49,7 +49,7 @@ a { color:var(--sage); }
 .toc { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:56px; padding:18px 22px; background:white; border:1px solid rgba(122,140,110,0.15); border-radius:2px; }
 .toc a { font-size:12px; letter-spacing:.06em; text-decoration:none; color:var(--sage); border-bottom:1px solid var(--sage-light); padding-bottom:1px; }
 footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:center; padding:32px 24px; font-size:12px; }
-@media(max-width:600px){ nav{padding:14px 20px;} main{padding:110px 20px 60px;} }
+
 
 .lang-switcher { position:relative; margin-left:10px; }
 .lang-current {
@@ -72,26 +72,34 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 .lang-menu a.active { color:#7a8c6e; font-weight:600; }
 
 
-/* HAMBURGER (mobile) */
-.hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; z-index:201; }
-.hamburger span { display:block; width:22px; height:2px; background:var(--charcoal); border-radius:2px; transition:all .25s; }
-.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity:0; }
-.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-.mobile-nav-overlay {
-  display:none; position:fixed; top:63px; left:0; right:0; bottom:0;
-  background:rgba(250,248,244,0.98); z-index:199; flex-direction:column;
-  align-items:center; justify-content:center; gap:28px;
-}
-.mobile-nav-overlay.open { display:flex; }
-.mobile-nav-overlay a.nav-back { font-size:18px; color:var(--charcoal); text-decoration:none; letter-spacing:.04em; }
-.mobile-lang-row { display:flex; gap:10px; margin-top:4px; flex-wrap:wrap; justify-content:center; }
-.mobile-lang-row a { font-size:12px; padding:6px 14px; border:1px solid rgba(122,140,110,.35); border-radius:20px; color:#666; text-decoration:none; letter-spacing:.05em; }
-.mobile-lang-row a.active { color:var(--sage); border-color:var(--sage); background:var(--sage-pale); }
+/* NAV LINKS & CTA */
+.nav-links { display:flex; gap:32px; align-items:center; }
+.nav-links a { text-decoration:none; font-size:13px; font-weight:400; color:#666; letter-spacing:.04em; transition:color .2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--sage); }
+.nav-cta { background:var(--sage) !important; color:white !important; padding:9px 22px; border-radius:2px; font-size:12px !important; letter-spacing:.08em !important; text-transform:uppercase; transition:background .2s !important; }
+.nav-cta:hover { background:var(--earth) !important; }
 
-@media(max-width:600px){
-  .nav-desktop-actions { display:none; }
-  .hamburger { display:flex; }
+/* HAMBURGER (mobile) */
+.nav-hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.nav-hamburger span { display:block; width:22px; height:1.5px; background:var(--charcoal); transition:all .3s; }
+.nav-hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity:0; }
+.nav-hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+
+@media(max-width:768px){
+  nav { padding:16px 20px; }
+  .nav-hamburger { display:flex; }
+  .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,244,0.98); padding:16px 20px; gap:0; border-bottom:1px solid rgba(122,140,110,0.15); }
+  .nav-links.open { display:flex; }
+  .nav-links a { padding:13px 0; border-bottom:1px solid rgba(122,140,110,0.08); font-size:15px; }
+  .nav-links a:last-child { border-bottom:none; }
+  .nav-cta { display:block; margin-top:8px; text-align:center !important; padding:13px 22px !important; }
+  .nav-links .lang-switcher { margin:8px 0 0; }
+  .nav-links .lang-current { display:none; }
+  .nav-links .lang-menu { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; border:none; border-radius:0; background:transparent; display:flex; flex-direction:row; gap:8px; padding:0; min-width:0; }
+  .nav-links .lang-menu a { padding:6px 12px; border:1px solid rgba(122,140,110,0.2); border-radius:20px; font-size:12px; color:#888; }
+  .nav-links .lang-menu a.active { color:#7a8c6e; border-color:#7a8c6e; font-weight:600; }
+  main { padding:110px 20px 60px; }
 }
 </style>
   <script>
@@ -105,29 +113,29 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 </head>
 <body>
 
-<nav>
+<nav id="navbar">
   <a href="/en" class="nav-logo"><img src="/assets/wellnest-inline_dark.png" alt="Wellnest Guide"></a>
-  <div class="nav-desktop-actions" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;"><a href="/en" class="nav-back">← Back to directory</a><div class="lang-switcher" tabindex="0">
+  <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="/en/listings">Directory</a>
+    <a href="/en/finder">AI Finder</a>
+    <a href="/blog">Blog</a>
+    <a href="/en/about">About</a>
+    <a href="/en/contact">For centers</a>
+    <a href="/en/finder" class="nav-cta">Find my retreat</a>
+    <div class="lang-switcher" tabindex="0">
       <button class="lang-current">EN</button>
       <div class="lang-menu">
-      <a href="https://wellnest.guide/legal" class="es">ES</a>
-      <a href="https://wellnest.guide/en/legal" class="en active">EN</a>
-      <a href="https://wellnest.guide/fr/legal" class="fr">FR</a>
-      <a href="https://wellnest.guide/it/legal" class="it">IT</a>
+        <a href="https://wellnest.guide/legal" class="es">ES</a>
+        <a href="https://wellnest.guide/en/legal" class="en active">EN</a>
+        <a href="https://wellnest.guide/fr/legal" class="fr">FR</a>
+        <a href="https://wellnest.guide/it/legal" class="it">IT</a>
       </div>
-    </div></div>
-  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
-  </nav>
-
-<div class="mobile-nav-overlay" id="mobileNavOverlay">
-  <a href="/en" class="nav-back" onclick="toggleMobileNav()">← Back to directory</a>
-  <div class="mobile-lang-row">
-  <a href="https://wellnest.guide/legal" class="es">ES</a>
-      <a href="https://wellnest.guide/en/legal" class="en active">EN</a>
-      <a href="https://wellnest.guide/fr/legal" class="fr">FR</a>
-      <a href="https://wellnest.guide/it/legal" class="it">IT</a>
+    </div>
   </div>
-</div>
+</nav>
 
 <main>
   <div class="eyebrow">Legal information</div>
@@ -198,11 +206,12 @@ footer { background:var(--charcoal); color:rgba(255,255,255,.5); text-align:cent
 
 <footer>© 2026 Wellnest Guide · wellnest.guide</footer>
 <script>
-function toggleMobileNav() {
-  const btn = document.getElementById('hamburger');
-  const overlay = document.getElementById('mobileNavOverlay');
-  btn.classList.toggle('open');
-  overlay.classList.toggle('open');
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+});
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('navHamburger').classList.toggle('open');
 }
 </script>
 

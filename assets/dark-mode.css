@@ -173,6 +173,13 @@
   }
   .view-btn.active { background: var(--charcoal) !important; color: var(--warm-white) !important; }
 
+  /* Mobile "Ver mapa" / map toggle button */
+  .mobile-map-btn {
+    background: #3a3835 !important;
+    color: #e8e3d8 !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5) !important;
+  }
+
   /* Form inputs across site */
   input:not([type=range]),
   textarea,
